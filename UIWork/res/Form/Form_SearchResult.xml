@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent"
+        Id="@+Id/Root">
+        <Function
+            Id="@Id/PreDefine/Fragment_SearchMain"
+            LayoutHeight="FillParent"
+            LayoutWidth="FillParent" />
+        <!--HMI界面布局部分，此元器件LayoutWidth表示半屏尺寸-->
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <RelativeLayout
+                Id="@+Id/Layout_Half_Panel"
+                LayoutWidth="724"
+                LayoutHeight="872"
+                LayoutTopMargin="96"
+				Background="@Drawable/card_bg_day_and_night">
+                    <LinearLayout
+                        Id="@+Id/Linear_List"
+                        LayoutWidth="692"
+                        LayoutHeight="840"
+                        LayoutTopMargin="16"
+                        LayoutLeftMargin = "16"
+                        Orientation="Vertical"
+                        HorizontalGravity="Left"
+                        Clickable="true">
+                        <!--title 部分-->
+                        <LinearLayout
+                                Id="@+Id/ListTitle"
+                                LayoutWidth="FillParent"
+                                LayoutHeight="136"
+                                LayoutTopMargin="14"
+                                PaddingRight="14">
+                                <RelativeLayout
+                                    LayoutWidth="136"
+                                    LayoutHeight="FillParent"
+                                    LayoutLeftMargin="14"
+                                    HorizontalGravity="Center"
+                                    VerticalGravity="Center">
+                                    <ImageButton
+                                        Id="@Id/PreDefine/BtnReturn"
+                                        LayoutWidth="FillParent"
+                                        LayoutHeight="FillParent"
+                                        Background="@Drawable/h104_background_prox"
+                                        Drawable="@Drawable/favorite_back"
+                                        ClickDataCollection="BTN_Back"
+                                        VisibleSpeechs="@String/NAVI_SEARCH_RESULT_LIST_ONLINE_VisibleSpeechs_01" />
+                                </RelativeLayout>
+                                <!--title 目的地视图文言-->
+                                <RelativeLayout
+                                    Id="@Id/PreDefine/TxtTitle"
+                                    LayoutWidth="500"
+                                    LayoutHeight="60"
+                                    LayoutTopMargin="46"
+                                    LayoutLeftMargin="15"
+                                    Visible="Gone">
+                                    <TextActor
+                                        LayoutHeight="FillParent"
+                                        LayoutWidth="WrapContent"
+                                        LayoutLeftMargin="-1"
+                                        HorizontalGravity="Left"
+                                        VerticalGravity="Top"
+                                        LayoutCenterVertical="true"
+                                        Text="@String/MX_LANG_NAVI_MAP_RESTRICTION_VIEW_LOADING_Title_Destination_View"
+                                        TextFont="@Font/UIFont40_Text_M"
+                                        TextColor="@Color/Color_000000day_and_FFFFFFnight" />
+                                </RelativeLayout>
+                                <LinearLayout
+                                    Id="@+Id/EditInputBox"
+                                    LayoutWidth="0"
+                                    LayoutWeight="1"
+                                    LayoutHeight="106"
+                                    LayoutLeftMargin="14"
+                                    LayoutRightMargin="16"
+                                    LayoutTopMargin="16"
+                                    Clickable="true"
+                                    VisibleSpeechs = "@String/MX_LANG_NAVI_SEARCH_RESULT_LIST_VisibleSpeechs_01"
+                                    Background="@Drawable/search_bg_106_raised">
+                                    <TextActor
+                                        Id="@Id/PreDefine/TextTitle"
+                                        LayoutLeftMargin="48"
+                                        LayoutTopMargin="25"
+                                        HorizontalGravity="Left"
+                                        LayoutWidth="FillParent"
+                                        LayoutHeight="52"
+                                        TextFont="@Font/UIFont40_Text_R"
+                                        TextShadow="false"
+                                        Text = "palace"
+                                        TextAutoScrollMode="AutoScrollWhenFocused"
+                                        DuplicateParentState="true"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        ClickDataCollection="BTN_Input_Field" />
+                                </LinearLayout>
+                                <ImageButton
+                                    Id="@+Id/BtnCategory"
+                                    LayoutWidth="136"
+                                    LayoutLeftMargin="-2"
+                                    LayoutHeight="FillParent"
+                                    Background="@Drawable/h104_background_prox_nochecked"
+                                    Drawable="@Drawable/favorite_filter"
+                                    VisibleSpeechs="@String/MX_LANG_NAVI_SEARCH_RESULT_LIST_ONLINE_VisibleSpeechs_02"
+                                    ClickDataCollection="BTN_Search_Result_Category" />
+                                <ImageButton
+                                    Id="@+Id/BtnSort"
+                                    LayoutWidth="136"
+                                    LayoutHeight="FillParent"
+                                    LayoutLeftMargin="-2"
+                                    Background="@Drawable/h104_background_prox_nochecked"
+                                    Drawable="@Drawable/favorite_switch_view"
+                                    VisibleSpeechs="@String/MX_LANG_NAVI_SEARCH_RESULT_LIST_ONLINE_VisibleSpeechs_03"
+                                    ClickDataCollection="BTN_Search_Result_Sort" />
+                        </LinearLayout>
+                        <!--NoResult 部分-->
+                        <LinearLayout
+                            Id="@+Id/NoResultParent"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="720"
+                            HorizontalGravity="Center"
+                            Orientation="Vertical"
+                            Visible="Gone">
+                            <RelativeLayout
+                                Id="@+Id/NoResultLayout"
+                                LayoutWidth="612"
+                                LayoutHeight="WrapContent"
+                                LayoutTopMargin="224"
+                                HorizontalGravity="Center">
+                                <TextActor
+                                    Id="@+Id/NoResult"
+                                    LayoutWidth="FillParent"
+                                    LayoutHeight="WrapContent"
+                                    TextFont="@Font/BtnFont34_N_TextL_P_TextM_C_TextM_D_TextL"
+                                    TextColor="@Color/BtnFavoriteColor"
+                                    LayoutTopMargin="28"
+                                    SingleLine="false"
+                                    WordWrapped="true"
+                                    Text="@String/MX_LANG_NAVI_MAP_DESTINATION_VIEW_EMPTY_2_TEXT_Empty_Online" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                Id="@+Id/BtnOnline"
+                                LayoutWidth="664"
+                                LayoutHeight="136"
+                                LayoutTopMargin="247"
+                                LayoutBottomMargin ="30"
+                                Clickable="true"
+                                VisibleSpeechs="@String/MX_LANG_NAVI_SEARCH_RESULT_LIST_EMPTY_1_VisibleSpeechs_02">
+                                <Button
+                                    LayoutWidth="700"
+                                    LayoutHeight="172"
+                                    LayoutTopMargin="-18"
+                                    LayoutBottomMargin="-18"
+                                    LayoutLeftMargin="-18"
+                                    LayoutRightMargin="-16"
+                                    DuplicateParentState="true"
+                                    PaddingTop = "2"
+                                    Clickable="false"
+                                    Background="@Drawable/background_104h_normal_view_raised"
+                                    Text="@String/MX_LANG_NAVI_MAP_RESTRICTION_VIEW_FAILED_BTN_Resctiction_Retry"
+                                    TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                                    TextColor="@Color/BtnFavoriteColor"
+                                    ClickDataCollection="BTN_Research_Online" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <!--List 部分-->
+                        <RelativeLayout
+                            Id="@+Id/Relative_List"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="703"
+                            LayoutLeftMargin="16"
+                            LayoutTopMargin="3"
+                            HorizontalGravity="Left"
+                            Visible="Gone">
+                            <RelativeLayout
+                                Id="@+Id/LayoutResearch"
+                                LayoutWidth="648"
+                                LayoutHeight="168"
+                                LayoutLeftMargin="24"
+                                HorizontalGravity="Center"
+                                Visible="Gone">
+                                <TextActor
+                                    Id="@+Id/PoorNetwork"
+                                    LayoutWidth="612"
+                                    LayoutHeight="FillParent"
+                                    VerticalGravity="Top"
+                                    HorizontalGravity="Left"
+                                    LayoutTopMargin = "16"
+                                    LineIntervalAddFactor="-10"
+                                    TextFont="@Font/UIFont34_Text_L"
+                                    TextColor="@Color/BtnFavoriteColor"
+                                    SingleLine="false"
+                                    WordWrapped="true"
+                                    Text="@String/MX_LANG_NAVI_SEARCH_RESULT_LIST_ONBOARD_TEXT_Search_Result_Onboard1" />
+                                <Button
+                                    Id="@+Id/Btn_ResearchOnline"
+                                    LayoutHeight="45"
+                                    LayoutWidth="WrapContent"
+                                    LayoutTopMargin="95"
+                                    LayoutRightMargin="38"
+                                    LayoutAlignParentRight="true"
+                                    HorizontalGravity="Right"
+                                    Background="@Drawable/list_text_mask_bg"
+                                    ClickDataCollection="BTN_Research_Online"
+                                    Text="@String/MX_LANG_NAVI_SEARCH_RESULT_LIST_ONBOARD_TEXT_Research_Online"
+                                    TextColor="@Color/BtnResearchOnline"
+                                    TextFont="@Font/BtnFont34_N_Text_P_TextM_C_TextM_D_Text"
+                                    VisibleSpeechs="@String/MX_LANG_NAVI_ADD_SEARCH_RESULT_LIST_ONBOARD_VisibleSpeechs_01" />
+                            </RelativeLayout>
+                           <RelativeLayout
+                                Id="@+Id/LayoutListInfo"
+                                LayoutWidth="FillParent"
+                                LayoutHeight="FillParent"
+                                LayoutBelow="@Id/LayoutResearch">
+                                <SmoothListActorEx
+                                    Id="@+Id/SearchResultListActor"
+                                    LayoutWidth="656"
+                                    LayoutHeight="672"
+                                    LayoutLeftMargin = "2"
+                                    DefaultDividerInterval="0"
+                                    VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_04" />
+                            </RelativeLayout>
+                            <SmoothListScrollBar
+                                Id="@+Id/SearchListScrollBar"
+                                LayoutWidth="30"
+                                LayoutHeight="656"
+                                LayoutTopMargin="15"
+                                LayoutLeftMargin="644"
+                                Clickable="true"
+                                ScrollBarLayout="@Layout/CActorScrollbarNewThirty" />
+                            <RelativeLayout
+                                Id="@+Id/LayoutListChargingInfo"
+                                LayoutWidth="FillParent"	
+                                LayoutHeight="FillParent"
+                                LayoutBelow="@Id/LayoutResearch"
+                                LayoutTopMargin = "3"
+                                Visible = "Gone">
+                                <SmoothListActorEx
+                                    Id="@+Id/SearchChargingListActor"
+                                    LayoutWidth="656"
+                                    LayoutHeight="666"
+                                    LayoutLeftMargin = "2"
+                                    DefaultDividerInterval="0"
+                                    VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_04"/>
+                            </RelativeLayout>
+                            <SmoothListScrollBar
+                                Id="@+Id/SearchChargingLisBar"
+                                LayoutWidth="30"
+                                LayoutHeight="656"
+                                LayoutTopMargin="15"
+                                LayoutLeftMargin="644"
+                                Clickable="true"
+                                ScrollBarLayout="@Layout/CActorScrollbarNewThirty"/>
+                            </RelativeLayout>
+                            <RelativeLayout
+                                Id="@+Id/LoadingEX"
+                                LayoutWidth="FillParent"
+                                LayoutHeight="170"
+                                LayoutTopMargin="224"
+                                HorizontalGravity="Center">
+                                <RelativeLayout
+                                    Id="@+Id/Image_Search_Result_Loading"
+                                    LayoutCenterHorizontal="true"
+                                    LayoutWidth="80"
+                                    LayoutHeight="80">
+                                    <AutomaticImageActor
+                                        Id ="@+Id/Automatic_Search_Loading"
+                                        LayoutCenterHorizontal="true"
+                                        LayoutWidth="FillParent"
+                                        LayoutHeight="FillParent"
+                                        ImageChangeTimer="83"
+                                        Cyclable="true"
+                                        Visible = "Gone"
+                                        Drawable="@Drawable/loading_anim_seq_l_LayerList" />
+                                </RelativeLayout>
+                                <TextActor
+                                    Id="@+Id/Title_Search_Result_Loading"
+                                    LayoutWidth="FillParent"
+                                    LayoutHeight="40"
+                                    LayoutTopMargin="127"
+                                    TextFont="@Font/UIFont34_Text_L"
+                                    TextColor="@Color/BtnFavoriteColor"
+                                    Text="@String/MX_LANG_NAVI_MAP_DESTINATION_VIEW_LOADING_TEXT_Loading" />
+                        </RelativeLayout>
+                    </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                LayoutWidth="FillParent"
+                LayoutHeight="FillParent"
+                LayoutLeftMargin="709">
+                <!--回自车 hero btn -->
+                <RelativeLayout
+                    Id="@Id/PreDefine/ReturnCCP"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="172"
+                    LayoutCenterHorizontal="true"
+                    LayoutAlignParentBottom="true"
+                    LayoutBottomMargin="124"
+                    Background="@Drawable/background_104h_hero_prox_day_shadows"
+                    Visible="Gone">
+                    <RelativeLayout
+                        Id="@Id/PreDefine/BtnReturnCCP"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="136"
+                        LayoutLeftMargin="18"
+                        LayoutRightMargin="18"
+                        LayoutCenterInParent="true"
+                        Clickable="true"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_MAP_DESTINATION_VIEW_VisibleSpeechs_02">
+                        <LinearLayout
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="112"
+                            LayoutLeftMargin="12"
+                            LayoutRightMargin="12"
+                            LayoutCenterInParent="true"
+                            DuplicateParentState="true"
+                            Background="@Drawable/Gradient_background_104h_hero_prox">
+                            <ImageActor
+                                LayoutLeftMargin="28"
+                                LayoutCenterVertical="true"
+                                DuplicateParentState="true"
+                                Drawable="@Drawable/back_to_destination_day" />
+                            <!--占位-->
+                            <ImageActor
+                                Id="@Id/PreDefine/SpaceBefore"
+                                LayoutWidth="2"
+                                LayoutHeight="FillParent"
+                                Visible="Gone" />
+                            <TextActor
+                                Id="@Id/PreDefine/TxtReturnCCP"
+                                LayoutHeight="FillParent"
+                                LayoutWidth="WrapContent"
+                                LayoutLeftMargin="8"
+                                LayoutRightMargin="47"
+                                PaddingTop="4"
+                                DuplicateParentState="true"
+                                Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV2_TEXT_Back_to_CCP"
+                                TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                                TextColor="@Color/HeroBtnText_RGB" />
+                            <!--占位-->
+                            <ImageActor
+                                Id="@Id/PreDefine/SpaceAfter"
+                                LayoutWidth="2"
+                                LayoutHeight="FillParent"
+                                Visible="Gone" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+            <!--屏幕搜索 btn -->
+            <RelativeLayout
+					Id = "@+Id/Layout_Search_Nearby"
+					LayoutWidth="498"
+					LayoutHeight="136"
+					LayoutRightOf = "@Id/Layout_Half_Panel"
+					LayoutTopMargin="126"
+					LayoutLeftMargin = "8"
+                    VisibleSpeechs="@String/MX_LANG_NAVI_SEARCH_RESULT_LIST_NEARBY_ONLINE_TEXT_Search_Nearby_Current_Screen_VisibleSpeechs_01"
+					Clickable = "true">
+					<ImageActor
+					    LayoutWidth = "534"
+						LayoutHeight = "172"
+						LayoutTopMargin="-18"
+						LayoutLeftMargin="-18"
+						LayoutBottomMargin="-18"
+						LayoutRightMargin="-18"
+						DuplicateParentState="true"
+						BGHorizontalGravity="Center"
+						BGVerticalGravity="Center"
+						Background = "@Drawable/background_104h_normal_view_raised"/>
+					<ImageActor
+					    Id = "@+Id/Img_Search_Nearby"
+					    LayoutWidth = "80"
+						LayoutHeight = "80"
+						LayoutLeftMargin = "40"
+						LayoutTopMargin = "28"
+						DuplicateParentState="true"
+						Drawable = "@Drawable/search_icon"/>
+					<TextActor 
+						Id = "@+Id/Btn_Search_Nearby"
+						LayoutRightOf = "@Id/Img_Search_Nearby"
+						LayoutWidth = "302"
+						LayoutHeight = "WrapContent"
+						LayoutLeftMargin = "12"
+						LayoutTopMargin = "43"
+						HorizontalGravity = "Left"
+						DuplicateParentState="true"
+                        SingleLine = "false"
+						Text = "@String/MX_LANG_NAVI_SEARCH_RESULT_LIST_NEARBY_ONLINE_TEXT_Search_Nearby_Current_Screen"
+						TextFont="@Font/UIFont40_Text_L"
+						TextColor = "@Color/NormalBtn_RGB" />
+				</RelativeLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

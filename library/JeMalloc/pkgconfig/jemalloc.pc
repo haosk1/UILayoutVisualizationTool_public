@@ -1,0 +1,12 @@
+prefix=/media/Linux/49521dea-9b18-4459-9dd1-a0faebd23993/home/haosk-deepin/MyDisk/学习总结/共通杂项
+exec_prefix=/media/Linux/49521dea-9b18-4459-9dd1-a0faebd23993/home/haosk-deepin/MyDisk/学习总结/共通杂项
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+install_suffix=
+
+Name: jemalloc
+Description: A general purpose malloc(3) implementation that emphasizes fragmentation avoidance and scalable concurrency support.
+URL: http://jemalloc.net/
+Version: 0.0.0_0
+Cflags: -I${includedir}
+Libs: -L${libdir} -ljemalloc${install_suffix}
