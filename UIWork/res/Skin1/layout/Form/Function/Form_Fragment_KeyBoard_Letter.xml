@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@Id/PreDefine/KeyBoardRelative_Main"
+        LayoutWidth="WrapContent"
+		LayoutHeight="498"
+		LayoutTopMargin="459"
+		LayoutLeftMargin = "11"
+		Background="@Drawable/speller_bg"
+		Clickable="true">
+        <RelativeLayout
+            LayoutWidth="WrapContent"
+            LayoutHeight="488"
+            LayoutTopMargin="5"
+            LayoutLeftMargin = "5"
+            LayoutRightMargin = "5">
+            <ImageButton
+                Id="@Id/PreDefine/Btn_ChangMode"
+                LayoutLeftMargin="36"
+                LayoutTopMargin="20"
+                LayoutWidth="64"
+                LayoutHeight="64"
+                Drawable="@Drawable/s_keyboard" />
+            <ImageButton
+                Id="@Id/PreDefine/Btn_Write"
+                LayoutLeftMargin="156"
+                LayoutTopMargin="20"
+                LayoutWidth="64"
+                LayoutHeight="64"
+                Drawable="@Drawable/handwriting" />
+            <LinearLayout
+                Id="@Id/PreDefine/LayoutParent"
+                LayoutWidth="WrapContent"
+                LayoutHeight="FillParent"
+                LayoutRightMargin="8">
+                <LinearLayout
+                    Id="@Id/PreDefine/InputLayout_Left"
+                    LayoutWidth="128"
+                    LayoutHeight="376"
+                    LayoutLeftMargin="8"
+                    LayoutTopMargin="104">
+                    <LinearLayout
+                        Id="@+Id/ChineseShift"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="FillParent"
+                        Orientation="Vertical"
+                        HorizontalGravity="Center">
+                        <ImageButton
+                            Id="@Id/PreDefine/Btn_ChiToEng"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="120"
+						    PaddingTop = "2"
+                            Background="@Drawable/key_one"
+                            Drawable="@Drawable/chn_en" />
+                        <MulitButton
+                            Id="@Id/PreDefine/Btn_Shift"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="120"
+						    LayoutTopMargin="8"
+                            Background="@Drawable/key_one"
+                            Drawable="@Drawable/shift_lower" />
+                        <ImageButton
+                            Id="@Id/PreDefine/Btn_Num"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="120"
+                            LayoutTopMargin="8"
+                            PaddingBottom="4"
+                            Background="@Drawable/key_one"
+                            Drawable="@Drawable/number_special_character" />
+                    </LinearLayout>
+                    <LinearLayout
+                        Id="@+Id/EnglishShift"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="FillParent"
+                        Orientation="Vertical">
+                        <ImageButton
+                            Id="@Id/PreDefine/Btn_EngNum"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="120"
+                            Drawable="@Drawable/number_special_character"
+                            Background="@Drawable/key_two" />
+                        <MulitButton
+                            Id="@Id/PreDefine/Btn_EngShift"
+                            LayoutTopMargin="8"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="248"
+                            Background="@Drawable/key_one"
+                            Drawable="@Drawable/shift_lower" />
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    Id="@Id/PreDefine/Layout_KeyBoard"
+                    LayoutWidth="1192"
+                    LayoutHeight="FillParent"
+                    LayoutLeftMargin="8">
+                    <LinearLayout
+                        LayoutWidth="FillParent"
+                        LayoutHeight="120"
+					    LayoutTopMargin="104">
+                        <Button
+                            Id="@Id/PreDefine/Key_Q"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="q" />
+                        <Button
+                            Id="@Id/PreDefine/Key_W"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="w" />
+                        <Button
+                            Id="@Id/PreDefine/Key_E"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="e" />
+                        <Button
+                            Id="@Id/PreDefine/Key_R"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="r" />
+                        <Button
+                            Id="@Id/PreDefine/Key_T"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="t" />
+                        <Button
+                            Id="@Id/PreDefine/Key_Y"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="y" />
+                        <Button
+                            Id="@Id/PreDefine/Key_U"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="u" />
+                        <Button
+                            Id="@Id/PreDefine/Key_I"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="i" />
+                        <Button
+                            Id="@Id/PreDefine/Key_O"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="o" />
+                        <Button
+                            Id="@Id/PreDefine/Key_P"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="p" />
+                    </LinearLayout>
+                    <LinearLayout
+					LayoutWidth="FillParent"
+					LayoutHeight="120"					
+					LayoutTopMargin="232">
+				    <ImageButton
+                        Id="@Id/PreDefine/BlankLeft"
+                        LayoutWidth="15"
+                        LayoutHeight="120"
+                        Visible = "Gone"/>
+                        <Button
+                            LayoutLeftMargin="60"
+                            Id="@Id/PreDefine/Key_A"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="a" />
+                        <Button
+                            Id="@Id/PreDefine/Key_S"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="s" />
+                        <Button
+                            Id="@Id/PreDefine/Key_D"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="d" />
+                        <Button
+                            Id="@Id/PreDefine/Key_F"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="f" />
+                        <Button
+                            Id="@Id/PreDefine/Key_G"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="g" />
+                        <Button
+                            Id="@Id/PreDefine/Key_H"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="h" />
+                        <Button
+                            Id="@Id/PreDefine/Key_J"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="j" />
+                        <Button
+                            Id="@Id/PreDefine/Key_K"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="k" />
+                        <Button
+                            Id="@Id/PreDefine/Key_L"
+                            LayoutLeftMargin="8"
+                            LayoutRightMargin = "60"
+                            LayoutAlignParentRight="true"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="l" />
+                        <ImageButton
+                            Id="@Id/PreDefine/BlankRight"
+                            LayoutWidth="15"
+                            LayoutHeight="120"
+                            Visible = "Gone"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        LayoutWidth="FillParent"
+                        LayoutHeight="120"
+                        LayoutTopMargin="360">
+                        <Button
+                            Id="@Id/PreDefine/Key_Z"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="z" />
+                        <Button
+                            Id="@Id/PreDefine/Key_X"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="x" />
+                        <Button
+                            Id="@Id/PreDefine/Key_C"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="c" />
+                        <Button
+                            Id="@Id/PreDefine/Key_V"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="v" />
+                        <Button
+                            Id="@Id/PreDefine/Key_B"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="b" />
+                        <Button
+                            Id="@Id/PreDefine/Key_N"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="n" />
+                        <Button
+                            Id="@Id/PreDefine/Key_M"
+                            LayoutLeftMargin="8"
+                            Style="@Style/BtnKeyBoardKeyStyle"
+                            Text="m" />
+                        <ImageButton
+                            Id="@Id/PreDefine/Btn_Space"
+                            LayoutLeftMargin="8"
+                            LayoutWidth="352"
+                            LayoutHeight="120"
+                            Background="@Drawable/key_one"
+                            Drawable="@Drawable/space" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <LinearLayout
+                    Id="@Id/PreDefine/InputLayout_Right"
+                    LayoutWidth="152"
+                    LayoutHeight="376"
+                    LayoutLeftMargin="8"
+                    LayoutTopMargin="104"
+                    Orientation="Vertical">
+                    <RelativeLayout
+                        Id="@Id/PreDefine/Layout_Delete"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="120"
+                        Clickable="true"
+                        Background="@Drawable/key_one">
+                        <ImageActor
+                            Id="@Id/PreDefine/Btn_Delete"
+                            LayoutWidth="64"
+                            LayoutHeight="64"
+                            LayoutTopMargin="28"
+                            LayoutLeftMargin = "64"
+                            DuplicateParentState = "true"
+                            Drawable = "@Drawable/backspace"/>
+				    </RelativeLayout>
+                    <ImageButton
+                        Id="@Id/PreDefine/Btn_KeyBoardConfirm"
+                        LayoutTopMargin="8"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="248"
+                        Background="@Drawable/Gradient_hero_prox"
+                        Drawable="@Drawable/ok_l_c_day" />
+                </LinearLayout>
+            </LinearLayout>
+		<RelativeLayout
+			Id="@Id/PreDefine/Layout_NumberKeyBoard"
+			LayoutWidth="504"
+			LayoutHeight="376"
+			LayoutTopMargin="104"
+			LayoutLeftMargin = "1704">
+			<LinearLayout
+				LayoutWidth="FillParent"
+				LayoutHeight="120"
+				LayoutAlignParentBottom="true">
+				<Button
+					Id="@Id/PreDefine/Key_0"
+					Style = "@Style/BtnNumberKeyBoard"
+					Text = "0"/>
+				<Button
+					Id="@Id/PreDefine/Key_1"
+					Style = "@Style/BtnNumberKeyBoard"
+					LayoutLeftMargin = "8"
+					Text = "1"/>
+				<Button
+					Id="@Id/PreDefine/Key_2"
+					Style = "@Style/BtnNumberKeyBoard"
+					LayoutLeftMargin = "8"
+					Text = "2"/>
+				<Button
+					Id="@Id/PreDefine/Key_3"
+					Style = "@Style/BtnNumberKeyBoard"
+					LayoutLeftMargin = "8"
+					Text = "3"/>
+			</LinearLayout>
+			<LinearLayout
+				LayoutWidth="370"
+				LayoutHeight="120"
+				LayoutLeftMargin = "126"
+				LayoutTopMargin = "128">
+				<Button
+					Id="@Id/PreDefine/Key_4"
+					Style = "@Style/BtnNumberKeyBoard"
+					Text = "4"/>
+				<Button
+					Id="@Id/PreDefine/Key_5"
+					Style = "@Style/BtnNumberKeyBoard"
+					LayoutLeftMargin = "8"
+					Text = "5"/>
+				<Button
+					Id="@Id/PreDefine/Key_6"
+					Style = "@Style/BtnNumberKeyBoard"
+					LayoutLeftMargin = "8"
+					Text = "6"/>
+			</LinearLayout>
+			<LinearLayout
+				LayoutWidth="370"
+				LayoutHeight="120"
+				LayoutLeftMargin = "126">
+				<Button
+					Id="@Id/PreDefine/Key_7"
+					Style = "@Style/BtnNumberKeyBoard"
+					Text = "7"/>
+				<Button
+					Id="@Id/PreDefine/Key_8"
+					Style = "@Style/BtnNumberKeyBoard"
+					LayoutLeftMargin = "8"
+					Text = "8"/>
+				<Button
+					Id="@Id/PreDefine/Key_9"
+					Style = "@Style/BtnNumberKeyBoard"
+					LayoutLeftMargin = "8"
+					Text = "9"/>
+			</LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

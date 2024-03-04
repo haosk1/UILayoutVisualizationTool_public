@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+<!-->Check-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "true" Drawable = "INVALID_ID"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" Drawable = "@Drawable/list_bg_left_down_normal_pressed_hero"/>
+    </StateList>
+</Resource>

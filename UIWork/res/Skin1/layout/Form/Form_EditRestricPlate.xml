@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/LayoutRelative"
+        LayoutHeight="FillParent"
+        Background="@Drawable/navi_image_mask_bg"
+        LayoutWidth="FillParent"
+        Clickable="true">
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <RelativeLayout
+                Id="@Id/PreDefine/MainLayout"
+                LayoutWidth="1302"
+                LayoutHeight="872"
+                LayoutTopMargin="96"
+                Clickable="true"
+                Focusable="true"
+                Background="@Drawable/card_bg_day_and_night">
+                <!--返回BTN-->
+                <!--阴影背景图 172*172-->
+                <RelativeLayout
+                    LayoutHeight="136"
+                    LayoutWidth="136"
+                    LayoutLeftMargin="30"
+                    LayoutTopMargin="30">
+                    <!--圆形BTN 热区 104*104 +16-->
+                    <RelativeLayout
+                        Id="@Id/PreDefine/BTN_Back"
+                        LayoutWidth="117"
+                        LayoutHeight="117"
+                        LayoutCenterInParent="true"
+                        Clickable="true"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_EMPTY_VisibleSpeechs_01">
+                        <!--圆形BTN背景图-->
+                        <RelativeLayout
+                            LayoutWidth="147"
+                            LayoutHeight="147"
+                            Background="@Drawable/btn_h104_background_normal_prox"
+                            LayoutLeftMargin="-14"
+                            LayoutRightMargin="-14"
+                            LayoutTopMargin="-14"
+                            LayoutBottomMargin="-14"
+                            DuplicateParentState="true">
+                            <ImageActor
+                                LayoutWidth="69"
+                                LayoutHeight="69"
+                                LayoutLeftMargin="38"
+                                LayoutTopMargin="38"
+                                DuplicateParentState="true"
+                                Background="@Drawable/close_favorite" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <!-- 设置标题 -->
+                <TextActor
+                    Id="@+Id/Tilte_Setting"
+                    HorizontalGravity="Left"
+                    LayoutLeftMargin="180"
+                    LayoutTopMargin="72"
+                    LayoutHeight="52"
+                    PaddingTop="4"
+                    LayoutWidth="160"
+                    Text="@String/MX_LANG_NAVI_GUIDANCE_SETTING_TITLE_SETTING"
+                    TextFont="@Font/UIFont40_Text_M"
+                    TextColor="@Color/DayBlack_NightWhite" />
+                <LinearLayout
+                    LayoutHeight="WrapContent"
+                    LayoutWidth="300"
+                    LayoutTopMargin="170"
+                    Orientation="Vertical"
+                    LayoutLeftMargin="46"
+                    Background="@Drawable/mixin_bg_normal_DayNight">
+                    <!-- Guidance Btn -->
+                    <RelativeLayout
+                        LayoutHeight="130"
+                        LayoutWidth="300">
+                        <Button
+                            Id="@Id/PreDefine/Btn_Guidance_Setting"
+                            LayoutWidth="300"
+                            LayoutHeight="130"
+                            PaddingTop="5"
+                            VerticalGravity="Center"
+                            Background="@Drawable/menu_bg_1_Setting"
+                            Text="@String/MX_LANG_NAVI_GUIDANCE_SETTING_TEXT_Guidance_Setting"
+                            TextFont="@Font/UIFont40_Text_R"
+                            TextColor="@Color/ListFavColor"
+                            ClickDataCollection="Btn_Guidance_Setting" />
+                        <ImageActor
+                            LayoutHeight="2"
+                            LayoutWidth="300"
+                            LayoutTopMargin="128"
+                            Background="@Drawable/menu_line_DayNight" />
+                    </RelativeLayout>
+                    <!-- map Btn与分割线 -->
+                    <RelativeLayout
+                        LayoutHeight="130"
+                        LayoutWidth="300">
+                        <Button
+                            Id="@Id/PreDefine/Btn_Map_Setting"
+                            LayoutWidth="300"
+                            LayoutHeight="130"
+                            PaddingTop="5"
+                            Background="@Drawable/menu_bg_2_Setting"
+                            VerticalGravity="Center"
+                            Text="@String/MX_LANG_NAVI_GUIDANCE_SETTING_TEXT_Map_Setting"
+                            TextFont="@Font/UIFont40_Text_R"
+                            TextColor="@Color/ListFavColor"
+                            ClickDataCollection="Btn_Map_Setting" />
+                        <ImageActor
+                            LayoutHeight="2"
+                            LayoutWidth="300"
+                            LayoutTopMargin="128"
+                            Background="@Drawable/menu_line_DayNight" />
+                    </RelativeLayout>
+                    <!-- Notifications Btn与分割线 -->
+                    <!-- <RelativeLayout
+						LayoutHeight = "130"
+						LayoutWidth = "312">
+						<Button
+							Id = "@Id/PreDefine/BTN_Notifications_Setting"
+							LayoutWidth="312"
+							LayoutHeight="130"
+							PaddingTop = "8"
+							Background = "@Drawable/menu_bg_2"
+							VerticalGravity = "Center"
+							Text = "@String/MX_LANG_NAVI_GUIDANCE_SETTING_TEXT_Notifications_Setting"
+							TextFont = "@Font/UIFont46_Text_R"
+							TextColor = "@Color/ListFavColor"
+							ClickDataCollection = "BTN_Notifications_Setting"/>
+						<ImageActor
+							LayoutHeight = "2" 
+							LayoutWidth = "312"
+							LayoutTopMargin = "128"
+							Background = "@Drawable/menu_line_DayNight"/>
+					</RelativeLayout> -->
+                    <!-- Audio Btn与分割线 -->
+                    <LinearLayout
+                        LayoutHeight="132"
+                        LayoutWidth="300"
+                        Orientation="Vertical">
+                        <RelativeLayout
+                            LayoutHeight="0"
+                            LayoutWeight="130"
+                            LayoutWidth="300">
+                            <Button
+                                Id="@Id/PreDefine/BTN_Audio_Setup_Setting"
+                                LayoutWidth="300"
+                                LayoutHeight="FillParent"
+                                PaddingTop="5"
+                                PaddingLeft="-1"
+                                Background="@Drawable/menu_bg_2_Setting"
+                                VerticalGravity="Center"
+                                Text="@String/MX_LANG_NAVI_GUIDANCE_SETTING_TEXT_Audio_Setup_Setting"
+                                TextFont="@Font/UIFont40_Text_R"
+                                TextColor="@Color/ListFavColor"
+                                VisibleSpeechs="@String/MX_LANG_NAVI_MAP_SETTING_VisibleSpeechs_05"
+                                ClickDataCollection="BTN_Audio_Setup_Setting" />
+                            <ImageActor
+                                Id="@Id/PreDefine/Icon_line_Audio"
+                                LayoutHeight="2"
+                                LayoutWidth="300"
+                                LayoutTopMargin="128"
+                                Background="@Drawable/menu_line_DayNight" />
+                        </RelativeLayout>
+                        <ImageActor
+                            Id="@Id/PreDefine/BTN_Audio_Setup_Blank"
+                            LayoutHeight="0"
+                            LayoutWeight="2"
+                            LayoutWidth="300"
+                            Visible="Gone" />
+                    </LinearLayout>
+                    <!-- Group Btn与分割线 -->
+                    <LinearLayout
+                        Id="@Id/PreDefine/LayoutGroupDriving"
+                        LayoutHeight="132"
+                        LayoutWidth="300"
+                        LayoutTopMargin="-2"
+                        Orientation="Vertical">
+                        <RelativeLayout
+                            LayoutWeight="130"
+                            LayoutHeight="0"
+                            LayoutWidth="300">
+                            <Button
+                                Id="@Id/PreDefine/BTN_Group_Driving_Setting"
+                                LayoutWidth="300"
+                                LayoutHeight="FillParent"
+                                PaddingTop="3"
+                                Background="@Drawable/menu_bg_2_Setting"
+                                VerticalGravity="Center"
+                                PaddingLeft="3"
+                                Text="@String/MX_LANG_NAVI_GUIDANCE_SETTING_TEXT_Group_Driving_Setting"
+                                TextFont="@Font/UIFont40_Text_R"
+                                TextColor="@Color/ListFavColor"
+                                VisibleSpeechs="@String/MX_LANG_NAVI_MAP_SETTING_VisibleSpeechs_06"
+                                ClickDataCollection="BTN_Group_Driving_Setting" />
+                            <ImageActor
+                                Id="@Id/PreDefine/Icon_line"
+                                LayoutHeight="2"
+                                LayoutWidth="300"
+                                LayoutTopMargin="128"
+                                Visible="Gone"
+                                Background="@Drawable/menu_line_DayNight" />
+                        </RelativeLayout>
+                        <ImageActor
+                            Id="@Id/PreDefine/BTN_Group_Driving_Blank"
+                            LayoutWeight="2"
+                            LayoutHeight="0"
+                            LayoutWidth="300"
+                            Visible="Gone" />
+                    </LinearLayout>
+                    <!-- Charging Btn与分割线 -->
+                    <LinearLayout
+                        Id="@Id/PreDefine/LayoutCharging"
+                        LayoutHeight="130"
+                        LayoutWidth="300"
+                        LayoutTopMargin="-2"
+                        Visible="Gone">
+                        <Button
+                            Id="@Id/PreDefine/BTN_Charging_Setting"
+                            LayoutWidth="300"
+                            LayoutHeight="130"
+                            PaddingTop="5"
+                            PaddingLeft="1"
+                            Background="@Drawable/menu_bg_3_Setting"
+                            VerticalGravity="Center"
+                            Text="@String/MX_LANG_NAVI_CHARGING_SETTING_EV_TEXT_Chargingsetting"
+                            TextFont="@Font/UIFont40_Text_R"
+                            TextColor="@Color/ListFavColor"
+                            ClickDataCollection="BTN_Charging_Setting" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--阴影背景图 172*172-->
+                <RelativeLayout
+                    LayoutHeight="147"
+                    LayoutWidth="147"
+                    LayoutLeftMargin="354"
+                    LayoutTopMargin="148">
+                    <!--圆形BTN 热区 104*104 +16-->
+                    <RelativeLayout
+                        Id="@+Id/Btn_Plate_Return"
+                        LayoutWidth="117"
+                        LayoutHeight="117"
+                        LayoutCenterInParent="true"
+                        Clickable="true"
+                        Focusable="true"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_EMPTY_VisibleSpeechs_02">
+                        <!--圆形BTN背景图-->
+                        <RelativeLayout
+                            LayoutWidth="147"
+                            LayoutHeight="147"
+                            Background="@Drawable/btn_h104_background_normal_prox"
+                            LayoutLeftMargin="-14"
+                            LayoutRightMargin="-14"
+                            LayoutTopMargin="-14"
+                            LayoutBottomMargin="-14"
+                            DuplicateParentState="true">
+                            <ImageActor
+                                LayoutWidth="69"
+                                LayoutHeight="69"
+                                LayoutLeftMargin="38"
+                                LayoutTopMargin="38"
+                                DuplicateParentState="true"
+                                Background="@Drawable/icon_back" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <TextActor
+                    LayoutTopMargin="202"
+                    LayoutLeftMargin="510"
+                    LayoutHeight="45"
+                    LayoutWidth="729"
+                    HorizontalGravity="Left"
+                    TextFont="@Font/UIFont34_Text_M"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_EMPTY_Title_License_Plate_Number"
+                    TextColor="@Color/DayBlack_NightWhite" />
+                <!--城市按钮-->
+                <RelativeLayout
+                    Id="@+Id/Btn_City"
+                    LayoutWidth="228"
+                    LayoutHeight="136"
+                    LayoutTopMargin="278"
+                    LayoutLeftMargin="360"
+                    Clickable="true"
+                    Focusable="true">
+                    <!--背景图-->
+                    <ImageActor
+                        LayoutWidth="274"
+						LayoutHeight="172"
+						LayoutTopMargin="-18"
+						LayoutBottomMargin="-18"
+						LayoutRightMargin="-18"
+						LayoutLeftMargin="-18"
+                        Background="@Drawable/background_104h_normal_view"
+                        DuplicateParentState="true" />
+                    <!-- 文言 -->
+                    <TextActor
+                        Id="@+Id/EditTextActor"
+                        LayoutWidth="40"
+                        LayoutHeight="56"
+                        PaddingTop="2"
+                        LayoutTopMargin="42"
+                        LayoutLeftMargin="60"
+                        Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City8"
+                        TextFont="@Font/UIFont40_Text_L"
+                        TextColor="@Color/NormalBtn_RGB"
+                        DuplicateParentState="true" />
+                    <ImageActor
+                        Id="@+Id/ImgDropdown"
+                        LayoutWidth="69"
+                        LayoutHeight="69"
+                        LayoutTopMargin="28"
+                        LayoutRightMargin="46"
+                        LayoutAlignParentRight="true"
+                        LayoutCenterVertical="true"
+                        Background="@Drawable/arrow_down_icon"
+                        DuplicateParentState="true" />
+                    <!-- <Button 
+						Id = "@+Id/ImgDropdown"
+						LayoutWidth = "132"
+						LayoutHeight = "80"
+						HorizontalGravity = "Right"
+						PaddingTop = "16"
+						PaddingBottom = "16"
+						LayoutLeftMargin = "66"
+						LayoutTopMargin = "28"
+						TextColor = "@Color/NormalBtn_RGB"
+						TextFont="@Font/UIFont40_Text_L" 
+						Text = "@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City8"
+						CompoundRightDrawable="@Drawable/arrow_down_icon"
+						CompoundDrawablePadding="12"
+						DuplicateParentState="true"/> -->
+                </RelativeLayout>
+                <!--中间框-->
+                <LinearLayout
+                    Id="@+Id/EditInputBox"
+                    LayoutWidth="540"
+                    LayoutHeight="106"
+                    LayoutLeftMargin="592"
+                    LayoutTopMargin="294"
+                    Clickable="true"
+                    VerticalGravity="Center"
+                    Background="@Drawable/search_bg_106_raised">
+                    <!--输入框-->
+                    <EditBox
+                        Id="@Id/PreDefine/EditText"
+                        Style="@Style/EditBoxStylePlate"
+                        LayoutWidth="460"
+                        LayoutHeight="FillParent"
+                        TextFont="@Font/UIFont34_Text_L"
+                        LayoutLeftMargin="45"
+                        PaddingLeft="3"
+                        PaddingTop = "-1"
+                        TextColor="@Color/DayBlack_NightWhite"
+                        MoveCursorByClick="true"
+                        MoveCursorByKey="false"
+                        CursorBlink="true"
+                        TextShadow="false"
+                        TextHintColor="@Color/EditHintColor"
+                        TextMaxLength="NoLimit" />
+                    <!--光标-->
+                    <ImageButton
+                        Id="@+Id/CommandCursor"
+                        LayoutWidth="4"
+                        LayoutHeight="92"
+                        LayoutLeftMargin="51"
+                        DuplicateParentState="true"
+                        Background="@Drawable/cursor"
+                        Visible = "Gone"/>
+                </LinearLayout>
+                <!--删除按钮-->
+                <!--阴影背景图 172*172-->
+                <RelativeLayout
+                    LayoutHeight="147"
+                    LayoutWidth="147"
+                    LayoutRightMargin="25"
+                    LayoutAlignParentRight="true"
+                    LayoutTopMargin="272">
+                    <!--圆形BTN 热区 104*104 +16-->
+                    <RelativeLayout
+                        Id="@Id/PreDefine/Btn_Delete"
+                        LayoutWidth="117"
+                        LayoutHeight="117"
+                        LayoutCenterInParent="true"
+                        Clickable="true"
+                        Focusable="true">
+                        <!--圆形BTN背景图-->
+                        <RelativeLayout
+                            LayoutWidth="147"
+                            LayoutHeight="147"
+                            Background="@Drawable/btn_h104_background_normal_prox_carnumber"
+                            LayoutLeftMargin="-14"
+                            LayoutRightMargin="-14"
+                            LayoutTopMargin="-14"
+                            LayoutBottomMargin="-14"
+                            DuplicateParentState="true">
+                            <ImageActor
+                                LayoutWidth="55"
+                                LayoutHeight="55"
+                                LayoutLeftMargin="45"
+                                LayoutTopMargin="45"
+                                DuplicateParentState="true"
+                                Background="@Drawable/backspace_m" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    Id="@+Id/Speller"
+                    LayoutWidth="948"
+                    LayoutHeight="413"
+                    LayoutLeftMargin="375"
+                    LayoutTopMargin="472"
+                    Clickable="true">
+                    <!--英文加字母键盘Start-->
+                    <LinearLayout
+                        LayoutWidth="926"
+                        LayoutHeight="86"
+                        Orientation="Horizontal">
+                        <Button
+                            Id="@Id/PreDefine/Key_1"
+                            Style="@Style/cns_BtnKeyBoard_Key"
+                            Text="1" />
+                        <Button
+                            Id="@Id/PreDefine/Key_2"
+                            Style="@Style/cns_BtnKeyBoard_Key"
+                            Text="2" />
+                        <Button
+                            Id="@Id/PreDefine/Key_3"
+                            Style="@Style/cns_BtnKeyBoard_Key"
+                            Text="3" />
+                        <Button
+                            Id="@Id/PreDefine/Key_4"
+                            Style="@Style/cns_BtnKeyBoard_Key"
+                            Text="4" />
+                        <Button
+                            Id="@Id/PreDefine/Key_5"
+                            Style="@Style/cns_BtnKeyBoard_Key"
+                            Text="5" />
+                        <Button
+                            Id="@Id/PreDefine/Key_6"
+                            Style="@Style/cns_BtnKeyBoard_Key"
+                            Text="6" />
+                        <Button
+                            Id="@Id/PreDefine/Key_7"
+                            Style="@Style/cns_BtnKeyBoard_Key"
+                            Text="7" />
+                        <Button
+                            Id="@Id/PreDefine/Key_8"
+                            Style="@Style/cns_BtnKeyBoard_Key"
+                            Text="8" />
+                        <Button
+                            Id="@Id/PreDefine/Key_9"
+                            Style="@Style/cns_BtnKeyBoard_Key"
+                            Text="9" />
+                        <Button
+                            Id="@Id/PreDefine/Key_0"
+                            Style="@Style/cns_BtnKeyBoard_Key"
+                            Text="0" />
+                    </LinearLayout>
+                    <LinearLayout
+                        LayoutWidth="926"
+                        LayoutHeight="86"
+                        LayoutTopMargin="88"
+                        Orientation="Horizontal">
+                        <Button
+                            Id="@Id/PreDefine/Key_Q"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="Q" />
+                        <Button
+                            Id="@Id/PreDefine/Key_W"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="W" />
+                        <Button
+                            Id="@Id/PreDefine/Key_E"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="E" />
+                        <Button
+                            Id="@Id/PreDefine/Key_R"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="R" />
+                        <Button
+                            Id="@Id/PreDefine/Key_T"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="T" />
+                        <Button
+                            Id="@Id/PreDefine/Key_Y"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="Y" />
+                        <Button
+                            Id="@Id/PreDefine/Key_U"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="U" />
+                        <Button
+                            Id="@Id/PreDefine/Key_I"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="I" />
+                        <Button
+                            Id="@Id/PreDefine/Key_O"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="O" />
+                        <Button
+                            Id="@Id/PreDefine/Key_P"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="P" />
+                    </LinearLayout>
+                    <LinearLayout
+                        LayoutWidth="741"
+                        LayoutHeight="86"
+                        LayoutTopMargin="176"
+                        Orientation="Horizontal">
+                        <Button
+                            Id="@Id/PreDefine/Key_A"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="A" />
+                        <Button
+                            Id="@Id/PreDefine/Key_S"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="S" />
+                        <Button
+                            Id="@Id/PreDefine/Key_D"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="D" />
+                        <Button
+                            Id="@Id/PreDefine/Key_F"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="F" />
+                        <Button
+                            Id="@Id/PreDefine/Key_G"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="G" />
+                        <Button
+                            Id="@Id/PreDefine/Key_H"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="H" />
+                        <Button
+                            Id="@Id/PreDefine/Key_J"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="J" />
+                        <Button
+                            Id="@Id/PreDefine/Key_K"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="K" />
+                    </LinearLayout>
+                    <LinearLayout
+                        LayoutWidth="741"
+                        LayoutHeight="86"
+                        LayoutTopMargin="264"
+                        Orientation="Horizontal">
+                        <Button
+                            Id="@Id/PreDefine/Key_L"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="L" />
+                        <Button
+                            Id="@Id/PreDefine/Key_Z"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="Z" />
+                        <Button
+                            Id="@Id/PreDefine/Key_X"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="X" />
+                        <Button
+                            Id="@Id/PreDefine/Key_C"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="C" />
+                        <Button
+                            Id="@Id/PreDefine/Key_V"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="V" />
+                        <Button
+                            Id="@Id/PreDefine/Key_B"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="B" />
+                        <Button
+                            Id="@Id/PreDefine/Key_N"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="N" />
+                        <Button
+                            Id="@Id/PreDefine/Key_M"
+                            Style="@Style/cns_BtnKeyBoard_END"
+                            Text="M" />
+                    </LinearLayout>
+                    <ImageButton
+                        Id="@Id/PreDefine/Btn_KeyBoardConfirm"
+                        LayoutWidth="178"
+                        LayoutHeight="178"
+                        LayoutLeftMargin="704"
+                        LayoutTopMargin="174"
+                        Background="@Drawable/key_hero"
+                        Drawable="@Drawable/OK_M" />
+                    <!-- </RelativeLayout> -->
+                    <!--英文键盘 End-->
+                </RelativeLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

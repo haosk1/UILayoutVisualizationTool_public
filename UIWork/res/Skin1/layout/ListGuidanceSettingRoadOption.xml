@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/ListItem"
+        LayoutWidth="FillParent"
+        LayoutHeight="362">
+        <RelativeLayout
+            LayoutWidth="880"
+            LayoutHeight="111">
+            <!--标题-->
+            <TextActor
+                Id="@+Id/TITLE_Setting_Route_Option"
+                LayoutWidth="808"
+                LayoutHeight="52"
+                LayoutLeftMargin="36"
+                LayoutTopMargin="48"
+                HorizontalGravity="Left"
+                VerticalGravity="Center"
+                PaddingTop="4"
+                Text="@String/MX_LANG_NAVI_GUIDANCE_SETTING_TITLE_Setting_Route_Option"
+                TextFont="@Font/UIFont34_Text_L"
+                TextColor="@Color/DayBlack_NightWhite" />
+        </RelativeLayout>
+        <RelativeLayout
+           LayoutTopMargin="128">
+            <RelativeLayout
+                LayoutWidth="880"
+                LayoutHeight="214"
+                LayoutTopMargin="10"
+                Background="@Drawable/mixin_bg_normal_DayNight">
+            </RelativeLayout>
+            <!--第一行-->
+            <LinearLayout
+                Id="@+Id/GuidanceLayout1"
+                LayoutWidth="880"
+                LayoutHeight="117"
+                Orientation="Horizontal">
+                <RelativeLayout
+                    Id="@+Id/BTN_Recommend_Option"
+                    LayoutHeight="117"
+                    LayoutWidth="439"
+                    LayoutLeftMargin="0"
+                    Background="@Drawable/list_bg_left"
+                    Focusable="true"
+                    Clickable="true"
+                    VisibleSpeechs = "@String/MX_LANG_NAVI_MAP_VIEW_LIST_WITH_GUIDANCE_EV_VisibleSpeechs_12">
+                    <VividCheckbox
+                        Id="@+Id/RadioBtn_Recommend_Option"
+                        LayoutHeight="104"
+                        LayoutWidth="104"
+                        LayoutTopMargin = "13"
+                        LayoutLeftMargin="36"
+                        Clickable="false"
+                        Focusable="false"
+                        UnCheckToCheck="@Drawable/Gradient_Radiobutton_M_Z06Z10_F_C"
+                        CheckToUnCheck="@Drawable/Gradient_Radiobutton_M_Z10Z06_F_C"
+                        UnCheckToCheckBackground="@Drawable/Radiobutton_M_Z06Z10_B"
+                        CheckToUnCheckBackground="@Drawable/Radiobutton_M_Z10Z06_B" />
+                    <TextActor
+                        LayoutHeight="40"
+                        LayoutWidth="280"
+                        LayoutTopMargin="45"
+                        PaddingTop = "4"
+                        LayoutLeftMargin="140"
+                        DuplicateParentState="true"
+                        HorizontalGravity="Left"
+                        Text="@String/MX_LANG_NAVI_MAP_VIEW_LIST_WITH_GUIDANCE_TEXT_Recommend_Option"
+                        TextFont="@Font/BtnFont34_N_TextL_P_TextR_C_TextR_D_TextL"
+                        TextColor="@Color/ListFavColor" />
+                </RelativeLayout>
+                <ImageActor
+                    LayoutWidth="2"
+                    LayoutHeight="56"
+                    LayoutTopMargin="37"
+                    Drawable="@Drawable/citylist_line_dayAndnight" />
+                <RelativeLayout
+                    Id="@+Id/BTN_Avoid_Highways_Option"
+                    LayoutHeight="117"
+                    LayoutWidth="439"
+                    Background="@Drawable/list_bg_right"
+                    Focusable="true"
+                    Clickable="true"
+                    VisibleSpeechs = "@String/MX_LANG_NAVI_MAP_VIEW_LIST_WITH_GUIDANCE_EV_VisibleSpeechs_13">
+                    <VividCheckbox
+                        Id="@+Id/RadioBtn_Avoid_Highways_Option"
+                        LayoutHeight="104"
+                        LayoutWidth="104"
+                        LayoutTopMargin="13"
+                        LayoutLeftMargin="19"
+                        Clickable="false"
+                        Focusable="false"
+                        UnCheckToCheck="@Drawable/Gradient_Radiobutton_M_Z06Z10_F_C"
+                        CheckToUnCheck="@Drawable/Gradient_Radiobutton_M_Z10Z06_F_C"
+                        UnCheckToCheckBackground="@Drawable/Radiobutton_M_Z06Z10_B"
+                        CheckToUnCheckBackground="@Drawable/Radiobutton_M_Z10Z06_B" />
+                    <TextActor
+                        LayoutHeight="WrapContent"
+                        LayoutWidth="280"
+                        LayoutTopMargin="48"
+                        LayoutLeftMargin="140"
+                        HorizontalGravity="Left"
+                        DuplicateParentState="true"
+                        Text="@String/MX_LANG_NAVI_MAP_VIEW_LIST_WITH_GUIDANCE_TEXT_Avoid_Highways_Option"
+                        TextFont="@Font/BtnFont34_N_TextL_P_TextR_C_TextR_D_TextL"
+                        TextColor="@Color/ListFavColor" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!--第二行-->
+            <LinearLayout
+                Id="@+Id/GuidanceLayout2"
+                LayoutWidth="439"
+                LayoutHeight="117"
+                LayoutTopMargin="117">
+                <RelativeLayout
+                    Id="@+Id/BTN_Less_Charge_Option"
+                    LayoutHeight="117"
+                    LayoutWidth="439"
+                    Background="@Drawable/list_bg_left_down"
+                    LayoutLeftMargin="0"
+                    Focusable="true"
+                    Clickable="true"
+                    VisibleSpeechs = "@String/MX_LANG_NAVI_MAP_VIEW_LIST_WITH_GUIDANCE_EV_VisibleSpeechs_14">
+                    <VividCheckbox
+                        Id="@+Id/RadioBtn_Less_Charge_Option"
+                        LayoutHeight="104"
+                        LayoutWidth="104"
+                        LayoutLeftMargin="36"
+                        Clickable="false"
+                        Focusable="false"
+                        UnCheckToCheck="@Drawable/Gradient_Radiobutton_M_Z06Z10_F_C"
+                        CheckToUnCheck="@Drawable/Gradient_Radiobutton_M_Z10Z06_F_C"
+                        UnCheckToCheckBackground="@Drawable/Radiobutton_M_Z06Z10_B"
+                        CheckToUnCheckBackground="@Drawable/Radiobutton_M_Z10Z06_B" />
+                    <TextActor
+                        LayoutHeight="WrapContent"
+                        LayoutWidth="280"
+                        LayoutTopMargin="35"
+                        LayoutLeftMargin="140"
+                        HorizontalGravity="Left"
+                        DuplicateParentState="true"
+                        Text="@String/MX_LANG_NAVI_MAP_VIEW_LIST_WITH_GUIDANCE_TEXT_Less_Charge_Option"
+                        TextFont="@Font/BtnFont34_N_TextL_P_TextR_C_TextR_D_TextL"
+                        TextColor="@Color/ListFavColor" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

@@ -1,0 +1,550 @@
+﻿<? xml version = "1.0" encoding = "UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="117">
+        <!--1级List 自车-->
+        <LinearLayout
+            Id="@+Id/Lnr_Point_CCP"
+            LayoutWidth="434"
+            LayoutHeight="FillParent"
+            LayoutLeftMargin="27"
+            Clickable="true"
+            HorizontalGravity="Left"
+            VerticalGravity="Center"
+            Orientation="Vertical"
+            Background="@Drawable/card_right_angle_conrners_tripview_bg">
+            <LinearLayout
+                LayoutWidth="FillParent"
+                LayoutHeight="115"
+                HorizontalGravity="Left"
+                VerticalGravity="Center"
+                DuplicateParentState="true">
+                <!--自车图标-->
+                <ImageActor
+                    Id="@+Id/PointImageType_CCP"
+                    LayoutWidth="55"
+                    LayoutHeight="55"
+                    LayoutLeftMargin="17"
+                    LayoutCenterVertical="true"
+                    DuplicateParentState="true"
+                    Background="@Drawable/current_car_position_m_c" />
+                <!--自车名称-->
+                <TextActor
+                    Id="@+Id/TxtPointTitle_CCP"
+                    LayoutCenterVertical="true"
+                    LayoutLeftMargin="14"
+                    LayoutTopMargin="5"
+                    Style="@Style/cns_TripView_Title"
+                    LayoutWidth="199"
+                    LayoutHeight="34"
+                    DuplicateParentState="true" />
+                <RelativeLayout
+                    LayoutWidth="113"
+                    LayoutHeight="113"
+                    LayoutAlignParentRight="true"
+                    LayoutRightMargin="-4"
+                    LayoutLeftMargin="41"
+                    LayoutTopMargin="2">
+                    <!-- 分割线 -->
+                    <ImageActor
+                        LayoutLeftMargin="17"
+                        LayoutWidth="2"
+                        LayoutHeight="48"
+                        LayoutCenterVertical="true"
+                        Background="@Drawable/card_list_vertical_line" />
+                    <!--List折叠/展开 icon-->
+                    <ImageButton
+                        Id="@+Id/ImgListFold_CCP"
+                        LayoutHeight="113"
+                        LayoutWidth="113"
+                        LayoutCenterInParent="true"
+                        DuplicateParentState="true"
+                        Background="@Drawable/h64_background_normal_clear_list"
+                        Drawable="@Drawable/arrow_up_icon" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!--List分割线-->
+            <ImageActor
+                LayoutWidth="434"
+                LayoutHeight="2"
+                Background="@Drawable/radio_button_line" />
+        </LinearLayout>
+        <!--1级List 目的地-->
+        <LinearLayout
+            Id="@+Id/Lnr_Point"
+            LayoutWidth="434"
+            LayoutHeight="FillParent"
+            Clickable="true"
+            LayoutLeftMargin="27"
+            HorizontalGravity="Left"
+            VerticalGravity="Center"
+            Orientation="Vertical"
+            Background="@Drawable/card_right_angle_conrners_tripview_bg">
+            <LinearLayout
+                LayoutWidth="FillParent"
+                LayoutHeight="115"
+                DuplicateParentState="true">
+                <!--目的地图标-->
+                <ImageActor
+                    Id="@+Id/PointImageType"
+                    LayoutWidth="55"
+                    LayoutHeight="55"
+                    LayoutLeftMargin="17"
+                    LayoutTopMargin="33"
+                    DuplicateParentState="true" />
+                <LinearLayout
+                    LayoutWidth="FillParent"
+                    LayoutHeight="69"
+                    HorizontalGravity="Left"
+                    DuplicateParentState="true"
+                    LayoutLeftMargin="12"
+                    LayoutTopMargin="24"
+                    Orientation="Vertical">
+                    <!--目的地名称-->
+                    <TextActor
+                        Id="@+Id/TxtPointTitle"
+                        Text="@String/MX_LANG_NAVI_TRIPVIEW_ROUTE_WITH_STOPOVER_TEXT_Ferry_Line"
+                        Style="@Style/cns_TripView_Title"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="34"
+                        DuplicateParentState="true" />
+                    <LinearLayout
+                        LayoutHeight="34"
+                        DuplicateParentState="true"
+                        LayoutWidth="FillParent">
+                        <LinearLayout
+                            Id="@+Id/Layout_ReachSoc"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="FillParent">
+                            <!--目的地电量图标-->
+                            <ImageActor
+                                Id="@+Id/Icon_DestReachsoc"
+                                HorizontalGravity="Left"
+                                LayoutWidth="22"
+                                LayoutHeight="FillParent"
+                                LayoutCenterVertical="true"
+                                Background="@Drawable/power_48_tripview" />
+                            <TextActor
+                                Id="@+Id/TxtReachSoc_Dest"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="FillParent"
+                                LayoutRightMargin="4"
+                                Style="@Style/cns_TripView_Address" />
+                        </LinearLayout>
+                        <!--目的地距离信息-->
+                        <TextActor
+                            Id="@+Id/TxtDist_Dest"
+                            Style="@Style/cns_TripView_Title"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="34"
+                            DuplicateParentState="true" />
+                        <!--目的地距离单位-->
+                        <TextActor
+                            Id="@+Id/TxtDistUnit_Dest"
+                            Style="@Style/cns_TripView_Address"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="34"
+                            DuplicateParentState="true" />
+                        <!--到达时间-->
+                        <TextActor
+                            Id="@+Id/TxtArrivalTime_Dist"
+                            Style="@Style/cns_TripView_Title"
+                            LayoutLeftMargin="34"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="34" />
+                        <!--到达文言-->
+                        <TextActor
+                            Id="@+Id/TxtArrival_Dist"
+                            Style="@Style/cns_TripView_Address"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="34" />
+                        <!--地址详情-->
+                        <TextActor
+                            Id="@+Id/TxtDetail_Dist"
+                            Style="@Style/cns_TripView_Address"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="34" />
+                    </LinearLayout>
+                    <!--List折叠/展开 icon-->
+                    <ImageButton
+                        Id="@+Id/ImgListFold"
+                        LayoutHeight="69"
+                        LayoutWidth="69"
+                        LayoutLeftMargin="75"
+                        LayoutCenterVertical="true"
+                        DuplicateParentState="true"
+                        Drawable="@Drawable/arrow_up_icon" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--List分割线-->
+            <ImageActor
+                LayoutWidth="434"
+                LayoutHeight="2"
+                Background="@Drawable/radio_button_line" />
+        </LinearLayout>
+        <!--1级List 途经点 长按识别使用-->
+        <LinearLayout
+            Id="@+Id/Lnr_Point_StopOver"
+            LayoutWidth="434"
+            LayoutHeight="FillParent"
+            Clickable="true"
+            HorizontalGravity="Left"
+            VerticalGravity="Center"
+            Orientation="Vertical"
+            LayoutLeftMargin="27"
+            Visible="Gone"
+            Background="@Drawable/card_right_angle_conrners_tripview_bg">
+            <LinearLayout
+                LayoutWidth="FillParent"
+                LayoutHeight="115"
+                HorizontalGravity="Left"
+                VerticalGravity="Center"
+                DuplicateParentState="true">
+                <!--经由地图标-->
+                <ImageActor
+                    Id="@+Id/PointImageType_StopOver"
+                    LayoutWidth="55"
+                    LayoutHeight="55"
+                    LayoutLeftMargin="17"
+                    LayoutTopMargin="33"
+                    DuplicateParentState="true" />
+                <LinearLayout
+                    LayoutWidth="236"
+                    LayoutHeight="69"
+                    HorizontalGravity="Left"
+                    DuplicateParentState="true"
+                    LayoutTopMargin="24"
+                    LayoutLeftMargin="12"
+                    Orientation="Vertical">
+                    <!--经由地名称-->
+                    <TextActor
+                        Id="@+Id/TxtPointTitle_StopOver"
+                        Style="@Style/cns_TripView_Title"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="34"
+                        DuplicateParentState="true" />
+                    <LinearLayout
+                        LayoutHeight="34"
+                        DuplicateParentState="true"
+                        LayoutWidth="FillParent">
+                        <LinearLayout
+                            Id="@+Id/Layout_StopoverSoc"
+                            LayoutHeight="FillParent"
+                            LayoutWidth="WrapContent">
+                            <!--经由地电量图标-->
+                            <ImageActor
+                                Id="@+Id/Icon_Reachsoc"
+                                HorizontalGravity="Left"
+                                LayoutWidth="22"
+                                LayoutHeight="33"
+                                LayoutCenterVertical="true"
+                                Background="@Drawable/power_48_tripview" />
+                            <!--电量-->
+                            <TextActor
+                                Id="@+Id/TxtReachSoc"
+                                HorizontalGravity="Left"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="FillParent"
+                                LayoutRightMargin="4"
+                                Style="@Style/cns_TripView_Address" />
+                        </LinearLayout>
+                        <!--经由地距离信息-->
+                        <TextActor
+                            Id="@+Id/TxtDistance_StopOver"
+                            Style="@Style/cns_TripView_Title"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="FillParent"
+                            DuplicateParentState="true" />
+                        <TextActor
+                            Id="@+Id/TxtDistanceUnit_StopOver"
+                            Style="@Style/cns_TripView_Address"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="FillParent"
+                            DuplicateParentState="true" />
+                        <!--经由地时间信息-->
+                        <TextActor
+                            Id="@+Id/TxtTime_StopOver"
+                            Style="@Style/cns_TripView_Title"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="FillParent"
+                            LayoutLeftMargin="8"
+                            DuplicateParentState="true" />
+                        <!--经由地 - 到达-->
+                        <TextActor
+                            Id="@+Id/TxtArrival_StopOver"
+                            Style="@Style/cns_TripView_Address"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="FillParent"
+                            DuplicateParentState="true" />
+                        <!--经由地 - 地址信息-->
+                        <TextActor
+                            Id="@+Id/TxtDetail_StopOver"
+                            Style="@Style/cns_TripView_Address"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="FillParent"
+                            LayoutLeftMargin="8"
+                            DuplicateParentState="true" />
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    LayoutWidth="113"
+                    LayoutHeight="113"
+                    LayoutAlignParentRight="true"
+                    LayoutRightMargin="-4"
+                    LayoutLeftMargin="6"
+                    LayoutTopMargin="3">
+                    <!-- 分割线 -->
+                    <ImageActor
+                        LayoutLeftMargin="17"
+                        LayoutWidth="2"
+                        LayoutHeight="48"
+                        LayoutCenterVertical="true"
+                        Background="@Drawable/card_list_vertical_line" />
+                    <!--List折叠/展开 icon-->
+                    <ImageButton
+                        Id="@+Id/ImgListFold_StopOver"
+                        LayoutHeight="113"
+                        LayoutWidth="113"
+                        LayoutCenterInParent="true"
+                        DuplicateParentState="true"
+                        Drawable="@Drawable/arrow_up_icon"
+                        Background="@Drawable/h64_background_normal_clear_list" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!--List分割线-->
+            <ImageActor
+                LayoutWidth="434"
+                LayoutHeight="2"
+                Background="@Drawable/radio_button_line" />
+        </LinearLayout>
+        <!--1级List 推荐充电站 长按识别使用-->
+        <LinearLayout
+            Id="@+Id/Lnr_Point_ChargingStation"
+            LayoutWidth="434"
+            LayoutHeight="FillParent"
+            Clickable="true"
+            HorizontalGravity="Left"
+            VerticalGravity="Center"
+            Orientation="Vertical"
+            LayoutLeftMargin="27"
+            Visible="Gone"
+            Background="@Drawable/card_right_angle_conrners_tripview_bg">
+            <LinearLayout
+                LayoutWidth="FillParent"
+                LayoutHeight="115"
+                DuplicateParentState="true">
+                <!--推荐充电站图标-->
+                <ImageActor
+                    Id="@+Id/PointImageType_ChargingStation"
+                    LayoutWidth="55"
+                    LayoutHeight="55"
+                    LayoutLeftMargin="17"
+                    LayoutTopMargin="33" />
+                <LinearLayout
+                    LayoutHeight="FillParent"
+                    HorizontalGravity="Left"
+                    DuplicateParentState="true"
+                    Orientation="Vertical"
+                    LayoutWidth="242"
+                    LayoutLeftMargin="12">
+                    <!--推荐充电站名称-->
+                    <TextActor
+                        Id="@+Id/TxtPointTitle_ChargingStation"
+                        Style="@Style/cns_TripView_Title"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="34"
+                        DuplicateParentState="true" />
+                    <!--推荐充电站详细地址信息-->
+                    <TextActor
+                        Id="@+Id/TxtPointDetailAddress_ChargingStation"
+                        Style="@Style/cns_TripView_Address"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="34"
+                        DuplicateParentState="true" />
+                    <LinearLayout
+                        LayoutHeight="34"
+                        LayoutWidth="FillParent"
+                        DuplicateParentState="true"
+                        VerticalGravity="Center">
+                        <!--电量图标-->
+                        <ImageActor
+                            Id="@+Id/Img_ChargingPower"
+                            LayoutWidth="34"
+                            LayoutHeight="34"
+                            DuplicateParentState="true"
+                            Background="@Drawable/newpower_tripview" />
+                        <!--到达电量~充电电量-->
+                        <TextActor
+                            Id="@+Id/Txt_Charging"
+                            LayoutRightOf="@Id/Img_ChargingPower"
+                            Style="@Style/cns_TripView_Address"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="34"
+                            DuplicateParentState="true" />
+                        <!--时间图标-->
+                        <ImageActor
+                            Id="@+Id/Img_ChargingTime"
+                            LayoutWidth="34"
+                            LayoutHeight="34"
+                            DuplicateParentState="true"
+                            Background="@Drawable/newpower_tripview" />
+                        <!--充电时间-->
+                        <TextActor
+                            Id="@+Id/Txt_ChargingTime"
+                            Style="@Style/cns_TripView_Address"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="34"
+                            DuplicateParentState="true" />
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    LayoutWidth="113"
+                    LayoutHeight="113"
+                    LayoutAlignParentRight="true"
+                    LayoutRightMargin="-4"
+                    LayoutLeftMargin="6"
+                    LayoutTopMargin="3">
+                    <!-- 分割线 -->
+                    <ImageActor
+                        LayoutLeftMargin="17"
+                        LayoutWidth="2"
+                        LayoutHeight="48"
+                        LayoutCenterVertical="true"
+                        Background="@Drawable/card_list_vertical_line" />
+                    <!--List折叠/展开 icon-->
+                    <ImageButton
+                        Id="@+Id/ImgListFold_Charging"
+                        LayoutHeight="113"
+                        LayoutWidth="113"
+                        LayoutCenterInParent="true"
+                        DuplicateParentState="true"
+                        Background="@Drawable/h64_background_normal_clear_list"
+                        Drawable="@Drawable/arrow_up_icon" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!--List分割线-->
+            <ImageActor
+                LayoutWidth="434"
+                LayoutHeight="2"
+                Background="@Drawable/radio_button_line" />
+        </LinearLayout>
+        <!--2级List-->
+        <LinearLayout
+            Id="@+Id/Lnr_Maneuver"
+            LayoutWidth="365"
+            LayoutHeight="FillParent"
+            LayoutLeftMargin="96"
+            HorizontalGravity="Left"
+            VerticalGravity="Center"
+            Visible="Invisible"
+            Clickable="true"
+            Orientation="Vertical"
+            Background="@Drawable/card_right_angle_conrners_tripview_bg">
+            <LinearLayout
+                LayoutWidth="FillParent"
+                LayoutHeight="115"
+                HorizontalGravity="Left"
+                VerticalGravity="Center">
+                <!--Direction部品 资源暂未提供，临时对应-->
+                <ImageActor
+                    Id="@+Id/ImgDir"
+                    LayoutWidth="69"
+                    LayoutHeight="69"
+                    Background="@Drawable/h64_background_normal_active_day"
+                    HorizontalGravity="Center"
+                    VerticalGravity="Center" />
+                <LinearLayout
+                    LayoutWidth="181"
+                    LayoutHeight="FillParent"
+                    LayoutLeftMargin="3"
+                    LayoutTopMargin="24"
+                    Orientation="Vertical">
+                    <!--Title-->
+                    <TextActor
+                        Id="@+Id/TxtWayName"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="34"
+                        Style="@Style/cns_TripView_Title" />
+                    <!--道路番号-->
+                    <LinearLayout
+                        LayoutWidth="FillParent"
+                        LayoutHeight="34"
+                        HorizontalGravity="Left">
+                        <!--带点-->
+                        <TextActor
+                            Id="@+Id/HighWayNo"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="FillParent"
+                            TextFont="@Font/UIFont28_Text_R"
+                            TextColor="@Color/Color_FFFFFF"
+                            LayoutRightMargin="10"
+                            HorizontalGravity="Center"
+                            VerticalGravity="Center"
+                            Visible="Gone" />
+                        <!--不带点-->
+                        <TextActor
+                            Id="@+Id/RNCNo"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="FillParent"
+                            TextFont="@Font/UIFont28_Text_R"
+                            TextColor="@Color/Color_FFFFFF"
+                            LayoutRightMargin="10"
+                            HorizontalGravity="Center"
+                            VerticalGravity="Center"
+                            Visible="Gone" />
+                        <TextActor
+                            Style="@Style/cns_TripView_Address"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="34"
+                            Text="@String/MX_LANG_NAVI_TRIPVIEW_ROUTE_NO_STOPOVER_TEXT_Driving" />
+                        <!--行驶距离-->
+                        <TextActor
+                            Id="@+Id/TxtWayDistance"
+                            Style="@Style/cns_TripView_Title"
+                            LayoutWidth="WrapContent"
+                            LayoutLeftMargin="11"
+                            LayoutHeight="34" />
+                        <!--行驶距离单位-->
+                        <TextActor
+                            Id="@+Id/TxtWayDistanceUnit"
+                            Style="@Style/cns_TripView_Address"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="34" />
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    LayoutWidth="113"
+                    LayoutHeight="113"
+                    LayoutAlignParentRight="true"
+                    LayoutRightMargin="-4"
+                    LayoutLeftMargin="6"
+                    LayoutTopMargin="3">
+                    <!-- 分割线 -->
+                    <ImageActor
+                        LayoutLeftMargin="28"
+                        LayoutWidth="2"
+                        LayoutHeight="48"
+                        LayoutCenterVertical="true"
+                        LayoutTopMargin="2"
+                        Background="@Drawable/card_list_vertical_line" />
+                    <!--List折叠/展开 icon-->
+                    <ImageButton
+                        Id="@+Id/BTN_Block_Road"
+                        LayoutHeight="113"
+                        LayoutWidth="113"
+                        LayoutCenterInParent="true"
+                        DuplicateParentState="true"
+                        ClickDataCollection="BTN_Block_Road"
+                        Drawable="@Drawable/close_favorite"
+                        Background="@Drawable/h64_background_normal_clear_list" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!--List分割线-->
+            <ImageActor
+                LayoutWidth="FillParent"
+                LayoutHeight="2"
+                Background="@Drawable/radio_button_line" />
+        </LinearLayout>
+    </RelativeLayout>
+</Resource>

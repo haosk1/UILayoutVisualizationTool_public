@@ -1,0 +1,188 @@
+<Resource>
+    <RelativeLayout
+        Id="@+Id/LayoutMain"
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent">
+        <LinearLayout
+            Id="@+Id/NullRegion3"
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent" />
+        <RelativeLayout
+            Id="@+Id/LayoutBG"
+            LayoutWidth="900"
+            LayoutHeight="435"
+            LayoutLeftMargin="21"
+            LayoutTopMargin="141" />
+        <ImageActor
+            Id="@Id/PreDefine/ImgSmartCard"
+            LayoutWidth="513"
+            LayoutHeight="FillParent" />
+        <RelativeLayout
+            Id="@+Id/LayoutPrivince"
+            LayoutWidth="948"
+            LayoutHeight="413"
+            LayoutRightOf="@Id/PreDefine/ImgSmartCard"
+            LayoutLeftMargin="362"
+            LayoutTopMargin="530"
+            Visible="Gone"
+            Clickable="true">
+            <!--第一行 京-冀-->
+            <LinearLayout
+                LayoutWidth="926"
+                LayoutHeight="86"
+                LayoutLeftMargin="9"
+                LayoutTopMargin="25">
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_0"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_1"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City8" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_2"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City10" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_3"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City9" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_4"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City18" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_5"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City14" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_6"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City3" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_7"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City2" />
+            </LinearLayout>
+            <!--第二行 豫-鄂-->
+            <LinearLayout
+                LayoutWidth="926"
+                LayoutHeight="86"
+                LayoutLeftMargin="9"
+                LayoutTopMargin="117">
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_8"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City15" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_9"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City21" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_10"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City24" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_11"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City5" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_12"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City6" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_13"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City7" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_14"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City11" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_15"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City16" />
+            </LinearLayout>
+            <!--第三行 湘-津-->
+            <LinearLayout
+                LayoutWidth="926"
+                LayoutHeight="86"
+                LayoutLeftMargin="9"
+                LayoutTopMargin="209">
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_16"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City17" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_17"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City13" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_18"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City12" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_19"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City26" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_20"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City27" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_21"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City28" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_22"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City4" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_23"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City1" />
+            </LinearLayout>
+            <!--第四行 贵-藏-->
+            <LinearLayout
+                LayoutWidth="926"
+                LayoutTopMargin="301"
+                LayoutLeftMargin="9"
+                LayoutHeight="86">
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_24"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City22" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_25"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City23" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_26"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City19" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_27"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City20" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_28"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City29" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_29"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City30" />
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_30"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Text="@String/MX_LANG_NAVI_EDIT_LICENCE_PLATE_CITY_BTN_City25" />
+                <!--补充无用布局-->
+                <Button
+                    Id="@Id/PreDefine/PlateNumberAreaKey_31"
+                    Style="@Style/cns_ProvinceName_Btn"
+                    Enabled="false" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

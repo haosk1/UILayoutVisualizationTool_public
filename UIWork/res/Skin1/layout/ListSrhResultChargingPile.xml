@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/BtnInfo"
+        LayoutWidth="FillParent"
+        LayoutHeight="168"
+        Clickable="true"
+        Focusable="true">
+        <RelativeLayout
+            Id="@+Id/InfoLayout"
+            LayoutHeight="164"
+            LayoutWidth="FillParent"
+            LayoutTopMargin="4"
+            Background="@Drawable/bg_prox"
+            Focusable="true">
+            <!-- 充电桩名称 -->
+            <TextActor
+                Id="@+Id/PileName"
+                LayoutTopMargin="34"
+                LayoutLeftMargin="52"
+                LayoutHeight="40"
+                LayoutWidth="342"
+                HorizontalGravity="Left"
+                TextFont="@Font/UIFont34_Text_R"
+                TextColor="@Color/ListFavColor" />
+            <!-- 充电桩信息 -->
+            <RelativeLayout
+                LayoutTopMargin="76"
+                LayoutWidth="406"
+                LayoutHeight="WrapContent">
+                <TextActor
+                    Id="@+Id/ChargeInfo"
+                    LayoutHeight="34"
+                    LayoutWidth="220"
+                    LayoutLeftMargin="52"
+                    LayoutTopMargin="12"
+                    HorizontalGravity="Left"
+                    TextFont="@Font/UIFont28_Text_L"
+                    TextColor="@Color/ListFavColor" />
+                <ImageActor
+                    LayoutTopMargin="3"
+                    LayoutHeight="48"
+                    LayoutWidth="99"
+                    LayoutLeftMargin="292"
+                    Background="@Drawable/navi_card_cams_bg" />
+                <TextActor
+                    Id="@+Id/ChargeBrand"
+                    LayoutHeight="30"
+                    LayoutWidth="59"
+                    LayoutTopMargin="14"
+                    LayoutLeftMargin="312"
+                    TextFont="@Font/UIFont24_Text_L"
+                    TextColor="@Color/ListFavColor" />
+            </RelativeLayout>
+            <RelativeLayout
+                Id="@+Id/OptionsBtn"
+                LayoutVerticalGravity="Center"
+                LayoutWidth="232"
+                LayoutHeight="116"
+                LayoutTopMargin="22"
+                LayoutLeftMargin="398"
+                Clickable="true"
+                Focusable="true">
+                <!-- 预约/取消预约Btn -->
+                <ImageActor
+                    LayoutWidth="268"
+                    LayoutHeight="152"
+                    LayoutTopMargin="-18"
+                    LayoutLeftMargin="-18"
+                    LayoutBottomMargin="-18"
+                    LayoutRightMargin="-18"
+                    DuplicateParentState="true"
+                    Background="@Drawable/background_84h_normal_list_raised" />
+                <TextActor
+                    Id="@+Id/OptionsText"
+                    LayoutWidth="200"
+                    LayoutHeight="116"
+                    LayoutTopMargin="5"
+                    PaddingLeft="8"
+                    PaddingRight="8"
+                    DuplicateParentState="true"
+                    LayoutCenterHorizontal="true"
+                    TextFont="@Font/BtnFont34_N_TestL_P_TestM"
+                    TextColor="@Color/NormalBtn_RGB"
+                    Text="@String/MX_LANG_NAVI_SEARCH_RESULT_LIST_CHARGING_PILE_EV_BTN_Reservation" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <DayNightStateList>
+<!--Day-->
+		<Item DayOrNight = "Day" Drawable = "@Drawable/logo_wechat_l_day"/>
+<!--Night-->
+		<Item DayOrNight = "Night" Drawable = "@Drawable/logo_wechat_l_night"/>
+    </DayNightStateList>
+</Resource>

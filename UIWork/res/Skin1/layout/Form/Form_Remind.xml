@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+	<RelativeLayout
+		LayoutHeight="FillParent"
+		LayoutWidth="FillParent"
+		Id = "@+Id/Layout" >
+		<RelativeLayout
+			Id="@+Id/RemindLayout"
+			LayoutWidth="508"
+			LayoutHeight="394"
+			LayoutLeftMargin="496"
+			LayoutTopMargin="212"
+			Clickable="true"
+			Visible="Gone"
+			Background="@Drawable/card_bg_day_and_night">
+			<!-- 提示文言 -->
+			<TextActor
+				LayoutWidth="416"
+				LayoutHeight="120"
+				LayoutTopMargin="48"
+				LayoutLeftMargin="46"
+				HorizontalGravity="Left"
+				VerticalGravity="Top"
+				SingleLine="false"
+				LineIntervalAddFactor="-6"
+				LineIntervalMultiFactor="0.1"
+				Text="@String/MX_LANG_NAVI_PNAV_REMIND_Text_Po_Pnav_Remind"
+				TextFont="@Font/UIFont30_Text_L"
+				TextColor="@Color/BtnFavoriteColor"/>
+			<!-- Ignore -->
+			<RelativeLayout
+				Id = "@+Id/BtnIgore"
+				LayoutWidth="448"
+				LayoutHeight="96"
+				LayoutLeftMargin = "30"
+				LayoutTopMargin = "184"
+				VisibleSpeechs = "@String/MX_LANG_NAVI_PNAV_REMIND_TEXT_Remind_VisibleSpeechs_1"
+				Clickable = "true">
+				<TextActor
+					LayoutWidth="484"
+					LayoutHeight="132"
+					LayoutTopMargin="-18"
+					LayoutBottomMargin="-18"
+					LayoutLeftMargin="-18"
+					LayoutRightMargin="-18"
+					PaddingTop="4"
+					Background = "@Drawable/background_64_normal_prox"
+					DuplicateParentState = "true"
+					TextFont= " @Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL"
+					TextColor = "@Color/BtnFavoriteColor"
+					Text="@String/MX_LANG_NAVI_PNAV_REMIND_TEXT_Remind"/>
+			</RelativeLayout>
+			<!-- No remind -->
+			<RelativeLayout
+				Id = "@+Id/BtnNoRemind"
+				LayoutWidth="448"
+				LayoutHeight="96"
+				LayoutLeftMargin = "30"
+				LayoutTopMargin = "268"
+				VisibleSpeechs = "@String/MX_LANG_NAVI_PNAV_REMIND_TEXT_Remind_VisibleSpeechs_2"
+				Clickable = "true">
+				<TextActor
+					LayoutWidth="484"
+					LayoutHeight="132"
+					LayoutTopMargin="-18"
+					LayoutBottomMargin="-18"
+					LayoutLeftMargin="-18"
+					LayoutRightMargin="-18"
+					PaddingTop="4"
+					Background = "@Drawable/background_64_normal_prox"
+					DuplicateParentState = "true"
+					TextFont= " @Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL"
+					TextColor = "@Color/BtnFavoriteColor"
+					Text="@String/MX_LANG_NAVI_PNAV_REMIND_TEXT_No_Remind"/>
+			</RelativeLayout>
+		</RelativeLayout>
+	</RelativeLayout>
+</Resource>

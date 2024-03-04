@@ -1,0 +1,18 @@
+﻿<? xml version = "1.0" encoding = "UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/LayoutParent"
+        LayoutWidth="128"
+        LayoutHeight="88">
+        <Button
+            Id="@+Id/BtnIndoorMap"
+            LayoutWidth="128"
+            LayoutHeight="88"
+            PaddingTop="6"
+            VerticalGravity="Center"
+            HorizontalGravity="Center"
+            Background="@Drawable/floor_BtnIndoor"
+            TextFont="@Font/BtnFont34_N_TextL_P_TextL_C_TextM_D_TextL"
+            TextColor="@Color/BtnIndoorMap" />/&gt;&#x0A;&#x09;
+    </RelativeLayout>
+</Resource>

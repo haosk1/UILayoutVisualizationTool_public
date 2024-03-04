@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "false"  Drawable = "@Drawable/mixin_bg_l_normal_day"/>
+<!-->Check-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "true" Drawable = "@Drawable/mixin_bg_checked"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" Drawable = "@Drawable/mixin_bg_pressed"/>
+	</StateList>
+</Resource>

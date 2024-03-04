@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateListAlpha>
+<!-->Normal-->
+		<Item StateEnabled = "true" Color = "#000000" AlphaValue = "255"/>
+<!-->Disable-->
+		<Item StateEnabled = "false" Color = "#000000" AlphaValue = "140"/>
+    </StateListAlpha>
+</Resource>

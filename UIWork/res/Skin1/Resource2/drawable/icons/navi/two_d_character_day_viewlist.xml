@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "false" Drawable = "@Drawable/navi_2d_character_s_day"/>
+<!-->Check-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "true" Drawable = "@Drawable/navi_2d_character_s_day"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" Drawable = "@Drawable/navi_2d_character_s_pressed_day"/>
+<!-->Disable-->
+		<Item StateEnabled = "false" Drawable = "@Drawable/navi_2d_character_s_disable_day"/>
+    </StateList>
+</Resource>

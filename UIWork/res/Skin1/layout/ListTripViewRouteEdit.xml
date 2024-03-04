@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="128"
+        Clickable="true">
+        <RelativeLayout
+            Id="@+Id/LayoutMain"
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent"
+            Clickable="true"
+            Focusable="true"
+            Background="@Drawable/card_right_angle_conrners_tripview_bg">
+            <ImageActor
+                Id="@+Id/Icon"
+                LayoutHeight="64"
+                LayoutWidth="64"
+                LayoutLeftMargin="25"
+                LayoutCenterVertical="true" />
+            <LinearLayout
+                Id="@+Id/LrnPoint"
+                LayoutWidth="276"
+                LayoutHeight="80"
+                LayoutRightOf="@Id/Icon"
+                LayoutLeftMargin="16"
+                HorizontalGravity="Left"
+                VerticalGravity="Center"
+                LayoutCenterVertical="true"
+                DuplicateParentState="true">
+                <!--经由地/目的地地址信息-->
+                <TextActor
+                    Id="@+Id/TxtPointTitle"
+                    TextFont="@Font/UIFont34_Text_R"
+                    TextColor="@Color/ListPushColor"
+                    HorizontalGravity="Left"
+                    LayoutHeight="FillParent"
+                    LayoutWidth="0"
+                    LayoutWeight="196"
+                    PaddingTop="8"
+                    PaddingLeft = "-1"
+                    LayoutCenterVertical="true"
+                    DuplicateParentState="true" />
+                <ImageActor
+                    Id="@+Id/ImbDrag"
+                    LayoutHeight="FillParent"
+                    LayoutWidth="0"
+                    LayoutWeight="80"
+                    LayoutTopMargin = "2"
+                    LayoutCenterVertical="true"
+                    Drawable="@Drawable/more_m_pressed"
+                    DuplicateParentState="true" />
+            </LinearLayout>
+            <RelativeLayout
+                Id="@+Id/LayoutDelete"
+                LayoutHeight="98"
+                LayoutWidth="98"
+                LayoutTopMargin = "12"
+                LayoutLeftMargin="397">
+                <ImageActor
+                    LayoutHeight="56"
+                    LayoutWidth="2"
+                    LayoutTopMargin="24"
+                    Drawable="@Drawable/citylist_line_dayAndnight" />
+                <ImageButton
+                    Id="@+Id/ImbDelete"
+                    LayoutHeight="80"
+                    LayoutWidth="80"
+                    LayoutTopMargin="12"
+                    LayoutLeftMargin="18"
+                    Drawable="@Drawable/icon_delete_s"
+                    Background="@Drawable/h64_background_normal"
+                    ClickDataCollection="BTN_Delete" />
+            </RelativeLayout>
+            <ImageActor
+                Id="@+Id/ListLine_CCP"
+                LayoutHeight="2"
+                LayoutWidth="520"
+                LayoutLeftMargin = "5"
+                LayoutAlignParentBottom="true"
+                Drawable="@Drawable/card_list_line" />
+            <ImageActor
+                Id="@+Id/ListLine"
+                LayoutHeight="2"
+                LayoutWidth="506"
+                LayoutLeftMargin = "5"
+                LayoutAlignParentBottom="true"
+                Drawable="@Drawable/card_list_line" />
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@Id/PreDefine/KeyBoardRelative_Main"
+        LayoutWidth="WrapContent"
+        LayoutHeight="498"
+		LayoutTopMargin="459"
+		LayoutLeftMargin = "11"
+        Background="@Drawable/speller_bg"
+        Clickable="true">
+        <RelativeLayout
+            LayoutWidth="WrapContent"
+            LayoutHeight="488"
+            LayoutTopMargin="5"
+            LayoutLeftMargin = "5"
+            LayoutRightMargin = "5">
+            <ImageButton
+                Id="@Id/PreDefine/Btn_ChangMode"
+                LayoutLeftMargin="36"
+                LayoutTopMargin="20"
+                LayoutWidth="64"
+                LayoutHeight="64"
+                Drawable="@Drawable/s_keyboard" />
+            <ImageButton
+                Id="@Id/PreDefine/Btn_Spell"
+                LayoutLeftMargin="156"
+                LayoutTopMargin="20"
+                LayoutWidth="64"
+                LayoutHeight="64"
+                Drawable="@Drawable/english_keyboard" />
+            <LinearLayout
+                Id="@Id/PreDefine/LayoutParent"
+                LayoutWidth="WrapContent"
+                LayoutHeight="FillParent"
+                LayoutRightMargin = "8">
+                <LinearLayout
+                    Id="@Id/PreDefine/InputLayout_Left"
+                    LayoutWidth="168"
+                    LayoutHeight="376"
+                    LayoutLeftMargin="8"
+                    LayoutTopMargin="104"
+                    Orientation="Vertical">
+                    <ImageButton
+                        Id="@Id/PreDefine/Btn_Num"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="120"
+                        Background="@Drawable/key_two"
+                        Drawable="@Drawable/number_special_character" />
+                    <ImageButton
+                        Id="@Id/PreDefine/Btn_Space"
+                        LayoutTopMargin="8"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="248"
+                        Background="@Drawable/key_one"
+                        Drawable="@Drawable/space" />
+                </LinearLayout>
+                <RelativeLayout
+                    Id = "@Id/PreDefine/Layout_KeyBoard"
+                    LayoutWidth="1192"
+                    LayoutHeight="376"
+                    LayoutTopMargin="104"
+                    LayoutLeftMargin="8"
+                    Clickable="true"
+                    Background="@Drawable/key_one">
+                    <TextActor
+                        Id="@Id/PreDefine/TextWrite"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="WrapContent"
+                        LayoutCenterInParent="true"
+                        TextColor="@Color/EditHintColor"
+                        TextFont="@Font/UIFont40_Text_R"
+                        Text="@String/MX_LANG_NAVI_HANDWRITE_KEYBOARD_TEXT_Handwrite_Word"
+                        PaddingLeft = "-1"
+                        PaddingTop="2" />
+                    <JPCCWritePanel
+                        Id="@Id/PreDefine/WritePanel"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="FillParent"
+                        WPLineWidth="8"
+                        DrawableStroke="@Drawable/Icon_Texture" />
+                    <TextActor
+                        Id="@+Id/TextWriteColor"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="FillParent"
+                        TextColor="@Color/DayBlack_NightWhite"
+                        Visible="Gone" />
+                </RelativeLayout>
+                <LinearLayout
+                    Id="@Id/PreDefine/InputLayout_Right"
+                    LayoutWidth="152"
+					LayoutHeight="376"
+					LayoutLeftMargin="8"
+					LayoutTopMargin="104"
+                    Orientation="Vertical">
+                    <RelativeLayout
+                        Id="@Id/PreDefine/Layout_Delete"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="120"
+                        Clickable="true"
+                        Background="@Drawable/key_one">
+                        <ImageActor
+                            Id="@Id/PreDefine/Btn_Delete"
+                            LayoutWidth="64"
+                            LayoutHeight="64"
+                            LayoutTopMargin="28"
+                            LayoutLeftMargin = "64"
+                            DuplicateParentState = "true"
+                            Drawable = "@Drawable/backspace"/>
+				    </RelativeLayout>
+                    <ImageButton
+                        Id="@Id/PreDefine/Btn_KeyBoardConfirm"
+                        LayoutTopMargin="8"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="248"
+                        Background="@Drawable/Gradient_hero_prox"
+                        Drawable="@Drawable/ok_l_c_day" />
+                </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout
+                Id="@Id/PreDefine/Layout_NumberKeyBoard"
+                LayoutWidth="432"
+                LayoutHeight="322"
+                LayoutTopMargin="89"
+                LayoutLeftMargin="1461">
+                <LinearLayout
+                    LayoutWidth="FillParent"
+                    LayoutHeight="103"
+                    LayoutAlignParentBottom="true">
+                    <Button
+                        Id="@Id/PreDefine/Key_0"
+                        Style="@Style/BtnNumberKeyBoard"
+                        Text="0" />
+                    <Button
+                        Id="@Id/PreDefine/Key_1"
+                        Style="@Style/BtnNumberKeyBoard"
+                        LayoutLeftMargin="7"
+                        Text="1" />
+                    <Button
+                        Id="@Id/PreDefine/Key_2"
+                        Style="@Style/BtnNumberKeyBoard"
+                        LayoutLeftMargin="7"
+                        Text="2" />
+                    <Button
+                        Id="@Id/PreDefine/Key_3"
+                        Style="@Style/BtnNumberKeyBoard"
+                        LayoutLeftMargin="7"
+                        Text="3" />
+                </LinearLayout>
+                <LinearLayout
+                    LayoutWidth="317"
+                    LayoutHeight="103"
+                    LayoutLeftMargin="108"
+                    LayoutTopMargin="110">
+                    <Button
+                        Id="@Id/PreDefine/Key_4"
+                        Style="@Style/BtnNumberKeyBoard"
+                        Text="4" />
+                    <Button
+                        Id="@Id/PreDefine/Key_5"
+                        Style="@Style/BtnNumberKeyBoard"
+                        LayoutLeftMargin="7"
+                        Text="5" />
+                    <Button
+                        Id="@Id/PreDefine/Key_6"
+                        Style="@Style/BtnNumberKeyBoard"
+                        LayoutLeftMargin="7"
+                        Text="6" />
+                </LinearLayout>
+                <LinearLayout
+                    LayoutWidth="317"
+                    LayoutHeight="103"
+                    LayoutLeftMargin="108">
+                    <Button
+                        Id="@Id/PreDefine/Key_7"
+                        Style="@Style/BtnNumberKeyBoard"
+                        Text="7" />
+                    <Button
+                        Id="@Id/PreDefine/Key_8"
+                        Style="@Style/BtnNumberKeyBoard"
+                        LayoutLeftMargin="7"
+                        Text="8" />
+                    <Button
+                        Id="@Id/PreDefine/Key_9"
+                        Style="@Style/BtnNumberKeyBoard"
+                        LayoutLeftMargin="7"
+                        Text="9" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "false" StateFocused = "false" Drawable = "@Drawable/switch_view_day"/>
+<!-->Check-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "true" Drawable = "@Drawable/switch_view_day"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" Drawable = "@Drawable/switch_view_pressed_day"/>
+<!-->Disable-->
+		<Item StateEnabled = "false" Drawable = "@Drawable/switch_view_disable_day"/>
+    </StateList>
+</Resource>

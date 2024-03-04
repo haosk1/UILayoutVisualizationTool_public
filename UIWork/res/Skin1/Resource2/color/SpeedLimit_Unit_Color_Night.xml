@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+		<Item StateChecked = "false"  Color = "#FFFFFF"/>
+		<Item StateChecked = "true"  Color = "#F10E29"/>
+    </StateList>
+</Resource>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <LinearLayout
+	    LayoutWidth = "FillParent"
+		LayoutHeight="92">
+		<!--自车城市-->
+		<RelativeLayout
+			Id = "@+Id/City_One"
+			LayoutWidth = "410"
+			LayoutHeight = "92"
+			Clickable = "true"
+			Background="@Drawable/City_background_hero_prox"
+			ClickDataCollection = "BTN_Restriction_City">
+			<ImageActor
+				Id = "@+Id/City_CCP"
+				LayoutWidth = "64"
+				LayoutHeight = "64"
+				LayoutTopMargin = "14"
+				LayoutLeftMargin = "11"
+				DuplicateParentState="true"
+				Drawable="@Drawable/icon_locations"/>
+
+				<TextActor
+					Id="@+Id/TEXT_One"
+					LayoutWidth="FillParent"
+					LayoutHeight = "60"
+					LayoutCenterInParent = "true"
+					PaddingTop="5"
+					PaddingLeft="-4"
+					TextColor="@Color/ListFavColor"
+					DuplicateParentState="true"
+					TextFont="@Font/BtnFont40_N_TextL_P_TextR_C_TextR_D_TextL"/>
+
+		</RelativeLayout>
+				<ImageActor
+				Id="@+Id/BtnLine1"
+				LayoutWidth = "2"
+				LayoutHeight = "50"
+				LayoutTopMargin = "21"
+				Visible = "Gone"
+				Drawable="@Drawable/citylist_line_dayAndnight"/>
+
+		<!--目的地城市-->
+		<RelativeLayout
+			Id = "@+Id/City_Two"
+			LayoutWidth = "410"
+			LayoutHeight = "92"
+			Clickable = "true"
+			Background="@Drawable/City_background_hero_prox"
+			ClickDataCollection = "BTN_Restriction_City">
+			<ImageActor
+				Id = "@+Id/City_Dest"
+				LayoutWidth = "64"
+				LayoutHeight = "64"
+				LayoutTopMargin = "12"
+				LayoutLeftMargin = "10"
+				DuplicateParentState="true"
+				Drawable="@Drawable/icon_destination"/>
+			<TextActor
+				Id="@+Id/TEXT_Two"
+				LayoutWidth="FillParent"
+				LayoutHeight = "60"
+				LayoutTopMargin = "19"
+				LayoutLeftMargin = "90"
+				PaddingTop="5"
+				PaddingLeft="1"
+				LayoutCenterInParent = "true"
+				TextColor="@Color/ListFavColor"
+				DuplicateParentState="true"
+				TextFont="@Font/BtnFont40_N_TextL_P_TextR_C_TextR_D_TextL"/>
+
+		</RelativeLayout>
+			<ImageActor
+				Id="@+Id/BtnLine2"
+				LayoutWidth = "2"
+				LayoutHeight = "50"
+				LayoutTopMargin = "21"
+				Visible = "Gone"
+				Drawable="@Drawable/citylist_line_dayAndnight"/>
+		<RelativeLayout
+			Id = "@+Id/City_Three"
+			LayoutWidth = "410"
+			LayoutHeight = "92"
+			Clickable = "true"
+			Background="@Drawable/City_background_hero_prox"
+			ClickDataCollection = "BTN_Restriction_City">
+			<TextActor
+				Id="@+Id/TEXT_Three"
+				LayoutWidth="FillParent"
+				LayoutHeight = "60"
+				LayoutTopMargin = "19"
+				LayoutLeftMargin = "90"
+				PaddingTop="5"
+				LayoutCenterInParent = "true"
+				TextColor="@Color/ListFavColor"
+				DuplicateParentState="true"
+				TextFont="@Font/BtnFont40_N_TextL_P_TextR_C_TextR_D_TextL"/>
+
+		</RelativeLayout>
+    </LinearLayout>
+</Resource>

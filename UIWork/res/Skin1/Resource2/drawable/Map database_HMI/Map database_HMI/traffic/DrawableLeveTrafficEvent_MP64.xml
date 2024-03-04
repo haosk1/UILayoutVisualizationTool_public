@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+	<LevelList>
+		<Item DrawableLevel = "101" Drawable = "@Drawable/mp23_highlight_Lanes_open_101_HMI64_64"/>
+		<Item DrawableLevel = "102" Drawable = "@Drawable/mp23_highlight_Major_roadworks_102_HMI64_64"/>
+		<Item DrawableLevel = "103" Drawable = "@Drawable/mp23_highlight_Accident_103_HMI64_64"/>
+		<Item DrawableLevel = "104" Drawable = "@Drawable/mp23_highlight_Roadworks_104_HMI64_64"/>
+		<Item DrawableLevel = "106" Drawable = "@Drawable/mp23_highlight_Impassable_106_HMI64_64"/>
+		<Item DrawableLevel = "107" Drawable = "@Drawable/mp23_highlight_Slippery_road_107_HMI64_64"/>
+		<Item DrawableLevel = "108" Drawable = "@Drawable/mp23_highlight_Aquaplaning_108_HMI64_64"/>
+		<Item DrawableLevel = "109" Drawable = "@Drawable/mp23_highlight_Fire_109_HMI64_64"/>
+		<Item DrawableLevel = "110" Drawable = "@Drawable/mp23_highlight_Objects_on_the_road_110_HMI64_64"/>
+		<Item DrawableLevel = "111" Drawable = "@Drawable/mp23_highlight_Hazardous_driving_conditions_111_HMI64_64"/>
+		<Item DrawableLevel = "112" Drawable = "@Drawable/mp23_highlight_Extreme_weather_112_HMI64_64"/>
+		<Item DrawableLevel = "113" Drawable = "@Drawable/mp23_highlight_Regulatory_measure_113_HMI64_64"/>
+		<Item DrawableLevel = "115" Drawable = "@Drawable/mp23_highlight_Reduced_visibility_115_HMI64_64"/>
+		<Item DrawableLevel = "116" Drawable = "@Drawable/mp23_highlight_Precipitation_116_HMI64_64"/>
+		<Item DrawableLevel = "118" Drawable = "@Drawable/mp23_highlight_Malfunction_roadside_equipment_118_HMI64_64"/>
+		<Item DrawableLevel = "119" Drawable = "@Drawable/mp23_highlight_Informative_119_HMI64_64"/>
+		<Item DrawableLevel = "120" Drawable = "@Drawable/mp23_highlight_Lanes_closed_120_HMI64_64"/>
+		<Item DrawableLevel = "121" Drawable = "@Drawable/mp23_highlight_Left_lanes_closed_121_HMI64_64"/>
+		<Item DrawableLevel = "122" Drawable = "@Drawable/mp23_highlight_Right_lanes_closed_122_HMI64_64"/>
+		<Item DrawableLevel = "123" Drawable = "@Drawable/mp23_highlight_Serious_accident_123_HMI64_64"/>
+		<Item DrawableLevel = "124" Drawable = "@Drawable/mp23_highlight_Flooding_124_HMI64_64"/>
+		<Item DrawableLevel = "125" Drawable = "@Drawable/mp23_highlight_Landslips_125_HMI64_64"/>
+		<Item DrawableLevel = "126" Drawable = "@Drawable/mp23_highlight_Fuel_on_road_126_HMI64_64"/>
+		<Item DrawableLevel = "127" Drawable = "@Drawable/mp23_highlight_ice_on_road_127_HMI64_64"/>
+		<Item DrawableLevel = "128" Drawable = "@Drawable/mp23_highlight_Heavy_frost_128_HMI64_64"/>
+		<Item DrawableLevel = "129" Drawable = "@Drawable/mp23_highlight_Snow_on_road_129_HMI64_64"/>
+		<Item DrawableLevel = "130" Drawable = "@Drawable/mp23_highlight_Black_ice_on_road_130_HMI64_64"/>
+		<Item DrawableLevel = "131" Drawable = "@Drawable/mp23_highlight_Oil_on_road_131_HMI64_64"/>	
+		<Item DrawableLevel = "135" Drawable = "@Drawable/mp23_highlight_Large_objects_135_HMI64_64"/>
+		<Item DrawableLevel = "136" Drawable = "@Drawable/mp23_highlight_Strong_winds_136_HMI64_64"/>
+		<Item DrawableLevel = "137" Drawable = "@Drawable/mp23_highlight_Hurricane_137_HMI64_64"/>
+		<Item DrawableLevel = "139" Drawable = "@Drawable/mp23_highlight_Blizzard_139_HMI64_64"/>
+		<Item DrawableLevel = "140" Drawable = "@Drawable/mp23_highlight_Visibility_reduced_due_to_fog_140_HMI64_64"/>
+		<Item DrawableLevel = "141" Drawable = "@Drawable/mp23_highlight_Heavy_rain_141_HMI64_64"/>
+		<Item DrawableLevel = "142" Drawable = "@Drawable/mp23_highlight_Heavy_snowfall_142_HMI64_64"/>
+		<Item DrawableLevel = "143" Drawable = "@Drawable/mp23_highlight_Sleet_143_HMI64_64"/>
+		<Item DrawableLevel = "147" Drawable = "@Drawable/mp23_highlight_Traffic_control_signals_working_incorrectly_147_HMI64_64"/>
+		<Item DrawableLevel = "148" Drawable = "@Drawable/mp23_highlight_Contraflow_148_HMI64_64"/>
+		<Item DrawableLevel = "149" Drawable = "@Drawable/mp23_highlight_Major_fire_149_HMI64_64"/>
+		<Item DrawableLevel = "150" Drawable = "@Drawable/mp23_highlight_Rockfalls_150_HMI64_64"/>
+		<Item DrawableLevel = "151" Drawable = "@Drawable/mp23_highlight_Earthquake_damage_151_HMI64_64"/>
+		<Item DrawableLevel = "152" Drawable = "@Drawable/mp23_highlight_Subsidence_152_HMI64_64"/>
+		<Item DrawableLevel = "153" Drawable = "@Drawable/mp23_highlight_Broken_down_unlit_vehicle_153_HMI64_64"/>
+		<Item DrawableLevel = "154" Drawable = "@Drawable/mp23_highlight_Damaging_hail_154_HMI64_64"/>
+		<Item DrawableLevel = "155" Drawable = "@Drawable/mp23_highlight_Thunderstorm_155_HMI64_64"/>
+		<Item DrawableLevel = "156" Drawable = "@Drawable/mp23_highlight_Visibility_reduced_due_to_sandstorms_156_HMI64_64"/>
+		<Item DrawableLevel = "157" Drawable = "@Drawable/mp23_highlight_Sports_event_157_HMI64_64"/>
+		<Item DrawableLevel = "158" Drawable = "@Drawable/mp23_highlight_Vehicles_slowing_to_look_at_accident_158_HMI64_64"/>
+        <Item DrawableLevel = "159" Drawable = "@Drawable/mp23_highlight_Broken_down_vehicle_159_HMI64_64"/>
+		<Item DrawableLevel = "226" Drawable = "@Drawable/mp23_highlight_Major_event_226_HMI64_64"/>
+		<Item DrawableLevel = "224" Drawable = "@Drawable/mp23_highlight_Sewer_collapse_224_HMI64_64"/>
+		<Item DrawableLevel = "225" Drawable = "@Drawable/mp23_highlight_Burst_pipe_225_HMI64_64"/>
+		<Item DrawableLevel = "220" Drawable = "@Drawable/mp23_highlight_Shed_load_220_HMI64_64"/>
+		<Item DrawableLevel = "221" Drawable = "@Drawable/mp23_highlight_Demonstration_221_HMI64_64"/>
+		<Item DrawableLevel = "222" Drawable = "@Drawable/mp23_highlight_Fair_222_HMI64_64"/>
+		<Item DrawableLevel = "223" Drawable = "@Drawable/mp23_highlight_Festival_223_HMI64_64"/>
+	</LevelList>
+</Resource>

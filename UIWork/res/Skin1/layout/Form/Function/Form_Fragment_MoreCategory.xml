@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/LayoutRelative"
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent"
+        Background="@Drawable/navi_image_mask_bg"
+        Clickable="true">
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <RelativeLayout
+                Id="@+Id/MainLayout"
+                LayoutWidth="1136"
+                LayoutHeight="872"
+                LayoutTopMargin="96"
+                Clickable="true"
+                Background="@Drawable/card_bg_day_and_night">
+                <RelativeLayout
+                    Id="@+Id/FullScreen"
+                    LayoutWidth="1104"
+                    LayoutHeight="840"
+                    LayoutTopMargin="16"
+                    LayoutLeftMargin="16">
+                    <RelativeLayout
+                        LayoutWidth="172"
+                        LayoutHeight="172"
+                        LayoutTopMargin="-4"
+                        LayoutLeftMargin="-4"
+                        HorizontalGravity="Center"
+                        VerticalGravity="Center">
+                        <ImageButton
+                            Id="@+Id/BtnReturn"
+                            LayoutWidth="136"
+                            LayoutHeight="136"
+                            Background="@Drawable/h104_background_prox"
+                            Drawable="@Drawable/favorite_back"
+                            ClickDataCollection="BTN_Back"
+                            VisibleSpeechs="@String/NAVI_ADD_STOPOVER_VisibleSpeechs_01" />
+                    </RelativeLayout>
+                    <!--标题-->
+                    <TextActor
+                        Id="@+Id/TxtTitle"
+                        HorizontalGravity="Left"
+                        LayoutLeftMargin="164"
+                        LayoutTopMargin="55"
+                        LayoutHeight="52"
+                        PaddingTop="5"
+                        LayoutWidth="500"
+                        TextFont="@Font/UIFont40_Text_M"
+                        TextColor="@Color/DayBlack_NightWhite"
+                        Text="@String/MX_LANG_NAVI_SEARCH_MORE_POI_CATEGORY_Title_More_Category" />
+                    <LinearLayout
+                        Id="@Id/PreDefine/EditBoxLayout"
+                        LayoutWidth="916"
+                        LayoutHeight="106"
+                        LayoutTopMargin="30"
+                        LayoutLeftMargin="158"
+                        Background="@Drawable/search_bg_106_raised">
+                        <EditBox
+                            Id="@Id/PreDefine/EditText"
+                            Style="@Style/EditBoxStyle"
+                            LayoutWidth="706"
+                            LayoutHeight="52"
+                            LayoutLeftMargin="48"
+                            LayoutTopMargin="25"
+                            PaddingTop="5"
+                            PaddingLeft = "1"
+                            TextFont=" @Font/UIFont46_Text_R"
+                            TextShadow="false"
+                            TextHintColor="@Color/EditHintColor"
+                            TextColor="@Color/DayBlack_NightWhite"
+                            ClickDataCollection="BTN_Input_Field" />
+                        <ImageButton
+                            Id="@Id/PreDefine/Btn_DeleteAll"
+                            LayoutHeight="80"
+                            LayoutWidth="80"
+                            LayoutAlignParentRight="true"
+                            LayoutTopMargin="12"
+                            LayoutLeftMargin = "50"
+                            ClickDataCollection="BTN_Input_Delete_All"
+                            Drawable="@Drawable/close_favorite" />
+                    </LinearLayout>
+                    <LinearLayout
+                        Id="@Id/PreDefine/LayoutShift"
+                        LayoutWidth="303"
+                        LayoutHeight="137"
+                        LayoutTopMargin="15"
+                        LayoutLeftMargin="645"
+                        Background="@Drawable/button_card_bg"
+                        VerticalGravity="Center"
+                        Visible="Gone">
+                        <ImageButton
+                            Id="@Id/PreDefine/BTN_Shift_Left"
+                            LayoutWidth="117"
+                            LayoutHeight="117"
+                            LayoutLeftMargin="38"
+                            Background="@Drawable/h104_background_normal_prox_raised"
+                            Drawable="@Drawable/arrow_left" />
+                        <ImageButton
+                            Id="@Id/PreDefine/BTN_Shift_Right"
+                            LayoutWidth="117"
+                            LayoutHeight="117"
+                            LayoutLeftMargin="5"
+                            Background="@Drawable/h104_background_normal_prox_raised"
+                            Drawable="@Drawable/arrow_right" />
+                    </LinearLayout>
+                    <!--列表-->
+                    <RelativeLayout
+                        Id="@+Id/SuperListLayout"
+                        LayoutTopMargin="167"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="673">
+                        <SuperList
+                            Id="@+Id/SuperList"
+                            LayoutLeftMargin="0"
+                            LayoutWidth="1104"
+                            LayoutHeight="FillParent"
+                            VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_01" />
+                        <SmoothListScrollBar
+                            Id="@+Id/SmoothListScrollBar"
+                            LayoutLeftMargin="1038"
+                            LayoutWidth="66"
+                            LayoutHeight="678"
+                            LayoutTopMargin = "-5"
+                            ScrollBarLayout="@Layout/CActorScrollBarNew" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        Id="@+Id/SuggestionListLayout"
+                        LayoutTopMargin="162"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="FillParent">
+                        <SmoothListActorEx
+                            Id="@Id/PreDefine/SmoothListActor"
+                            LayoutLeftMargin="30"
+                            LayoutWidth="1008"
+                            LayoutHeight="670"
+                            DefaultDividerInterval="0"
+                            WipeEnabled="true"
+                            Orientation="Vertical"
+                            ListDeleteAnimation="true" />
+                        <SmoothListScrollBar
+                            Id="@Id/PreDefine/SmoothListScrollBar"
+                            LayoutLeftMargin="1038"
+                            LayoutTopMargin="136"
+                            LayoutWidth="66"
+                            LayoutHeight="542"
+                            ScrollBarLayout="@Layout/CActorScrollBarNew" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

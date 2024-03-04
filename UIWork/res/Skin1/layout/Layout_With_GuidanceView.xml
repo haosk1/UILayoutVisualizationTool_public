@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@Id/PreDefine/Layout_MotorWayInfo1_BigPattern_Background"
+        LayoutWidth="552"
+        LayoutHeight="144"
+        DuplicateParentState="true">
+        <!--提醒按钮 提醒状态-->
+        <RelativeLayout
+            Id="@Id/PreDefine/Btn_MotorWayInfo1_Remind"
+            LayoutWidth="212"
+            LayoutHeight="64"
+            LayoutAlignParentRight="true"
+            LayoutRightMargin="20"
+            LayoutTopMargin="12"
+            Background="@Drawable/SAPA_remind_on_m"
+            Clickable="true">
+            <LinearLayout
+                LayoutWidth="WrapContent"
+                LayoutHeight="FillParent"
+                LayoutCenterHorizontal = "true"
+                VerticalGravity = "Center"
+                DuplicateParentState="true">
+            <ImageActor
+                LayoutWidth="36"
+                LayoutHeight="36"
+                Drawable="@Drawable/duihao_sel_small_36"
+                DuplicateParentState="true" />
+            <TextActor
+                LayoutWidth="WrapContent"
+                LayoutHeight="34"
+                PaddingTop="4"
+                TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL"
+                TextColor="@Color/Color_F68B00"
+                Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_SERVICE_BTN_Service_Remind_On"
+                DuplicateParentState="true" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!--提醒按钮 未提醒状态-->
+        <RelativeLayout
+            Id="@Id/PreDefine/Btn_MotorWayInfo1_NoRemind"
+            LayoutWidth="212"
+            LayoutHeight="64"
+            LayoutAlignParentRight="true"
+            LayoutRightMargin="20"
+            LayoutTopMargin="12"
+            Background="@Drawable/SAPA_remind_off_m"
+            Clickable="true">
+            <LinearLayout
+                LayoutWidth="WrapContent"
+                LayoutHeight="FillParent"
+                LayoutCenterHorizontal = "true"
+                VerticalGravity = "Center"
+                DuplicateParentState="true">
+            <ImageActor
+                LayoutWidth="36"
+                LayoutHeight="36"
+                Drawable="@Drawable/remind_small_36_normal_press" 
+                DuplicateParentState="true"/>
+            <TextActor
+                LayoutWidth="WrapContent"
+                LayoutHeight="34"
+                PaddingTop="4"
+                TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL"
+                TextColor="@Color/Color_FFFFFF"
+                Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_SERVICE_BTN_Service_Remind_Off"
+                DuplicateParentState="true" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!--名称-->
+        <TextActor
+            Id="@Id/PreDefine/Img_MotorWayInfo1_Name_BigPattern"
+            LayoutWidth="280"
+            LayoutHeight="40"
+            LayoutLeftMargin="20"
+            LayoutTopMargin="24"
+            Text="ShenYang"
+            PaddingTop="4"
+            TextFont="@Font/UIFont34_Text_R"
+            HorizontalGravity="Left"
+            TextColor="@Color/Color_FFFFFF" />
+        <!--收费站类型ICON-->
+        <LinearLayout
+            Id="@Id/PreDefine/Layout_MotorWayInfo1_Toll_Type_Icon"
+            LayoutWidth="WrapContent"
+            LayoutHeight="40"
+            LayoutTopMargin="88"
+            LayoutLeftMargin="20"
+            Orientation="Horizontal"
+            Visible="Gone">
+            <!--ETC收费-->
+            <ImageActor
+                Id="@Id/PreDefine/Img_MotorWayInfo1_Toll_Type_Icon_ETC"
+                LayoutWidth="40"
+                LayoutHeight="40"
+                Drawable="@Drawable/etc_40" />
+            <!--人工收费站-->
+            <ImageActor
+                Id="@Id/PreDefine/Img_MotorWayInfo1_Toll_Type_Icon_Toll"
+                LayoutWidth="40"
+                LayoutHeight="40"
+                Drawable="@Drawable/charge_40" />
+        </LinearLayout>
+        <!--SAPA类型ICON-->
+        <LinearLayout
+            Id="@Id/PreDefine/Layout_MotorWayInfo1_SAPA_Type_Icon"
+            LayoutWidth="WrapContent"
+            LayoutHeight="40"
+            LayoutTopMargin="88"
+            LayoutLeftMargin="20"
+            Orientation="Horizontal">
+            <!--加油站-->
+            <ImageActor
+                Id="@Id/PreDefine/Img_MotorWayInfo1_SAPA_Type_Icon_petrolstation"
+                LayoutWidth="40"
+                LayoutHeight="40"
+                Drawable="@Drawable/PetrolstationOrCharge_40" />
+            <!--公共厕所-->
+            <ImageActor
+                Id="@Id/PreDefine/Img_MotorWayInfo1_SAPA_Type_Icon_tolite"
+                LayoutWidth="40"
+                LayoutHeight="40"
+                Drawable="@Drawable/toilet_40" />
+            <!--餐饮-->
+            <ImageActor
+                Id="@Id/PreDefine/Img_MotorWayInfo1_SAPA_Type_Icon_food"
+                LayoutWidth="40"
+                LayoutHeight="40"
+                Drawable="@Drawable/food_40" />
+            <!--购物-->
+            <ImageActor
+                Id="@Id/PreDefine/Img_MotorWayInfo1_SAPA_Type_Icon_Shopping"
+                LayoutWidth="40"
+                LayoutHeight="40"
+                Drawable="@Drawable/shopping_40" />
+            <!--住宿-->
+            <ImageActor
+                Id="@Id/PreDefine/Img_MotorWayInfo1_SAPA_Type_Icon_hotel"
+                LayoutWidth="40"
+                LayoutHeight="40"
+                Drawable="@Drawable/hotel_40" />
+            <!--汽车服务中心-->
+            <ImageActor
+                Id="@Id/PreDefine/Img_MotorWayInfo1_SAPA_Type_Icon_automobileservice"
+                LayoutWidth="40"
+                LayoutHeight="40"
+                Drawable="@Drawable/dazhong_40" />
+            <!--ATM-->
+            <ImageActor
+                Id="@Id/PreDefine/Img_MotorWayInfo1_SAPA_Type_Icon_ATM"
+                LayoutWidth="40"
+                LayoutHeight="40"
+                Drawable="@Drawable/atm_40" />
+            <!--无子设施时显示停车icon-->
+            <ImageActor
+                Id="@Id/PreDefine/Img_MotorWayInfo1_SAPA_Type_Icon_Parking"
+                LayoutWidth="40"
+                LayoutHeight="40"
+                Drawable="@Drawable/park_40" />
+        </LinearLayout>
+        <!--距离-->
+        <TextActor
+            Id="@Id/PreDefine/Img_MotorWayInfo1_Dist_BigPattern"
+            LayoutLeftOf = "@Id/PreDefine/Img_MotorWayInfo1_Unit_BigPattern"
+            LayoutTopMargin="88"
+            LayoutWidth="92"
+            LayoutHeight="40"
+            PaddingTop="4"
+            Text="9999"
+            TextFont="@Font/UIFont32_Text_B"
+            TextColor="@Color/Color_FFFFFF"
+            HorizontalGravity="Right" />
+        <!--单位-->
+        <TextActor
+            Id="@Id/PreDefine/Img_MotorWayInfo1_Unit_BigPattern"
+            LayoutAlignParentRight="true"
+            LayoutTopMargin="88"
+            LayoutRightMargin="20"
+            LayoutWidth="WrapContent"
+            LayoutHeight="40"
+            PaddingTop="4"
+            Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Distance_TEXT_Km"
+            TextFont="@Font/UIFont32_Text_L"
+            TextColor="@Color/Color_FFFFFF"
+            HorizontalGravity="Left" />
+    </RelativeLayout>
+</Resource>

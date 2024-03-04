@@ -1,0 +1,112 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<Resource>
+	<RelativeLayout
+		LayoutWidth = "FillParent"
+		LayoutHeight = "86"
+		LayoutCenterVertical = "true">
+		<Button
+			Id = "@+Id/BtnCategory1"
+			LayoutWidth = "360"
+			LayoutHeight = "80"
+			PaddingLeft = "20"
+			PaddingRight = "20"
+			PaddingTop = "2"
+			LayoutLeftMargin = "10"
+			TextFont = "@Font/BtnFont34_N_TextL_P_TextR_C_TextR_D_TextL"
+			TextColor = "@Color/ListFavColor"
+			Background = "@Drawable/btn_text_com"
+			Visible = "Gone"/>
+		<Button
+			Id = "@+Id/BtnCategoryOpen1"
+			LayoutWidth = "360"
+			LayoutHeight = "80"
+			TextFont = "@Font/BtnFont34_N_TextL_P_TextR_C_TextR_D_TextL"
+			TextColor = "@Color/ListFavColor"
+			Background = "@Drawable/btn_text_com"
+			Text = "@String/MX_LANG_NAVI_SEARCH_MORE_CATEGORY_OPEN_TEXT_More"
+			CompoundRightDrawable = "@Drawable/arrow_down_cardlist"
+			CompoundDrawablePadding = "-133"
+			PaddingRight = "70"
+            LayoutLeftMargin = "10"
+			PaddingLeft = "20"
+			Visible = "Gone"/>
+		<ImageActor
+			Id = "@+Id/BtnCategoryLine1"
+			LayoutWidth="2"
+			LayoutHeight="56"
+			LayoutTopMargin = "10"
+			LayoutLeftMargin = "370"
+			Drawable="@Drawable/citylist_line"/>
+		<Button
+			Id = "@+Id/BtnCategory2"
+			LayoutRightOf = "@Id/BtnCategory1"
+			LayoutWidth = "360"
+			LayoutHeight = "80"
+			LayoutLeftMargin = "2"
+			PaddingTop = "2"
+			PaddingLeft = "20"
+			PaddingRight = "20"
+			TextFont = "@Font/BtnFont34_N_TextL_P_TextR_C_TextR_D_TextL"
+			TextColor = "@Color/ListFavColor"
+			Background = "@Drawable/btn_text_com"
+			Visible = "Gone"/>
+		<Button
+			Id = "@+Id/BtnCategoryOpen2"
+			LayoutRightOf = "@Id/BtnCategory1"
+			LayoutWidth = "360"
+			LayoutHeight = "82"
+			LayoutLeftMargin = "2"
+			TextFont = "@Font/BtnFont34_N_TextL_P_TextR_C_TextR_D_TextL"
+			TextColor = "@Color/ListFavColor"
+			Background = "@Drawable/btn_text_com"
+			Text = "@String/MX_LANG_NAVI_SEARCH_MORE_CATEGORY_OPEN_TEXT_More"
+			CompoundRightDrawable = "@Drawable/arrow_down_cardlist"
+			CompoundDrawablePadding = "-133"
+			PaddingRight = "70"
+			PaddingLeft = "20"
+			Visible = "Gone"/>
+		<ImageActor
+			Id = "@+Id/BtnCategoryLine2"
+			LayoutWidth="2"
+			LayoutHeight="56"
+			LayoutTopMargin = "10"
+			LayoutLeftMargin = "732"
+			Drawable="@Drawable/citylist_line"/>
+		<Button
+			Id = "@+Id/BtnCategory3"
+			LayoutRightOf = "@Id/BtnCategory2"
+			LayoutWidth = "340"
+			LayoutHeight = "80"
+			PaddingTop = "2"
+			LayoutLeftMargin = "2"
+			PaddingLeft = "20"
+			PaddingRight = "0"
+			TextFont = "@Font/BtnFont34_N_TextL_P_TextR_C_TextR_D_TextL"
+			TextColor = "@Color/ListFavColor"
+			Background = "@Drawable/btn_text_com"
+			Visible = "Gone"/>
+		<Button
+			Id = "@+Id/BtnCategoryOpen3"
+			LayoutRightOf = "@Id/BtnCategory2"
+			LayoutWidth = "340"
+			LayoutHeight = "80"
+			LayoutLeftMargin = "2"
+			TextFont = "@Font/BtnFont34_N_TextL_P_TextR_C_TextR_D_TextL"
+			TextColor = "@Color/ListFavColor"
+			Background = "@Drawable/btn_text_com"
+			Text = "@String/MX_LANG_NAVI_SEARCH_MORE_CATEGORY_OPEN_TEXT_More"
+			CompoundRightDrawable = "@Drawable/arrow_down_cardlist_icon"
+			CompoundDrawablePadding = "-144"
+			PaddingTop = "2"
+			PaddingLeft = "0"
+			PaddingRight = "60"
+			Visible = "Gone"/>
+		<!--占位用，不显示-->
+		<ImageActor
+			Id = "@+Id/BtnCategoryLine3"
+			LayoutWidth="2"
+			LayoutHeight="56"
+			LayoutTopMargin = "10"
+			LayoutLeftMargin = "1030"/>
+	</RelativeLayout>
+</Resource>

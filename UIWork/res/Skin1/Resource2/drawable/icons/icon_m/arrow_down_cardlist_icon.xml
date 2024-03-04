@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <ScaleDrawableRectCustomStateList>
+<!-->Normal-->
+		<Item PaddingTop = "-5" Drawable = "@Drawable/arrow_down_cardlist"/>
+    </ScaleDrawableRectCustomStateList>
+</Resource>

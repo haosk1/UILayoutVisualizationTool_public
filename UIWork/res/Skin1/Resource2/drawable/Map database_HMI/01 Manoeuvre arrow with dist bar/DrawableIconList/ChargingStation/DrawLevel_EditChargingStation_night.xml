@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Resource>
+    <LevelList>
+                <Item DrawableLevel = "22" Drawable = "@Drawable/Charging_station_on_route_night"/>
+                <Item DrawableLevel = "23" Drawable = "@Drawable/Charging_station_on_route_night"/>
+                <Item DrawableLevel = "24" Drawable = "@Drawable/Charging_station_on_route_night"/>
+	</LevelList>
+</Resource>

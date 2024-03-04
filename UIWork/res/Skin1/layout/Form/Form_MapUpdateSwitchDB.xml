@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent"
+        Background="@Drawable/map_place_night_and_day"
+        Clickable="true">
+        <RelativeLayout
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent"
+            LayoutLeftMargin="492">
+            <RelativeLayout
+                LayoutWidth="WrapContent"
+                LayoutHeight="WrapContent"
+                LayoutCenterInParent="true"
+                Background="@Drawable/popup_toast_bg">
+                <RelativeLayout
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="WrapContent"
+                    LayoutCenterInParent="true"
+                    LayoutLeftMargin="34"
+                    LayoutRightMargin="34"
+                    LayoutTopMargin="34"
+                    LayoutBottomMargin="34">
+                    <TextActor
+                        Id="@+Id/NavigationStarting"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="WrapContent"
+                        LayoutLeftMargin = "100"
+                        LayoutRightMargin = "100"
+                        LayoutTopMargin = "30"
+                        LayoutBottomMargin = "30"
+                        PaddingTop = "6"
+                        LineIntervalAddFactor="-11"
+                        TextColor="@Color/NormalBtn_RGB"
+                        TextFont="@Font/UIFont34_Text_L"
+                        WordWrapped="true"
+                        SingleLine="false"
+                        Text="@String/MX_LANG_NAVI_DOMAIN_NOT_AVAILABLE_TEXT_Domain_Not_Available" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

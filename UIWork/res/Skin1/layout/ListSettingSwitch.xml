@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id = "@+Id/ListItem"
+        LayoutWidth = "FillParent"
+        LayoutHeight = "130"
+        Focusable="true">
+        <RelativeLayout
+            LayoutWidth = "FillParent"
+            LayoutHeight = "FillParent">
+            <RelativeLayout
+                Id = "@+Id/RelativeLayout_Switch"
+                LayoutHeight = "110"
+                LayoutWidth = "880"
+                Background = "@Drawable/bg_prox_pressed_selected_DayNight"
+                LayoutTopMargin = "10"
+                DuplicateParentState="true"
+                Clickable = "true"
+                Focusable = "true">
+                <TextActor
+                    Id = "@+Id/Text_Setting_Switch"
+                    LayoutWidth = "670"
+                    LayoutHeight = "WrapContent"
+                    LayoutLeftMargin = "36"
+                    HorizontalGravity = "Left"
+                    VerticalGravity = "Center"
+                    LayoutTopMargin = "35"
+                    PaddingTop = "2"
+                    DuplicateParentState="true"
+                    TextFont = "@Font/UIFont34_Text_R"
+                    TextColor = "@Color/ListFavColor"/>
+                <VividCheckbox
+                    Id = "@+Id/BTN_Setting_Switch"
+                    LayoutHeight = "104"
+                    LayoutWidth = "104"
+                    LayoutCenterVertical = "true"
+                    LayoutLeftMargin = "740"
+                    Clickable = "false"
+                    Focusable = "false"
+                    UnCheckToCheck="@Drawable/Gradient_Switch_M_Z06Z10_F_C"
+                    CheckToUnCheck="@Drawable/Gradient_Switch_M_Z10Z06_F_C"
+                    UnCheckToCheckBackground="@Drawable/Switch_M_Z06Z10_B"
+                    CheckToUnCheckBackground="@Drawable/Switch_M_Z10Z06_B"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

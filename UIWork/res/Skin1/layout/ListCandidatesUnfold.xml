@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/ListCanLayoutParent"
+        LayoutWidth="FillParent"
+        LayoutHeight="126"
+        Focusable="true"
+        Clickable="true">
+        <LinearLayout
+            Id="@Id/PreDefine/LayoutCandidatesCharList"
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent"
+            Orientation="Horizontal"
+            LayoutLeftMargin = "1"
+            DrawFocusWhenRemoteFunctionClosed="true"
+            DuplicateParentState="true">
+            <LinearLayout
+                Id="@Id/PreDefine/LayoutCandidatesCharListBtn1"
+                LayoutWidth="WrapContent"
+                LayoutHeight="FillParent">
+                <Button
+                    Id="@Id/PreDefine/CandidatesCharListBtn1"
+                    LayoutWidth="FillParent"
+                    Style="@Style/BtnKeyBoardCandidatesListStyle" />
+                <ImageActor
+                    Id="@Id/PreDefine/CandidatesCharListDivider1"
+                    Style="@Style/DividerKeyBoardCandidatesListStyle" />
+            </LinearLayout>
+            <LinearLayout
+                Id="@Id/PreDefine/LayoutCandidatesCharListBtn2"
+                LayoutWidth="WrapContent"
+                LayoutHeight="FillParent">
+                <Button
+                    Id="@Id/PreDefine/CandidatesCharListBtn2"
+                    LayoutWidth="FillParent"
+                    Style="@Style/BtnKeyBoardCandidatesListStyle" />
+                <ImageActor
+                    Id="@Id/PreDefine/CandidatesCharListDivider2"
+                    Style="@Style/DividerKeyBoardCandidatesListStyle" />
+            </LinearLayout>
+            <LinearLayout
+                Id="@Id/PreDefine/LayoutCandidatesCharListBtn3"
+                LayoutWidth="WrapContent"
+                LayoutHeight="FillParent">
+                <Button
+                    Id="@Id/PreDefine/CandidatesCharListBtn3"
+                    LayoutWidth="FillParent"
+                    Style="@Style/BtnKeyBoardCandidatesListStyle" />
+                <ImageActor
+                    Id="@Id/PreDefine/CandidatesCharListDivider3"
+                    Style="@Style/DividerKeyBoardCandidatesListStyle" />
+            </LinearLayout>
+            <LinearLayout
+                Id="@Id/PreDefine/LayoutCandidatesCharListBtn4"
+                LayoutWidth="WrapContent"
+                LayoutHeight="FillParent">
+                <Button
+                    Id="@Id/PreDefine/CandidatesCharListBtn4"
+                    LayoutWidth="FillParent"
+                    Style="@Style/BtnKeyBoardCandidatesListStyle" />
+                <ImageActor
+                    Id="@Id/PreDefine/CandidatesCharListDivider4"
+                    Style="@Style/DividerKeyBoardCandidatesListStyle" />
+            </LinearLayout>
+            <LinearLayout
+                Id="@Id/PreDefine/LayoutCandidatesCharListBtn5"
+                LayoutWidth="WrapContent"
+                LayoutHeight="FillParent">
+                <Button
+                    Id="@Id/PreDefine/CandidatesCharListBtn5"
+                    LayoutWidth="FillParent"
+                    Style="@Style/BtnKeyBoardCandidatesListStyle" />
+                <ImageActor
+                    Id="@Id/PreDefine/CandidatesCharListDivider5"
+                    Style="@Style/DividerKeyBoardCandidatesListStyle" />
+            </LinearLayout>
+            <LinearLayout
+                Id="@Id/PreDefine/LayoutCandidatesCharListBtn6"
+                LayoutWidth="WrapContent"
+                LayoutHeight="FillParent">
+                <Button
+                    Id="@Id/PreDefine/CandidatesCharListBtn6"
+                    LayoutWidth="FillParent"
+                    Style="@Style/BtnKeyBoardCandidatesListStyle" />
+                <ImageActor
+                    Id="@Id/PreDefine/CandidatesCharListDivider6"
+                    Style="@Style/DividerKeyBoardCandidatesListStyle" />
+            </LinearLayout>
+            <!-- <LinearLayout
+                LayoutWidth="WrapContent"
+                LayoutHeight="FillParent">
+                <Button
+                    Id="@Id/PreDefine/CandidatesCharListBtn7"
+                    Style="@Style/BtnKeyBoardCandidatesListStyle" />
+                <ImageActor
+                    Id="@Id/PreDefine/CandidatesCharListDivider7"
+                    Style="@Style/DividerKeyBoardCandidatesListStyle" />
+            </LinearLayout> -->
+            <!-- <LinearLayout
+                LayoutWidth="WrapContent"
+                LayoutHeight="FillParent">
+                <Button
+                    Id="@Id/PreDefine/CandidatesCharListBtn8"
+                    Style="@Style/BtnKeyBoardCandidatesListStyle" />
+                <ImageActor
+                    Id="@Id/PreDefine/CandidatesCharListDivider8"
+                    Style="@Style/DividerKeyBoardCandidatesListStyle" />
+            </LinearLayout>
+            <LinearLayout
+                LayoutWidth="WrapContent"
+                LayoutHeight="FillParent">
+                <Button
+                    Id="@Id/PreDefine/CandidatesCharListBtn9"
+                    Style="@Style/BtnKeyBoardCandidatesListStyle" />
+                <ImageActor
+                    Id="@Id/PreDefine/CandidatesCharListDivider9"
+                    Style="@Style/DividerKeyBoardCandidatesListStyle" />
+            </LinearLayout>
+            <LinearLayout
+                LayoutWidth="WrapContent"
+                LayoutHeight="FillParent">
+                <Button
+                    Id="@Id/PreDefine/CandidatesCharListBtn10"
+                    Style="@Style/BtnKeyBoardCandidatesListStyle" />
+                <ImageActor
+                    Id="@Id/PreDefine/CandidatesCharListDivider10"
+                    Style="@Style/DividerKeyBoardCandidatesListStyle" />
+            </LinearLayout>
+            <LinearLayout
+                LayoutWidth="WrapContent"
+                LayoutHeight="FillParent">
+                <Button
+                    Id="@Id/PreDefine/CandidatesCharListBtn11"
+                    Style="@Style/BtnKeyBoardCandidatesListStyle" />
+                <ImageActor
+                    Id="@Id/PreDefine/CandidatesCharListDivider11"
+                    Style="@Style/DividerKeyBoardCandidatesListStyle" />
+            </LinearLayout> -->
+        </LinearLayout>
+        <ImageActor
+            Id="@+Id/horizontal_divider"
+            LayoutWidth="1782"
+            LayoutHeight="2"
+            LayoutLeftMargin="17"
+            LayoutAlignParentBottom="true"
+            Drawable="@Drawable/horizontal_divider" />
+    </RelativeLayout>
+</Resource>

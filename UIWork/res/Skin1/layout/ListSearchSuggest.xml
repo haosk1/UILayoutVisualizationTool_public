@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <HorizontalWipeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="136"
+        Orientation="Horizontal"
+        VerticalGravity="Center"
+        MaxWipeWidth="240"
+        RightWipeEnabled="true"
+        Clickable="true">
+        <RelativeLayout
+            Id="@+Id/ListInfo"
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent"
+            Background="@Drawable/mixin_bg"
+            Clickable="false">
+           <RelativeLayout
+                Id="@+Id/CurrentPosition"
+                DrawFocusWhenRemoteFunctionClosed="true"
+                Background="@Drawable/mixin_bg"
+                Clickable="true"
+                LayoutWidth="FillParent"
+                LayoutHeight="FillParent">
+                <ImageActor
+                    LayoutWidth="64"
+                    LayoutHeight="64"
+                    LayoutLeftMargin="32"
+                    LayoutTopMargin="36"
+                    VerticalGravity="Center"
+                    Drawable="@Drawable/current_car_position_m_c"
+                    DuplicateParentState="true" />
+                <!--当前位置-->
+                <TextActor
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="52"
+                    LayoutLeftMargin="128"
+                    LayoutTopMargin="44"
+                    DuplicateParentState="true"
+                    HorizontalGravity="Left"
+                    Text="@String/MX_LANG_NAVI_ADD_MAIN_TEXT_Add_Current_Position"
+                    TextFont="@Font/UIFont40_Text_R"
+                    TextColor="@Color/ListFavColor" />
+            </RelativeLayout>
+            <RelativeLayout
+                Id="@+Id/LinearMain"
+                DrawFocusWhenRemoteFunctionClosed="true"
+                DuplicateParentState="true"
+                LayoutWidth="FillParent"
+                LayoutHeight="FillParent">
+                <RelativeLayout
+                    Id="@+Id/ListMain"
+                    LayoutWidth="1008"
+                    LayoutHeight="116"
+                    LayoutTopMargin="10"
+                    Clickable="true"
+                    Background="@Drawable/bg_prox_night_Suggest">
+                    <ImageActor
+                        Id="@+Id/List_Icon"
+                        LayoutWidth="64"
+                        LayoutHeight="64"
+                        LayoutLeftMargin="33"
+                        LayoutTopMargin="27"
+                        VerticalGravity="Center"
+                        DuplicateParentState="true" />
+                    <LinearLayout
+                        Id="@+Id/ListInfoLayout"
+                        LayoutWidth="774"
+                        LayoutHeight="116"
+                        LayoutLeftMargin="128"
+                        Orientation="Vertical"
+                        VerticalGravity="Center"
+                        DuplicateParentState="true">
+                        <LinearLayout
+                            Id="@+Id/ListInfoFirstRow"
+                            Orientation="Horizontal"
+                            LayoutWidth="646"
+                            LayoutHeight="52"
+                            LayoutTopMargin="4"
+                            DuplicateParentState="true">
+                            <!--名称-->
+                            <TextActor
+                                Id="@+Id/ListMainBody"
+                                LayoutLeftMargin="0"
+                                VerticalGravity="Center"
+                                HorizontalGravity="Left"
+                                TextStyleArray="@ReferenceArray/SrhSuggestTextHight10"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="52"
+                                DuplicateParentState="true"
+                                TextStyleUsed="true"
+                                ShowEllipsis="true"
+                                TextFont="@Font/UIFont40_Text_R"
+                                TextColor="@Color/DayBlack_NightWhite_Grey_pressed" />
+                            <!--分类标签-->
+                            <TextActor
+								Id="@+Id/CategoryType"
+								LayoutHeight="48"
+								LayoutWidth="WrapContent"
+								LayoutRightOf = "@Id/ListMainBody"
+								LayoutLeftMargin = "12"
+								PaddingLeft = "12"
+								PaddingRight = "12"
+								TextColor="@Color/ListFavColor"
+								TextFont="@Font/UIFont24_Text_L"
+								DuplicateParentState="true"
+								Background="@Drawable/navi_card_cams_bg"
+								Visible = "Gone"
+								MaxFormatWidth = "120"
+								Text="CategoryType"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            Id="@+Id/LayoutAddress"
+                            LayoutTopMargin="4"
+                            LayoutHeight="43"
+                            LayoutWidth="644"
+                            Orientation="Horizontal"
+                            DuplicateParentState="true">
+                            <TextActor
+                                Id="@+Id/Distance"
+                                HorizontalGravity="Left"
+                                LayoutAlignParentRight="true"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="40"
+                                TextFont="@Font/UIFont34_Text_L"
+                                TextColor="@Color/DayBlack_NightWhite_Grey_pressed"
+                                LayoutRightMargin="11"
+                                SingleLine="false"
+                                DuplicateParentState="true" />
+                            <ImageActor
+                                Id="@+Id/AddressPoint"
+                                HorizontalGravity="Left"
+                                LayoutWidth = "5"
+								LayoutHeight = "6"
+								LayoutTopMargin = "17"
+								LayoutRightMargin = "12"
+                                DuplicateParentState="true"
+                                Drawable="@Drawable/icon_separation_symbols" />
+                            <!--地址-->
+                            <TextActor
+                                Id="@+Id/Addr"
+                                HorizontalGravity="Left"
+                                LayoutWidth="FillParent"
+                                LayoutHeight="FillParent"
+                                VerticalGravity="Center"
+                                TextFont="@Font/UIFont34_Text_L"
+                                TextColor="@Color/DayBlack_NightWhite_Grey_pressed"
+                                ShowEllipsis="true"
+                                DuplicateParentState="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+                <!--单条列表快捷按钮-->
+                <LinearLayout
+				    LayoutWidth = "FillParent"
+					LayoutHeight = "FillParent"
+					Orientation="Horizontal"
+					HorizontalGravity = "Right"
+					LayoutLeftMargin = "794">
+					<RelativeLayout
+					    Id="@+Id/LayoutAddStopOver"
+						LayoutWidth = "WrapContent"
+						LayoutHeight = "FillParent"
+						Clickable = "true"
+						LayoutRightMargin="-4">
+						<ImageActor
+                            Id="@+Id/AddLine"
+							LayoutWidth="2"
+							LayoutHeight="56"
+							LayoutTopMargin="40"
+							LayoutLeftMargin = "2"
+							Drawable="@Drawable/citylist_line"/>
+						<ImageButton
+							Id="@+Id/AddStopOver"
+							LayoutWidth="112"
+							LayoutHeight="112"
+							LayoutTopMargin = "12"
+							Background = "@Drawable/h84_background_normal"
+							Drawable="@Drawable/naviadd_view"
+							Visible="Gone"/>
+					</RelativeLayout>
+					<RelativeLayout
+					        Id="@+Id/LayoutCalculate"
+					 		LayoutWidth = "WrapContent"
+							LayoutHeight = "FillParent"
+							Clickable = "true"
+							LayoutRightMargin="-4">	    
+							<ImageActor
+								LayoutWidth="2"
+								LayoutHeight="56"
+								LayoutTopMargin="40"
+								LayoutLeftMargin = "2"
+								Drawable="@Drawable/citylist_line"/>
+							<ImageButton
+								Id="@+Id/Calculate"
+								LayoutWidth="112"
+								LayoutHeight="112"
+								LayoutTopMargin = "12"
+								Background = "@Drawable/h84_background_normal"
+								Drawable="@Drawable/icon_navi_overall_view"
+								Visible="Gone"/>
+					</RelativeLayout>
+				</LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+				Id="@+Id/BtnDeleteAll"
+				LayoutVerticalGravity="Center"
+				LayoutWidth="464"
+				LayoutHeight="116"
+				LayoutLeftMargin="285"
+				LayoutTopMargin = "9"
+				Clickable="true">
+				<ImageActor
+					LayoutWidth="500"
+					LayoutHeight="152"
+					LayoutTopMargin="-18"
+					LayoutLeftMargin="-18"
+					LayoutBottomMargin="-18"
+					LayoutRightMargin="-18"
+					DuplicateParentState="true"
+					BGHorizontalGravity="Center"
+					BGVerticalGravity="Center"
+					Background = "@Drawable/background_84h_normal_view_deleteall"/>
+				<ImageActor
+				    Id = "@+Id/Delete"
+				    LayoutWidth="80"
+					LayoutHeight="80"
+					LayoutTopMargin="19"
+					LayoutLeftMargin="37"
+					DuplicateParentState="true"
+					VerticalGravity="Center"
+					Drawable="@Drawable/navi_delete_m"/>
+				<TextActor
+					LayoutHeight="40"
+					LayoutWidth="300"
+					LayoutTopMargin="42"
+					LayoutLeftMargin="108"
+					DuplicateParentState="true"
+					HorizontalGravity = "Center"
+					VerticalGravity="Center"
+					Text="@String/MX_LANG_NAVI_SEARCH_MAIN_WITH_GUIDANCE_BTN_History_Delete_All"
+					TextFont = "@Font/BtnFont34_N_TextL_P_TextM_C_TextM_D_TextL"
+					TextColor = "@Color/NormalBtn_RGB"/>
+			</RelativeLayout>
+        </RelativeLayout>
+        <HorizontalWipeDecoration
+		    Id="@+Id/LayoutLeftSwipe"
+			LayoutWidth="240"
+            LayoutHeight="136"
+			DeleteRegionX="240"
+			LayoutLeftMargin="814">
+			<LinearLayout
+				LayoutWidth="FillParent"
+				LayoutHeight="136"
+				HorizontalGravity = "Left">
+				<ImageButton
+					Id="@+Id/BtnAddFavorite"
+					Background="@Drawable/h110_background_list_collection"
+					Drawable="@Drawable/favorite_m"
+					PaddingTop = "-4"
+					LayoutTopMargin = "10"
+					LayoutLeftMargin = "10"
+					LayoutWidth="110"
+					LayoutHeight="116"
+					Visible="Visible"
+					ClickDataCollection="BTN_Favorite"/>
+				<ImageButton
+					Id="@+Id/BtnDelete"
+					Background="@Drawable/h110_background_list_delete"
+					Drawable="@Drawable/fav_delete"
+					LayoutTopMargin = "10"
+					LayoutLeftMargin = "10"
+					LayoutWidth="110"
+					LayoutHeight="116"
+					ClickDataCollection="BTN_History_Delete_Item"/>
+			</LinearLayout>
+		</HorizontalWipeDecoration>
+    </HorizontalWipeLayout>
+</Resource>

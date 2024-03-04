@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/Root"
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent">
+        <!-- HMI界面布局部分，此元器件LayoutWidth表示半屏尺寸 -->
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <LinearLayout
+                Id="@+Id/BoardLayout"
+                LayoutWidth="724"
+                LayoutHeight="872"
+                LayoutTopMargin="96"
+                Background="@Drawable/card_bg_day_and_night"
+                Orientation="Vertical"
+                Clickable="true">
+                <!-- Title 部分 -->
+                <RelativeLayout
+                    LayoutWidth="FillParent"
+                    LayoutHeight="166">
+                    <RelativeLayout
+                        LayoutWidth="136"
+                        LayoutHeight="136"
+                        LayoutTopMargin="30"
+                        LayoutLeftMargin="30">
+                        <ImageButton
+                            Id="@Id/PreDefine/BtnReturn"
+                            LayoutHeight="136"
+                            LayoutWidth="136"
+                            LayoutLeftMargin="26"
+                            LayoutCenterInParent="true"
+                            LayoutVerticalGravity="Center"
+                            Drawable="@Drawable/icon_back"
+                            Background="@Drawable/btn_h104_background_normal_prox"
+                            DuplicateParentState="true" />
+                    </RelativeLayout>
+                    <TextActor
+                        Id="@+Id/Title_Charging_Pile_List"
+                        LayoutWidth="364"
+                        LayoutHeight="52"
+                        LayoutTopMargin="74"
+                        LayoutLeftMargin="180"
+                        HorizontalGravity="Left"
+                        TextColor="@Color/DayBlack_NightWhite"
+                        TextFont="@Font/UIFont40_Text_M"
+                        Text="@String/MX_LANG_NAVI_SEARCH_RESULT_LIST_CHARGING_PILE_EV_TITLE_Charging_Pile_List" />
+                </RelativeLayout>
+                <!-- Loading -->
+                <RelativeLayout
+                    Id="@+Id/LoadingLayout"
+                    LayoutWidth="FillParent"
+                    LayoutHeight="FillParent"
+                    ClipChildren="false"
+                    Orientation="Vertical">
+                    <AutomaticImageActor
+                        Id="@+Id/LoadingImage_Color"
+                        LayoutWidth="80"
+                        LayoutHeight="80"
+                        LayoutTopMargin="224"
+                        LayoutLeftMargin="321"
+                        ImageChangeTimer="83"
+                        Cyclable="true"
+                        Drawable="@Drawable/loading_anim_seq_l_LayerList"
+                        Visible = "Gone" />
+                    <TextActor
+                        Id="@+Id/LoadingText"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="51"
+                        LayoutTopMargin="346"
+                        TextColor="@Color/DayBlack_NightWhite"
+                        TextFont="@Font/UIFont34_Text_L"
+                        Text="@String/MX_LANG_NAVI_SEARCH_RESULT_LIST_CHARGING_PILE_LOADING_EV_TEXT_Loading_Charging" />
+                </RelativeLayout>
+                <!-- 充电桩列表 -->
+                <RelativeLayout
+                    Id="@+Id/ChargingPileLayout"
+                    LayoutWidth="FillParent"
+                    LayoutHeight="FillParent"
+                    LayoutLeftMargin="34"
+                    Visible="Gone">
+                    <SmoothListActorEx
+                        Id="@Id/PreDefine/SmoothListActor"
+                        LayoutWidth="656"
+                        LayoutHeight="672"
+                        DefaultDividerInterval="0"
+                        VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_Find_By_Number_01" />
+                    <SmoothListScrollBar
+                        Id="@Id/PreDefine/SmoothListScrollBar"
+                        LayoutWidth="30"
+                        LayoutHeight="656"
+                        LayoutTopMargin="18"
+                        LayoutLeftMargin="642"
+                        Clickable="true"
+                        ScrollBarLayout="@Layout/CActorScrollbarNewThirty" />
+                </RelativeLayout>
+                <!-- 无可用充电桩 -->
+                <RelativeLayout
+                    Id="@+Id/NoPileLayout"
+                    LayoutWidth="711"
+                    LayoutHeight="FillParent"
+                    HorizontalGravity="Center"
+                    Visible="Gone">
+                    <TextActor
+                        LayoutWidth="FillParent"
+                        LayoutHeight="40"
+                        LayoutTopMargin="252"
+                        VerticalGravity="Center"
+                        TextColor="@Color/DayBlack_NightWhite"
+                        TextFont="@Font/UIFont34_Text_L"
+                        Text="@String/MX_LANG_NAVI_SEARCH_RESULT_LIST_NO_CHARGING_PILE_EV_TEXT_Loading_Charging_No" />
+                </RelativeLayout>
+                <!-- 检索失败 -->
+                <RelativeLayout
+                    Id="@+Id/SrhFailedLayout"
+                    LayoutWidth="711"
+                    LayoutHeight="FillParent"
+                    HorizontalGravity="Center"
+                    Visible="Gone">
+                    <TextActor
+                        LayoutWidth="FillParent"
+                        LayoutHeight="40"
+                        LayoutTopMargin="252"
+                        VerticalGravity="Center"
+                        TextColor="@Color/DayBlack_NightWhite"
+                        TextFont="@Font/UIFont34_Text_L"
+                        Text="@String/MX_LANG_NAVI_SEARCH_RESULT_LIST_CHARGING_PILE_LOADING_FAILED_EV_TEXT_Loading_Charging_Fail" />
+                </RelativeLayout>
+            </LinearLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

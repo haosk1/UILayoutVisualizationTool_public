@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <LinearLayout
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent">
+        <!--半屏时占位控件，全屏时隐藏，达到控件布局可以动态切换-->
+        <ImageActor
+            Id="@Id/PreDefine/ImgSmartCard"
+            LayoutWidth="496"
+            LayoutHeight="FillParent" />
+        <!-- 简易引导 -->
+        <RelativeLayout
+            Id="@+Id/LayoutSimpleGuide"
+            LayoutWidth="584"
+            LayoutHeight="264"
+            LayoutTopMargin="96"
+            Visible="Gone"
+            Clickable="true">
+            <ImageActor
+                Id="@+Id/ImgBackGroundTwo"
+                LayoutWidth="FillParent"
+                LayoutHeight="FillParent"
+                Visible="Gone"
+                Background="@Drawable/card_bg_day_and_night" />
+            <ImageActor
+                Id="@+Id/ImgBackGroundOne"
+                LayoutWidth="FillParent"
+                LayoutHeight="212"
+                Visible="Gone"
+                Background="@Drawable/card_tbt_bg"
+                VerticalGravity="Top" />
+            <ImageActor
+                Id="@+Id/ImgBackGroundFamiliar"
+                LayoutWidth="FillParent"
+                LayoutHeight="200"
+                Visible="Gone"
+                Background="@Drawable/card_tbt_bg_200_day_and_night"
+                VerticalGravity="Top" />
+            <ImageActor
+                Id="@+Id/ImgBackGroundTripView"
+                LayoutWidth="584"
+                LayoutHeight="152"
+                Visible="Gone"
+                Background="@Drawable/card_above_bg_prox"
+                BGVerticalGravity="Top" />
+            <!-- Next -->
+            <RelativeLayout
+                Id="@+Id/LayoutTBT_Next"
+                LayoutWidth="FillParent"
+                LayoutHeight="104"
+                Clickable = "true"
+                LayoutTopMargin="160">
+                <!-- Next引导点方向图标-->
+                <ImageActor
+                    Id="@+Id/ImgGuideDirection_Next"
+                    LayoutWidth="68"
+                    LayoutHeight="68"
+                    LayoutAlignParentBottom="true"
+                    LayoutLeftMargin="66"
+                    LayoutBottomMargin="28"
+                    HorizontalGravity="Center"
+                    VerticalGravity="Center" />
+                <LinearLayout
+                    LayoutWidth="370"
+                    LayoutHeight="40"
+                    LayoutBottomMargin="39"
+                    LayoutLeftMargin="168"
+                    LayoutAlignParentBottom="true">
+                    <!--随后 Next-->
+                    <TextActor
+                        Id="@+Id/TxtAfterEN_Next"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="FillParent"
+                        LayoutCenterVertical="true"
+                        Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_DISPLAY_TEXT_Maneuver_Distance1"
+                        TextColor="@Color/DayBlack_NightWhite"
+                        TextFont="@Font/UIFont32_Text_L" />
+                    <!--距离:25-->
+                    <TextActor
+                        Id="@+Id/TxtDistance_Next"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="40"
+                        PaddingTop="-2"
+                        LayoutCenterVertical="true"
+                        TextColor="@Color/DayBlack_NightWhite"
+                        TextFont="@Font/UIFont32_UIDigit_M" />
+                    <!--距离:单位-->
+                    <TextActor
+                        Id="@+Id/TxtDistanceUnit_Next"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="40"
+                        LayoutCenterVertical="true"
+                        TextColor="@Color/DayBlack_NightWhite"
+                        TextFont="@Font/UIFont32_Text_L" />
+                    <!--引导信息-->
+                    <TextActor
+                        Id="@+Id/GuideInfo_Next"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="FillParent"
+                        HorizontalGravity = "Left"
+                        Text="Hun West Station Station Station"
+                        TextFont="@Font/UIFont32_Text_L"
+                        TextColor="@Color/DayBlack_NightWhite" />
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+                LayoutHeight="FillParent"
+                LayoutWidth="FillParent"
+                Orientation = "Vertical">
+                <ImageActor
+                    Id="@+Id/initial_Actor1"
+                    LayoutWidth="FillParent"
+                    LayoutHeight="16"
+                    Visible = "Gone"/>
+                <!-- Current -->
+                <RelativeLayout
+                    Id="@+Id/LayoutTBT_Cur"
+                    LayoutWidth="584"
+                    LayoutHeight="168"
+                    Clickable="true"
+                    ClickDataCollection="BTN_Repeat">
+                    <!-- Current·-->
+                    <ImageActor
+                        Id="@+Id/Animation"
+                        LayoutWidth="104"
+                        LayoutHeight="104"
+                        LayoutLeftMargin="48"
+                        LayoutTopMargin="34"
+                        Background="@Drawable/TBT_Animation" />
+                    <ImageActor
+                        Id="@+Id/ImgGuideDirection"
+                        LayoutWidth="104"
+                        LayoutHeight="104"
+                        LayoutLeftMargin="48"
+                        LayoutTopMargin="34"
+                        VerticalGravity="Center"
+                        HorizontalGravity="Center" />
+                    <LinearLayout
+                        Id="@+Id/LayoutGuideInfo_Cur"
+                        LayoutWidth="290"
+                        LayoutHeight="60"
+                        LayoutLeftMargin="168"
+                        LayoutTopMargin="24">
+                        <!--After-->
+                        <TextActor
+                            Id="@+Id/TxtAfterEN_Curr"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="52"
+                            LayoutTopMargin="4"
+                            LayoutRightMargin = "1"
+                            Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_DISPLAY_TEXT_Maneuver_Distance_EN"
+                            PaddingRight="5"
+                            TextFont="@Font/UIFont40_Text_L"
+                            TextColor="@Color/DayBlack_NightWhite" />
+                        <!--距离：数字-->
+                        <LinearLayout
+                            LayoutHeight="FillParent"
+                            LayoutWidth="WrapContent"
+                            Orientation = "Vertical">
+                            <ImageActor
+                                Id="@+Id/DisBlankPlace"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="4"
+                                Visible = "Gone"/>
+                            <TextActor
+                                Id="@+Id/GuideDistance"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="60"
+                                Text="9999"
+                                LayoutLeftMargin = "15"
+                                PaddingTop="-5"
+                                TextFont="@Font/UIFont46_UIDigit_M"
+                                TextColor="@Color/DayBlack_NightWhite"/>
+                        </LinearLayout>
+                        <!--距离：单位-->
+                        <LinearLayout
+                            LayoutHeight="FillParent"
+                            LayoutWidth="WrapContent"
+                            Orientation = "Vertical">
+                            <ImageActor
+                                Id="@+Id/UnitBlankPlace"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="7"
+                                Visible = "Gone"/>
+                            <TextActor
+                                Id="@+Id/DistanceUnit"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="52"
+                                LayoutTopMargin="4"
+                                LayoutLeftMargin = "13"
+                                Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Distance_TEXT_Km"
+                                TextFont="@Font/UIFont40_Text_L"
+                                TextColor="@Color/DayBlack_NightWhite"/>
+                        </LinearLayout>
+                        <!--后-->
+                        <TextActor
+                            Id="@+Id/TxtAfterCN_Curr"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="FillParent"
+                            HorizontalGravity = "Left"
+                            Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_DISPLAY_TEXT_Maneuver_Distance_CN"
+                            TextFont="@Font/UIFont40_Text_L"
+                            TextColor="@Color/DayBlack_NightWhite" />
+                    </LinearLayout>
+                    <LinearLayout
+                        LayoutHeight="FillParent"
+                        LayoutWidth="FillParent"
+                        Orientation = "Vertical">
+                        <ImageActor
+                            Id="@+Id/initial_Actor2"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="4"
+                            Visible = "Gone"/>
+                        <TextActor
+                            Id="@+Id/OutRoadName"
+                            LayoutWidth="370"
+                            LayoutHeight="60"
+                            LayoutLeftMargin="168"
+                            LayoutTopMargin="84"
+                            PaddingTop="6"
+                            Text="Hun River Station Station Station"
+                            TextFont="@Font/UIFont46_Text_M"
+                            TextColor="@Color/DayBlack_NightWhite"
+                            HorizontalGravity="Left" />
+                    </LinearLayout>
+                    <ImageActor
+                        Id="@+Id/RoadLine"
+                        LayoutTopMargin="150"
+                        LayoutWidth="520"
+                        LayoutHeight="20"
+                        LayoutCenterHorizontal="true"
+                        Background="@Drawable/radio_button_line" />
+                    <!-- 喇叭图标 -->
+                    <ImageButton
+                        Id="@+Id/ImgTouchSound"
+                        LayoutWidth="132"
+                        LayoutHeight="132"
+                        Drawable="@Drawable/volume"
+                        Background="@Drawable/h64_background_normal_clear_list"
+                        HorizontalGravity="Center"
+                        VerticalGravity="Center"
+                        LayoutAlignParentRight="true"
+                        LayoutTopMargin="-8"
+                        LayoutRightMargin="14" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</Resource>

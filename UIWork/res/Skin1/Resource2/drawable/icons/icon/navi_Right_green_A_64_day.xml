@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <LevelList>
+		<Item DrawableLevel = "0" Drawable = "@Drawable/navi_Right_green_64_day"/>
+		<Item DrawableLevel = "1" Drawable = "INVALID_ID"/>
+	</LevelList>
+</Resource>

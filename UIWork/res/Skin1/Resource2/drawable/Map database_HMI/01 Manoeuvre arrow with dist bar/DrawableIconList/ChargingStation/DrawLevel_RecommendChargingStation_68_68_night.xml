@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Resource>
+    <LevelList>
+                <Item DrawableLevel = "0" Drawable = "@Drawable/Recommend_charging_station_night_68_68"/>
+                <Item DrawableLevel = "1" Drawable = "@Drawable/Recommend_charging_station_night_68_68"/>
+                <Item DrawableLevel = "2" Drawable = "@Drawable/Recommend_charging_station_night_68_68"/>
+                <Item DrawableLevel = "3" Drawable = "@Drawable/Recommend_charging_station_night_68_68"/>
+                <Item DrawableLevel = "4" Drawable = "@Drawable/Recommend_charging_station_night_68_68"/>
+                <Item DrawableLevel = "5" Drawable = "@Drawable/Recommend_charging_station_night_68_68"/>
+                <Item DrawableLevel = "6" Drawable = "@Drawable/Recommend_charging_station_night_68_68"/>
+                <Item DrawableLevel = "7" Drawable = "@Drawable/Recommend_charging_station_night_68_68"/>
+                <Item DrawableLevel = "8" Drawable = "@Drawable/Recommend_charging_station_night_68_68"/>
+                <Item DrawableLevel = "9" Drawable = "@Drawable/Recommend_charging_station_night_68_68"/>
+                <Item DrawableLevel = "10" Drawable = "@Drawable/Recommend_charging_station_night_68_68"/>
+                <Item DrawableLevel = "11" Drawable = "@Drawable/Recommend_charging_station_night_68_68"/>
+                <Item DrawableLevel = "12" Drawable = "@Drawable/Recommend_charging_station_night_68_68"/>
+                <Item DrawableLevel = "13" Drawable = "@Drawable/Recommend_charging_station_night_68_68"/>
+                <Item DrawableLevel = "14" Drawable = "@Drawable/Recommend_charging_station_night_68_68"/>
+                <Item DrawableLevel = "15" Drawable = "@Drawable/Recommend_charging_station_night_68_68"/>
+                <Item DrawableLevel = "16" Drawable = "@Drawable/Recommend_charging_station_night_68_68"/>
+                <Item DrawableLevel = "17" Drawable = "@Drawable/Recommend_charging_station_night_68_68"/>
+                <Item DrawableLevel = "18" Drawable = "@Drawable/Recommend_charging_station_night_68_68"/>
+	</LevelList>
+</Resource>

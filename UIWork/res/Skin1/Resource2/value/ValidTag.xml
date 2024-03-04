@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+	<ValidTag>
+		<Item>SeizeDrawable</Item>
+		<Item>MXUIActorTranslateAnimator</Item>
+		<Item>LaneInfo</Item>
+		<Item>BrokenlyActor</Item>
+		<Item>BrokenlyImageActor</Item>
+		<Item>SmoothListActorEx</Item>
+		<Item>AutomaticImageActor</Item>
+		<Item>UIScrollViewEx</Item>
+		<Item>UIDragView</Item>
+		<Item>ScrollViewBar</Item>
+		<Item>KDWritePanel</Item>
+		<Item>ViewAzimuthActor</Item>
+		<Item>GuideViewActor</Item>
+  		<Item>MulitButton</Item>
+		<Item>ActorGPSMapTakingID</Item>
+		<Item>ColorableTextActor</Item>
+		<Item>DirectionArrowsActor</Item>
+		<Item>ActorTopMenuBtn</Item>
+		<Item>ActorSwitch</Item>
+		<Item>KeyBoardButton</Item>
+		<Item>TextureList</Item>
+		<Item>ActorSliderCtrl</Item>
+		<Item>ActorInsideSliderCtrl</Item>
+		<Item>TrafficFlow_RainBowBar</Item>
+		<Item>StateListAlpha</Item>
+		<Item>DayNightStateList</Item>
+		<Item>VividCheckbox</Item>
+		<Item>ScaleDrawable</Item>
+		<Item>SLaneInfoDrawable</Item>
+		<Item>LayerList</Item>
+		<Item>UIDropDownSlideActor</Item>
+		<Item>DropDownScrollBar</Item>
+		<Item>DropDownScrollBarTrack</Item>
+		<Item>MXUIScreenRelativeLayout</Item>
+		<Item>HorizontalWipeLayout</Item>
+		<Item>LinearGradientDrawable</Item>
+		<Item>ScaleDrawableRectCustomStateList</Item>
+		<Item>SuperListEx</Item>
+		<Item>LevelListEx</Item>
+		<Item>LaneAutomaticImageActor</Item>
+		<Item>ActorCustomLayout</Item>
+	</ValidTag>
+</Resource>

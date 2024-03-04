@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="204">
+        <RelativeLayout
+            Id="@+Id/Layout_MotorWayInfo"
+            LayoutWidth="FillParent"
+            LayoutHeight="204"
+            Clickable="true"
+            Focusable="true">
+            <!--提醒按钮 提醒状态-->
+            <RelativeLayout
+                Id="@+Id/Btn_MotorWayInfo_Remind"
+                LayoutWidth="228"
+                LayoutHeight="64"
+                LayoutAlignParentRight="true"
+                LayoutAlignParentBottom="true"
+                LayoutRightMargin="38"
+                LayoutBottomMargin="32"
+                Background="@Drawable/SAPA_remind_on"
+                Clickable="true"
+                Focusable="true">
+                <LinearLayout
+                LayoutWidth="WrapContent"
+                LayoutHeight="FillParent"
+                LayoutCenterHorizontal = "true"
+                VerticalGravity = "Center"
+                DuplicateParentState="true">
+                <ImageActor
+                    Id="@+Id/Icon_Remind"
+                    LayoutWidth="48"
+                    LayoutHeight="48"
+                    DuplicateParentState="true" />
+                <TextActor
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="FillParent"
+                    PaddingTop="4"
+                    TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL"
+                    TextColor="@Color/Color_000000"
+                    Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_SERVICE_BTN_Service_Remind_On"
+                    DuplicateParentState="true" />
+                </LinearLayout>
+            </RelativeLayout>
+            <!--提醒按钮 未提醒状态-->
+            <RelativeLayout
+                Id="@+Id/Btn_MotorWayInfo_NoRemind"
+                LayoutWidth="228"
+                LayoutHeight="64"
+                LayoutAlignParentRight="true"
+                LayoutAlignParentBottom="true"
+                LayoutRightMargin="38"
+                LayoutBottomMargin="32"
+                Background="@Drawable/SAPA_remind_off"
+                Clickable="true"
+                Focusable="true">
+                <LinearLayout
+                LayoutWidth="WrapContent"
+                LayoutHeight="FillParent"
+                LayoutCenterHorizontal = "true"
+                VerticalGravity = "Center"
+                DuplicateParentState="true">
+                <ImageActor
+                    LayoutWidth="48"
+                    LayoutHeight="48"
+                    Drawable="@Drawable/remind_normal_press"
+                    DuplicateParentState="true" />
+                <TextActor
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="FillParent"
+                    PaddingTop="4"
+                    TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL"
+                    TextColor="@Color/Color_FFFFFF"
+                    Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_SERVICE_BTN_Service_Remind_Off"
+                    DuplicateParentState="true" />
+                </LinearLayout>
+            </RelativeLayout>
+            <!--名称-->
+            <TextActor
+                Id="@+Id/MotorWayInfo_Name"
+                LayoutWidth="422"
+                LayoutHeight="40"
+                LayoutLeftMargin="38"
+                LayoutTopMargin="20"
+                PaddingTop="4"
+                TextFont="@Font/UIFont34_Text_M"
+                HorizontalGravity="Left"
+                TextColor="@Color/Color_FFFFFF" />
+            <!--SAPA类型ICON-->
+            <LinearLayout
+                Id="@+Id/Layout_SAPA_Type_Icon"
+                LayoutWidth="WrapContent"
+                LayoutHeight="40"
+                LayoutTopMargin="76"
+                LayoutLeftMargin="38"
+                Orientation="Horizontal">
+                <!--无加油站-->
+                <ImageActor
+                    Id="@+Id/Type_Icon_No_petrolstation"
+                    LayoutWidth="40"
+                    LayoutHeight="40"
+                    Drawable="@Drawable/NoPetrolstationOrCharge_40" />
+                <!--加油站-->
+                <ImageActor
+                    Id="@+Id/Type_Icon_petrolstation"
+                    LayoutWidth="40"
+                    LayoutHeight="40"
+                    Drawable="@Drawable/PetrolstationOrCharge_40" />
+                <!--公共厕所-->
+                <ImageActor
+                    Id="@+Id/Type_Icon_tolite"
+                    LayoutWidth="40"
+                    LayoutHeight="40"
+                    Drawable="@Drawable/toilet_40" />
+                <!--餐饮-->
+                <ImageActor
+                    Id="@+Id/Type_Icon_food"
+                    LayoutWidth="40"
+                    LayoutHeight="40"
+                    Drawable="@Drawable/food_40" />
+                <!--购物-->
+                <ImageActor
+                    Id="@+Id/Type_Icon_Shopping"
+                    LayoutWidth="40"
+                    LayoutHeight="40"
+                    Drawable="@Drawable/shopping_40" />
+                <!--住宿-->
+                <ImageActor
+                    Id="@+Id/Type_Icon_hotel"
+                    LayoutWidth="40"
+                    LayoutHeight="40"
+                    Drawable="@Drawable/hotel_40" />
+                <!--汽车服务中心-->
+                <ImageActor
+                    Id="@+Id/Type_Icon_automobileservice"
+                    LayoutWidth="40"
+                    LayoutHeight="40"
+                    Drawable="@Drawable/dazhong_40" />
+                <!--ATM-->
+                <ImageActor
+                    Id="@+Id/Type_Icon_ATM"
+                    LayoutWidth="40"
+                    LayoutHeight="40"
+                    Drawable="@Drawable/atm_40" />
+                <!--无子设施时显示停车icon-->
+                <ImageActor
+                    Id="@+Id/Type_Icon_Parking"
+                    LayoutWidth="40"
+                    LayoutHeight="40"
+                    Drawable="@Drawable/park_40" />
+            </LinearLayout>
+            <!--距离-->
+            <TextActor
+                Id="@+Id/MotorWayInfo_Dist"
+                LayoutTopMargin="20"
+                LayoutLeftOf = "@Id/MotorWayInfo_Unit"
+                LayoutWidth="96"
+                LayoutHeight="40"
+                PaddingTop="4"
+                Text="9999"
+                TextFont="@Font/UIFont34_Text_B"
+                TextColor="@Color/Color_FFFFFF"
+                HorizontalGravity="Right" />
+            <!--单位-->
+            <TextActor
+                Id="@+Id/MotorWayInfo_Unit"
+                LayoutAlignParentRight="true"
+                LayoutTopMargin="20"
+                LayoutRightMargin="38"
+                LayoutWidth="WrapContent"
+                LayoutHeight="40"
+                PaddingTop="4"
+                TextFont="@Font/UIFont34_Text_L"
+                TextColor="@Color/Color_FFFFFF"
+                HorizontalGravity="Left" />
+            <LinearLayout
+                Id="@+Id/Petrolstation_BG"
+                LayoutWidth="WrapContent"
+                LayoutHeight="48"
+                LayoutLeftMargin="38"
+                LayoutAlignParentBottom="true"
+                LayoutBottomMargin="32">
+                <!--石油品牌-->
+                <ImageActor
+                    Id="@+Id/Petrolstation_Brand"
+                    LayoutWidth="48"
+                    LayoutHeight="48"
+                    LayoutRightMargin="-8"
+                    Drawable="@Drawable/PetrolstationBrand" />
+                <!--油号信息-->
+                <TextActor
+                    Id="@+Id/Petrolstation_Info"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="FillParent"
+                    LayoutLeftMargin="16"
+                    LayoutRightMargin="16"
+                    PaddingTop="4"
+                    MaxFormatWidth="248"
+                    Text="92#/0#/95#"
+                    TextFont="@Font/UIFont28_Text_M"
+                    HorizontalGravity="Left"
+                    TextColor="@Color/Color_004634" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

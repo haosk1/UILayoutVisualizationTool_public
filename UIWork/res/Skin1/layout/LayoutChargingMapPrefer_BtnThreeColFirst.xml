@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutHeight="104"
+        LayoutWidth="362"
+        Background="@Drawable/btn_text_com"
+        Focusable="true"
+        Clickable="true">
+        <VividCheckbox
+            Id="@Id/PreDefine/ChargingPreferCheckBox"
+            LayoutHeight="104"
+            LayoutWidth="104"
+            LayoutLeftMargin="30"
+            DuplicateParentState="true"
+            Clickable="false"
+            Focusable="false"
+            UnCheckToCheck="@Drawable/Gradient_Checkbox_M_Z06Z10_F_C"
+            CheckToUnCheck="@Drawable/Gradient_Checkbox_M_Z10Z06_F_C"
+            UnCheckToCheckBackground="@Drawable/Checkbox_M_Z06Z10_B"
+            CheckToUnCheckBackground="@Drawable/Checkbox_M_Z10Z06_B" />
+        <TextActor
+            Id="@Id/PreDefine/ChargingPreferText"
+            LayoutHeight="40"
+            LayoutWidth="200"
+            HorizontalGravity="Left"
+            LayoutLeftMargin="134"
+            LayoutTopMargin="32"
+            PaddingTop = "4"
+            DuplicateParentState="true"
+            TextFont="@Font/BtnFont34_N_TextL_P_TextR_C_TextR_D_TextL"
+            TextColor="@Color/ListFavColor" />
+    </RelativeLayout>
+</Resource>

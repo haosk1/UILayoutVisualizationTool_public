@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Resource>
+    <LevelList>
+		<Item DrawableLevel = "5" Drawable = "@Drawable/limit_5"/>
+		<Item DrawableLevel = "10" Drawable = "@Drawable/limit_10"/>
+		<Item DrawableLevel = "15" Drawable = "@Drawable/limit_15"/>
+		<Item DrawableLevel = "20" Drawable = "@Drawable/limit_20"/>
+		<Item DrawableLevel = "25" Drawable = "@Drawable/limit_25"/>
+		<Item DrawableLevel = "30" Drawable = "@Drawable/limit_30"/>
+		<Item DrawableLevel = "35" Drawable = "@Drawable/limit_35"/>
+		<Item DrawableLevel = "40" Drawable = "@Drawable/limit_40"/>
+		<Item DrawableLevel = "45" Drawable = "@Drawable/limit_45"/>
+		<Item DrawableLevel = "50" Drawable = "@Drawable/limit_50"/>
+		<Item DrawableLevel = "55" Drawable = "@Drawable/limit_55"/>
+		<Item DrawableLevel = "60" Drawable = "@Drawable/limit_60"/>
+		<Item DrawableLevel = "65" Drawable = "@Drawable/limit_65"/>
+		<Item DrawableLevel = "70" Drawable = "@Drawable/limit_70"/>
+		<Item DrawableLevel = "75" Drawable = "@Drawable/limit_75"/>
+		<Item DrawableLevel = "80" Drawable = "@Drawable/limit_80"/>
+		<Item DrawableLevel = "85" Drawable = "@Drawable/limit_85"/>
+		<Item DrawableLevel = "90" Drawable = "@Drawable/limit_90"/>
+		<Item DrawableLevel = "95" Drawable = "@Drawable/limit_95"/>
+		<Item DrawableLevel = "100" Drawable = "@Drawable/limit_100"/>
+		<Item DrawableLevel = "105" Drawable = "@Drawable/limit_105"/>
+		<Item DrawableLevel = "110" Drawable = "@Drawable/limit_110"/>
+		<Item DrawableLevel = "115" Drawable = "@Drawable/limit_115"/>	
+		<Item DrawableLevel = "120" Drawable = "@Drawable/limit_120"/>
+	</LevelList>
+</Resource>

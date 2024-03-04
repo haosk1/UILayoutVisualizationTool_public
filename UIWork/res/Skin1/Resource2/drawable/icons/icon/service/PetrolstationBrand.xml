@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+	<!--对应bc_config_sa_facility_油车(gp)配置文件,-1为没有加油站的case-->
+    <LevelListEx>
+		<Item DrawableLevel = "-1" Drawable = "@Drawable/nogas"/>
+		<Item DrawableLevel = "3" Drawable = "@Drawable/petrol1_HMI"/>
+		<Item DrawableLevel = "4" Drawable = "@Drawable/petrol2_HMI"/>
+		<Item DrawableLevel = "5" Drawable = "@Drawable/Shell_HMI"/>
+		<Item DrawableLevel = "6" Drawable = "@Drawable/Mobil_HMI"/>
+		<Item DrawableLevel = "7" Drawable = "@Drawable/Caltex_HMI"/>
+		<Item DrawableLevel = "11" Drawable = "@Drawable/Total_HMI"/>
+		<Item DrawableLevel = "12" Drawable = "@Drawable/ESSO_HMI"/>
+		<Item DrawableLevel = "13" Drawable = "@Drawable/Sinopec_Total_HMI"/>
+	</LevelListEx>
+</Resource>

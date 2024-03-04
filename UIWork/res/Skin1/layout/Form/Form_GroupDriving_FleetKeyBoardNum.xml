@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@Id/PreDefine/LayoutParent"
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent">
+        <TransparencyActor
+            Id="@+Id/TransparencyScreen"
+            LayoutHeight="FillParent"
+            LayoutWidth="FillParent" />
+        <Function
+            Id="@Id/PreDefine/Fragment_GroupDrivingFleetKeyBoardNum"
+            LayoutHeight="FillParent"
+            LayoutWidth="FillParent" />
+        <!--HMI界面布局部分，此元器件LayoutWidth表示半屏尺寸-->
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <!--SearchBar-->
+            <LinearLayout
+                Id="@Id/PreDefine/SearchBar"
+                LayoutHeight="98"
+                LayoutWidth="476"
+                LayoutTopMargin="112"
+                LayoutLeftMargin="16"
+                Background="@Drawable/search_bg"
+                Clickable="true">
+                <Button
+                    Id="@Id/PreDefine/BTN_Search"
+                    LayoutHeight="FillParent"
+                    LayoutWidth="FillParent"
+                    Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV1_TEXT_HInt_Text1"
+                    TextFont="@Font/UIFont34_Text_L"
+                    TextColor="@Color/DayBlack_NightWhite_Grey"
+                    PaddingLeft="48"
+                    PaddingTop="4"
+                    HorizontalGravity="Left"
+                    DuplicateParentState="true"
+                    ClickDataCollection="BTN_Search" />
+            </LinearLayout>
+            <!-- 组队数字键盘画页布局 -->
+            <RelativeLayout
+                Id="@Id/PreDefine/LayoutMain"
+                LayoutHeight="FillParent"
+                LayoutWidth="FillParent"
+                LayoutTopMargin="348">
+                <!-- 背景图片 -->
+                <RelativeLayout
+                    Id="@+Id/LayoutBG"
+                    LayoutHeight="620"
+                    LayoutWidth="584"
+                    Background="@Drawable/card_bg_day_and_night"
+                    Clickable="true">
+                    <RelativeLayout
+                        Id="@+Id/FullScreen"
+                        LayoutWidth="552"
+                        LayoutHeight="588"
+                        LayoutLeftMargin="16"
+                        LayoutTopMargin="16">
+                        <!-- 返回按钮 -->
+                        <ImageButton
+                            Id="@+Id/BtnBack"
+                            LayoutWidth="116"
+                            LayoutHeight="116"
+                            LayoutTopMargin="14"
+                            LayoutLeftMargin="14"
+                            Background="@Drawable/btn_h84_background_normal_prox"
+                            Drawable="@Drawable/back_s"
+                            VisibleSpeechs="@String/MX_LANG_NAVI_GROUPDRIVING_ACCESS_VisibleSpeechs_01"
+                            ClickDataCollection="BTN_Back" />
+                        <!-- 集结文言 -->
+                        <TextActor
+                            LayoutHeight="52"
+                            LayoutWidth="378"
+                            LayoutTopMargin="48"
+                            LayoutLeftMargin="144"
+                            TextFont="@Font/UIFont40_Text_M"
+                            TextColor="@Color/BtnFavoriteColor"
+                            Text="@String/MX_LANG_NAVI_GROUPDRIVING_MAIN_VIEW_TEXT_Enter"
+                            HorizontalGravity="Left" />
+                        <!--中间框-->
+                        <LinearLayout
+                            Id="@Id/PreDefine/EditBoxInfo"
+                            LayoutWidth="492"
+                            LayoutHeight="86"
+                            LayoutTopMargin="138"
+                            LayoutCenterHorizontal="true"
+                            Background="@Drawable/search_small_bg">
+                            <!--输入框-->
+                            <EditText
+                                Id="@Id/PreDefine/EditText"
+                                Style="@Style/EditBoxStyle"
+                                LayoutWidth="428"
+                                LayoutHeight="40"
+                                LayoutLeftMargin="32"
+                                LayoutTopMargin="24"
+                                HorizontalGravity="Left"
+                                TextFont=" @Font/UIFont34_Text_L"
+                                TextShadow="false"
+                                TextHintColor="@Color/EditHintColor"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                HintText="@String/MX_LANG_NAVI_GROUPDRIVING_ACCESS_TEXT_Input"
+                                TextMaxLength="NoLimit" />
+                        </LinearLayout>
+                        <!-- 数字键盘 -->
+                        <RelativeLayout
+                            LayoutHeight="312"
+                            LayoutWidth="492"
+                            LayoutTopMargin="246"
+                            LayoutLeftMargin="30">
+                            <LinearLayout
+                                Id="@+Id/KeyBoardLine1"
+                                LayoutWidth="FillParent"
+                                LayoutHeight="72"
+                                Orientation="Horizontal">
+                                <Button
+                                    Id="@Id/PreDefine/Key_1"
+                                    Style="@Style/MA_GroupKeyBoard_Key"
+                                    Text="1" />
+                                <Button
+                                    Id="@Id/PreDefine/Key_2"
+                                    Style="@Style/MA_GroupKeyBoard_Key"
+                                    LayoutLeftMargin="9"
+                                    Text="2" />
+                                <Button
+                                    Id="@Id/PreDefine/Key_3"
+                                    Style="@Style/MA_GroupKeyBoard_Key"
+                                    LayoutLeftMargin="9"
+                                    Text="3" />
+                            </LinearLayout>
+                            <LinearLayout
+                                Id="@+Id/KeyBoardLine2"
+                                LayoutWidth="FillParent"
+                                LayoutHeight="72"
+                                LayoutTopMargin="80"
+                                Orientation="Horizontal">
+                                <Button
+                                    Id="@Id/PreDefine/Key_4"
+                                    Style="@Style/MA_GroupKeyBoard_Key"
+                                    Text="4" />
+                                <Button
+                                    Id="@Id/PreDefine/Key_5"
+                                    Style="@Style/MA_GroupKeyBoard_Key"
+                                    LayoutLeftMargin="9"
+                                    Text="5" />
+                                <Button
+                                    Id="@Id/PreDefine/Key_6"
+                                    Style="@Style/MA_GroupKeyBoard_Key"
+                                    LayoutLeftMargin="9"
+                                    Text="6" />
+                            </LinearLayout>
+                            <LinearLayout
+                                Id="@+Id/KeyBoardLine3"
+                                LayoutWidth="FillParent"
+                                LayoutHeight="72"
+                                LayoutTopMargin="160"
+                                Orientation="Horizontal">
+                                <Button
+                                    Id="@Id/PreDefine/Key_7"
+                                    Style="@Style/MA_GroupKeyBoard_Key"
+                                    Text="7" />
+                                <Button
+                                    Id="@Id/PreDefine/Key_8"
+                                    Style="@Style/MA_GroupKeyBoard_Key"
+                                    LayoutLeftMargin="9"
+                                    Text="8" />
+                                <Button
+                                    Id="@Id/PreDefine/Key_9"
+                                    Style="@Style/MA_GroupKeyBoard_Key"
+                                    LayoutLeftMargin="9"
+                                    Text="9" />
+                            </LinearLayout>
+                            <LinearLayout
+                                Id="@+Id/KeyBoardLine4"
+                                LayoutWidth="FillParent"
+                                LayoutHeight="72"
+                                LayoutTopMargin="240"
+                                Orientation="Horizontal">
+                                <ImageButton
+                                    Id="@Id/PreDefine/Btn_Delete"
+                                    LayoutWidth="158"
+                                    LayoutHeight="72"
+                                    Background="@Drawable/small_key"
+                                    Drawable="@Drawable/backspace_s"
+                                    ClickDataCollection="BTN_Input_Delete" />
+                                <Button
+                                    Id="@Id/PreDefine/Key_0"
+                                    Style="@Style/MA_GroupKeyBoard_Key"
+                                    LayoutLeftMargin="9"
+                                    Text="0" />
+                                <ImageButton
+                                    Id="@Id/PreDefine/Btn_KeyBoardConfirm"
+                                    Style="@Style/MA_GroupKeyBoard_Key"
+                                    PaddingTop="1"
+                                    LayoutLeftMargin="10"
+                                    Background="@Drawable/small_key_hero"
+                                    Enabled="false"
+                                    Drawable="@Drawable/OK_50"
+                                    ClickDataCollection="BTN_OK" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+        <!--1558宽度元器件居中-->
+        <RelativeLayout
+            Id="@Id/PreDefine/CenterLayoutParent"
+            LayoutHeight="FillParent"
+            LayoutWidth="1314"
+            LayoutAlignParentRight="true"
+            Clickable="false">
+            <RelativeLayout
+                Id="@Id/PreDefine/ReturnCCP"
+                LayoutWidth="WrapContent"
+                LayoutHeight="164"
+                LayoutCenterHorizontal="true"
+                LayoutAlignParentBottom="true"
+                LayoutBottomMargin="94"
+                Background="@Drawable/background_96h_hero_prox_day_shadows">
+                <RelativeLayout
+                    Id="@Id/PreDefine/BtnReturnCCP"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="164"
+                    LayoutLeftMargin="18"
+                    LayoutRightMargin="18"
+                    LayoutCenterInParent="true"
+                    VisibleSpeechs="@String/MX_LANG_NAVI_MAP_RESTRICTION_VIEW_WITHOUT_GUIDANCE_VisibleSpeechs_02"
+                    Clickable="true">
+                    <LinearLayout
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="104"
+                        LayoutLeftMargin="12"
+                        LayoutRightMargin="12"
+                        LayoutCenterInParent="true"
+                        DuplicateParentState="true"
+                        Background="@Drawable/Gradient_background_96h_hero_prox">
+                        <ImageActor
+                            LayoutLeftMargin="28"
+                            LayoutCenterVertical="true"
+                            DuplicateParentState="true"
+                            Drawable="@Drawable/back_to_destination_day" />
+                        <!--占位-->
+                        <ImageActor
+                            Id="@Id/PreDefine/SpaceBefore"
+                            LayoutWidth="2"
+                            LayoutHeight="FillParent"
+                            Visible="Gone" />
+                        <TextActor
+                            Id="@Id/PreDefine/TxtReturnCCP"
+                            LayoutHeight="FillParent"
+                            LayoutWidth="WrapContent"
+                            LayoutLeftMargin="8"
+                            LayoutRightMargin="47"
+                            PaddingTop="4"
+                            DuplicateParentState="true"
+                            Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV2_TEXT_Back_to_CCP"
+                            TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                            TextColor="@Color/HeroBtnText_RGB" />
+                        <!--占位-->
+                        <ImageActor
+                            Id="@Id/PreDefine/SpaceAfter"
+                            LayoutWidth="2"
+                            LayoutHeight="FillParent"
+                            Visible="Gone" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+            <!--车线-->
+            <LinearLayout
+                Id="@Id/PreDefine/LaneLayout"
+                LayoutHeight="164"
+                LayoutTopMargin="78"
+                LayoutCenterHorizontal="true"
+                Background="@Drawable/background_020_m_lane_info_box"
+                Visible="Invisible">
+                <RelativeLayout
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="96"
+                    LayoutLeftMargin = "34"
+                    LayoutRightMargin = "34"
+                    LayoutTopMargin="34">
+                    <!--推荐车线背景帧动画-->
+                    <LaneAutomaticImageActor
+                        Id="@Id/PreDefine/LaneAutomatic"
+                        LayoutHeight="FillParent"
+                        ImageChangeTimer="38"
+                        Cyclable="true"
+                        Drawable="@Drawable/background_recommend_lane"
+                        Visible="Gone" />
+                    <LaneInfo
+                        Id="@Id/PreDefine/Lane"
+                        LayoutHeight="FillParent"
+                        LaneRecommended="@Drawable/DrawLevel_RecommendLane"
+                        LaneAvailable="@Drawable/DrawLevel_AvailableLane"
+                        LaneDisable="@Drawable/DrawLevel_DisableLane"
+                        LaneOmit="@Drawable/more"
+                        LaneTG="@Drawable/DrawLevel_All_SpecialLane"
+                        LaneMiddleImg="@Drawable/background_020_m_lane_info_box_line"
+                        LanePaddingLeft="8"
+                        LanePaddingRight="8"
+                        LanePaddingTop="16"
+                        LanePaddingBottom="16"
+                        LaneMaxCnt="6"
+                        Clickable="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

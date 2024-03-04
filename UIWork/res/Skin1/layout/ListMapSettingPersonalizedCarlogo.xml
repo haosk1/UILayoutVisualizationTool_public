@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id = "@+Id/ListItem"
+		LayoutWidth = "FillParent"
+        LayoutHeight = "384"
+        Clickable="true"
+        Focusable="true" >
+        <RelativeLayout
+            LayoutWidth = "880"
+            LayoutHeight = "130">
+            <!--标题-->
+            <TextActor
+                Id = "@+Id/TITLE_Setting_Personalized_Car_Logo"
+                LayoutWidth = "808"
+                LayoutHeight = "52"
+                LayoutLeftMargin = "36"
+                LayoutTopMargin = "48"
+                HorizontalGravity = "Left"
+                VerticalGravity = "Center"
+                PaddingTop = "4"
+                Text = "@String/MX_LANG_NAVI_MAP_SETTING_TITLE_Setting_Personalized_Car_logo"
+                TextFont = "@Font/UIFont34_Text_L"
+                TextColor = "@Color/DayBlack_NightWhite"/>
+        </RelativeLayout>
+        <RelativeLayout
+            LayoutWidth = "880"
+            LayoutHeight = "236"
+            LayoutTopMargin = "138"
+            Focusable="true"
+            Background= "@Drawable/mixin_bg_normal_DayNight">
+            <!-- Default -->
+            <RelativeLayout
+                Id="@+Id/BTN_Car_logo_Default"
+                LayoutHeight = "182"
+                LayoutWidth = "131"
+                LayoutTopMargin = "29"
+                LayoutLeftMargin = "48"
+                Focusable="true"
+                Background = "@Drawable/navi_setting_btn_bg"
+                ClickDataCollection = "BTN_Car_logo_Default" >
+                <ImageActor
+                    LayoutHeight = "182"
+                    LayoutWidth = "130"
+                    DuplicateParentState = "true"
+                    Background = "@Drawable/navi_setting_btn_active"/>
+                <ImageActor
+                    LayoutHeight = "92"
+                    LayoutWidth = "92"
+                    LayoutTopMargin = "19"
+                    LayoutLeftMargin = "19"
+                    DuplicateParentState = "true"
+                    Background = "@Drawable/navi_default"/>
+                <TextActor
+                    LayoutHeight = "40"
+                    LayoutWidth = "130"
+                    LayoutTopMargin = "144"
+                    PaddingLeft = "1"
+                    HorizontalGravity = "Center"
+                    VerticalGravity = "Center"
+                    DuplicateParentState = "true"
+                    Text = "@String/MX_LANG_NAVI_MAP_SETTING_TEXT_Car_logo_Default"
+                    TextFont = "@Font/BtnFont34_N_TestL_P_TestR"
+                    TextColor = "@Color/DayBlack_NightWhite" />
+            </RelativeLayout>
+            <!-- Speed -->
+            <RelativeLayout
+                Id = "@+Id/BTN_Car_logo_Speed"
+                LayoutHeight = "182"
+                LayoutWidth = "130"
+                LayoutTopMargin = "29"
+                LayoutLeftMargin = "266"
+                Focusable="true"
+                Background = "@Drawable/navi_setting_btn_bg"
+                ClickDataCollection = "BTN_Car_logo_Speed" >
+                <ImageActor
+                    LayoutHeight = "182"
+                    LayoutWidth = "130"
+                    DuplicateParentState = "true"
+                    Background = "@Drawable/navi_setting_btn_active"/>
+                <ImageActor
+                    LayoutHeight = "92"
+                    LayoutWidth = "92"
+                    LayoutTopMargin = "19"
+                    LayoutLeftMargin = "19"
+                    DuplicateParentState = "true"
+                    Background = "@Drawable/navi_speed"/>
+                <TextActor
+                    LayoutHeight = "40"
+                    LayoutWidth = "130"
+                    LayoutTopMargin = "144"
+                    HorizontalGravity = "Center"
+                    VerticalGravity = "Center"
+                    DuplicateParentState = "true"
+                    Text = "@String/MX_LANG_NAVI_MAP_SETTING_TEXT_Car_logo_Speed"
+                    TextFont = "@Font/BtnFont34_N_TestL_P_TestR"
+                    TextColor = "@Color/DayBlack_NightWhite" />
+            </RelativeLayout>
+            <!-- VW -->
+            <RelativeLayout
+                Id = "@+Id/BTN_Car_logo_VW"
+                LayoutHeight = "182"
+                LayoutWidth = "130"
+                LayoutTopMargin = "29"
+                LayoutLeftMargin = "484"
+                Focusable="true"
+                Background = "@Drawable/navi_setting_btn_bg"
+                ClickDataCollection = "BTN_Car_logo_VW" >
+                <ImageActor
+                    LayoutHeight = "182"
+                    LayoutWidth = "130"
+                    DuplicateParentState = "true"
+                    Background = "@Drawable/navi_setting_btn_active"/>
+                <ImageActor
+                    LayoutHeight = "92"
+                    LayoutWidth = "92"
+                    LayoutTopMargin = "19"
+                    LayoutLeftMargin = "19"
+                    DuplicateParentState = "true"
+                    Background = "@Drawable/navi_VW"/>
+                <TextActor
+                    LayoutHeight = "40"
+                    LayoutWidth = "130"
+                    LayoutTopMargin = "144"
+                    PaddingLeft = "-1"
+                    HorizontalGravity = "Center"
+                    VerticalGravity = "Center"
+                    DuplicateParentState = "true"
+                    Text = "@String/MX_LANG_NAVI_MAP_SETTING_TEXT_Car_logo_VW"
+                    TextFont = "@Font/BtnFont34_N_TestL_P_TestR"
+                    TextColor = "@Color/DayBlack_NightWhite" />
+            </RelativeLayout>
+            <!-- Car -->
+            <RelativeLayout
+                Id = "@+Id/BTN_Car_logo_Car"
+                LayoutHeight = "182"
+                LayoutWidth = "130"
+                LayoutTopMargin = "29"
+                LayoutLeftMargin = "702"
+                Focusable="true"
+                Background = "@Drawable/navi_setting_btn_bg"
+                ClickDataCollection = "BTN_Car_logo_Car" >
+                <ImageActor
+                    LayoutHeight = "182"
+                    LayoutWidth = "130"
+                    DuplicateParentState = "true"
+                    Background = "@Drawable/navi_setting_btn_active"/>
+                <ImageActor
+                    LayoutHeight = "92"
+                    LayoutWidth = "92"
+                    LayoutTopMargin = "19"
+                    LayoutLeftMargin = "19"
+                    DuplicateParentState = "true"
+                    Background = "@Drawable/navi_car"/>
+                <TextActor
+                    LayoutHeight = "40"
+                    LayoutWidth = "130"
+                    LayoutTopMargin = "144"
+                    HorizontalGravity = "Center"
+                    VerticalGravity = "Center"
+                    DuplicateParentState = "true"
+                    Text = "@String/MX_LANG_NAVI_MAP_SETTING_TEXT_Car_logo_Car"
+                    TextFont = "@Font/BtnFont34_N_TestL_P_TestR"
+                    TextColor = "@Color/DayBlack_NightWhite" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

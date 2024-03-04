@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="194"
+        Clickable="true"
+        Focusable="true">
+        <!--单条list item背景-->
+        <LinearLayout
+            Id="@+Id/LayoutParkingLot"
+            LayoutWidth="450"
+            LayoutHeight="FillParent"
+            LayoutLeftMargin="16"
+            Clickable="true"
+            Orientation = "Vertical"
+            VerticalGravity = "Center"
+            Background="@Drawable/card_selected_rounded_corners_bg"
+            ClickDataCollection="BTN_Parking_Lot">
+            <LinearLayout
+                LayoutWidth="405"
+                LayoutHeight="WrapContent"
+                Orientation = "Vertical"
+                LayoutTopMargin="17"
+                LayoutLeftMargin="35"
+                DuplicateParentState="true">
+                <!--停车场名称-->
+                <TextActor
+                    Id="@+Id/ParkingName"
+                    LayoutWidth="FillParent"
+                    LayoutHeight="40"
+                    Text="@String/MX_LANG_NAVI_MAP_DESTINATION_PARKING_TEXT_Parking_Name"
+                    HorizontalGravity="Left"
+                    ShowEllipsis="false"
+                    TextColor="@Color/TextColor_ListParkinginfo"
+                    TextFont="@Font/UIFont34_Text_R"
+                    DuplicateParentState="true" />
+                <TextActor
+                    Id="@+Id/ParkingName1"
+                    LayoutWidth="FillParent"
+                    LayoutHeight="40"
+                    Text="@String/MX_LANG_NAVI_MAP_DESTINATION_PARKING_TEXT_Parking_Name"
+                    HorizontalGravity="Left"
+                    ShowEllipsis="true"
+                    TextColor="@Color/TextColor_ListParkinginfo"
+                    TextFont="@Font/UIFont34_Text_R"
+                    DuplicateParentState="true"
+                    Visible="Gone"/>
+            </LinearLayout>
+            <!--第二行显示信息-->
+            <LinearLayout
+                Id="@+Id/LayoutInfo"
+                LayoutWidth="436"
+                LayoutTopMargin="12"
+                LayoutHeight="54"
+                DuplicateParentState="true">
+                <!--Img-->
+                <ImageActor
+                    Id="@+Id/ImgDes"
+                    LayoutHeight="48"
+                    LayoutWidth="48"
+                    LayoutTopMargin="3"
+                    LayoutLeftMargin="30"
+                    Drawable="@Drawable/distance_parking"
+                    DuplicateParentState="true" />
+                <!--距离-->
+                <TextActor
+                    Id="@+Id/TxtParkingDistance"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="40"
+                    LayoutTopMargin="9"
+                    Text="Text"
+                    LayoutLeftMargin="10"
+                    TextColor="@Color/TextColor_ListParkinginfo"
+                    TextFont="@Font/UIFont34_Text_R"
+                    DuplicateParentState="true" />
+                <TextActor
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="40"
+                    LayoutTopMargin="9"
+                    Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Distance_TEXT_M"
+                    HorizontalGravity="Left"
+                    TextColor="@Color/TextColor_ListParkinginfo"
+                    TextFont="@Font/UIFont34_Text_L"
+                    DuplicateParentState="true" />
+                <RelativeLayout
+                    Id="@+Id/LayoutParkingType"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="48"
+                    LayoutLeftMargin="24"
+                    LayoutTopMargin="3"
+                    LayoutRightMargin="18"
+                    Background="@Drawable/navi_card_label_bg"
+                    DuplicateParentState="true"
+                    Visible="Gone">
+                    <!--停车场类型-->
+                    <TextActor
+                        Id="@+Id/TxtParkingType"
+                        LayoutCenterVertical="true"
+                        LayoutHeight="FillParent"
+                        LayoutRightMargin="20"
+                        LayoutLeftMargin="21"
+                        PaddingTop="4"
+                        LayoutWidth="WrapContent"
+                        TextColor="@Color/TextColor_ListParkinginfo"
+                        TextFont="@Font/UIFont24_Text_L"
+                        DuplicateParentState="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!--开始引导-->
+        <RelativeLayout
+            LayoutWidth="116"
+            LayoutHeight="132"
+            LayoutAlignParentRight="true"
+            LayoutRightMargin = "4"
+            LayoutTopMargin="36">
+            <ImageActor
+                LayoutLeftMargin="2"
+                Background="@Drawable/citylist_line"
+                LayoutCenterVertical="true"
+                LayoutWidth="2"
+                LayoutHeight="50" />
+            <RelativeLayout
+                Id="@+Id/BtnNavigate"
+                LayoutHeight="132"
+                LayoutWidth="100"
+                Clickable="true"
+                LayoutLeftMargin = "4"
+                Background="@Drawable/h64_background_normal"
+                ClickDataCollection="BTN_Navigate"
+                VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_03">
+                <ImageActor
+                    LayoutWidth="40"
+                    LayoutHeight="40"
+                    LayoutCenterInParent="true"
+                    DuplicateParentState="true"
+                    Drawable="@Drawable/navi_navigation_s_40" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <!--分割线-->
+        <ImageActor
+            Id="@+Id/ImgTabbar"
+            LayoutHeight="2"
+            LayoutWidth="552"
+            LayoutAlignParentBottom="true"
+            LayoutCenterHorizontal="true"
+            Background="@Drawable/radio_button_line" />
+    </RelativeLayout>
+</Resource>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateListAlpha>
+		<!--氛围灯的起始颜色，ColorFollowAmbient可省略，写AmbientColorType，默认开启ColorFollowAmbient-->
+		<Item ColorFollowAmbient = "true" AmbientColorType="A" />
+    </StateListAlpha>
+</Resource>

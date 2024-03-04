@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <ColorFillingBucketDrawable>
+		<Item Drawable = "@Drawable/separation_symbols"/>
+		<Item FillingColor = "@Color/DayBlack_NightWhite_Grey_pressed"/>
+    </ColorFillingBucketDrawable>
+</Resource>

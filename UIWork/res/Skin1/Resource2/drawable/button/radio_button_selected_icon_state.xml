@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "false" StateFocused = "false" Drawable = "INVALID_ID"/>
+<!-->Check-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "true" Drawable = "@Drawable/radio_button_selected_icon"/>
+<!-->Push_Normal-->
+		<Item StateEnabled = "true" StatePressed = "true" StateChecked = "false" Drawable = "INVALID_ID"/>
+<!-->Push_Check-->
+		<Item StateEnabled = "true" StatePressed = "true" StateChecked = "true" Drawable = "@Drawable/radio_button_selected_icon"/>
+<!-->Disable-->
+		<Item StateEnabled = "false" Drawable = "INVALID_ID"/>
+    </StateList>
+</Resource>

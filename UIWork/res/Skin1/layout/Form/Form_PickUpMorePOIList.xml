@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent">
+        <TransparencyActor
+            Id="@+Id/TransparencyScreen"
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent" />
+        <!--HMI界面布局部分，此元器件LayoutWidth表示半屏尺寸-->
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1407"
+            LayoutHeight="FillParent">
+            <!--列表-->
+            <LinearLayout
+                LayoutWidth="711"
+                LayoutHeight="864"
+                LayoutTopMargin="103"
+                Id="@+Id/Linear_List"
+                Background="@Drawable/card_bg_day_and_night"
+                Orientation="Vertical"
+                HorizontalGravity="Left"
+                Clickable="true">
+                <!--title 部分-->
+                <LinearLayout
+                    LayoutWidth="FillParent"
+                    LayoutHeight="147"
+                    LayoutLeftMargin="10"
+                    LayoutTopMargin="10">
+                    <ImageButton
+                        Id="@Id/PreDefine/BtnReturn"
+                        LayoutWidth="117"
+                        LayoutHeight="117"
+                        LayoutLeftMargin="15"
+                        LayoutTopMargin="15"
+                        Drawable="@Drawable/icon_close"
+                        Background="@Drawable/btn_h104_background_normal_prox"
+                        BGHorizontalGravity="Center"
+                        BGVerticalGravity="Center"
+                        ClickDataCollection="BTN_Back"
+                        DuplicateParentState="true" />
+                    <TextActor
+                        Id="@Id/PreDefine/TxtTitle"
+                        LayoutHeight="WrapContent"
+                        LayoutWidth="WrapContent"
+                        LayoutLeftMargin="12"
+                        LayoutTopMargin="53"
+                        Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_OPERATE_TEXT_More"
+                        TextFont=" @Font/UIFont46_Text_M"
+                        TextColor="@Color/Color_000000day_and_FFFFFFnight" />
+                </LinearLayout>
+                <!--list 部分-->
+                <RelativeLayout
+                    LayoutWidth="FillParent"
+                    LayoutHeight="703"
+                    LayoutTopMargin="-16"
+                    LayoutLeftMargin="29"
+                    HorizontalGravity="Left">
+                    <SmoothListActorEx
+                        Id="@Id/PreDefine/SmoothListActor"
+                        LayoutWidth="653"
+                        LayoutHeight="703"
+                        DefaultDividerInterval="0"
+                        VisibleSpeechs="@String/NAVI_MAP_CLICK_ON_MAP_MOREPOI_WITHOUT_GUIDANCE_EV_VisibleSpeechs_02" />
+                    <SmoothListScrollBar
+                        Id="@Id/PreDefine/SmoothListScrollBar"
+                        LayoutWidth="26"
+                        LayoutHeight="686"
+                        LayoutAlignParentRight="true"
+                        LayoutRightMargin="14"
+                        LayoutTopMargin="9"
+                        ScrollBarLayout="@Layout/CActorScrollbarNewThirty" />
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout
+                LayoutWidth="FillParent"
+                LayoutHeight="FillParent"
+                LayoutLeftMargin="698">
+                <!--Back To CCP-->
+                <RelativeLayout
+                    Id="@Id/PreDefine/ReturnCCP"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="147"
+                    LayoutCenterHorizontal="true"
+                    LayoutAlignParentBottom="true"
+                    LayoutBottomMargin="123"
+                    Background="@Drawable/background_104h_hero_prox_day_shadows">
+                    <RelativeLayout
+                        Id="@Id/PreDefine/BtnReturnCCP"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="117"
+                        LayoutLeftMargin="15"
+                        LayoutRightMargin="15"
+                        LayoutCenterInParent="true"
+                        Clickable="true">
+                        <LinearLayout
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="96"
+                            LayoutLeftMargin="10"
+                            LayoutRightMargin="10"
+                            LayoutCenterInParent="true"
+                            DuplicateParentState="true"
+                            Background="@Drawable/Gradient_background_104h_hero_prox">
+                            <ImageActor
+                                LayoutLeftMargin="24"
+                                LayoutCenterVertical="true"
+                                DuplicateParentState="true"
+                                Drawable="@Drawable/back_to_destination_day" />
+                            <!--占位-->
+                            <ImageActor
+                                Id="@Id/PreDefine/SpaceBefore"
+                                LayoutWidth="2"
+                                LayoutHeight="FillParent"
+                                Visible="Gone" />
+                            <TextActor
+                                Id="@Id/PreDefine/TxtReturnCCP"
+                                LayoutHeight="FillParent"
+                                LayoutWidth="WrapContent"
+                                LayoutLeftMargin="7"
+                                LayoutRightMargin="40"
+                                PaddingTop="3"
+                                DuplicateParentState="true"
+                                Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV2_TEXT_Back_to_CCP"
+                                TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                                TextColor="@Color/HeroBtnText_RGB" />
+                            <!--占位-->
+                            <ImageActor
+                                Id="@Id/PreDefine/SpaceAfter"
+                                LayoutWidth="2"
+                                LayoutHeight="FillParent"
+                                Visible="Gone" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

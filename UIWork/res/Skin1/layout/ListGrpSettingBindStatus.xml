@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/ListItem"
+        LayoutWidth="FillParent"
+        LayoutHeight="400"
+        Clickable="true"
+        Focusable="true">
+        <!--已绑定，显示头像、微信名和解绑-->
+        <RelativeLayout
+            Id="@+Id/LayoutUserdata"
+            LayoutWidth="776"
+            LayoutHeight="FillParent"
+            LayoutLeftMargin="40"
+            LayoutTopMargin="70"
+            Visible="Gone">
+            <RelativeLayout
+                Background="@Drawable/image_log"
+                LayoutLeftMargin="0"
+                LayoutWidth="260"
+                LayoutHeight="260"
+                HorizontalGravity="Center"
+                VerticalGravity="Center" >
+                <!--已绑定 头像-->
+                <ImageActor
+                    Id="@+Id/ICON_User"
+                    LayoutWidth="220"
+                    LayoutHeight="220"
+                    HorizontalGravity="Center"
+                    VerticalGravity="Center"/>
+            </RelativeLayout>
+            <!--已绑定 微信名-->
+            <TextActor
+                Id="@+Id/Wechat_Name"
+                LayoutTopMargin="38"
+                LayoutLeftMargin="288"
+                LayoutHeight="60"
+                LayoutWidth="448"
+                TextColor="@Color/DayBlack_NightWhite"
+                TextFont="@Font/UIFont40_Text_R"
+                Text="@String/MX_LANG_NAVI_GROUP_SETTING_TEXT_Wechat_Name"
+                VerticalGravity="Top"
+                HorizontalGravity="Left"
+                LineIntervalMultiFactor="0.2" />
+            <!--已绑定 解绑-->
+            <Button
+                Id="@+Id/BTN_UnBunding"
+                LayoutTopMargin="108"
+                LayoutLeftMargin="254"
+                LayoutWidth="342"
+                LayoutHeight="152"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                PaddingTop="10"
+                PaddingLeft="-1"
+                PaddingBottom="5"
+                Text="@String/MX_LANG_NAVI_GROUP_SETTING_TEXT_Unbundling"
+                TextFont="@Font/BtnFont34_N_TextL_P_TextM_C_TextM_D_TextL"
+                TextColor="@Color/NormalBtn_RGB"
+                Background="@Drawable/background_84h_normal_view_raised"
+                DuplicateParentState="true"
+                VisibleSpeechs="@String/MX_LANG_NAVI_GROUP_SETTING_VisibleSpeechs_11" />
+        </RelativeLayout>
+        <!--获取失败 显示Retry-->
+        <RelativeLayout
+            Id="@+Id/NAVI_TENCENT_MY_CAR_LOADING_FAILED"
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent"
+            HorizontalGravity="Center"
+            VerticalGravity="Center"
+            Visible="Gone">
+            <TextActor
+                Id="@+Id/GetGroupInfoFail"
+                LayoutWidth="FillParent"
+                LayoutHeight="52"
+                SingleLine="true"
+                LayoutTopMargin="31"
+                TextColor="@Color/NormalBtn_RGB"
+                TextFont="@Font/UIFont34_Text_L"
+                Text="@String/MX_LANG_NAVI_TENCENT_MY_CAR_LOADING_FAILED_TEXT_Not_Information" />
+            <!--Retry部品-->
+            <Button
+                Id="@+Id/BtnRetry"
+                LayoutWidth="540"
+                LayoutHeight="152"
+                LayoutTopMargin="96"
+                LayoutCenterHorizontal="true"
+                Clickable="true"
+                Background="@Drawable/background_84h_normal_view_raised"
+                PaddingTop="5"
+                Text="@String/MX_LANG_NAVI_MAP_RESTRICTION_VIEW_FAILED_BTN_Resctiction_Retry"
+                TextFont="@Font/BtnFont34_N_TextL_P_TextL_C_TextM_D_TextL"
+                TextColor="@Color/NormalBtn_RGB"
+                BGHorizontalGravity="Center"
+                BGVerticalGravity="Center"
+                ClickDataCollection="BTN_Retry" />
+        </RelativeLayout>
+        <!-- 加载状态-->
+        <RelativeLayout
+            Id="@+Id/NAVI_TENCENT_MY_CAR_LOADING_SETTING"
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent"
+            HorizontalGravity="Center"
+            VerticalGravity="Center"
+            Visible="Gone">
+            <!--Loading部品-->
+            <RelativeLayout
+                Id="@+Id/LoadingGroupInfo"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                LayoutWidth="FillParent"
+                LayoutHeight="276">
+                <AutomaticImageActor
+                    Id="@+Id/GroupInfoLoadAnim"
+                    LayoutWidth="80"
+                    LayoutHeight="80"
+                    ImageChangeTimer="83"
+                    Cyclable="true"
+                    LayoutCenterHorizontal="true"
+                    LayoutTopMargin="23"
+                    Drawable="@Drawable/loading_anim_seq_m_LayerList"
+                    Visible="Gone" />
+                <TextActor
+                    Id="@+Id/GroupPromptInfo"
+                    LayoutHeight="103"
+                    LayoutWidth="FillParent"
+                    LayoutTopMargin="90"
+                    TextColor="@Color/NormalBtn_RGB"
+                    TextFont="@Font/UIFont34_Text_L"
+                    Text="@String/MX_LANG_NAVI_MAP_DESTINATION_VIEW_LOADING_TEXT_Loading"
+                    SingleLine="false" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            Id="@+Id/LayoutQRCode"
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent"
+            HorizontalGravity="Center"
+            VerticalGravity="Center">
+            <!--二维码Loading部品-->
+            <RelativeLayout
+                Id="@+Id/NAVI_TENCENT_MY_CAR_LOADING"
+                LayoutWidth="FillParent"
+                LayoutHeight="FillParent"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Visible="Gone">
+              <RelativeLayout
+                    LayoutWidth="188"
+                    LayoutHeight="188"
+                    LayoutCenterHorizontal="true"
+                    Background="@Drawable/QR_Code_bg_mask_card_place">
+                    <AutomaticImageActor
+                        Id="@+Id/Navi_Qr_Code_Loading"
+                        LayoutWidth="80"
+                        LayoutHeight="80"	
+                        ImageChangeTimer = "83"
+                        Cyclable = "true"
+                        LayoutCenterHorizontal = "true"
+                        LayoutTopMargin = "54"
+                        Drawable="@Drawable/loading_anim_seq_l_LayerList"
+                        Visible = "Gone"/>
+                </RelativeLayout>
+                <TextActor
+                    LayoutHeight="104"
+                    LayoutWidth="FillParent"
+                    LayoutTopMargin="203"
+                    HorizontalGravity="Center"
+                    WordWrapped="true"
+                    TextColor="@Color/NormalBtn_RGB"
+                    TextFont="@Font/UIFont34_Text_L"
+                    Text="@String/MX_LANG_NAVI_TENCENT_MY_CAR_LOADING_TEXT_QR_Code_Loading"
+                    SingleLine="false" />
+            </RelativeLayout>
+            <!--二维码部品-->
+            <RelativeLayout
+                Id="@+Id/Relative_ShowQRCode"
+                LayoutWidth="FillParent"
+                LayoutHeight="FillParent"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Visible="Gone">
+                <RelativeLayout
+                    LayoutWidth = "188"
+                    LayoutHeight = "188"
+                    LayoutTopMargin = "15"
+                    Background = "@Drawable/QR_Code_small_bg"
+                    LayoutCenterHorizontal = "true">
+                 <ImageActor
+                    Id="@+Id/SYMBOL_QR_Code"
+                    LayoutWidth = "178"
+                    LayoutHeight = "178"
+                    LayoutCenterInParent = "true"/>
+                </RelativeLayout>
+                <TextActor
+                    LayoutHeight="89"
+                    LayoutWidth="FillParent"
+                    LayoutTopMargin="249"
+                    HorizontalGravity="Center"
+                    VerticalGravity="Top"
+                    LineIntervalMultiFactor="-0.04"
+                    TextColor="@Color/NormalBtn_RGB"
+                    TextFont="@Font/UIFont34_Text_L"
+                    Text="@String/MX_LANG_NAVI_TENCENT_MY_CAR_TEXT_No_Bind"
+                    SingleLine="false" />
+            </RelativeLayout>
+            <!--获取失败部品-->
+            <RelativeLayout
+                Id="@+Id/Relative_Fail"
+                LayoutWidth="FillParent"
+                LayoutHeight="FillParent"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Visible="Gone">
+                <RelativeLayout
+                    LayoutWidth="188"
+                    LayoutHeight="188"
+                    LayoutCenterHorizontal="true"
+                    Background="@Drawable/QR_Code_bg_mask_card_place">
+                    <ImageButton
+                        Id="@+Id/BTN_Fail_Load"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="FillParent"
+                        Drawable="@Drawable/refresh_erweima"
+                        ClickDataCollection="BTN_Fail_Load" />
+                </RelativeLayout>
+                <TextActor
+                    Text="@String/MX_LANG_NAVI_FAVORITE_WECHAT_QR_CODE_FAILED_TEXT_Fail_Load"
+                    TextColor="@Color/NormalBtn_RGB"
+                    TextFont="@Font/UIFont34_Text_L"
+                    LayoutWidth="FillParent"
+                    LayoutHeight="104"
+                    SingleLine="false"
+                    LayoutTopMargin="203"
+                    WordWrapped="true"
+                    PaddingLeft="2"
+                    LineIntervalMultiFactor="0.0"
+                    LineIntervalAddFactor="6" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

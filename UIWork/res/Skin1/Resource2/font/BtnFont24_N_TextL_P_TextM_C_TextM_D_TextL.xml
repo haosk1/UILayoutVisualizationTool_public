@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "false" Font = "@Font/UIFont24_Text_L"/>
+<!-->Check-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "true" Font = "@Font/UIFont24_Text_M"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" Font = "@Font/UIFont24_Text_M"/>
+<!-->Disable-->
+		<Item StateEnabled = "false" Font = "@Font/UIFont24_Text_L"/>
+    </StateList>
+</Resource>

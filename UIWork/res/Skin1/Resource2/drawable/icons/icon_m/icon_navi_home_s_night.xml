@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" Drawable = "@Drawable/navi_home_s_night"/>
+<!-->Check-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "true" Drawable = "@Drawable/navi_home_s_pressed_night"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" Drawable = "@Drawable/navi_home_s_pressed_night"/>
+<!-->Disable-->
+		<Item StateEnabled = "false" Drawable = "@Drawable/navi_home_s_disable_night"/>
+    </StateList>
+</Resource>

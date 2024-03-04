@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@Id/PreDefine/LayoutParent"
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent">
+        <Function
+            Id="@Id/PreDefine/Fragment_PNav"
+            LayoutHeight="FillParent"
+            LayoutWidth="FillParent" />
+        <!--CCP View左侧BTN-->
+        <LinearLayout
+            Id="@+Id/FULeftBtnLayout"
+            LayoutHeight="WrapContent"
+            LayoutWidth="WrapContent"
+            LayoutBottomMargin="118"
+            LayoutLeftMargin="502"
+            LayoutAlignParentBottom="true">
+            <RelativeLayout
+                Id="@+Id/BTN_Setting"
+                LayoutWidth="116"
+                LayoutHeight="116"
+                Clickable="true"
+                Background="@Drawable/mixin_background_square_outline"
+                VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CCP_VIEW_NO_GUIDANCE_OPERATE_VisibleSpeechs_02"
+                ClickDataCollection="BTN_Map_Orientation">
+                <ImageActor
+                    Style="@Style/LefBtnIconLayout"
+                    Drawable="@Drawable/setting" />
+                <TextActor
+                    Style="@Style/LeftBtnTxtLayout"
+                    Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_NO_GUIDANCE_DISPLAY_TEXT_Setting" />
+            </RelativeLayout>
+            <RelativeLayout
+				Id = "@+Id/BTN_Mute"
+				LayoutWidth = "116"
+				LayoutHeight = "116"
+                LayoutLeftMargin = "-2"
+				Clickable = "true"
+				Background = "@Drawable/mixin_background_square_outline">
+				<ImageActor
+					Id = "@+Id/ImgMute"	
+					Style = "@Style/LefBtnIconLayout"
+					Drawable = "@Drawable/setting_mute"/>
+				<TextActor
+					Id = "@+Id/Sound_Text"								
+					Style = "@Style/LeftBtnTxtLayout"
+					Text = "@String/MX_LANG_NAVI_MAP_CCP_VIEW_FAMILIAR_ROUTE_GUIDANCE_TEXT_Unmute"/>
+			</RelativeLayout>
+            <RelativeLayout
+                Id="@+Id/BTN_View_list"
+                LayoutWidth="116"
+                LayoutHeight="116"
+                LayoutLeftMargin = "-2"
+                Clickable="true"
+                Background="@Drawable/mixin_background_square_outline"
+                VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CCP_VIEW_NO_GUIDANCE_OPERATE_VisibleSpeechs_01"
+                ClickDataCollection="BTN_Map_Orientation">
+                <ImageActor
+                    Drawable="@Drawable/layer"
+                    Style="@Style/LefBtnIconLayout" />
+                <TextActor
+                    Style="@Style/LeftBtnTxtLayout"
+                    Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_NO_GUIDANCE_DISPLAY_TEXT_View_list" />
+            </RelativeLayout>
+            <RelativeLayout
+                Id="@Id/PreDefine/BtnMapAzimuth"
+                LayoutWidth="116"
+                LayoutHeight="116"
+                LayoutLeftMargin = "-2"
+                Clickable="true"
+                Background="@Drawable/mixin_background_square_outline"
+                VisibleSpeechs = "@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV2_EV_VisibleSpeechs_02"
+                ClickDataCollection="BTN_Map_Orientation">
+                <ImageActor
+                    Id="@Id/PreDefine/MapAzimuth_Icon"
+                    Style="@Style/LefBtnIconLayout" />
+                <TextActor
+                    Style="@Style/LeftBtnTxtLayout"
+                    Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_NO_GUIDANCE_DISPLAY_TEXT_Map_Orientation" />
+            </RelativeLayout>
+            <!--充电地图BTN-->
+            <RelativeLayout
+                Id="@+Id/BTN_Charging_Map_Without_Guidance"
+                LayoutWidth="116"
+                LayoutHeight="116"
+                LayoutLeftMargin = "-2"
+                Clickable="true"
+                Visible="Gone"
+                Background="@Drawable/mixin_background_square_outline"
+                VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CCP_VIEW_NO_GUIDANCE_DISPLAY_VisibleSpeechs_03"
+                ClickDataCollection="BTN_Charging_Map">
+                <ImageActor
+                    Style="@Style/LefBtnIconLayout"
+                    Drawable="@Drawable/change_navi" />
+                <TextActor
+                    Style="@Style/LeftBtnTxtLayout"
+                    Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_NO_GUIDANCE_DISPLAY_TEXT_Charging_Map" />
+            </RelativeLayout>
+        </LinearLayout>
+        <!--HMI界面布局部分，此元器件LayoutWidth表示半屏尺寸-->
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <!--SearchBar-->
+            <LinearLayout
+                Id="@+Id/SearchBar"
+                LayoutHeight="98"
+                LayoutWidth="476"
+                LayoutTopMargin="112"
+                LayoutLeftMargin="16"
+                Background="@Drawable/search_bg">
+                <Button
+                    Id="@+Id/Btn_SearchBar"
+                    LayoutHeight="FillParent"
+                    LayoutWidth="FillParent"
+                    Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV1_TEXT_HInt_Text1"
+                    VisibleSpeechs = "@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV2_EV_VisibleSpeechs_01"
+                    TextFont="@Font/UIFont34_Text_L"
+                    TextColor="@Color/DayBlack_NightWhite_Grey"
+                    PaddingLeft="48"
+                    PaddingTop="4"
+                    HorizontalGravity="Left"
+                    DuplicateParentState="true"
+                    ClickDataCollection="BTN_Search" />
+            </LinearLayout>
+            <!--提示文言-->
+            <RelativeLayout
+				LayoutHeight = "WrapContent"
+				LayoutWidth = "960"
+                LayoutRightMargin="-14"
+				LayoutAlignParentRight = "true">
+				<!-- 单限行或单traffic文言 -->
+				<RelativeLayout
+					Id = "@+Id/TitleLayout"
+					LayoutHeight = "WrapContent"
+					LayoutWidth = "FillParent"
+					LayoutTopMargin="78"
+					Clickable="true"
+					PaddingLeft="96"
+					PaddingTop="66"
+					PaddingRight="96"
+					PaddingBottom="63"
+					Background = "@Drawable/popup_toast_bg"
+					Visible = "Gone" >
+					<TextActor
+						Id = "@+Id/TitleText"
+						LayoutWidth = "WrapContent"
+						LayoutHeight = "WrapContent"
+						LayoutTopMargin="2"
+						SingleLine = "false"
+						LayoutCenterHorizontal = "true"
+						HorizontalGravity="Left"
+						LineIntervalAddFactor="-6"
+						LineIntervalMultiFactor="0.1"
+						Text = "Huanghe Street is closed caused by <event type>"
+						TextFont = "@Font/UIFont34_Text_L"
+						TextColor = "@Color/BtnFavoriteColor"/>
+				</RelativeLayout>
+				<!-- 限行traffic同时显示收起状态 -->
+				<RelativeLayout
+					Id = "@+Id/RestrictionAndTrafficReduce"
+					LayoutWidth = "FillParent"
+					LayoutHeight = "172"
+					Clickable="true"
+					LayoutTopMargin="78"
+                    VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV2_EV_VisibleSpeechs_04"
+					Background = "@Drawable/popup_toast_click_bg"
+					Visible = "Gone" >
+					<TextActor
+						Id = "@+Id/ReduceText"
+						LayoutWidth = "616"
+						LayoutHeight = "40"
+						LayoutTopMargin="69"
+						LayoutLeftMargin="96"
+						SingleLine = "true"
+						HorizontalGravity="Left"
+						LineIntervalAddFactor="-6"
+						LineIntervalMultiFactor="0.1"
+                        DuplicateParentState="true"
+						Text = "Route includes restricted area."
+						TextFont = "@Font/UIFont34_Text_L"
+						TextColor = "@Color/BtnFavoriteColor"/>
+					<TextActor
+						LayoutWidth = "64"
+						LayoutHeight = "64"
+						LayoutLeftMargin = "824"
+						LayoutCenterVertical = "true"
+						PaddingTop="6"
+						PaddingLeft="1"
+						HorizontalGravity = "Center"
+						VerticalGravity = "Center"
+						TextFont = "@Font/UIFont34_Text_R"
+						Text = "2"
+						Background = "@Drawable/general_message64"
+						TextColor = "@Color/Color_FFFFFF"/>
+				</RelativeLayout>
+				<!-- 限行traffic同时显示展开状态 -->
+				<RelativeLayout
+					Id = "@+Id/RestrictionAndTrafficAmplify"
+					LayoutWidth = "FillParent"
+					LayoutHeight = "WrapContent"
+					LayoutTopMargin="78"
+					Clickable="true"
+					Background = "@Drawable/popup_toast_bg"
+					Visible = "Gone" >
+					<!-- 限行 -->
+                    <RelativeLayout
+                        Id = "@+Id/AmplifyRestrictionBtn"
+                        LayoutWidth = "FillParent"
+                        LayoutHeight = "170"
+                        Clickable="true"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV2_EV_VisibleSpeechs_05"
+                        Background = "@Drawable/popup_toast_clear_bg">
+                        <TextActor
+                            Id = "@+Id/AmplifyRestrictionText"
+                            LayoutWidth = "768"
+                            LayoutHeight = "WrapContent"
+                            LayoutTopMargin="69"
+                            LayoutLeftMargin="96"
+                            SingleLine = "true"
+                            DuplicateParentState="true"
+                            HorizontalGravity="Left"
+                            LineIntervalAddFactor="-6"
+                            LineIntervalMultiFactor="0.1"
+                            Text = "Route includes restricted area."
+                            TextFont = "@Font/UIFont34_Text_L"
+                            TextColor = "@Color/BtnFavoriteColor"/>
+                    </RelativeLayout>
+					<!-- traffic -->
+					<TextActor
+						Id = "@+Id/AmplifyTrafficText"
+						LayoutWidth = "768"
+						LayoutHeight = "WrapContent"
+						LayoutTopMargin="172"
+						LayoutLeftMargin="96"
+						LayoutBottomMargin="63"
+						SingleLine = "false"
+						HorizontalGravity="Left"
+						LineIntervalAddFactor="-6"
+						LineIntervalMultiFactor="0.1"
+						Text = "Huanghe Street is closed caused by <event type>"
+						TextFont = "@Font/UIFont34_Text_L"
+						TextColor = "@Color/BtnFavoriteColor"/>
+					<ImageActor
+						Id = "@+Id/LineIcon"
+						LayoutWidth = "892"
+						LayoutHeight = "2"
+						LayoutLeftMargin = "34"
+						LayoutTopMargin = "136"
+						Background = "@Drawable/card_list_line"/>
+				</RelativeLayout>
+			</RelativeLayout>
+            <!--PNav主画页-->
+            <RelativeLayout
+                Id="@Id/PreDefine/LayoutMain"
+                LayoutHeight="FillParent"
+                LayoutWidth="FillParent"
+                LayoutTopMargin="212">
+                <RelativeLayout
+                    Id="@+Id/CardLayout"
+                    LayoutWidth="508"
+                    LayoutHeight="394"
+                    Clickable="true"
+                    Background="@Drawable/card_bg_day_and_night">
+                    <TrafficFlow_RainBowBar
+                        Id="@+Id/TrafficRainBar"
+                        LayoutWidth="416"
+                        LayoutHeight="8"
+                        LayoutTopMargin="206"
+                        LayoutLeftMargin="46"
+                        Orientation="Horizontal"
+                        TrafficFlowRainBowBarInvalidRouteStatusColor="#3A86FE"
+                        TrafficFlowRainbowBarLayoutWidth="416"
+                        TrafficFlowRainbowBarLayoutHeight="8"
+                        MaskDrawable="@Drawable/rainbow" />
+                    <!-- 标题 -->
+                    <TextActor
+                        Id="@+Id/TextTitle"
+                        LayoutWidth="357"
+                        LayoutHeight="29"
+                        LayoutTopMargin="36"
+                        LayoutLeftMargin="46"
+                        HorizontalGravity="Left"
+                        Text="You want to go to"
+                        TextFont="@Font/UIFont28_Text_L"
+                        TextColor="@Color/BtnFavoriteColor" />
+                    <!-- 目的地icon -->
+                    <ImageActor
+                        LayoutWidth="48"
+                        LayoutHeight="48"
+                        LayoutTopMargin="82"
+                        LayoutLeftMargin="46"
+                        Clickable="false"
+                        Drawable="@Drawable/Trip_Destination_day_and_night_48" />
+                    <!-- 目的地文言 -->
+                    <TextActor
+                        Id="@+Id/TextDestination"
+                        LayoutWidth="352"
+                        LayoutHeight="40"
+                        LayoutTopMargin="88"
+                        LayoutLeftMargin="110"
+                        HorizontalGravity="Left"
+                        Text="Shenyang Palace"
+                        TextFont="@Font/UIFont34_Text_M"
+                        TextColor="@Color/BtnFavoriteColor" />
+                    <!-- 当前线路 -->
+                    <RelativeLayout
+                        Id="@+Id/CurrentLineType"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="48"
+                        LayoutTopMargin="142"
+                        LayoutLeftMargin="46"
+                        Background="@Drawable/navi_card_recommend_bg_pnav">
+                        <TextActor
+                            Id="@+Id/CurrentLineTypeText"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="WrapContent"
+                            LayoutLeftMargin="20"
+                            LayoutRightMargin="20"
+                            PaddingTop="3"
+                            Clickable="false"
+                            LayoutCenterVertical="true"
+                            Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV1_TEXT_PNAV_Route_Tag1"
+                            TextFont="@Font/UIFont24_Text_L"
+                            TextColor="@Color/BtnFavoriteColor" />
+                    </RelativeLayout>
+                    <!-- 正常电池电量 -->
+                    <RelativeLayout
+                        Id="@+Id/EstimatedPower"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="48"
+                        LayoutTopMargin="142"
+                        LayoutLeftMargin="234"
+                        Background="@Drawable/navi_card_charge_less_bg"
+                        Visible="Gone">
+                        <ImageActor
+                            LayoutWidth="48"
+                            LayoutHeight="FillParent"
+                            LayoutLeftMargin="20"
+                            Clickable="false"
+                            Background="@Drawable/power_48" />
+                        <TextActor
+                            Id="@+Id/EstimatedPowerText"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="34"
+                            LayoutLeftMargin="73"
+                            LayoutRightMargin="21"
+                            PaddingTop="3"
+                            Clickable="false"
+                            LayoutCenterVertical="true"
+                            Text="23%"
+                            TextFont="@Font/UIFont28_Text_L"
+                            TextColor="@Color/BtnFavoriteColor" />
+                    </RelativeLayout>
+                    <!-- 低电电池电量 -->
+                    <RelativeLayout
+                        Id="@+Id/LowPower"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="48"
+                        LayoutTopMargin="142"
+                        LayoutLeftMargin="227"
+                        Background="@Drawable/navi_card_unreachable_bg_pnav"
+                        Visible="Gone">
+                        <ImageActor
+                            LayoutWidth="48"
+                            LayoutHeight="FillParent"
+                            LayoutLeftMargin="20"
+                            Clickable="false"
+                            Background="@Drawable/power_low_48" />
+                        <TextActor
+                            Id="@+Id/LowPowerText"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="34"
+                            LayoutLeftMargin="73"
+                            LayoutRightMargin="20"
+                            PaddingTop="3"
+                            Clickable="false"
+                            LayoutCenterVertical="true"
+                            Text="8%"
+                            TextFont="@Font/UIFont28_Text_L"
+                            TextColor="@Color/BtnFavoriteColor" />
+                    </RelativeLayout>
+                    <!-- 不可到达 -->
+                    <RelativeLayout
+                        Id="@+Id/Unreachable"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="48"
+                        LayoutTopMargin="142"
+                        LayoutLeftMargin="234"
+                        Background="@Drawable/navi_card_unreachable_bg_pnav"
+                        Visible="Gone">
+                        <TextActor
+                            Id="@+Id/UnreachableText"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="WrapContent"
+                            LayoutLeftMargin="20"
+                            LayoutRightMargin="20"
+                            PaddingTop="3"
+                            Clickable="false"
+                            LayoutCenterVertical="true"
+                            Text="@String/MX_LANG_NAVI_ROUTE_SELECTION_WITH_STOPOVER2_EV_TEXT_Destination_SOC_Info2"
+                            TextFont="@Font/UIFont24_Text_L"
+                            TextColor="@Color/BtnFavoriteColor" />
+                    </RelativeLayout>
+                    <!-- 预计到达时间 -->
+                    <TextActor
+                        Id="@+Id/ArrivalTime"
+                        LayoutWidth="130"
+                        LayoutHeight="34"
+                        LayoutTopMargin="232"
+                        LayoutLeftMargin="46"
+                        HorizontalGravity="Left"
+                        Text="18:30"
+                        TextFont="@Font/UIFont28_Text_L"
+                        TextColor="@Color/BtnFavoriteColor" />
+                    <TextActor
+                        Id="@+Id/ArrivalDay"
+                        LayoutWidth="27"
+                        LayoutHeight="40"
+                        LayoutTopMargin="221"
+                        LayoutLeftMargin="123"
+                        HorizontalGravity="Left"
+                        Text="+1"
+                        TextFont="@Font/UIFont22_Text_L"
+						TextColor= "@Color/BtnFavoriteColor"/>
+                    <!-- 路程预计时间 -->
+                    <TextActor
+                        Id="@+Id/EstimateTime"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="34"
+                        LayoutTopMargin="232"
+                        LayoutLeftMargin="336"
+                        Text="1h47min"
+                        TextFont="@Font/UIFont28_Text_L"
+                        TextColor="@Color/BtnFavoriteColor" />
+                    <!-- 预计行驶距离 -->
+                    <TextActor
+                        Id="@+Id/EstimateDistance"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="34"
+                        LayoutTopMargin="232"
+                        LayoutLeftMargin="197"
+                        Text="9999km"
+                        TextFont="@Font/UIFont28_Text_L"
+                        TextColor="@Color/BtnFavoriteColor" />
+                    <!--取消-->
+                    <RelativeLayout
+                        Id="@+Id/BtnCancel"
+                        LayoutWidth="225"
+						LayoutHeight="96"
+						LayoutLeftMargin = "30"
+						LayoutTopMargin = "268"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV1_VisibleSpeechs_01"
+                        Clickable="true">
+                        <TextActor
+                            LayoutWidth="261"
+							LayoutHeight="132"
+							LayoutTopMargin="-18"
+							LayoutBottomMargin="-18"
+							LayoutLeftMargin="-18"
+							LayoutRightMargin="-18"
+                            PaddingTop="4"
+                            Background="@Drawable/background_64_normal_prox"
+                            DuplicateParentState="true"
+                            TextFont=" @Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL"
+                            TextColor="@Color/BtnFavoriteColor"
+                            Text="@String/MX_LANG_PO_ALERT_NAVI_RESTRICTION_HINT_TEXT_Cancel" />
+                    </RelativeLayout>
+                    <!--开始引导-->
+                    <RelativeLayout
+                        Id="@+Id/BtnStartGuidance"
+                        LayoutWidth="233"
+						LayoutHeight="96"
+						LayoutLeftMargin = "249"
+						LayoutTopMargin = "268"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV1_VisibleSpeechs_02"
+                        Clickable="true">
+                        <RelativeLayout
+                            LayoutWidth="269"
+							LayoutHeight="132"
+                            LayoutTopMargin="-18"
+							LayoutBottomMargin="-18"
+							LayoutLeftMargin="-18"
+							LayoutRightMargin="-18"
+                            Background="@Drawable/background_64_hero_prox_day_shadows"
+                            DuplicateParentState="true">
+                            <TextActor
+                                LayoutWidth="201"
+                                LayoutHeight="72"
+                                PaddingTop="4"
+                                LayoutCenterInParent="true"
+                                DuplicateParentState="true"
+                                TextFont=" @Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL"
+                                TextColor="@Color/Color_000000"
+                                Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV1_TEXT_Go"
+                                Background="@Drawable/background_64_hero_prox_btn" />
+                            <!-- 占位元器件 -->
+                            <RelativeLayout
+                                Id="@+Id/LayoutTemp"
+                                LayoutWidth="900"
+                                LayoutHeight="600"
+                                LayoutLeftMargin="1010"
+                                LayoutTopMargin="250"
+                                Visible="Gone" />
+                            <!-- 占位元器件 -->
+                            <RelativeLayout
+                                Id="@+Id/CourseLayoutTemp"
+                                LayoutWidth="1354"
+                                LayoutHeight="698"
+                                LayoutLeftMargin="566"
+                                LayoutTopMargin="229"
+                                LayoutBottomMargin="274"
+                                Visible="Gone" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+        <!--1558宽度元器件居中-->
+        <RelativeLayout
+            Id="@Id/PreDefine/CenterLayoutParent"
+            LayoutHeight="FillParent"
+            LayoutWidth="1314"
+            LayoutAlignParentRight="true"
+            Clickable="false">
+            <!--回自车 hero btn -->
+            <RelativeLayout
+                Id="@Id/PreDefine/ReturnCCP"
+                LayoutWidth="WrapContent"
+				LayoutHeight="164"
+				LayoutCenterHorizontal = "true"
+				LayoutAlignParentBottom = "true"
+				LayoutBottomMargin = "94"
+                Background="@Drawable/background_96h_hero_prox_day_shadows">
+                <RelativeLayout
+                    Id="@Id/PreDefine/BtnReturnCCP"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="128"
+					LayoutLeftMargin = "18"
+					LayoutRightMargin = "18"
+                    LayoutCenterInParent="true"
+                    VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV2_EV_VisibleSpeechs_03"
+                    Clickable="true">
+                    <LinearLayout
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="104"
+						LayoutLeftMargin = "12"
+						LayoutRightMargin = "12"
+                        LayoutCenterInParent="true"
+                        DuplicateParentState="true"
+                        Background="@Drawable/Gradient_background_96h_hero_prox">
+                        <ImageActor
+                            LayoutLeftMargin="28"
+                            LayoutCenterVertical="true"
+                            DuplicateParentState="true"
+                            Drawable="@Drawable/back_to_destination_day" />
+                        <!--占位-->
+                        <ImageActor
+                            Id="@Id/PreDefine/SpaceBefore"
+                            LayoutWidth="2"
+                            LayoutHeight="FillParent"
+                            Visible="Gone" />
+                        <TextActor
+                            Id="@Id/PreDefine/TxtReturnCCP"
+                            LayoutHeight="FillParent"
+                            LayoutWidth="WrapContent"
+                            LayoutLeftMargin = "8"
+							LayoutRightMargin = "47"
+							PaddingTop = "4"
+                            DuplicateParentState="true"
+                            Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV2_TEXT_Back_to_CCP"
+                            TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                            TextColor="@Color/HeroBtnText_RGB" />
+                        <!--占位-->
+                        <ImageActor
+                            Id="@Id/PreDefine/SpaceAfter"
+                            LayoutWidth="2"
+                            LayoutHeight="FillParent"
+                            Visible="Gone" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent">
+        <!--地图-->
+        <TransparencyActor
+            Id="@+Id/TransparencyScreen"
+            LayoutHeight="FillParent"
+            LayoutWidth="FillParent" />
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1428"
+            LayoutHeight="FillParent">
+            <!--标题-->
+            <RelativeLayout
+                Id="@+Id/TitleText"
+                LayoutHeight="208"
+                LayoutWidth="1168"
+                LayoutTopMargin="86"
+                LayoutCenterHorizontal="true"
+                Clickable="true"
+                Visible="Visible"
+                Background="@Drawable/popup_toast_bg">
+                <TextActor
+                    Id="@+Id/Location_Text"
+                    LayoutWidth="766"
+                    LayoutHeight="80"
+                    LayoutCenterVertical="true"
+                    LayoutLeftMargin="133"
+                    HorizontalGravity="Left"
+                    PaddingTop="5"
+                    SingleLine="false"
+                    WordWrapped="true"
+                    LineIntervalMultiFactor="-0.04"
+                    Text="@String/MX_LANG_NAVI_LOCATION_SERVICE_OFF_DISPLAY_TEXT_Location_Service_Off_Reminder"
+                    TextFont="@Font/UIFont34_Text_L"
+                    TextColor="@Color/BtnFavoriteColor" />
+                <RelativeLayout
+                    Id="@+Id/BTN_Setting"
+                    LayoutWidth="200"
+                    LayoutHeight="116"
+                    LayoutLeftMargin="914"
+                    LayoutCenterVertical="true"
+                    Clickable="true"
+                    Visible="Visible"
+                    VisibleSpeechs="@String/MX_LANG_NAVI_LOCATION_SERVICE_OFF_DISPLAY_VisibleSpeechs_01">
+                    <TextActor
+                        LayoutWidth="236"
+                        LayoutHeight="152"
+                        LayoutTopMargin="-18"
+                        LayoutBottomMargin="-18"
+                        LayoutLeftMargin="-18"
+                        LayoutRightMargin="-18"
+                        PaddingTop="6"
+                        PaddingLeft = "2"
+                        Background="@Drawable/background_84h_normal_prox"
+                        DuplicateParentState="true"
+                        TextFont=" @Font/BtnFont34_N_TextL_P_TextL_C_TextM_D_TextL"
+                        TextColor="@Color/BtnFavoriteColor"
+                        Text="@String/MX_LANG_NAVI_LOCATION_SERVICE_OFF_DISPLAY_TEXT_Settings" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <ImageActor
+                Id="@+Id/GPSImageIcon"
+                LayoutHeight="50"
+                LayoutWidth="66"
+                LayoutRightMargin="17"
+                LayoutBottomMargin="171"
+                Drawable="@Drawable/nosignal"
+                LayoutAlignParentRight="true"
+                LayoutAlignParentBottom="true" />
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

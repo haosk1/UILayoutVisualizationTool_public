@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <DayNightStateList>
+<!--Day-->
+		<Item DayOrNight = "Day" Drawable = "@Drawable/navi_setting_background_active_1_bg_day_prox"/>
+<!--Night-->
+		<Item DayOrNight = "Night" Drawable = "@Drawable/navi_setting_background_active_1_bg_night_prox"/>
+    </DayNightStateList>
+</Resource>
+
+
+
+
+
+
+
+

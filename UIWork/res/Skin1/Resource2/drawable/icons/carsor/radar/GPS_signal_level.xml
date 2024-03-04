@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Resource>
+    <LevelList>
+		<Item DrawableLevel = "0" Drawable = "@Drawable/nosignal"/>
+		<Item DrawableLevel = "1" Drawable = "@Drawable/radar1"/>
+		<Item DrawableLevel = "2" Drawable = "@Drawable/radar2"/>
+		<Item DrawableLevel = "3" Drawable = "@Drawable/radar3"/>
+	</LevelList>
+</Resource>

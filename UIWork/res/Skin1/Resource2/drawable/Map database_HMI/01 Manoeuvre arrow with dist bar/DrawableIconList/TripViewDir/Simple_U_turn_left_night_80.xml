@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+     <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" Drawable = "@Drawable/Simple_U_turn_left_night_80_80"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" Drawable = "@Drawable/Simple_U_turn_left_day_80_80"/>
+    </StateList>
+</Resource>

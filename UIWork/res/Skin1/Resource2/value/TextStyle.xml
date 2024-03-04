@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+	<Style name = "SearchResultKeyWordTextStyle">
+		<Item name = "TextColor">@Color/SearchResultKeyWordColor</Item>
+	</Style>
+	<Style name = "TravelInfoKeyWordTextStyle">
+		<Item name = "TextColor">@Color/Color_White</Item>
+	</Style>
+	<Style name = "SrhSuggestTextHight10">
+		<Item name = "TextColor">@Color/Color_000000day_and_FFFFFFnight</Item>
+	</Style>
+</Resource>

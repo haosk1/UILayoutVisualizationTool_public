@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@Id/PreDefine/LayoutRelative"
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent">
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1428"
+            LayoutHeight="FillParent"
+            Clickable="false">
+            <!--背景图-->
+            <RelativeLayout
+                Id="@+Id/LayoutMain"
+                LayoutWidth="724"
+                LayoutHeight="872"
+                LayoutTopMargin="96"
+                LayoutLeftMargin = "4"
+                Background="@Drawable/card_bg_day_and_night"
+                Clickable="true">
+                <!--目的地ICON + 目的地Text-->
+                <LinearLayout
+                    LayoutWidth="FillParent"
+                    LayoutHeight="172"
+                    VerticalGravity="Center"
+                    LayoutTopMargin="12">
+                    <!--目的地ICON-->
+                    <ImageActor
+                        LayoutWidth="80"
+                        LayoutHeight="80"
+                        LayoutLeftMargin="58"
+                        Background="@Drawable/trip_destination_80" />
+                    <!--目的地Text-->
+                    <TextActor
+                        Id="@+Id/TxtDestInfo"
+                        LayoutWidth="360"
+                        LayoutHeight="52"
+                        LayoutLeftMargin="42"
+                        LayoutTopMargin="5"
+                        HorizontalGravity="Left"
+                        TextFont="@Font/UIFont40_Text_M"
+                        TextColor="@Color/DayBlack_NightWhite"
+                        Text="@String/MX_LANG_NAVI_MAP_DESTINATION_ARRIVAL_VIEW_TEXT_Destination" />
+                </LinearLayout>
+                <!--具体信息-->
+                <LinearLayout
+                    LayoutWidth="692"
+                    LayoutHeight="294"
+                    LayoutTopMargin="172"
+                    LayoutLeftMargin="16"
+                    Orientation="Vertical"
+                    HorizontalGravity="Left">
+                    <!--行驶距离-->
+                    <RelativeLayout
+                        LayoutWidth="652"
+                        LayoutHeight="52">
+                        <TextActor
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="FillParent"
+                            HorizontalGravity="Left"
+                            LayoutAlignParentLeft = "true"
+                            LayoutLeftMargin="40"
+                            PaddingTop="4"
+                            TextFont="@Font/UIFont40_Text_R"
+                            TextColor="@Color/DayBlack_NightWhite"
+                            Text="@String/MX_LANG_NAVI_MAP_DESTINATION_ARRIVAL_VIEW_TEXT_Mileage" />
+                        <LinearLayout
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="40"
+                            LayoutTopMargin = "9"
+                            LayoutAlignParentRight = "true">
+                            <!--行驶距离-->
+                            <TextActor
+                                Id="@+Id/TxtMileage"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="FillParent"
+                                LayoutLeftMargin = "0"
+                                HorizontalGravity="Left"
+                                VerticalGravity="Bottom"
+                                TextFont="@Font/UIFont34_Text_M"
+                                TextColor="@Color/DayBlack_NightWhite" />
+                            <TextActor
+                                Id="@+Id/TxtMileageUnit"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="FillParent"
+                                LayoutRightMargin = "0"
+                                HorizontalGravity="Left"
+                                VerticalGravity="Bottom"
+                                TextFont="@Font/UIFont34_Text_L"
+                                TextColor="@Color/DayBlack_NightWhite" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!--行驶时间-->
+                    <RelativeLayout
+                        LayoutWidth="652"
+                        LayoutHeight="52"
+                        LayoutTopMargin="15">
+                        <TextActor
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="FillParent"
+                            HorizontalGravity="Left"
+                            LayoutAlignParentLeft = "true"
+                            LayoutLeftMargin="40"
+                            PaddingTop="6"
+                            TextFont="@Font/UIFont40_Text_R"
+                            TextColor="@Color/DayBlack_NightWhite"
+                            Text="@String/MX_LANG_NAVI_MAP_DESTINATION_ARRIVAL_VIEW_TEXT_Route_Time" />
+                        <LinearLayout
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="40"
+                            LayoutTopMargin = "10"
+                            LayoutAlignParentRight = "true">
+                            <LinearLayout
+                                Id="@+Id/LayoutHour"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="FillParent"
+                                Visible="Gone">
+                                <!--行驶时间-->
+                                <TextActor
+                                    Id="@+Id/TxtRouteTime_Hour"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    HorizontalGravity="Left"
+                                    VerticalGravity="Bottom"
+                                    TextFont="@Font/UIFont34_Text_M"
+                                    TextColor="@Color/DayBlack_NightWhite" />
+                                <TextActor
+                                    Id="@+Id/TxtRouteTime_Hour_Unit"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    HorizontalGravity="Left"
+                                    Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Time_TEXT_Hour"
+                                    VerticalGravity="Bottom"
+                                    TextFont="@Font/UIFont34_Text_L"
+                                    TextColor="@Color/DayBlack_NightWhite" />
+                            </LinearLayout>
+                            <LinearLayout
+                                Id="@+Id/LayoutMin"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="FillParent"
+                                LayoutAlignParentRight = "true"
+                                Visible="Gone">
+                                <TextActor
+                                    Id="@+Id/TxtRouteTime_Min"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    LayoutLeftMargin = "0"
+                                    HorizontalGravity="Left"
+                                    VerticalGravity="Bottom"
+                                    TextFont="@Font/UIFont34_Text_M"
+                                    TextColor="@Color/DayBlack_NightWhite" />
+                                <TextActor
+								  Id = "@+Id/TxtRouteTime_Min_Unit"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    HorizontalGravity="Left"
+                                    LayoutRightMargin = "0"
+                                    Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Time_TEXT_Min1"
+                                    VerticalGravity="Bottom"
+                                    TextFont="@Font/UIFont34_Text_L"
+                                    TextColor="@Color/DayBlack_NightWhite" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!--平均速度对应文言 + 平均速度-->
+                    <RelativeLayout
+                        LayoutWidth="652"
+                        LayoutHeight="52"
+                        LayoutTopMargin="16">
+                        <TextActor
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="FillParent"
+                            TextFont="@Font/UIFont40_Text_R"
+                            HorizontalGravity="Left"
+                            LayoutAlignParentLeft = "true"
+                            LayoutLeftMargin="40"
+                            PaddingTop="6"
+                            TextColor="@Color/DayBlack_NightWhite"
+                            Text="@String/MX_LANG_NAVI_MAP_DESTINATION_ARRIVAL_VIEW_TEXT_AverageSpeed" />
+                        <LinearLayout
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="40"
+                            LayoutTopMargin = "10"
+                            LayoutAlignParentRight = "true">
+                            <TextActor
+                                Id="@+Id/TxtAverageSpeed"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="FillParent"
+                                LayoutLeftMargin = "0"
+                                HorizontalGravity="Left"
+                                TextFont="@Font/UIFont34_Text_M"
+                                VerticalGravity="Bottom"
+                                TextColor="@Color/DayBlack_NightWhite" />
+                            <TextActor
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="FillParent"
+                                LayoutRightMargin = "0"
+                                HorizontalGravity="Left"
+                                Text="km/h"
+                                VerticalGravity="Bottom"
+                                TextFont="@Font/UIFont34_Text_L"
+                                TextColor="@Color/DayBlack_NightWhite" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!--最高时速对应文言 + 最高时速-->
+                    <RelativeLayout
+                        LayoutWidth="652"
+                        LayoutHeight="52"
+                        LayoutTopMargin="16">
+                        <TextActor
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="FillParent"
+                            TextFont="@Font/UIFont40_Text_R"
+                            HorizontalGravity="Left"
+                            LayoutAlignParentLeft = "true"
+                            LayoutLeftMargin="40"
+                            PaddingTop="6"
+                            TextColor="@Color/DayBlack_NightWhite"
+                            Text="@String/MX_LANG_NAVI_MAP_DESTINATION_ARRIVAL_VIEW_TEXT_Fastest_Speed" />
+                        <LinearLayout
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="40"
+                            LayoutTopMargin = "10"
+                            LayoutAlignParentRight = "true">
+                            <TextActor
+                                Id="@+Id/TxtFastestSpeed"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="FillParent"
+                                LayoutLeftMargin = "0"
+                                HorizontalGravity="Left"
+                                TextFont="@Font/UIFont34_Text_M"
+                                VerticalGravity="Bottom"
+                                TextColor="@Color/DayBlack_NightWhite" />
+                            <TextActor
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="FillParent"
+                                LayoutRightMargin = "0"
+                                HorizontalGravity="Left"
+                                Text="km/h"
+                                VerticalGravity="Bottom"
+                                TextFont="@Font/UIFont34_Text_L"
+                                TextColor="@Color/DayBlack_NightWhite" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+                <!--取消BTN-->
+                <RelativeLayout
+                    LayoutWidth="700"
+                    LayoutHeight="172"
+                    LayoutCenterHorizontal="true"
+                    LayoutAlignParentBottom="true"
+                    LayoutBottomMargin="12">
+                    <!--常态的阴影-->
+                    <ImageActor
+                        Id="@+Id/shadows_BTN_OK_Normal"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="FillParent"
+                        Background="@Drawable/background_104h_hero_prox_day_shadows" />
+                    <!--倒计时的动画-->
+                    <RelativeLayout
+                        Id="@+Id/Layout_Btn_OK_Countdown"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="FillParent"
+                        Visible="Gone">
+                        <AutomaticImageActor
+                            Id="@+Id/Automatic_Btn_OK_Countdown"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="FillParent"
+                            LayoutCenterInParent="true"
+                            ImageChangeTimer="40"
+                            Cyclable="false"
+                            Drawable="@Drawable/drawablelevel_background_countdown_8s_view"
+                            Visible="Gone" />
+                    </RelativeLayout>
+                    <!--热区-->
+                    <RelativeLayout
+                        Id="@+Id/BtnOK"
+                        LayoutWidth="664"
+                        LayoutHeight="136"
+                        Clickable="true"
+                        LayoutCenterInParent="true"
+                        ClickDataCollection="BTN_OK"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CHARGING_MAP_FILTER_EV_SVW_VisibleSpeechs_02">
+                        <!--胶囊背景图-->
+                        <RelativeLayout
+                            LayoutWidth="700"
+                            LayoutHeight="172"
+                            LayoutLeftMargin="-18"
+                            LayoutRightMargin="-18"
+                            LayoutTopMargin="-18"
+                            LayoutBottomMargin="-18"
+                            Background="@Drawable/background_countdown_bg_8s_view"
+                            DuplicateParentState="true">
+                            <TextActor
+                                LayoutWidth="532"
+                                LayoutHeight="56"
+                                PaddingLeft="-2"
+                                PaddingTop="2"
+                                LayoutCenterInParent="true"
+                                DuplicateParentState="true"
+                                Text="@String/MX_LANG_NC_PO_GLOBAL_CONFIRM_NAVI_DOMAIN_ERROR_TEXT_OK"
+                                TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                                TextColor="@Color/NormalBtn_RGB" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

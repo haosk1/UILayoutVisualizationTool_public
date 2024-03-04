@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/Root"
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent"
+        Background="@Drawable/navi_image_mask_bg"
+        Clickable="true">
+        <!--HMI界面布局部分，此元器件LayoutWidth表示半屏尺寸-->
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <!-- 整体页面布局 -->
+            <RelativeLayout
+                Id="@+Id/MainLayout"
+                LayoutWidth="1136"
+                LayoutHeight="872"
+                LayoutTopMargin="96"
+                Clickable="true"
+                Background="@Drawable/card_bg_day_and_night">
+                <!--title 部分-->
+                <RelativeLayout
+					LayoutHeight = "172"
+					LayoutWidth = "172"
+					ClickDataCollection = "BTN_Back"
+					LayoutLeftMargin = "12"
+					LayoutTopMargin = "12"
+					Background = "@Drawable/h104_background_hero_prox_day_shadows">
+					<!--圆形BTN 热区 104*104 +16-->
+					<RelativeLayout
+						Id = "@+Id/BtnReturn"
+						LayoutWidth = "136"
+						LayoutHeight = "136"
+						VisibleSpeechs = "@String/NAVI_SEARCH_RESULT_LIST_ONLINE_CITY_VisibleSpeechs_01"
+						LayoutCenterInParent = "true"
+						Clickable = "true">
+						<!--圆形BTN背景图-->
+						<RelativeLayout
+							LayoutWidth = "172"
+							LayoutHeight = "172"
+							Background = "@Drawable/btn_h104_background_normal_prox"
+							LayoutLeftMargin = "-18"
+							LayoutRightMargin = "-18"
+							LayoutTopMargin = "-18"
+							LayoutBottomMargin = "-18"
+							DuplicateParentState = "true">
+							<ImageActor
+								LayoutWidth = "80"
+								LayoutHeight = "80"
+								LayoutLeftMargin = "46"
+								LayoutTopMargin = "46" 
+								DuplicateParentState = "true"
+								Background = "@Drawable/icon_back"/>
+						</RelativeLayout>
+					</RelativeLayout>
+				</RelativeLayout>
+                <!-- 搜索框布局 -->
+                <LinearLayout
+                    Id="@Id/PreDefine/EditBoxLayout"
+                    LayoutRightOf="@Id/BtnReturn"
+                    LayoutWidth="916"
+                    LayoutHeight="106"
+                    LayoutLeftMargin="174"
+                    LayoutTopMargin="46"
+                    Background="@Drawable/search_bg_106_raised">
+                    <EditBox
+                        Id="@Id/PreDefine/EditText"
+                        Style="@Style/EditBoxStyle"
+                        LayoutHeight="106"
+                        PaddingLeft="48"
+                        PaddingRight="48"
+                        PaddingTop="30"
+                        PaddingBottom="29"
+                        TextShadow="false"
+                        TextFont="@Font/UIFont40_Text_R"
+                        TextColor="@Color/DayBlack_NightWhite"
+                        LayoutWidth="916"
+                        ClickDataCollection="BTN_Input_Field" />
+                </LinearLayout>
+                <!-- 提示文言 -->
+                <LinearLayout
+                    Id="@+Id/HintText"
+                    LayoutWidth="1060"
+                    LayoutHeight="160"
+                    LayoutTopMargin="154"
+                    LayoutLeftMargin="38">
+                    <TextActor
+                        LayoutHeight="52"
+                        LayoutTopMargin = "78"
+                        LayoutWidth="FillParent"
+                        HorizontalGravity="Center"
+                        TextFont="@Font/UIFont40_Text_L"
+                        TextColor="@Color/DayBlack_NightWhite"
+                        Text="@String/MX_LANG_NAVI_SEARCH_RESULT_LIST_ONLINE_CITY_TEXT_Select_City" />
+                </LinearLayout>
+                <RelativeLayout
+                    Id="@+Id/Relative_List"
+                    LayoutWidth="1136"
+                    LayoutBelow="@Id/HintText"
+                    LayoutHeight="504"
+                    LayoutTopMargin = "29">
+                    <SmoothListActorEx
+                        Id="@Id/PreDefine/SmoothListActor"
+                        LayoutWidth="1068"
+                        LayoutHeight="504"
+                        LayoutLeftMargin="34"
+                        DefaultDividerInterval="0"
+                        Orientation="Vertical"
+                        VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_01" />
+                    <SmoothListScrollBar
+                        Id="@Id/PreDefine/SmoothListScrollBar"
+                        LayoutWidth="30"
+                        LayoutHeight="504"
+                        LayoutTopMargin="9"
+                        LayoutLeftMargin="1090"
+                        ScrollBarLayout="@Layout/CActorScrollbarNewThirty" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

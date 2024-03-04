@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <LinearLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="WrapContent"
+        Orientation="Vertical">
+        <!--创建集结点按钮布局,有空白占位-->
+        <RelativeLayout
+            Id="@+Id/Layout_Create"
+            LayoutWidth="FillParent"
+            LayoutHeight="120">
+            <!--创建集结点按钮-->
+            <RelativeLayout
+                Id="@+Id/Btn_Create"
+                LayoutWidth="524"
+                LayoutHeight="116"
+                LayoutCenterHorizontal="true"
+                Clickable="true"
+                Focusable="true"
+                ClickDataCollection="BTN_Group_Create_Point">
+                <ImageActor
+                    LayoutWidth="560"
+                    LayoutHeight="152"
+                    LayoutTopMargin="-18"
+                    LayoutBottomMargin="-18"
+                    LayoutLeftMargin="-18"
+                    LayoutRightMargin="-18"
+                    Drawable="@Drawable/background_84h_normal_prox"
+                    DuplicateParentState="true" />
+                <TextActor
+                    LayoutWidth="428"
+                    LayoutHeight="46"
+                    LayoutTopMargin="38"
+                    LayoutCenterHorizontal="true"
+                    TextFont=" @Font/UIFont34_Text_L"
+                    TextColor="@Color/NormalBtn_RGB"
+                    Text="@String/MX_LANG_NAVI_GROUPDRIVING_FLEET_MAIN_NO_GATHERING_POINT_TEXT_Group_Create_Point"
+                    DuplicateParentState="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <!--集结点list布局,有空白占位-->
+        <RelativeLayout
+            Id="@+Id/Layout_GatheringPoint"
+            LayoutWidth="FillParent"
+            LayoutHeight="146">
+            <!--集结点list-->
+            <RelativeLayout
+                LayoutWidth="492"
+                LayoutHeight="108"
+                LayoutTopMargin="16"
+                LayoutCenterHorizontal="true"
+                Background="@Drawable/mixin_bg_normal_DayNight">
+                <RelativeLayout
+                    Id="@+Id/Btn_GatheringPoint"
+                    LayoutWidth="370"
+                    LayoutHeight="108"
+                    Background="@Drawable/bg_prox_pressed_only"
+                    Clickable="true"
+                    Focusable="true"
+                    ClickDataCollection="BTN_Gathering_Point_Detail"
+                    VisibleSpeechs="@String/MX_LANG_NAVI_GROUPDRIVING_FLEET_MAIN_HAS_GATHERING_POINT_VisibleSpeechs_01">
+                    <!--集结点信息-->
+                    <TextActor
+                        Id="@+Id/GatherPoint_Name"
+                        LayoutWidth="347"
+                        LayoutHeight="40"
+                        LayoutTopMargin="18"
+                        LayoutLeftMargin="20"
+                        HorizontalGravity="Left"
+                        TextFont="@Font/UIFont34_Text_R"
+                        TextColor="@Color/ListFavColor"
+                        DuplicateParentState="true" />
+                    <TextActor
+                        Id="@+Id/GatherPoint_Address"
+                        LayoutWidth="334"
+                        LayoutHeight="34"
+                        HorizontalGravity="Left"
+                        LayoutLeftMargin="20"
+                        LayoutTopMargin="58"
+                        TextFont="@Font/UIFont28_Text_L"
+                        TextColor="@Color/ListFavColor"
+                        DuplicateParentState="true" />
+                </RelativeLayout>
+                <!--分割线-->
+                <ImageActor
+                    LayoutLeftMargin="370"
+                    LayoutCenterVertical="true"
+                    Drawable="@Drawable/citylist_line" />
+                <!--计算路线-->
+                <ImageButton
+                    Id="@+Id/ImgBtn_Start"
+                    LayoutWidth="116"
+                    LayoutHeight="116"
+                    LayoutRightMargin="2"
+                    LayoutAlignParentRight="true"
+                    LayoutCenterVertical="true"
+                    Drawable="@Drawable/navigation_64"
+                    Background="@Drawable/h84_background_normal"
+                    VisibleSpeechs="@String/MX_LANG_NAVI_GROUPDRIVING_FLEET_MAIN_HAS_GATHERING_POINT_VisibleSpeechs_02" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</Resource>

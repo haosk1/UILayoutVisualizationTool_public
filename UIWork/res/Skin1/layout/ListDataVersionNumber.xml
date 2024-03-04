@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="69"
+        Focusable="true"
+        BGVerticalGravity="Bottom">
+        <LinearLayout
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent"
+            Orientation="Vertical"
+            Focusable="true"
+            VerticalGravity="Center">
+            <LinearLayout
+                LayoutWidth="FillParent"
+                LayoutHeight="43">
+                <TextActor
+                    Id="@+Id/TextRegionId"
+                    LayoutWidth="257"
+                    LayoutHeight="FillParent"
+                    PaddingLeft="26"
+                    HorizontalGravity="Left"
+                    TextFont="@Font/UIFont18"
+                    TextColor="@Color/Color_White" />
+                <TextActor
+                    Id="@+Id/TextRegion"
+                    LayoutWidth="257"
+                    LayoutHeight="FillParent"
+                    PaddingLeft="17"
+                    LayoutLeftMargin="9"
+                    HorizontalGravity="Left"
+                    TextFont="@Font/UIFont18"
+                    TextColor="@Color/Color_White" />
+                <TextActor
+                    Id="@+Id/TextMinor"
+                    LayoutWidth="257"
+                    LayoutHeight="FillParent"
+                    PaddingLeft="17"
+                    HorizontalGravity="Left"
+                    TextFont="@Font/UIFont18"
+                    TextColor="@Color/Color_White" />
+                <TextActor
+                    Id="@+Id/TextVersion"
+                    LayoutWidth="257"
+                    LayoutHeight="FillParent"
+                    PaddingLeft="17"
+                    HorizontalGravity="Left"
+                    TextFont="@Font/UIFont18"
+                    TextColor="@Color/Color_White" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</Resource>

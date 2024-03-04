@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="69"
+        Focusable="true"
+        Background="@Drawable/scale_listBgMiddle"
+        BGVerticalGravity="Bottom">
+        <TextActor
+            Id="@+Id/TextCity"
+            LayoutWidth="343"
+            LayoutHeight="FillParent"
+            HorizontalGravity="Left"
+            PaddingLeft="17"
+            TextFont="@Font/UIFont24"
+            TextColor="@Color/Color_White" />
+        <LinearLayout
+            LayoutWidth="754"
+            LayoutHeight="FillParent"
+            Orientation="Vertical"
+            LayoutLeftMargin="343"
+            VerticalGravity="Center">
+            <LinearLayout
+                LayoutWidth="FillParent"
+                LayoutHeight="0"
+                LayoutWeight="1"
+                Orientation="Horizontal"
+                VerticalGravity="Center">
+                <TextActor
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="FillParent"
+                    HorizontalGravity="Left"
+                    PaddingLeft="17"
+                    TextFont="@Font/UIFont18"
+                    TextColor="@Color/Color_White"
+                    Text="CityCode：" />
+                <TextActor
+                    Id="@+Id/TextCodeNum"
+                    LayoutWidth="0"
+                    LayoutWeight="1"
+                    LayoutHeight="FillParent"
+                    PaddingRight="17"
+                    HorizontalGravity="Left"
+                    AutoTruncate="false"
+                    TextAutoScrollMode="AutoScrollWhenFocused"
+                    Clickable="true"
+                    TextFont="@Font/UIFont18"
+                    TextColor="@Color/Color_White" />
+            </LinearLayout>
+            <LinearLayout
+                LayoutWidth="FillParent"
+                LayoutHeight="0"
+                LayoutWeight="1"
+                Orientation="Horizontal"
+                VerticalGravity="Center">
+                <TextActor
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="FillParent"
+                    PaddingLeft="17"
+                    HorizontalGravity="Right"
+                    TextFont="@Font/UIFont18"
+                    TextColor="@Color/Color_White"
+                    Text="@String/VersionNum" />
+                <TextActor
+                    Id="@+Id/TextVersionNum"
+                    LayoutWidth="0"
+                    LayoutWeight="1"
+                    LayoutHeight="FillParent"
+                    PaddingRight="17"
+                    HorizontalGravity="Left"
+                    AutoTruncate="false"
+                    TextAutoScrollMode="AutoScrollWhenFocused"
+                    Clickable="true"
+                    TextFont="@Font/UIFont18"
+                    TextColor="@Color/Color_White" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</Resource>

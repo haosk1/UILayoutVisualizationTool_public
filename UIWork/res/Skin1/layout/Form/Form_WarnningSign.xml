@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent"
+        Id="@+Id/Layout">
+        <!--WarnningWarning-->
+        <RelativeLayout
+            Id="@Id/PreDefine/TrafficSignLayout"
+            LayoutWidth="244"
+            LayoutHeight="120"
+            LayoutTopMargin="105"
+            LayoutRightMargin="20"
+            HorizontalGravity="Right"
+            LayoutAlignParentRight="true"
+            ClipChildren="false">
+            <!--Btn Padding在代码里动态设置-->
+            <ImageButton
+                Id="@Id/PreDefine/TrafficSignTips_3"
+                LayoutWidth="68"
+                LayoutHeight="68"
+                LayoutTopMargin="4"
+                LayoutRightMargin="176"
+                LayoutAlignParentRight="true"
+                Visible="Visible" />
+            <ImageActor
+                Id="@Id/PreDefine/AdditionalSignType_3"
+                LayoutWidth="68"
+                LayoutHeight="45"
+                LayoutRightMargin="176"
+                LayoutBottomMargin="3"
+                LayoutAlignParentRight="true"
+                LayoutAlignParentBottom="true"
+                Visible="Visible" />
+            <!--Btn Padding在代码里动态设置-->
+            <ImageButton
+                Id="@Id/PreDefine/TrafficSignTips_2"
+                LayoutWidth="68"
+                LayoutHeight="68"
+                LayoutTopMargin="4"
+                LayoutRightMargin="88"
+                LayoutAlignParentRight="true"
+                Visible="Visible"
+                ClickDataCollection="SYMBOL_Traffic_Sign" />
+            <ImageActor
+                Id="@Id/PreDefine/AdditionalSignType_2"
+                LayoutWidth="68"
+                LayoutHeight="45"
+                LayoutRightMargin="88"
+                LayoutBottomMargin="3"
+                LayoutAlignParentRight="true"
+                LayoutAlignParentBottom="true"
+                Visible="Visible" />
+            <!--Btn Padding在代码里动态设置-->
+            <ImageButton
+                Id="@Id/PreDefine/TrafficSignTips_1"
+                LayoutWidth="68"
+                LayoutHeight="68"
+                LayoutTopMargin="4"
+                LayoutAlignParentRight="true"
+                Visible="Visible"
+                ClickDataCollection="SYMBOL_Traffic_Sign" />
+            <ImageActor
+                Id="@Id/PreDefine/AdditionalSignType_1"
+                LayoutWidth="68"
+                LayoutHeight="45"
+                LayoutBottomMargin="3"
+                LayoutAlignParentRight="true"
+                LayoutAlignParentBottom="true"
+                Visible="Visible" />
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

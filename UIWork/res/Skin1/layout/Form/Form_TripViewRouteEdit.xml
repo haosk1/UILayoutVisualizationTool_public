@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@Id/PreDefine/LayoutParent"
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent">
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent"
+            Clickable="false">
+            <!--界面元器件-->
+            <RelativeLayout
+                Id="@+Id/LayoutMain"
+                LayoutTopMargin="248"
+                LayoutHeight="720"
+                LayoutWidth="584">
+                <ImageActor
+                    LayoutWidth="FillParent"
+                    LayoutHeight="FillParent"
+                    LayoutTopMargin="-40"
+                    Background="@Drawable/card_bg_day_and_night" />
+                <RelativeLayout
+                    Id="@+Id/FullScreen"
+                    LayoutWidth="552"
+                    LayoutLeftMargin = "16"
+                    LayoutHeight="FillParent">
+                    <ImageActor
+                        LayoutWidth="520"
+                        LayoutHeight="2"
+                        LayoutLeftMargin="16"
+                        LayoutTopMargin="6"
+                        Background="@Drawable/card_list_line" />
+                    <RelativeLayout
+                        Id="@Id/PreDefine/Relativelayout_Main"
+                        LayoutHeight="FillParent"
+                        LayoutWidth="FillParent">
+                        <RelativeLayout
+                            Id="@Id/PreDefine/ListLayout"
+                            LayoutWidth="540"
+                            LayoutTopMargin="-8"
+                            LayoutHeight="FillParent"
+                            LayoutLeftMargin="11">
+                            <!--ListActor-->
+                            <SmoothListActorEx
+                                Id="@Id/PreDefine/SmoothListActor"
+                                LayoutWidth="520"
+                                LayoutHeight="572"
+                                LayoutTopMargin="16"
+                                Orientation="Vertical"
+                                VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_01" />
+                            <SmoothListScrollBar
+                                Id="@Id/PreDefine/SmoothListScrollBar"
+                                LayoutWidth = "30"
+                                LayoutHeight = "572"
+                                LayoutTopMargin="3"
+                                LayoutBottomMargin = "2"
+                                LayoutRightMargin = "0"
+                                LayoutAlignParentRight = "true"
+                                ScrollBarLayout="@Layout/CActorScrollbarNewThirty"/>
+                        </RelativeLayout>
+                        <LinearLayout
+                            Id="@Id/PreDefine/Layout_BtnCalculate"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="152"
+                            LayoutLeftMargin="-17"
+                            LayoutTopMargin="576"
+                            Orientation="Horizontal"
+                            VerticalGravity="Center">
+                            <RelativeLayout
+                                Id="@+Id/BTN_Cancel"
+                                LayoutWidth="277"
+                                LayoutHeight="116"
+                                LayoutLeftMargin="17"
+                                LayoutTopMargin = "-12"
+                                ClickDataCollection="BTN_Cancel"
+                                VerticalGravity="Center"
+                                Clickable="true"
+                                VisibleSpeechs="@String/MX_LANG_NAVI_TRIPVIEW_ROUTE_EDIT_VisibleSpeechs_01">
+                                <ImageActor
+                                    LayoutWidth="313"
+                                    LayoutHeight="152"
+                                    LayoutTopMargin="-18"
+                                    LayoutLeftMargin="-18"
+                                    LayoutBottomMargin="-18"
+                                    LayoutRightMargin="-18"
+                                    DuplicateParentState="true"
+                                    BGHorizontalGravity="Center"
+                                    Background="@Drawable/background_84h_normal_view_raised" />
+                                <!--按钮中显示的内容，文字-->
+                                <TextActor
+                                    LayoutWidth="181"
+                                    LayoutHeight="40"
+                                    PaddingTop="3"
+                                    DuplicateParentState="true"
+                                    LayoutTopMargin="39"
+                                    LayoutLeftMargin="49"
+                                    Text="@String/MX_LANG_PO_ALERT_NAVI_RESTRICTION_HINT_TEXT_Cancel"
+                                    TextFont="@Font/UIFont34_Text_L"
+                                    TextColor="@Color/NormalBtn_RGB" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                LayoutWidth="313"
+                                LayoutHeight="152"
+                                LayoutLeftMargin="-22"
+                                LayoutTopMargin="-20"
+                                Background="@Drawable/background_84h_hero_prox_day_shadows">
+                                <RelativeLayout
+                                    Id="@+Id/BTN_Finish"
+                                    LayoutWidth="277"
+                                    LayoutHeight="116"
+                                    LayoutCenterInParent="true"
+                                    ClickDataCollection="BTN_Finish"
+                                    Clickable="true"
+                                    Focusable="true"
+                                    VisibleSpeechs="@String/MX_LANG_NAVI_TRIPVIEW_ROUTE_EDIT_VisibleSpeechs_02">
+                                    <RelativeLayout
+                                        LayoutWidth="253"
+                                        LayoutHeight="92"
+                                        LayoutTopMargin="16"
+                                        LayoutLeftMargin="14"
+                                        DuplicateParentState="true"
+                                        Background="@Drawable/Route_background_84h_hero_prox">
+                                        <TextActor
+                                            LayoutWidth="181"
+                                            LayoutHeight="40"
+                                            PaddingTop="3"
+                                            LayoutTopMargin="27"
+                                            LayoutLeftMargin="36"
+                                            DuplicateParentState="true"
+                                            Text="@String/MX_LANG_NAVI_TRIPVIEW_ROUTE_EDIT_BTN_Finish"
+                                            TextFont="@Font/UIFont34_Text_L"
+                                            TextColor="@Color/Color_000000" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!--路线计算中Layout-->
+                    <RelativeLayout
+                        Id="@Id/PreDefine/LayoutLoading"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="FillParent"
+                        ClipChildren="false"
+                        Orientation="Vertical"
+                        Clickable="true"
+                        Visible="Gone">
+                        <AutomaticImageActor
+                            Id = "@+Id/LoadingImage"
+                            LayoutWidth="80"
+                            LayoutHeight="80"
+                            LayoutTopMargin="271"
+                            LayoutLeftMargin="235"
+                            ImageChangeTimer="83"
+                            Cyclable="true"
+                            Drawable="@Drawable/loading_anim_seq_l_LayerList"
+                            Visible = "Gone" />
+                        <TextActor
+                            LayoutWidth="FillParent"
+                            LayoutHeight="40"
+                            LayoutTopMargin="398"
+                            LayoutLeftMargin = "8"
+                            TextColor="@Color/DayBlack_NightWhite"
+                            TextFont="@Font/UIFont34_Text_L"
+                            Text="@String/MX_LANG_PO_NAVI_Manual_Rerouting_TEXT_Route_Updating" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+            <!--1558宽度元器件居中-->
+            <RelativeLayout
+                LayoutHeight="FillParent"
+                LayoutWidth="FillParent"
+                LayoutLeftMargin="371">
+                <!--回自车 hero btn -->
+                <RelativeLayout
+                    Id="@Id/PreDefine/ReturnCCP"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="164"
+                    LayoutCenterHorizontal="true"
+                    LayoutAlignParentBottom="true"
+                    LayoutBottomMargin="94"
+                    Background="@Drawable/background_96h_hero_prox_day_shadows">
+                    <RelativeLayout
+                        Id="@Id/PreDefine/BtnReturnCCP"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="164"
+                        LayoutLeftMargin="18"
+                        LayoutRightMargin="18"
+                        LayoutCenterInParent="true"
+                        Clickable="true"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_TRIPVIEW_ROUTE_EDIT_VisibleSpeechs_03">
+                        <LinearLayout
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="104"
+                            LayoutLeftMargin="12"
+                            LayoutRightMargin="12"
+                            LayoutCenterInParent="true"
+                            DuplicateParentState="true"
+                            Background="@Drawable/Gradient_background_96h_hero_prox">
+                            <ImageActor
+                                LayoutLeftMargin="28"
+                                LayoutCenterVertical="true"
+                                DuplicateParentState="true"
+                                Drawable="@Drawable/back_to_destination_day" />
+                            <!--占位-->
+                            <ImageActor
+                                Id="@Id/PreDefine/SpaceBefore"
+                                LayoutWidth="2"
+                                LayoutHeight="FillParent"
+                                Visible="Gone" />
+                            <TextActor
+                                Id="@Id/PreDefine/TxtReturnCCP"
+                                LayoutHeight="FillParent"
+                                LayoutWidth="WrapContent"
+                                LayoutLeftMargin="8"
+                                LayoutRightMargin="47"
+                                PaddingTop="4"
+                                DuplicateParentState="true"
+                                Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV2_TEXT_Back_to_CCP"
+                                TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                                TextColor="@Color/HeroBtnText_RGB" />
+                            <!--占位-->
+                            <ImageActor
+                                Id="@Id/PreDefine/SpaceAfter"
+                                LayoutWidth="2"
+                                LayoutHeight="FillParent"
+                                Visible="Gone" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <!--车线-->
+                <LinearLayout
+                    Id="@Id/PreDefine/LaneLayout"
+                    LayoutHeight="164"
+                    LayoutTopMargin="78"
+                    LayoutCenterHorizontal="true"
+                    Background="@Drawable/background_020_m_lane_info_box"
+                    Visible="Invisible">
+                    <RelativeLayout
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="96"
+                        LayoutLeftMargin = "34"
+                        LayoutRightMargin = "34"
+                        LayoutTopMargin="34">
+                        <!--推荐车线背景帧动画-->
+                        <LaneAutomaticImageActor
+                            Id="@Id/PreDefine/LaneAutomatic"
+                            LayoutHeight="FillParent"
+                            ImageChangeTimer="38"
+                            Cyclable="true"
+                            Drawable="@Drawable/background_recommend_lane"
+                            Visible="Gone" />
+                        <LaneInfo
+                            Id="@Id/PreDefine/Lane"
+                            LayoutHeight="FillParent"
+                            LaneRecommended="@Drawable/DrawLevel_RecommendLane"
+                            LaneAvailable="@Drawable/DrawLevel_AvailableLane"
+                            LaneDisable="@Drawable/DrawLevel_DisableLane"
+                            LaneOmit="@Drawable/more"
+                            LaneTG="@Drawable/DrawLevel_All_SpecialLane"
+                            LaneMiddleImg="@Drawable/background_020_m_lane_info_box_line"
+                            LanePaddingLeft="8"
+                            LanePaddingRight="8"
+                            LanePaddingTop="16"
+                            LanePaddingBottom="16"
+                            LaneMaxCnt="6"
+                            Clickable="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

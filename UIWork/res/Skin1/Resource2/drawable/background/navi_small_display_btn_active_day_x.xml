@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+<!-->Check-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "true" Drawable = "@Drawable/navi_small_display_btn_active_day"/>
+    </StateList>
+</Resource>

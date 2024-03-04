@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="1210"
+        LayoutHeight="130"
+        LayoutLeftMargin="39">
+        <LinearLayout
+            LayoutHeight="130"
+            LayoutWidth="1210"
+            Orientation="Vertical">
+            <ImageActor
+                Id="@+Id/LayoutProvince_Blank2"
+                LayoutHeight="0"
+                LayoutWeight="10"
+                LayoutWidth="1210"
+                Visible="Gone" />
+            <RelativeLayout
+                LayoutHeight="0"
+                LayoutWeight="110"
+                LayoutWidth="1210">
+                <LinearLayout
+                    Id="@+Id/LayoutProvince"
+                    LayoutWidth="1210"
+                    LayoutHeight="FillParent"
+                    Focusable="true"
+                    Clickable="true"
+                    Orientation="Vertical"
+                    Background="@Drawable/list_bg_xl_normal">
+                    <ImageActor
+                        Id="@+Id/LayoutProvince_TextBlank"
+                        LayoutHeight="10"
+                        LayoutWidth="1210"
+                        Visible="Gone" />
+					<RelativeLayout
+						LayoutWidth="FillParent"
+						LayoutHeight="WrapContent"
+						DuplicateParentState="true">
+						<TextActor
+							Id="@+Id/TxtNameProvince"
+							LayoutWidth="932"
+							LayoutHeight="45"
+							LayoutLeftMargin="36"
+							LayoutTopMargin="35"
+							HorizontalGravity="Left"
+							DuplicateParentState="true"
+							TextFont="@Font/UIFont34_Text_R"
+							TextColor="@Color/ListFavColor" />
+						<ImageActor
+							Id="@+Id/ImgDropdown"
+							LayoutWidth="80"
+							LayoutHeight="80"
+							LayoutTopMargin="15"
+							LayoutRightMargin="36"
+							LayoutAlignParentRight="true"
+							DuplicateParentState = "true"/>
+					</RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <ImageActor
+                Id="@+Id/LayoutProvince_Blank"
+                LayoutHeight="0"
+                LayoutWeight="10"
+                LayoutWidth="1210"
+                Visible="Gone" />
+            <ImageActor
+                Id="@+Id/ProvinceIcon_line"
+                LayoutWidth="1210"
+                LayoutHeight="2"
+                LayoutAlignParentBottom="true"
+                Visible="Gone"
+                Background="@Drawable/card_list_line" />
+        </LinearLayout>
+        <RelativeLayout
+            Id="@+Id/LayoutCity"
+            LayoutWidth="1210"
+            LayoutHeight="130"
+            Background="@Drawable/list_bg_xl_mid">
+            <ImageActor
+                Id="@+Id/CityIcon_line"
+                LayoutWidth="1210"
+                LayoutHeight="2"
+                LayoutAlignParentBottom="true"
+                Background="@Drawable/card_list_line" />
+            <TextActor
+                Id="@+Id/TxtNameCity"
+                LayoutWidth="653"
+                LayoutHeight="40"
+                LayoutTopMargin="47"
+                LayoutLeftMargin="84"
+                HorizontalGravity="Left"
+                TextFont="@Font/UIFont34_Text_R"
+                TextColor="@Color/ListFavColor" />
+        </RelativeLayout>
+        <TextActor
+            Id="@+Id/TxtVersion"
+            LayoutWidth="260"
+            LayoutHeight="40"
+            LayoutTopMargin="47"
+            HorizontalGravity="Right"
+            LayoutRightMargin="49"
+            LayoutAlignParentRight="true"
+            TextFont="@Font/UIFont34_Text_L"
+            TextColor="@Color/ListFavColor" />
+        <TextActor
+            Id="@+Id/TxtVerState"
+            LayoutWidth="260"
+            LayoutHeight="40"
+            LayoutTopMargin="47"
+            LayoutRightMargin="49"
+            LayoutAlignParentRight="true"
+            HorizontalGravity="Right"
+            Text="@String/MX_LANG_NAVI_MAP_MANAGEMENT_TEXT_Updated"
+            TextFont="@Font/UIFont34_Text_L"
+            TextColor="@Color/DayBlack_NightWhite" />
+    </RelativeLayout>
+</Resource>

@@ -1,0 +1,205 @@
+<Resource>
+    <RelativeLayout
+        Id="@Id/PreDefine/LayoutParent"
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent">
+        <TransparencyActor
+            Id="@+Id/TransparencyScreen"
+            LayoutHeight="FillParent"
+            LayoutWidth="FillParent" />
+        <Function
+            Id="@Id/PreDefine/Fragment_GroupDrivingMainView"
+            LayoutHeight="FillParent"
+            LayoutWidth="FillParent" />
+        <!--HMI界面布局部分，此元器件LayoutWidth表示半屏尺寸-->
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <!--鹰眼图-->
+            <ImageActor
+                Id="@Id/PreDefine/Btn_MiniOverView"
+                LayoutAlignParentRight="true"
+                LayoutAlignParentBottom="true"
+                LayoutRightMargin="20"
+                LayoutBottomMargin="257"
+                LayoutWidth="192"
+                LayoutHeight="192"
+                Visible="Gone"
+                Clickable="true"
+                VisibleSpeechs = "@String/MX_LANG_NAVI_CCP_VIEW_MINI_OVERVIEW_VisibleSpeechs_01"/>
+            <ImageActor
+                Id="@Id/PreDefine/MiniOverViewUnArrive"
+                LayoutWidth="142"
+                LayoutHeight="70"
+                LayoutRightMargin = "12"
+                LayoutBottomMargin = "402"
+                LayoutAlignParentBottom="true"
+                LayoutAlignParentRight="true"
+                Clickable = "true"
+                Drawable="@Drawable/icon_Unreachable"
+                Visible="Gone" />
+            <!--Parking Info 主体布局-->
+            <RelativeLayout
+                LayoutHeight="FillParent"
+                LayoutWidth="FillParent"
+                LayoutTopMargin="344">
+                <!-- 背景图片 -->
+                <RelativeLayout
+                    Id="@+Id/LayoutMain"
+                    LayoutWidth="584"
+                    LayoutHeight="624"
+                    Background="@Drawable/card_bg_day_and_night"
+                    Clickable="true">
+                    <RelativeLayout
+                        Id="@Id/PreDefine/ListLayout"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="501"
+                        LayoutTopMargin="16">
+                        <!--ListActor-->
+                        <SmoothListActorEx
+                            Id="@Id/PreDefine/SmoothListActor"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="487"
+                            Orientation="Vertical"
+                            VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_03" />
+                    </RelativeLayout>
+                    <!--取消BTN-->
+                    <RelativeLayout
+                        LayoutWidth="560"
+                        LayoutHeight="132"
+                        LayoutCenterHorizontal="true"
+                        LayoutAlignParentBottom="true"
+                        LayoutBottomMargin="2">
+                        <!--常态的阴影-->
+                        <ImageActor
+                            Id="@+Id/shadows_BTN_Cancel_Normal"
+                            LayoutCenterHorizontal="true"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="FillParent"
+                            Background="@Drawable/background_64_hero_prox_day_shadows" />
+                        <!--倒计时的动画-->
+                        <RelativeLayout
+                            Id="@+Id/Layout_Btn_Cancel_Countdown"
+                            LayoutWidth="524"
+                            LayoutHeight="96"
+                            LayoutCenterInParent="true"
+                            Background="@Drawable/background_countdown_bg_8s_new_view"
+                            Visible="Gone">
+                            <AutomaticImageActor
+                                Id="@+Id/Automatic_Btn_Cancel_Countdown"
+                                LayoutWidth="FillParent"
+                                LayoutHeight="FillParent"
+                                ImageChangeTimer="40"
+                                Cyclable="false"
+                                Drawable="@Drawable/background_countdown_8s_long_btn_view"
+                                Visible="Gone" />
+                        </RelativeLayout>
+                        <!--热区-->
+                        <RelativeLayout
+                            Id="@+Id/BtnCancel"
+                            LayoutWidth="524"
+                            LayoutHeight="96"
+                            Clickable="true"
+                            LayoutCenterInParent="true"
+                            ClickDataCollection="BTN_Cancel"
+                            VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CCP_VIEW_DYMAIC_REROUTE_SLIDE_VisibleSpeechs_01">
+                            <!--胶囊背景图-->
+                            <RelativeLayout
+                                LayoutWidth="560"
+                                LayoutHeight="132"
+                                LayoutLeftMargin="-18"
+                                LayoutRightMargin="-18"
+                                LayoutTopMargin="-18"
+                                LayoutBottomMargin="-18"
+                                Background="@Drawable/background_64_normal_prox"
+                                DuplicateParentState="true">
+                                <TextActor
+                                    LayoutWidth="428"
+                                    LayoutHeight="34"
+                                    LayoutCenterInParent="true"
+                                    DuplicateParentState="true"
+                                    PaddingTop="2"
+                                    PaddingLeft="-2"
+                                    Text="@String/MX_LANG_PO_ALERT_NAVI_RESTRICTION_HINT_TEXT_Cancel"
+                                    TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL"
+                                    TextColor="@Color/NormalBtn_RGB" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+            <!--1558宽度元器件居中-->
+            <RelativeLayout
+                LayoutHeight="FillParent"
+                LayoutWidth="FillParent"
+                LayoutLeftMargin="371">
+                <!--显示当前道路名称-->
+                <RelativeLayout
+                    Id="@+Id/LayoutCurrRoadName"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="108"
+                    LayoutAlignParentBottom="true"
+                    LayoutBottomMargin="122"
+                    Background="@Drawable/roadname"
+                    HorizontalGravity="Center"
+                    VerticalGravity="Center"
+                    LayoutCenterHorizontal="true"
+                    Clickable="true">
+                    <TextActor
+                        Id="@Id/PreDefine/CurrRoadName"
+                        LayoutHeight="FillParent"
+                        LayoutWidth="WrapContent"
+                        TextFont="@Font/UIFont34_Text_R"
+                        MaxFormatWidth="374"
+                        MinFormatWidth="154"
+                        PaddingLeft="46"
+                        PaddingRight="46"
+                        PaddingTop="6"
+                        DuplicateParentState="true"
+                        TextColor="@Color/DayBlack_NightWhite" />
+                </RelativeLayout>
+                <!--车线-->
+                <LinearLayout
+                    Id="@Id/PreDefine/LaneLayout"
+                    LayoutHeight="164"
+                    LayoutTopMargin="78"
+                    LayoutCenterHorizontal="true"
+                    Background="@Drawable/background_020_m_lane_info_box"
+                    Visible="Invisible">
+                    <RelativeLayout
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="96"
+                        LayoutLeftMargin = "34"
+                        LayoutRightMargin = "34"
+                        LayoutTopMargin="34">
+                        <!--推荐车线背景帧动画-->
+                        <LaneAutomaticImageActor
+                            Id="@Id/PreDefine/LaneAutomatic"
+                            LayoutHeight="FillParent"
+                            ImageChangeTimer="38"
+                            Cyclable="true"
+                            Drawable="@Drawable/background_recommend_lane"
+                            Visible="Gone" />
+                        <LaneInfo
+                            Id="@Id/PreDefine/Lane"
+                            LayoutHeight="FillParent"
+                            LaneRecommended="@Drawable/DrawLevel_RecommendLane"
+                            LaneAvailable="@Drawable/DrawLevel_AvailableLane"
+                            LaneDisable="@Drawable/DrawLevel_DisableLane"
+                            LaneOmit="@Drawable/more"
+                            LaneTG="@Drawable/DrawLevel_All_SpecialLane"
+                            LaneMiddleImg="@Drawable/background_020_m_lane_info_box_line"
+                            LanePaddingLeft="8"
+                            LanePaddingRight="8"
+                            LanePaddingTop="16"
+                            LanePaddingBottom="16"
+                            LaneMaxCnt="6"
+                            Clickable="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

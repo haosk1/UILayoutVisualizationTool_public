@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <LinearLayout
+        LayoutHeight="WrapContent"
+        LayoutWidth="FillParent"
+        Orientation = "Vertical">
+    </LinearLayout>
+</Resource>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="632"
+        LayoutHeight="112"
+        Clickable="true">
+        <RelativeLayout
+            Id="@+Id/ListStopover"
+            LayoutWidth="FillParent"
+            LayoutTopMargin = "6"
+            LayoutHeight="96"
+            Clickable="true"
+            Focusable="true"
+            DuplicateParentState="false"
+            Background="@Drawable/bg_prox_night_StopOverList">
+            <ImageActor
+                Id="@+Id/ICON_Stopover"
+                LayoutWidth="64"
+                LayoutHeight="64"
+                LayoutLeftMargin="62"
+                LayoutTopMargin="16"
+                DuplicateParentState="true"
+                Drawable="@Drawable/icon_stopover_list" />
+            <!--途经地名称-->
+            <RelativeLayout
+                Id="@+Id/Stopover_Input"
+                LayoutWidth="325"
+                LayoutHeight="40"
+                LayoutLeftMargin="124"
+                LayoutTopMargin="28"
+                DuplicateParentState="true"
+                ClickDataCollection="BTN_Stopover_Input">
+                <TextActor
+                    Id="@+Id/Text_Input"
+                    LayoutWidth="FillParent"
+                    LayoutHeight="FillParent"
+                    HorizontalGravity="Left"
+                    VerticalGravity="Center"
+                    LayoutTopMargin="2"
+                    LayoutLeftMargin = "32"
+                    PaddingTop="2"
+                    DuplicateParentState="true"
+                    TextFont="@Font/UIFont34_Text_L"
+                    TextColor="@Color/ListPushColor" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent">
+            <RelativeLayout
+                Id="@+Id/AllImageLayout"
+                LayoutWidth="190"
+                LayoutHeight="84"
+                LayoutLeftMargin="432"
+                LayoutTopMargin="12"
+                DuplicateParentState="true">
+                <!--移动-->
+                <ImageActor
+                    LayoutWidth="84"
+                    LayoutHeight="84"
+                    BGHorizontalGravity="Center"
+                    BGVerticalGravity="Center"
+                    Background="@Drawable/more_m_pressed" />
+                <!--删除途经地布局-->
+                <LinearLayout
+                    Id="@+Id/Stopover_Delete_Layout"
+                    LayoutWidth="96"
+                    LayoutHeight="FillParent"
+                    LayoutLeftMargin="94">
+                    <!--分割线-->
+                    <ImageActor
+                        LayoutWidth="2"
+                        LayoutHeight="56"
+                        LayoutTopMargin="14"
+                        DuplicateParentState="true"
+                        Drawable="@Drawable/citylist_line_dayAndnight" />
+                    <!--删除途经地-->
+                    <ImageButton
+                        Id="@+Id/BTN_Stopover_Delete"
+                        LayoutWidth="84"
+                        LayoutHeight="84"
+                        LayoutLeftMargin="10"
+                        BGHorizontalGravity="Center"
+                        BGVerticalGravity="Center"
+                        Background="@Drawable/h64_background_normal"
+                        Drawable="@Drawable/navi_delete_m"
+                        ClickDataCollection="BTN_Stopover_Delete" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

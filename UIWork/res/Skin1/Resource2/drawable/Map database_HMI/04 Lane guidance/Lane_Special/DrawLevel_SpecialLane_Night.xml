@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <LevelList>
+		<Item DrawableLevel = "0" Drawable = "@Drawable/ETC"/>
+		<Item DrawableLevel = "1" Drawable = "@Drawable/artificial"/>
+		<Item DrawableLevel = "2" Drawable = "@Drawable/ETC_and_artificial"/>
+		<Item DrawableLevel = "3" Drawable = "@Drawable/tidal_lane"/>
+		<Item DrawableLevel = "4" Drawable = "@Drawable/variable_lane"/>
+		<Item DrawableLevel = "5" Drawable = "@Drawable/extendable_lane3"/>
+		<Item DrawableLevel = "6" Drawable = "@Drawable/extendable_lane2"/>
+		<Item DrawableLevel = "7" Drawable = "@Drawable/bus_lane_down_normal_night"/>
+		<Item DrawableLevel = "8" Drawable = "@Drawable/bus_lane_down_disable_night"/>
+		<Item DrawableLevel = "9" Drawable = "@Drawable/bus_lane_middle_normal_night"/>
+		<Item DrawableLevel = "10" Drawable = "@Drawable/bus_lane_middle_disable_night"/>
+	</LevelList>
+</Resource>

@@ -1,0 +1,103 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<Resource>
+	 <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent">
+		<TransparencyActor
+			LayoutHeight = "FillParent"
+			LayoutWidth = "FillParent" />
+		<!--标题-->
+		<RelativeLayout
+			Id = "@+Id/TitleText"
+			LayoutHeight = "140"
+			LayoutWidth = "800"
+			LayoutTopMargin = "50"
+			LayoutLeftMargin= "300"
+			Clickable = "true"
+			Visible = "Gone"
+			Background = "@Drawable/popup_toast_bg" >
+			<TextActor
+				Id = "@+Id/Location_Text"
+				LayoutWidth = "WrapContent"
+				LayoutHeight = "WrapContent"
+				LayoutLeftMargin="60"
+				LayoutRightMargin = "60"
+				HorizontalGravity="Left"
+				LayoutCenterVertical = "true"
+				SingleLine = "false"
+				Text = "@String/MX_LANG_NAVI_LOCATION_SERVICE_OFF_DISPLAY_TEXT_Location_Service_Off_Reminder"
+				TextFont = "@Font/UIFont22_Text_L"
+				TextColor = "@Color/BtnFavoriteColor"/>
+		</RelativeLayout>
+		<!--车线-->
+		<RelativeLayout
+			Id = "@+Id/LaneLayoutParent"
+			LayoutHeight = "110"
+			LayoutTopMargin = "42"
+			LayoutWidth = "FillParent">
+			<LinearLayout
+				Id = "@Id/PreDefine/LaneLayout"
+				LayoutHeight = "FillParent"
+				LayoutCenterHorizontal = "true"
+				Background = "@Drawable/FPK__Lane_bg"
+				Visible = "Invisible"
+				>
+				<RelativeLayout
+					LayoutWidth = "WrapContent"
+					LayoutHeight = "50"
+					LayoutLeftMargin = "30"
+					LayoutRightMargin = "30"
+					LayoutTopMargin = "26">
+					<!--推荐车线背景帧动画-->
+					<LaneAutomaticImageActor
+						Id = "@Id/PreDefine/LaneAutomatic"
+						LayoutHeight="FillParent"
+						ImageChangeTimer="40"
+						Cyclable="true"
+						Drawable="@Drawable/AR_Navi"
+						Visible = "Gone"/>
+					<LaneInfo
+						Id = "@Id/PreDefine/Lane"
+						LayoutHeight = "FillParent"
+						LaneRecommended = "@Drawable/FPK__DrawLevel_RecommendLane"
+						LaneAvailable = "@Drawable/FPK__DrawLevel_AvailableLane"
+						LaneDisable = "@Drawable/FPK__DrawLevel_DisableLane"
+						LaneOmit = "@Drawable/FPK__more"
+						LaneTG = "@Drawable/FPK__DrawLevel_All_SpecialLane"
+						LaneMiddleImg = "@Drawable/FPK__vertical_divider"
+						LanePaddingLeft = "2"
+						LanePaddingRight = "2"
+						LanePaddingTop = "6"
+						LanePaddingBottom = "6"
+						LaneMaxCnt = "6"
+						Clickable = "true"
+						/>
+				</RelativeLayout>
+			</LinearLayout>
+		</RelativeLayout>
+		<!--显示比例尺-->
+		<LinearLayout
+			Id = "@Id/PreDefine/ScaleLayout"
+			LayoutHeight = "40"
+			LayoutBottomMargin = "80"
+			LayoutAlignParentBottom = "true"
+			LayoutCenterInParent = "true"
+			Background = "@Drawable/Scale_SOP2_MQB_bg_map_lane"
+			Visible = "Gone">
+			<!--IconAutoZoom-->
+			<ImageActor
+				Id = "@Id/PreDefine/ScaleAuto"
+				LayoutHeight = "FillParent"
+				PaddingLeft = "10"
+				Drawable = "@Drawable/SOP2_MQB_map_scale_auto_day"/>
+			<!--TextScaleValue-->
+			<TextActor
+				Id = "@Id/PreDefine/ScaleValue"
+				LayoutHeight = "FillParent"
+				PaddingLeft = "10"
+				PaddingRight = "10"
+				TextColor = "@Color/Color_F0F2F7"
+				TextFont = "@Font/UIFont28"/>
+		</LinearLayout>
+	</RelativeLayout>
+</Resource>

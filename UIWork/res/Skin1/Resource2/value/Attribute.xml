@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <DeclareStyleable>
+		<Attr name = "DayTextColor" format = "reference"/>
+		<Attr name = "NightTextColor" format = "reference"/>
+		<Attr name = "TextureResidual" format = "integer"/>
+		<Attr name = "LeftTopSubBackground" format = "reference"/>
+		<Attr name = "RightTopSubBackground" format = "reference"/>
+		<Attr name = "RightBottomSubBackground" format = "reference"/>
+ 		<Attr name = "CurPosPercentFont" format = "reference"/>
+		<Attr name = "CurPosPercentColor" format = "reference"/>
+		<Attr name = "DrawCurPosPercent">
+			<Enum name="true" value="1"/>
+			<Enum name="false" value="0"/>	
+		</Attr>
+		<Attr name = "DrawCurPosPercentPosition">
+			<Enum name="CenterOfThumb" value="0"/>
+			<Enum name="LeftOfThumb" value="1"/>
+			<Enum name="TopOfThumb" value="2"/>
+			<Enum name="RightOfThumb" value="3"/>
+			<Enum name="BottomOfThumb" value="4"/>	
+		</Attr>
+		<Attr name = "IntervalBetweenCurPosPercentAndThumb" format = "widthdimension"/>
+		<Attr name = "LeftPaddingCurPosPercentToThumb" format = "widthdimension"/>
+		<Attr name = "TopPaddingCurPosPercentToThumb" format = "widthdimension"/>
+		<Attr name = "RightPaddingCurPosPercentToThumb" format = "widthdimension"/>
+		<Attr name = "BottomPaddingCurPosPercentToThumb" format = "widthdimension"/>
+		<Attr name = "ShowStyleByPassword">
+			<Enum name="true" value="1"/>
+			<Enum name="false" value="0"/>	
+		</Attr>
+		<Attr name = "Cyclable">
+			<Enum name="true" value="1"/>
+			<Enum name="false" value="0"/>
+		</Attr>
+		<Attr name = "ImageChangeTimer" format = "integer"/>
+		<Attr name = "DirectionArrowsActorColor" format = "reference"/>
+		<Attr name = "WipeEnabled">
+			<Enum name = "true" value = "1"/>
+			<Enum name = "false" value = "0"/>
+		</Attr>
+		
+		<Attr name = "SwappingAnimationEnabled">
+			<Enum name = "true" value = "1"/>
+			<Enum name = "false" value = "0"/>
+		</Attr>
+		<Attr name = "ListDeleteAnimation">
+			<Enum name = "true" value = "1"/>
+			<Enum name = "false" value = "0"/>
+		</Attr>
+		<Attr name = "TopMenuBtnLayout" format = "reference"/>
+		<Attr name = "BackgroundPlate" format = "reference"/>
+		<Attr name = "CustomLayout" format = "reference"/>		
+		<Attr name = "ScrollViewBarLayoutHeight" format = "integer"/>
+		<Attr name = "ScrollViewBarLayoutWidth" format = "integer"/>
+		<Attr name = "ScrollViewBarLayoutLeftMargin" format = "integer"/>
+		<Attr name = "ScrollViewBarLayoutTopMargin" format = "integer"/>
+		<Attr name = "ScrollViewBarLayoutMinWidth" format = "integer"/>
+		<Attr name = "ScrollViewBarLayoutMinHeight" format = "integer"/>
+		<Attr name = "ShowsIndicator">
+			<Enum name="true" value="1"/>
+			<Enum name="false" value="0"/>	
+		</Attr>
+		<Attr name = "KeyBoardValue" format = "string"/>
+		<Attr name = "ThumbDrawableAmbientLight" format = "reference"/>
+		<Attr name = "WaterMark" format = "reference"/>
+		<Attr name = "LaneMiddleImg" format = "reference"/>
+		<Attr name = "LaneBGNormal" format = "reference"/>
+		<Attr name = "LaneBGDisable" format = "reference"/>
+		<Attr name = "LaneNormal" format = "reference"/>
+		<Attr name = "LaneDisable" format = "reference"/>
+		<Attr name = "LaneRecommended" format = "reference"/>
+		<Attr name = "LaneAvailable" format = "reference"/>
+		<Attr name = "LaneOmit" format = "reference"/>
+		<Attr name = "LaneEmpty" format = "reference"/>
+		<Attr name = "LaneLeftSide" format = "reference"/>
+		<Attr name = "LaneRightSide" format = "reference"/>
+		<Attr name = "LaneTG" format = "reference"/>
+		<Attr name = "LaneHorizontalGravity">
+			<Enum name="Left" value="4"/>
+			<Enum name="Center" value="8"/>
+			<Enum name="Right" value="12"/>
+		</Attr>
+		<Attr name = "LaneVerticalGravity">
+			<Enum name="Top" value="1"/>
+			<Enum name="Center" value="2"/>
+			<Enum name="Bottom" value="3"/>
+		</Attr>
+		<Attr name = "LanePaddingLeft" format = "integer"/>
+		<Attr name = "LanePaddingRight" format = "integer"/>
+		<Attr name = "LanePaddingTop" format = "integer"/>
+		<Attr name = "LanePaddingBottom" format = "integer"/>
+		<Attr name = "LaneSpace" format = "integer"/>	<!-->两个车线之间的间隔-->
+		<Attr name = "LaneMaxCnt" format = "integer"/>	<!-->支持显示的车线个数-->
+		<Attr name = "LaneFillMode">	<!-->当车线个数小于最大数时，车线显示方式-->
+			<Enum name="FillModeLeft" value="0"/>
+			<Enum name="FillModeRight" value="1"/>
+		</Attr>
+		<Attr name = "AzimuthNorthUpDrawable" format = "reference"/>	
+		<Attr name = "AzimuthHeadUpDrawable" format = "reference"/>	
+		<Attr name = "Azimuth3DDrawable" format = "reference"/>
+		<Attr name = "AzimuthVMapDrawable" format = "reference"/>
+		<Attr name = "ThumbDrawableBackground" format = "reference"/>
+		
+	        <!--交通流彩虹条 无效路况（车已经走过）（灰色）-->
+	        <Attr name = "TrafficFlowRainBowBarInvalidRouteStatusColor" format = "color"/>
+	        <!--交通流彩虹条 整个画布描画路况范围的宽度-->
+	        <Attr name = "TrafficFlowRainbowBarLayoutWidth" format = "widthdimension">
+	            <Enum name = "FillParent" value = "-1"/>
+	            <Enum name = "WrapContent" value = "-2"/>
+	        </Attr>
+	        <!--交通流彩虹条 整个画布描画路况范围的高度-->
+	        <Attr name = "TrafficFlowRainbowBarLayoutHeight" format = "heightdimension">
+	            <Enum name = "FillParent" value = "-1"/>
+	            <Enum name = "WrapContent" value = "-2"/>
+	        </Attr>
+	        <!--交通流彩虹条 在元器件内部的上、左间距-->
+	        <Attr name = "TrafficFlowRainbowBarLayoutLeftMargin" format = "widthdimension"/>
+	        <Attr name = "TrafficFlowRainbowBarLayoutTopMargin" format = "heightdimension"/>
+		<Attr name = "ColorFollowAmbient">
+			<Enum name = "true" value = "1"/>
+			<Enum name = "false" value = "0"/>
+		</Attr>
+		<Attr name = "DayOrNight">
+			<Enum name = "Day" value = "1"/>
+			<Enum name = "Night" value = "0"/>
+		</Attr>
+
+		<Attr name = "SpecialLaneDrawable" format = "reference"/>
+		<Attr name = "RecommendedDrawable" format = "reference"/>
+		<Attr name = "AvailableDrawable" format = "reference"/>
+		<Attr name = "DisableDrawable" format = "reference"/>
+		<Attr name = "FullScreenAnimationLayout" format = "reference"/>
+
+		<!--VividCheckbox-->
+		<Attr name = "CheckToUnCheck" format = "reference"/>
+		<Attr name = "CheckToUnCheckBackground" format = "reference"/>
+		<Attr name = "UnCheckToCheck" format = "reference"/>
+		<Attr name = "UnCheckToCheckBackground" format = "reference"/>
+		<Attr name = "HalfCheckedDrawable" format = "reference"/>
+		<Attr name = "HalfCheckedDrawableBackground" format = "reference"/>
+		<Attr name = "Enable3States">
+			<Enum name = "true" value = "1"/>
+			<Enum name = "false" value = "0"/>
+		</Attr>
+		<Attr name = "Direction">
+			<Enum name="Horizontal" value="1"/>
+			<Enum name="Vertical" value="2"/>
+			<Enum name="Diagonal" value="3"/>
+			<Enum name="FreedomAngle" value="4"/>
+		</Attr>
+		<Attr name = "Angle" format = "float"/>
+		<Attr name = "StartColor" format = "color|reference"/>
+		<Attr name = "EndColor" format = "color|reference"/>
+		<Attr name = "DrawableLayer" format = "integer"/>
+		
+		<Attr name = "XFromAbsoluteOffset" format = "integer"/>
+		<Attr name = "YFromAbsoluteOffset" format = "integer"/>
+		
+		<!--SuperList一次最大加载条目，滑动到当前索引与当前list条目总数差值多少时，再次加载一次list-->
+		<Attr name = "MaxCountOnceLoad" format = "integer"/>
+		<Attr name = "ScollDifference" format = "integer"/>
+
+		<!--DropDownScrollBar从上往下显示还是从下往上显示-->
+		<Attr name = "ShowDownward">
+			<Enum name="true" value="1"/>
+			<Enum name="false" value="0"/>	
+		</Attr>
+    </DeclareStyleable>
+</Resource>

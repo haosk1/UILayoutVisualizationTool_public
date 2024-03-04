@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <LinearLayout
+        Id="@+Id/CategoryLayout"
+        LayoutWidth="1038"
+        LayoutHeight="86"
+        PaddingLeft = "3">
+        <Button
+            Id="@+Id/Btn_Category1"
+            LayoutHeight="FillParent"
+            LayoutWidth="348"
+            TextFont="@Font/BtnFont34_N_TextL_P_TextR_C_TextR_D_TextL"
+            TextColor="@Color/ListCategoryColor"
+            Background="@Drawable/btn_text_com_filter" />
+        <ImageActor
+            Id="@+Id/icon_line1"
+            Background="@Drawable/citylist_line_dayAndnight"
+            LayoutHeight="56"
+            LayoutTopMargin="15"
+            LayoutWidth="2" />
+        <Button
+            Id="@+Id/Btn_Category2"
+            LayoutHeight="FillParent"
+            LayoutWidth="348"
+            TextFont="@Font/BtnFont34_N_TextL_P_TextR_C_TextR_D_TextL"
+            TextColor="@Color/ListCategoryColor"
+            Background="@Drawable/btn_text_com_filter" />
+        <ImageActor
+            Id="@+Id/icon_line2"
+            Background="@Drawable/citylist_line_dayAndnight"
+            LayoutHeight="56"
+            LayoutTopMargin="15"
+            LayoutWidth="2" />
+        <Button
+            Id="@+Id/Btn_Category3"
+            LayoutHeight="FillParent"
+            LayoutWidth="348"
+            TextFont="@Font/BtnFont34_N_TextL_P_TextR_C_TextR_D_TextL"
+            TextColor="@Color/ListCategoryColor"
+            Background="@Drawable/btn_text_com_filter" />
+    </LinearLayout>
+</Resource>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+		<Item StateFocused = "false" Color = "#74F593"/>
+		<Item StateFocused = "true" Color = "#74F593"/>
+    </StateList>
+</Resource>

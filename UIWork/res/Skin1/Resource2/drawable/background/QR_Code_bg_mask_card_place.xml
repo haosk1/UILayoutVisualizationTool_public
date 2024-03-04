@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <DayNightStateList>
+<!--Day-->
+		<Item DayOrNight = "Day" Drawable = "@Drawable/QR_Code_bg_mask_card_place_day_1"/>
+<!--Night-->
+		<Item DayOrNight = "Night" Drawable = "@Drawable/QR_Code_bg_mask_card_place_night_1"/>
+    </DayNightStateList>
+</Resource>

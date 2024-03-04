@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="150">
+        <LinearLayout
+            Id="@+Id/Linear_OneLine"
+            LayoutWidth="FillParent"
+            LayoutHeight="144"
+            PaddingTop = "-16"
+            Clickable="true"
+            Focusable="true">
+            <RelativeLayout
+                Id="@+Id/Relative_Invite"
+                LayoutWidth="120"
+                LayoutHeight="FillParent"
+                LayoutLeftMargin="30"
+                Visible="Gone"
+                Clickable="true"
+                Focusable="true"
+                Background="@Drawable/small_add"
+                ClickDataCollection="BTN_Group_Invite"
+                VisibleSpeechs="@String/MX_LANG_NAVI_GROUPDRIVING_FLEET_MAIN_NO_GATHERING_POINT_VisibleSpeechs_02">
+                <TextActor
+                    Style="@Style/Group_MemberNameText"
+                    Text="@String/MX_LANG_NAVI_GROUPDRIVING_FLEET_MAIN_NO_GATHERING_POINT_BTN_Group_Invite" />
+            </RelativeLayout>
+            <RelativeLayout
+                Id="@+Id/Linear_UserOne"
+                LayoutWidth="120"
+                LayoutLeftMargin="30"
+                LayoutHeight="FillParent"
+                LayoutTopMargin = "4"
+                Clickable="true"
+                Focusable="true"
+                Visible="Gone">
+                <ImageActor
+                    Id="@+Id/Btn_UserOne_Online_shadows"
+                    LayoutWidth="112"
+                    LayoutHeight="112"
+                    LayoutTopMargin="2"
+                    LayoutCenterHorizontal="true"
+                    Background="@Drawable/image_user_m_bg_shadows"
+                    Visible="Gone" />
+                <ImageActor
+                    Id="@+Id/Btn_UserOne"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="WrapContent" />
+                <ImageActor
+                    Id="@+Id/TextOffLine_One"
+                    Style="@Style/Group_MemberOffLineImg"
+                    Visible="Gone" />
+                <TextActor
+                    Id="@+Id/Text_UserOne"
+                    Style="@Style/Group_MemberNameText" />
+            </RelativeLayout>
+            <RelativeLayout
+                Id="@+Id/Linear_UserTwo"
+                LayoutWidth="120"
+                LayoutHeight="FillParent"
+                LayoutLeftMargin="4"
+                LayoutTopMargin = "4"
+                Clickable="true"
+                Focusable="true"
+                Visible="Gone">
+                <ImageActor
+                    Id="@+Id/Btn_UserTwo_Online_shadows"
+                    LayoutWidth="110"
+                    LayoutHeight="110"
+                    LayoutTopMargin="2"
+                    LayoutCenterHorizontal="true"
+                    Background="@Drawable/image_user_m_bg_shadows"
+                    Visible="Gone" />
+                <ImageActor
+                    Id="@+Id/Btn_UserTwo"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="WrapContent" />
+                <ImageActor
+                    Id="@+Id/TextOffLine_Two"
+                    Style="@Style/Group_MemberOffLineImg"
+                    Visible="Gone" />
+                <TextActor
+                    Id="@+Id/Text_UserTwo"
+                    Style="@Style/Group_MemberNameText" />
+            </RelativeLayout>
+            <RelativeLayout
+                Id="@+Id/Linear_UserThree"
+                LayoutWidth="120"
+                LayoutHeight="FillParent"
+                LayoutLeftMargin="4"
+                LayoutTopMargin = "4"
+                Clickable="true"
+                Focusable="true"
+                Visible="Gone">
+                <ImageActor
+                    Id="@+Id/Btn_UserThree_Online_shadows"
+                    LayoutWidth="110"
+                    LayoutHeight="110"
+                    LayoutTopMargin="2"
+                    LayoutCenterHorizontal="true"
+                    Background="@Drawable/image_user_m_bg_shadows"
+                    Visible="Gone" />
+                <ImageActor
+                    Id="@+Id/Btn_UserThree"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="WrapContent" />
+                <ImageActor
+                    Id="@+Id/TextOffLine_Three"
+                    Style="@Style/Group_MemberOffLineImg"
+                    Visible="Gone" />
+                <TextActor
+                    Id="@+Id/Text_UserThree"
+                    Style="@Style/Group_MemberNameText" />
+            </RelativeLayout>
+             <RelativeLayout
+                Id="@+Id/Linear_UserFour"
+                LayoutWidth="120"
+                LayoutHeight="FillParent"
+                LayoutLeftMargin="4"
+                LayoutTopMargin = "4"
+                Clickable="true"
+                Focusable="true"
+                Visible="Gone">
+                <ImageActor
+                    Id="@+Id/Btn_UserFour_Online_shadows"
+                    LayoutWidth="110"
+                    LayoutHeight="110"
+                    LayoutTopMargin="2"
+                    LayoutCenterHorizontal="true"
+                    Background="@Drawable/image_user_m_bg_shadows"
+                    Visible="Gone" />
+                <ImageActor
+                    Id="@+Id/Btn_UserFour"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="WrapContent" />
+                <ImageActor
+                    Id="@+Id/TextOffLine_Four"
+                    Style="@Style/Group_MemberOffLineImg"
+                    Visible="Gone" />
+                <TextActor
+                    Id="@+Id/Text_UserFour"
+                    Style="@Style/Group_MemberNameText" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</Resource>

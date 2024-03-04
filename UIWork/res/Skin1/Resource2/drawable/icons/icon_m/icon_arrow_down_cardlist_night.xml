@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "false" StateFocused = "false" Drawable = "@Drawable/arrow_down_cardlist_night"/>
+<!-->Check-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "true" Drawable = "@Drawable/arrow_down_cardlist2_pressed_day"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" Drawable = "@Drawable/arrow_down_cardlist2_pressed_day"/>
+<!-->Disable-->
+		<Item StateEnabled = "false" Drawable = "@Drawable/arrow_down_cardlist_disable_night"/>
+    </StateList>
+</Resource>

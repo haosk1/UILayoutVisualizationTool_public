@@ -1,0 +1,17 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<Resource>
+	<LevelList>
+		<Item DrawableLevel = "0" Drawable = "@Drawable/loading_anim_seq_001_m_b_1"/>
+		<Item DrawableLevel = "1" Drawable = "@Drawable/loading_anim_seq_002_m_b_1"/>
+		<Item DrawableLevel = "2" Drawable = "@Drawable/loading_anim_seq_003_m_b_1"/>
+		<Item DrawableLevel = "3" Drawable = "@Drawable/loading_anim_seq_004_m_b_1"/>
+		<Item DrawableLevel = "4" Drawable = "@Drawable/loading_anim_seq_005_m_b_1"/>
+		<Item DrawableLevel = "5" Drawable = "@Drawable/loading_anim_seq_006_m_b_1"/>
+		<Item DrawableLevel = "6" Drawable = "@Drawable/loading_anim_seq_007_m_b_1"/>
+		<Item DrawableLevel = "7" Drawable = "@Drawable/loading_anim_seq_008_m_b_1"/>
+		<Item DrawableLevel = "8" Drawable = "@Drawable/loading_anim_seq_009_m_b_1"/>
+		<Item DrawableLevel = "9" Drawable = "@Drawable/loading_anim_seq_010_m_b_1"/>
+		<Item DrawableLevel = "10" Drawable = "@Drawable/loading_anim_seq_011_m_b_1"/>
+		<Item DrawableLevel = "11" Drawable = "@Drawable/loading_anim_seq_012_m_b_1"/>
+	</LevelList>
+</Resource>

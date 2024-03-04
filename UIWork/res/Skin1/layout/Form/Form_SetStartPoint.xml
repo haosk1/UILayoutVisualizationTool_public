@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="69"
+        LayoutHeight="69"
+        LayoutTopMargin="600"
+        LayoutLeftMargin="1114">
+        <!--MCode-->
+        <Button
+            Id="@+Id/BtnMcode"
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent"
+            Background="@Drawable/DrawBtnStyle1"
+            TextFont="@Font/UIFont16"
+            TextColor="@Color/BtnStyle1Color"
+            TextShadow="true"
+            TextShadowColor="@Color/BtnBlackTextColor"
+            Text="Mcode" />
+    </RelativeLayout>
+</Resource>

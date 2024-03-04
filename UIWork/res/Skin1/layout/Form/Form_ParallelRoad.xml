@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <!--平行路切换-->
+    <RelativeLayout
+        Id="@+Id/LayoutParallel"
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent"
+        VerticalGravity="Bottom">
+        <!--占位用的smartcard -->
+        <ImageActor
+            Id="@Id/PreDefine/ImgSmartCard"
+            LayoutWidth="496"
+            LayoutHeight="FillParent" />
+        <!--水平-->
+        <LinearLayout
+            Id="@+Id/HorizontalLayoutParallel"
+            LayoutHeight="116"
+            LayoutWidth="WrapContent"
+            LayoutRightOf="@Id/PreDefine/ImgSmartCard"
+            LayoutAlignParentBottom="true"
+            LayoutLeftMargin="6"
+            LayoutBottomMargin="118">
+            <!--切换导航模式按钮占位-->
+			<ImageActor
+				Id = "@+Id/Change_LaneMode"
+				LayoutHeight = "116"
+				LayoutWidth = "116"
+				Visible = "Gone"/>
+            <RelativeLayout
+                Id="@+Id/Change_Position"
+                LayoutHeight="116"
+                LayoutWidth="116"
+                Visible="Gone"
+                Clickable="true"
+                Background="@Drawable/mixin_background_square_outline"
+                VisibleSpeechs="@String/MX_LANG_NAVI_RESERVATION_CCP_VIEW_NO_GUIDANCE_VisibleSpeechs_06">
+                <ImageButton
+                    Clickable="false"
+                    Style="@Style/LefBtnIconLayout"
+                    Drawable="@Drawable/icon_road_8" />
+                <TextActor
+                    Style="@Style/ParallelTxtLayout"
+                    PaddingLeft = "3"
+                    Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_ROAD_SWITCHING_DISPLAY_BTN_Change_Position" />
+            </RelativeLayout>
+            <RelativeLayout
+                Id="@+Id/Cut_Side_Road"
+                LayoutHeight="116"
+                LayoutWidth="116"
+                Visible="Gone"
+                LayoutLeftMargin = "-2"
+                Clickable="true"
+                VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CCP_VIEW_NO_GUIDANCE_OPERATE_VisibleSpeechs_06"
+                Background="@Drawable/mixin_background_square_outline">
+                <ImageButton
+                    Style="@Style/LefBtnIconLayout"
+                    Clickable="false"
+                    Drawable="@Drawable/icon_side_road" />
+                <TextActor
+                    Style="@Style/ParallelTxtLayout"
+                    Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_OPERATE_BTN_Cut_Side_Road" />
+            </RelativeLayout>
+            <RelativeLayout
+                Id="@+Id/Cut_Main_Road"
+                LayoutHeight="116"
+                LayoutWidth="116"
+                Visible="Gone"
+                LayoutLeftMargin = "-2"
+                Clickable="true"
+                Background="@Drawable/mixin_background_square_outline"
+                VisibleSpeechs = "@String/MX_LANG_NAVI_RESERVATION_CCP_VIEW_NO_GUIDANCE_VisibleSpeechs_07">
+                <ImageButton
+                    Style="@Style/LefBtnIconLayout"
+                    Clickable="false"
+                    Drawable="@Drawable/icon_main_road" />
+                <TextActor
+                    Style="@Style/ParallelTxtLayout"
+                    Text="@String/MX_LANG_Detail_Description_BTN_Switch_Position_BTN_Cut_Main_Road" />
+            </RelativeLayout>
+            <RelativeLayout
+                Id="@+Id/Cut_On_Bridge"
+                LayoutHeight="116"
+                LayoutWidth="116"
+                Visible="Gone"
+                LayoutLeftMargin = "-2"
+                Clickable="true"
+                Background="@Drawable/mixin_background_square_outline"
+                VisibleSpeechs = "@String/MX_LANG_NAVI_RESERVATION_CCP_VIEW_NO_GUIDANCE_VisibleSpeechs_04">
+                <ImageButton
+                    Style="@Style/LefBtnIconLayout"
+                    Clickable="false"
+                    Drawable="@Drawable/icon_above_bridge" />
+                <TextActor
+                    Style="@Style/ParallelTxtLayout"
+                    Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_ROAD_SWITCHING_DISPLAY_BTN_Cut_On_Bridge" />
+            </RelativeLayout>
+            <RelativeLayout
+                Id="@+Id/Cut_Under_Bridge"
+                LayoutHeight="116"
+                LayoutWidth="116"
+                Visible="Gone"
+                LayoutLeftMargin = "-2"
+                Clickable="true"
+                Background="@Drawable/mixin_background_square_outline"
+                VisibleSpeechs = "@String/MX_LANG_NAVI_RESERVATION_CCP_VIEW_NO_GUIDANCE_VisibleSpeechs_05">
+                <ImageButton
+                    Style="@Style/LefBtnIconLayout"
+                    Clickable="false"
+                    Drawable="@Drawable/icon_under_bridge" />
+                <TextActor
+                    Style="@Style/ParallelTxtLayout"
+                    Text="@String/MX_LANG_Detail_Description_BTN_Switch_Position_BTN_Cut_Under_Bridge" />
+            </RelativeLayout>
+            <RelativeLayout
+                Id="@+Id/Cut_Into_Tunnel"
+                LayoutHeight="116"
+                LayoutWidth="116"
+                Visible="Gone"
+                LayoutLeftMargin = "-2"
+                Clickable="true"
+                Background="@Drawable/mixin_background_square_outline"
+                VisibleSpeechs = "@String/MX_LANG_NAVI_RESERVATION_CCP_VIEW_NO_GUIDANCE_VisibleSpeechs_02">
+                <ImageButton
+                    Style="@Style/LefBtnIconLayout"
+                    Clickable="false"
+                    Drawable="@Drawable/icon_in" />
+                <TextActor
+                    Style="@Style/ParallelTxtLayout"
+                    Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_ROAD_SWITCHING_DISPLAY_BTN_Cut_Into_Tunnel" />
+            </RelativeLayout>
+            <RelativeLayout
+                Id="@+Id/Cut_Out_Tunnel"
+                LayoutHeight="116"
+                LayoutWidth="116"
+                Visible="Gone"
+                LayoutLeftMargin = "-2"
+                Clickable="true"
+                Background="@Drawable/mixin_background_square_outline"
+                VisibleSpeechs = "@String/MX_LANG_NAVI_RESERVATION_CCP_VIEW_NO_GUIDANCE_VisibleSpeechs_03">
+                <ImageButton
+                    Style="@Style/LefBtnIconLayout"
+                    Clickable="false"
+                    Drawable="@Drawable/icon_out" />
+                <TextActor
+                    Style="@Style/ParallelTxtLayout"
+                    Text="@String/MX_LANG_Detail_Description_BTN_Switch_Position_BTN_Cut_Out_Tunnel" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</Resource>

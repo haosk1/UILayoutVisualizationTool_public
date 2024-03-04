@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <!-- Backstage start -->
+    <Style name="BtnStyle1">
+        <Item name="Background">@Drawable/DrawBtnStyle1</Item>
+        <Item name="TextFont">@Font/UIFont24</Item>
+        <Item name="TextColor">@Color/BtnBackstageColor</Item>
+        <Item name="HorizontalGravity">Center</Item>
+        <Item name="VerticalGravity">Center</Item>
+        <Item name="TextShadow">true</Item>
+        <Item name="TextShadowColor">@Color/Color_Black</Item>
+    </Style>
+    <Style name="BtnStyleTools">
+        <Item name="TextColor">@Color/Color_White</Item>
+        <Item name="HorizontalGravity">Center</Item>
+        <Item name="VerticalGravity">Center</Item>
+        <Item name="TextFont">@Font/UIFont32</Item>
+    </Style>
+    <Style name="cns_EditBoxStyle">
+        <Item name="HorizontalGravity">Left</Item>
+        <Item name="VerticalGravity">Center</Item>
+        <Item name="TextFont">@Font/UIFont26</Item>
+        <Item name="TextColor">@Color/Color_F0F2F7</Item>
+        <Item name="CursorDrawable">@Drawable/Typeline</Item>
+        <Item name="TextShadow">true</Item>
+        <Item name="TextHintColor">@Color/Color_74767E</Item>
+        <Item name="PaddingLeft">0</Item>
+        <Item name="PaddingTop">0</Item>
+        <Item name="PaddingRight">0</Item>
+        <Item name="Focusable">false</Item>
+        <Item name="ShowCursorWhenNotFocused">false</Item>
+        <Item name="CursorBlink">true</Item>
+        <Item name="TextMaxLength">NoLimit</Item>
+        <Item name="NeedHighLightBackground">true</Item>
+        <Item name="HighLightColor">#C0C0C0</Item>
+    </Style>
+    <!-->画页中Form的Icon S10使用hanqk-->
+    <Style name="FormIcon">
+        <Item name="LayoutVerticalGravity">Top</Item>
+        <Item name="VerticalGravity">Center</Item>
+        <Item name="LayoutWidth">WrapContent</Item>
+        <Item name="LayoutHeight">WrapContent</Item>
+        <Item name="LayoutLeftMargin">-1</Item>
+        <Item name="LayoutTopMargin">13</Item>
+        <!--<Item name = "LayoutLeftMargin">15</Item>-->
+    </Style>
+    <Style name="FormReturn">
+        <Item name="Background">@Drawable/BtnStyleReturn</Item>
+        <Item name="LayoutVerticalGravity">Center</Item>
+        <Item name="LayoutWidth">WrapContent</Item>
+        <Item name="LayoutHeight">WrapContent</Item>
+        <Item name="LayoutLeftMargin">1029</Item>
+        <Item name="LayoutTopMargin">9</Item>
+        <Item name="TipsSimple">@String/Helper_ALL_Return</Item>
+        <Item name="TipsDetail">@String/Helper_ALL_Return</Item>
+    </Style>
+    <!-->EditBox风格-->
+    <!--bigsrh键盘Btn-->
+    <Style name="FormTitle_Dest">
+        <Item name="HorizontalGravity">Left</Item>
+        <Item name="VerticalGravity">Center</Item>
+        <Item name="TextFont">@Font/UIFont24</Item>
+        <Item name="TextColor">@Color/Color_Black</Item>
+        <Item name="LayoutWidth">WrapContent</Item>
+        <Item name="LayoutHeight">55</Item>
+        <Item name="LayoutTopMargin">3</Item>
+        <Item name="LayoutLeftMargin">121</Item>
+        <Item name="TextShadow">true</Item>
+        <Item name="TextShadowColor">@Color/Color_White</Item>
+    </Style>
+    <!--键盘Btn-->
+    <Style name="cns_BtnKeyBoard_Key">
+        <Item name="Background">@Drawable/key_num_normal</Item>
+        <Item name="TextFont">@Font/UIFont34_Text_R</Item>
+        <Item name="TextColor">@Color/NormalBtn_RGB</Item>
+        <Item name="HorizontalGravity">Center</Item>
+        <Item name="VerticalGravity">Center</Item>
+        <Item name="PaddingTop">6</Item>
+        <Item name="PaddingRight">1</Item>
+        <Item name="LayoutWidth">86</Item>
+        <Item name="LayoutHeight">86</Item>
+        <Item name="LayoutLeftMargin">2</Item>
+    </Style>
+    <Style name="cns_BtnKeyBoard_END">
+        <Item name="Background">@Drawable/key_normal</Item>
+        <Item name="TextFont">@Font/UIFont34_Text_R</Item>
+        <Item name="TextColor">@Color/NormalBtn_RGB</Item>
+        <Item name="HorizontalGravity">Center</Item>
+        <Item name="VerticalGravity">Center</Item>
+        <Item name="PaddingTop">6</Item>
+        <Item name="LayoutWidth">86</Item>
+        <Item name="LayoutHeight">86</Item>
+        <Item name="LayoutLeftMargin">2</Item>
+    </Style>
+    <Style name="cns_ProvinceName_Btn">
+        <Item name="Background">@Drawable/license_plate_key</Item>
+        <Item name="LayoutHeight">86</Item>
+        <Item name="LayoutWidth">109</Item>
+        <Item name="HorizontalGravity">Center</Item>
+        <Item name="VerticalGravity">Center</Item>
+        <Item name="TextColor">@Color/NormalBtn_RGB</Item>
+        <Item name="TextFont">@Font/UIFont34_Text_L</Item>
+        <Item name="LayoutLeftMargin">2</Item>
+    </Style>
+    <!--键盘Btn-->
+    <Style name="McodeBtnKey">
+        <Item name="Background">@Drawable/KeyBoard_Key</Item>
+        <Item name="TextFont">@Font/UIFont26</Item>
+        <Item name="TextColor">@Color/KeyBoardColorStyle</Item>
+        <Item name="HorizontalGravity">Center</Item>
+        <Item name="VerticalGravity">Center</Item>
+        <Item name="LayoutLeftMargin">20</Item>
+        <Item name="TextShadow">true</Item>
+        <Item name="TextShadowColor">@Color/BtnBlackTextColor</Item>
+        <Item name="LayoutWidth">60</Item>
+        <Item name="LayoutHeight">56</Item>
+    </Style>
+    <!-->画页中Form的回地图 S10使用hanqk-->
+    <Style name="DeckLine">
+        <Item name="Background">@Drawable/deckLine</Item>
+        <Item name="LayoutWidth">WrapContent</Item>
+        <Item name="LayoutHeight">WrapContent</Item>
+        <Item name="LayoutLeftMargin">816</Item>
+        <Item name="LayoutTopMargin">123</Item>
+    </Style>
+    <!--行程规划里编辑、删除等风格的Btn-->
+    <Style name="oBtnStyle58">
+        <Item name="Background">@Drawable/BtnStyle58</Item>
+        <Item name="TextFont">@Font/UIFont26</Item>
+        <Item name="TextColor">@Color/BtnOkColor</Item>
+        <Item name="HorizontalGravity">Center</Item>
+        <Item name="VerticalGravity">Center</Item>
+        <Item name="TextShadow">true</Item>
+    </Style>
+    <Style name="BtnStyleConfirm">
+        <Item name="Background">@Drawable/BtnKeyboardConfirm</Item>
+        <Item name="TextFont">@Font/UIFont24</Item>
+        <Item name="TextColor">@Color/BtnOkColor</Item>
+        <Item name="HorizontalGravity">Center</Item>
+        <Item name="VerticalGravity">Center</Item>
+    </Style>
+    <!-- Backstage end -->
+    <Style name="ScrollViewActorStyle">
+        <Item name="ScrollDistanceFont">@Font/UIFont10</Item>
+        <Item name="ScrollDistanceColor">@Color/ScrollViewDistanceColor</Item>
+        <Item name="ScrollDistancePosition">RightOfCursor</Item>
+        <Item name="IntervalBetweenScrollDistanceAndCursor">-11</Item>
+        <Item name="BottomPaddingScrollDistanceToCursor">57</Item>
+    </Style>
+    <Style name="FULayoutGuideView">
+        <Item name="LayoutWidth">WrapContent</Item>
+        <Item name="LayoutHeight">WrapContent</Item>
+    </Style>
+    <Style name="EditBoxStyle">
+        <Item name="HorizontalGravity">Left</Item>
+        <Item name="VerticalGravity">Center</Item>
+        <Item name="TextFont">@Font/UIFont32</Item>
+        <Item name="TextColor">@Color/Color_F0F2F7</Item>
+        <Item name="CursorDrawable">@Drawable/edit_scrollbar_bg</Item>
+        <Item name="TextShadow">true</Item>
+        <Item name="TextHintColor">@Color/Color_F0F2F7</Item>
+        <Item name="PaddingLeft">0</Item>
+        <Item name="PaddingTop">0</Item>
+        <Item name="PaddingRight">0</Item>
+        <Item name="Focusable">false</Item>
+        <Item name="ShowCursorWhenNotFocused">false</Item>
+        <Item name="CursorBlink">true</Item>
+        <Item name="TextMaxLength">NoLimit</Item>
+        <Item name="NeedHighLightBackground">true</Item>
+        <Item name="HighLightColor">#C0C0C0</Item>
+    </Style>
+    <Style name="EditBoxStylePlate">
+        <Item name="HorizontalGravity">Left</Item>
+        <Item name="VerticalGravity">Center</Item>
+        <Item name="TextFont">@Font/UIFont32</Item>
+        <Item name="TextColor">@Color/Color_F0F2F7</Item>
+        <Item name="CursorDrawable">@Drawable/edit_scrollbarPlate_bg</Item>
+        <Item name="TextShadow">true</Item>
+        <Item name="TextHintColor">@Color/Color_F0F2F7</Item>
+        <Item name="PaddingLeft">0</Item>
+        <Item name="PaddingTop">0</Item>
+        <Item name="PaddingRight">0</Item>
+        <Item name="Focusable">false</Item>
+        <Item name="ShowCursorWhenNotFocused">false</Item>
+        <Item name="CursorBlink">true</Item>
+        <Item name="TextMaxLength">NoLimit</Item>
+        <Item name="NeedHighLightBackground">true</Item>
+        <Item name="HighLightColor">#C0C0C0</Item>
+    </Style>
+    <Style name="BtnKeyBoardKeyStyle">
+        <Item name="Background">@Drawable/key_one</Item>
+        <Item name="TextFont">@Font/UIFont46_Text_R</Item>
+        <Item name="TextColor">@Color/DayBlack_NightWhite</Item>
+        <Item name="HorizontalGravity">Center</Item>
+        <Item name="VerticalGravity">Center</Item>
+        <Item name="PaddingTop">4</Item>
+        <Item name="LayoutWidth">0</Item> 
+        <Item name="LayoutWeight">10</Item> 
+        <Item name="LayoutHeight">120</Item>
+    </Style>
+    <Style name="BtnKeyBoardCandidatesListStyle">
+        <Item name="LayoutHeight">64</Item>
+        <Item name="LayoutTopMargin">29</Item>
+        <Item name="LayoutLeftMargin">6</Item>
+        <Item name="Background">@Drawable/words_btn</Item>
+        <Item name="Focusable">true</Item>
+        <Item name="TextFont">@Font/UIFont40_Text_R</Item>
+        <Item name="TextColor">@Color/DayBlack_NightWhite</Item>
+        <Item name="PaddingLeft">0</Item>
+        <Item name="PaddingRight">0</Item>
+        <Item name="PaddingTop">4</Item>
+    </Style>
+    <Style name="DividerKeyBoardCandidatesListStyle">
+        <Item name="LayoutWidth">2</Item>
+        <Item name="LayoutHeight">52</Item>
+        <Item name="LayoutTopMargin">35</Item>
+        <Item name="Drawable">@Drawable/vertical_divider</Item>
+    </Style>
+    <Style name="BtnNumberKeyBoard">
+        <Item name="LayoutWidth">118</Item>
+        <Item name="LayoutHeight">120</Item>
+        <Item name="PaddingTop">4</Item>
+        <Item name="Background">@Drawable/key_one</Item>
+        <Item name="TextColor">@Color/DayBlack_NightWhite</Item>
+        <Item name="TextFont">@Font/UIFont46_UIDigit_R</Item>
+    </Style>
+    <Style name="cns_Scale_Value">
+        <Item name="LayoutRightMargin">2</Item>
+        <Item name="LayoutBottomMargin">-3</Item>
+        <Item name="LayoutHeight">34</Item>
+        <Item name="HorizontalGravity">Right</Item>
+        <Item name="VerticalGravity">Bottom</Item>
+        <Item name="LayoutAlignParentBottom">true</Item>
+        <Item name="LayoutAlignParentRight">true</Item>
+        <Item name="TextColor">@Color/DayBlack_NightWhite</Item>
+        <Item name="TextFont">@Font/UIFont28_Text_L</Item>
+    </Style>
+    <Style name="cns_ScaleAuto">
+        <Item name="LayoutLeftMargin">5</Item>
+        <Item name="LayoutRightMargin">-1</Item>
+        <Item name="LayoutBottomMargin">1</Item>
+        <Item name="LayoutAlignParentBottom">true</Item>
+        <Item name="LayoutAlignParentRight">true</Item>
+        <Item name="Background">@Drawable/auto_search</Item>
+    </Style>
+    <Style name="cns_Scale_Bar">
+        <Item name="LayoutWidth">240</Item>
+        <Item name="LayoutHeight">16</Item>
+        <Item name="LayoutAlignParentBottom">true</Item>
+        <Item name="LayoutAlignParentRight">true</Item>
+        <Item name="Background">@Drawable/bilichi</Item>
+    </Style>
+    <Style name="cns_TripView_Title">
+        <Item name="TextColor">@Color/ListFavColor</Item>
+        <Item name="TextFont">@Font/UIFont34_Text_R</Item>
+        <Item name="HorizontalGravity">Left</Item>
+        <Item name="VerticalGravity">Center</Item>
+        <Item name="ShowEllipsis">true</Item>
+        <Item name="PaddingTop">4</Item>
+    </Style>
+    <Style name="cns_TripView_Address">
+        <Item name="TextColor">@Color/ListFavColor</Item>
+        <Item name="TextFont">@Font/UIFont34_Text_L</Item>
+        <Item name="HorizontalGravity">Left</Item>
+        <Item name="VerticalGravity">Center</Item>
+        <Item name="ShowEllipsis">true</Item>
+        <Item name="PaddingTop">3</Item>
+    </Style>
+    <Style name="MA_GroupKeyBoard_Key">
+        <Item name="Background">@Drawable/small_key</Item>
+        <Item name="TextFont">@Font/UIFont34_Text_R</Item>
+        <Item name="TextColor">@Color/BtnFavoriteColor</Item>
+        <Item name="HorizontalGravity">Center</Item>
+        <Item name="PaddingTop">12</Item>
+        <Item name="PaddingLeft">-2</Item>
+        <Item name="VerticalGravity">Center</Item>
+        <Item name="LayoutWidth">158</Item>
+        <Item name="LayoutHeight">72</Item>
+    </Style>
+   <Style name="Group_MemberNameText">
+        <Item name="TextFont">@Font/UIFont24_Text_M</Item>
+        <Item name="TextColor">@Color/DayBlack_NightWhite</Item>
+        <Item name="LayoutWidth">FillParent</Item>
+        <Item name="LayoutHeight">34</Item>
+        <Item name="LayoutBottomMargin">16</Item>
+        <Item name="LayoutAlignParentBottom">true</Item>
+        <Item name="DuplicateParentState">true</Item>
+    </Style>
+    <Style name="Group_MemberOffLineImg">
+        <Item name="LayoutRightMargin">16</Item>
+        <Item name="LayoutTopMargin">68</Item>
+        <Item name="LayoutAlignParentRight">true</Item>
+        <Item name="Drawable">@Drawable/navi_user_offline</Item>
+        <Item name="DuplicateParentState">true</Item>
+    </Style>
+    <Style name="FURightSideBtnBGLayout">
+        <Item name="LayoutWidth">69</Item>
+        <Item name="LayoutHeight">69</Item>
+        <Item name="HorizontalGravity">Center</Item>
+        <Item name="VerticalGravity">Center</Item>
+        <Item name="Clickable">true</Item>
+    </Style>
+    <Style name="MapTitleReturnImg">
+        <Item name="LayoutWidth">69</Item>
+        <Item name="LayoutHeight">69</Item>
+        <Item name="DrawableBackground">@Drawable/SOP2_MQB_btn_com_headline_siz80_P</Item>
+        <Item name="Background">@Drawable/SOP2_MQB_btn_com_headline_siz80_1</Item>
+        <Item name="DuplicateParentState">true</Item>
+        <Item name="Clickable">false</Item>
+    </Style>
+    <Style name="FuScaleLayout">
+        <Item name="LayoutRightMargin">129</Item>
+        <Item name="LayoutBottomMargin">24</Item>
+        <Item name="LayoutAlignParentBottom">true</Item>
+        <Item name="LayoutAlignParentRight">true</Item>
+    </Style>
+    <Style name = "LeftBtnTxtLayout">
+		<Item name = "LayoutHeight">30</Item>
+		<Item name = "LayoutWidth">90</Item>
+		<Item name = "LayoutCenterHorizontal">true</Item>
+		<Item name = "LayoutBottomMargin">12</Item>
+		<Item name = "PaddingTop">1</Item>
+		<Item name = "LayoutAlignParentBottom">true</Item>
+		<Item name = "TextColor">@Color/NormalBtn_RGB</Item>
+		<Item name = "DuplicateParentState">true</Item>
+		<Item name = "TextFont">@Font/BtnFont20_N_TextL_P_TextM_C_TextM_D_TextL</Item>
+	</Style>        
+    <Style name = "LefBtnIconLayout">
+		<Item name = "LayoutHeight">56</Item>
+		<Item name = "LayoutWidth">56</Item>
+		<Item name = "LayoutCenterHorizontal">true</Item>
+		<Item name = "LayoutTopMargin">16</Item>
+		<Item name = "DuplicateParentState">true</Item>
+	</Style>
+    <Style name = "ParallelTxtLayout">
+		<Item name = "LayoutHeight">30</Item>
+		<Item name = "LayoutWidth">90</Item>
+		<Item name = "LayoutCenterHorizontal">true</Item>
+		<Item name = "LayoutBottomMargin">12</Item>
+		<Item name = "PaddingTop">1</Item>
+		<Item name = "LayoutAlignParentBottom">true</Item>
+		<Item name = "TextColor">@Color/NormalBtn</Item>
+		<Item name = "DuplicateParentState">true</Item>
+		<Item name = "TextFont">@Font/BtnFont20_N_TextL_P_TextM_C_TextM_D_TextL</Item>
+	</Style>
+    <Style name = "TagLayout">
+		<Item name = "LayoutWidth">WrapContent</Item>
+		<Item name = "LayoutHeight">48</Item>
+		<Item name = "PaddingLeft">20</Item>
+		<Item name = "PaddingRight">20</Item>
+		<Item name = "PaddingTop">2</Item>
+		<Item name = "TextFont">@Font/UIFont24_Text_L</Item>
+		<Item name = "TextColor">@Color/DayBlack_NightWhite</Item>
+	</Style>
+</Resource>

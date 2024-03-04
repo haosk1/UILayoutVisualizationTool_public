@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/ListItem"
+        LayoutWidth="FillParent"
+        LayoutHeight="438"
+        Clickable="true"
+        Focusable="true">
+        <RelativeLayout
+            LayoutWidth="921"
+            LayoutHeight="111">
+            <TextActor
+                Id="@+Id/TITLE_Setting_Route_OVerview_Mode"
+                LayoutWidth="808"
+                LayoutHeight="45"
+                LayoutTopMargin="55"
+                HorizontalGravity="Left"
+                VerticalGravity="Center"
+                LayoutLeftMargin="36"
+                TextFont="@Font/UIFont34_Text_L"
+                TextColor="@Color/DayBlack_NightWhite" />
+        </RelativeLayout>
+        <RelativeLayout
+            LayoutHeight="288"
+            LayoutWidth="921"
+            LayoutTopMargin="140"
+            Background="@Drawable/mixin_bg_normal_DayNight" />
+        <ImageButton
+            Id="@+Id/BTN_Setting_Mini_Tripview_Bar"
+            Background="@Drawable/image_btn_1"
+            LayoutLeftMargin="34"
+            LayoutTopMargin="154"
+            LayoutWidth="405"
+            LayoutHeight="259" />
+        <ImageButton
+            Id="@+Id/BTN_Setting_Mini_Overview_Map"
+            Background="@Drawable/image_btn_2"
+            LayoutLeftMargin="442"
+            LayoutTopMargin="154"
+            LayoutWidth="405"
+            LayoutHeight="259" />
+        <ImageActor
+            Id="@+Id/BTN_Setting_Mini_Tripview_Bar_RoadConditionDisplay"
+            Drawable="@Drawable/image_btn_active"
+            LayoutLeftMargin="34"
+            LayoutTopMargin="154"
+            LayoutWidth="405"
+            LayoutHeight="259"
+            Visible="Gone" />
+        <ImageActor
+            Id="@+Id/BTN_Setting_Mini_Overview_Map_RoadConditionDisplay"
+            Drawable="@Drawable/image_btn_active"
+            LayoutLeftMargin="442"
+            LayoutTopMargin="154"
+            LayoutWidth="405"
+            LayoutHeight="259"
+            Visible="Gone" />
+    </RelativeLayout>
+</Resource>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <ScaleDrawableRectCustomStateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" PaddingTop = "0" PaddingLeft = "2" PaddingBottom = "0" PaddingRight = "2" Drawable = "@Drawable/scrollbar_bg"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" Drawable = "@Drawable/scrollbar_bg"/>
+    </ScaleDrawableRectCustomStateList>
+</Resource>

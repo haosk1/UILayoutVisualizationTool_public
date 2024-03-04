@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent">
+        <!--HMI界面布局部分，此元器件LayoutWidth表示半屏尺寸-->
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <RelativeLayout
+                Id="@+Id/RealtiveMain"
+                LayoutWidth="724"
+                LayoutHeight="872"
+                LayoutTopMargin="96"
+                Clickable="true"
+                Background="@Drawable/card_bg_day_and_night">
+                <RelativeLayout
+                    Id="@+Id/AnimationInfo"
+                    LayoutWidth="692"
+                    LayoutHeight="840"
+                    LayoutLeftMargin="16"
+                    LayoutTopMargin="16">
+                <!--返回部品-->
+                <RelativeLayout
+                    LayoutWidth="172"
+                    LayoutHeight="172"
+                    LayoutTopMargin="-4"
+                    LayoutLeftMargin="-4">
+                    <ImageButton
+                        Id="@+Id/BtnReturn"
+                        LayoutWidth="136"
+                        LayoutHeight="136"
+                        LayoutCenterInParent="true"
+                        LayoutVerticalGravity="Center"
+                        Drawable="@Drawable/icon_back"
+                        Background="@Drawable/btn_h104_background_normal_prox"
+                        BGHorizontalGravity="Center"
+                        BGVerticalGravity="Center"
+                        ClickDataCollection="BTN_Back"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_TRAFFIC_EVENT_LIST_VisibleSpeechs_01" />
+                </RelativeLayout>
+                <TextActor
+                    LayoutHeight="60"
+                    LayoutLeftMargin="164"
+                    LayoutTopMargin="51"
+                    PaddingTop="6"
+                    TextColor="@Color/DayBlack_NightWhite"
+                    TextFont="@Font/UIFont40_Text_M"
+                    Text="@String/MX_LANG_NAVI_MAP_TRAFFIC_EVENT_DETAIL_TITLE_Traffic_Event" />
+                <!--List-->
+                <RelativeLayout
+                    Id="@+Id/ListAndBarLayout"
+                    LayoutWidth="724"
+                    LayoutHeight="676"
+                    LayoutTopMargin="154"
+                    HorizontalGravity="Left">
+                    <SmoothListActorEx
+                        Id="@Id/PreDefine/SmoothListActor"
+                        LayoutWidth="656"
+                        LayoutHeight="676"
+                        LayoutLeftMargin="18"
+                        DefaultDividerInterval="4"
+                        VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_01" />
+                    <SmoothListScrollBar
+                        Id="@Id/PreDefine/SmoothListScrollBar"
+                        LayoutWidth="30"
+                        LayoutHeight="670"
+                        LayoutAlignParentRight="true"
+                        LayoutTopMargin="8"
+                        ScrollBarLayout="@Layout/CActorScrollBarRouteSelect" />
+                </RelativeLayout>
+                <!--loading-->
+                <RelativeLayout
+                    Id="@+Id/RealtiveLoading"
+                    LayoutWidth="FillParent"
+                    LayoutHeight="FillParent"
+                    ClipChildren="false"
+                    Visible="Gone">
+                    <AutomaticImageActor
+                        Id="@+Id/ImageLoading"
+                        LayoutWidth="80"
+                        LayoutHeight="80"
+                        ImageChangeTimer="83"
+						LayoutTopMargin = "374"
+						LayoutLeftMargin = "305"
+                        Cyclable="true"
+                        Drawable="@Drawable/loading_anim_seq_l_LayerList"
+                        Visible="Gone"/>
+                    <TextActor
+                        Id="@+Id/loading"
+                        LayoutWidth="597"
+                        LayoutHeight="50"
+                        LayoutTopMargin="497"
+                        LayoutLeftMargin="46"
+                        Text="@String/MX_LANG_NAVI_TRAFFIC_EVENT_LOADING_TEXT_Event_Loading"
+                        TextFont="@Font/UIFont34_Text_L"
+                        TextColor="@Color/DayBlack_NightWhite" />
+                </RelativeLayout>
+                <!--Noresult message-->
+                <RelativeLayout
+                    Id="@+Id/Linear_NoResult_parent"
+                    LayoutWidth="FillParent"
+                    LayoutHeight="FillParent"
+                    ClipChildren="false"
+                    Orientation="Vertical"
+                    Visible="Gone">
+                    <TextActor
+                        Id="@+Id/NoResult"
+                        LayoutWidth="618"
+                        LayoutHeight="WrapContent"
+                        LayoutLeftMargin="41"
+                        LayoutTopMargin="399"
+                        PaddingTop="3"
+                        LineIntervalAddFactor="-14"
+                        SingleLine="false"
+                        WordWrapped="true"
+                        VerticalGravity="Top"
+                        TextFont="@Font/UIFont34_Text_L"
+                        TextColor="@Color/DayBlack_NightWhite" />
+                </RelativeLayout>
+                <!--Left Noresult message-->
+                <RelativeLayout
+                    Id="@+Id/Linear_NoResult_Left_parent"
+                    LayoutWidth="618"
+                    LayoutHeight="FillParent"
+                    ClipChildren="false"
+                    LayoutCenterHorizontal="true"
+                    HorizontalGravity="Center"
+                    Orientation="Vertical"
+                    Visible="Gone">
+                    <TextActor
+                        Id="@+Id/Left_NoResult"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="WrapContent"
+                        LayoutLeftMargin="40"
+                        MaxFormatWidth = "618"
+                        LayoutTopMargin="399"
+                        PaddingTop="3"
+                        LineIntervalAddFactor="-14"
+                        SingleLine="false"
+                        WordWrapped="true"
+                        HorizontalGravity="Left"
+                        VerticalGravity="Top"
+                        TextFont="@Font/UIFont34_Text_L"
+                        TextColor="@Color/DayBlack_NightWhite" />
+                </RelativeLayout>
+            </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                LayoutWidth="FillParent"
+                LayoutHeight="FillParent"
+                LayoutLeftMargin="709">
+                <!--回自车 hero btn -->
+                <RelativeLayout
+                    Id="@Id/PreDefine/ReturnCCP"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="164"
+                    LayoutCenterHorizontal="true"
+                    LayoutAlignParentBottom="true"
+                    LayoutBottomMargin="128"
+                    Background="@Drawable/background_96h_hero_prox_day_shadows">
+                    <RelativeLayout
+                        Id="@Id/PreDefine/BtnReturnCCP"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="164"
+                        LayoutLeftMargin="18"
+                        LayoutRightMargin="18"
+                        LayoutCenterInParent="true"
+                        Clickable="true"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_TRAFFIC_EVENT_LOADING_VisibleSpeechs_02">
+                        <LinearLayout
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="104"
+                            LayoutLeftMargin="12"
+                            LayoutRightMargin="12"
+                            LayoutCenterInParent="true"
+                            DuplicateParentState="true"
+                            Background="@Drawable/Gradient_background_96h_hero_prox">
+                            <ImageActor
+                                LayoutLeftMargin="28"
+                                LayoutCenterVertical="true"
+                                DuplicateParentState="true"
+                                Drawable="@Drawable/back_to_destination_day" />
+                            <!--占位-->
+                            <ImageActor
+                                Id="@Id/PreDefine/SpaceBefore"
+                                LayoutWidth="2"
+                                LayoutHeight="FillParent"
+                                Visible="Gone" />
+                            <TextActor
+                                Id="@Id/PreDefine/TxtReturnCCP"
+                                LayoutHeight="FillParent"
+                                LayoutWidth="WrapContent"
+                                LayoutLeftMargin="8"
+                                LayoutRightMargin="47"
+                                PaddingTop="4"
+                                DuplicateParentState="true"
+                                Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV2_TEXT_Back_to_CCP"
+                                TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                                TextColor="@Color/HeroBtnText_RGB" />
+                            <!--占位-->
+                            <ImageActor
+                                Id="@Id/PreDefine/SpaceAfter"
+                                LayoutWidth="2"
+                                LayoutHeight="FillParent"
+                                Visible="Gone" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <!--车线-->
+                <LinearLayout
+                    Id="@Id/PreDefine/LaneLayout"
+                    LayoutHeight="164"
+                    LayoutTopMargin="78"
+                    LayoutCenterHorizontal="true"
+                    Background="@Drawable/background_020_m_lane_info_box"
+                    Visible="Invisible">
+                    <RelativeLayout
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="96"
+                        LayoutLeftMargin = "34"
+                        LayoutRightMargin = "34"
+                        LayoutTopMargin="34">
+                        <!--推荐车线背景帧动画-->
+                        <LaneAutomaticImageActor
+                            Id="@Id/PreDefine/LaneAutomatic"
+                            LayoutHeight="FillParent"
+                            ImageChangeTimer="38"
+                            Cyclable="true"
+                            Drawable="@Drawable/background_recommend_lane"
+                            Visible="Gone" />
+                        <LaneInfo
+                            Id="@Id/PreDefine/Lane"
+                            LayoutHeight="FillParent"
+                            LaneRecommended="@Drawable/DrawLevel_RecommendLane"
+                            LaneAvailable="@Drawable/DrawLevel_AvailableLane"
+                            LaneDisable="@Drawable/DrawLevel_DisableLane"
+                            LaneOmit="@Drawable/more"
+                            LaneTG="@Drawable/DrawLevel_All_SpecialLane"
+                            LaneMiddleImg="@Drawable/background_020_m_lane_info_box_line"
+                            LanePaddingLeft="8"
+                            LanePaddingRight="8"
+                            LanePaddingTop="16"
+                            LanePaddingBottom="16"
+                            LaneMaxCnt="6"
+                            Clickable="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

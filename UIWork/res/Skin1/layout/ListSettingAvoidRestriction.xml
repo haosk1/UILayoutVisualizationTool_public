@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/ListItem"
+        LayoutWidth="FillParent"
+        LayoutHeight="130">
+        <RelativeLayout
+            Id="@+Id/RelativeLayout_Switch"
+            LayoutHeight="110"
+            LayoutWidth="880"
+            Background="@Drawable/bg_prox_pressed_selected_DayNight"
+            LayoutTopMargin="10"
+            DuplicateParentState="true"
+            Clickable="true"
+            Focusable="true">
+            <RelativeLayout
+                Id = "@+Id/TITLE_Setting_Route_Option_Layout"
+                LayoutWidth="WrapContent"
+                LayoutHeight="40"
+                LayoutTopMargin="19"
+                LayoutLeftMargin="30"
+                DuplicateParentState = "true">
+                <!--标题-->
+                <TextActor
+                    Id="@+Id/TITLE_Setting_Route_Option"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="FillParent"
+                    PaddingTop="3"
+                    HorizontalGravity="Left"
+                    Text="@String/MX_LANG_NAVI_MAP_VIEW_LIST_WITH_GUIDANCE_TEXT_Avoid_Restriction"
+                    TextFont="@Font/UIFont34_Text_M"
+                    TextColor="@Color/ListFavColor"
+                    DuplicateParentState = "true" />
+            </RelativeLayout>
+            <RelativeLayout
+                Id="@+Id/Btn_Plate_Number"
+                LayoutHeight="WrapContent"
+                LayoutWidth="WrapContent"
+                LayoutAlignParentLeft="true"
+                LayoutLeftMargin="30"
+                LayoutTopMargin="58"
+                VerticalGravity="Center"
+                Clickable="true"
+                Focusable="true"
+                DuplicateParentState = "true">
+                <TextActor
+                    Id="@+Id/Text_Plate_Number"
+                    LayoutHeight="34"
+                    LayoutWidth="WrapContent"
+                    PaddingTop="3"
+                    HorizontalGravity="Left"
+                    TextFont="@Font/UIFont28_Text_L"
+                    TextColor="@Color/ListSettingColor"
+                    DuplicateParentState="true" />
+            </RelativeLayout>
+            <VividCheckbox
+                Id="@+Id/BTN_Setting_Switch"
+                LayoutHeight="104"
+                LayoutWidth="104"
+                LayoutCenterVertical="true"
+                LayoutLeftMargin="736"
+                Clickable="false"
+                Focusable="false"
+                UnCheckToCheck="@Drawable/Gradient_Switch_M_Z06Z10_F_C"
+                CheckToUnCheck="@Drawable/Gradient_Switch_M_Z10Z06_F_C"
+                UnCheckToCheckBackground="@Drawable/Switch_M_Z06Z10_B"
+                CheckToUnCheckBackground="@Drawable/Switch_M_Z10Z06_B" />
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

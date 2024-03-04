@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Resource>
+    <LevelList>
+		<Item DrawableLevel = "0" Drawable = "@Drawable/Normal_turn_N_day"/>
+		<Item DrawableLevel = "1" Drawable = "@Drawable/Normal_turn_NE_day"/>
+		<Item DrawableLevel = "2" Drawable = "@Drawable/Normal_turn_NE_day"/>
+		<Item DrawableLevel = "3" Drawable = "@Drawable/Normal_turn_NE_day"/>
+		<Item DrawableLevel = "4" Drawable = "@Drawable/Normal_turn_E_day"/>
+		<Item DrawableLevel = "5" Drawable = "@Drawable/Normal_turn_SE_day"/>
+		<Item DrawableLevel = "6" Drawable = "@Drawable/Normal_turn_SE_day"/>
+		<Item DrawableLevel = "7" Drawable = "@Drawable/Normal_turn_SE_day"/>
+		<Item DrawableLevel = "8" Drawable = "@Drawable/Normal_turn_SE_day"/>
+		<Item DrawableLevel = "9" Drawable = "@Drawable/Normal_turn_SW_day"/>
+		<Item DrawableLevel = "10" Drawable = "@Drawable/Normal_turn_SW_day"/>
+		<Item DrawableLevel = "11" Drawable = "@Drawable/Normal_turn_SW_day"/>
+		<Item DrawableLevel = "12" Drawable = "@Drawable/Normal_turn_W_day"/>
+		<Item DrawableLevel = "13" Drawable = "@Drawable/Normal_turn_NW_day"/>
+		<Item DrawableLevel = "14" Drawable = "@Drawable/Normal_turn_NW_day"/>
+		<Item DrawableLevel = "15" Drawable = "@Drawable/Normal_turn_NW_day"/>
+		<Item DrawableLevel = "16" Drawable = "@Drawable/Normal_turn_N_day"/>
+		<Item DrawableLevel = "17" Drawable = "@Drawable/Guided_U_turn_right_day"/>
+		<Item DrawableLevel = "18" Drawable = "@Drawable/Guided_U_turn_left_day"/>
+		<Item DrawableLevel = "19" Drawable = "@Drawable/three_bifurcations_straight_day"/>
+		<Item DrawableLevel = "20" Drawable = "@Drawable/three_bifurcations_left_day"/>
+		<Item DrawableLevel = "21" Drawable = "@Drawable/three_bifurcations_right_day"/>
+		<Item DrawableLevel = "22" Drawable = "@Drawable/Destination_stopover_arrival_3_day"/>	
+		<Item DrawableLevel = "23" Drawable = "@Drawable/Destination_stopover_arrival_2_day"/>
+		<Item DrawableLevel = "24" Drawable = "@Drawable/Destination_stopover_arrival_1_day"/>
+		<Item DrawableLevel = "25" Drawable = "@Drawable/two_bifurcations_straight_day"/>
+		<Item DrawableLevel = "26" Drawable = "@Drawable/two_bifurcations_left_day"/>
+		<Item DrawableLevel = "27" Drawable = "@Drawable/two_bifurcations_right_day"/>
+		<Item DrawableLevel = "28" Drawable = "@Drawable/three_bifurcations_left_day"/>
+		<Item DrawableLevel = "29" Drawable = "@Drawable/three_bifurcations_right_day"/>
+		<Item DrawableLevel = "30" Drawable = "@Drawable/Roundabout_0_left_day"/>
+		<Item DrawableLevel = "31" Drawable = "@Drawable/Roundabout_exit_left_day"/>
+		<Item DrawableLevel = "32" Drawable = "@Drawable/Roundabout_exit_right_day"/>
+		<Item DrawableLevel = "33" Drawable = "@Drawable/Roundabout_4_right_day"/>
+		<Item DrawableLevel = "34" Drawable = "@Drawable/Roundabout_6_right_day"/>
+		<Item DrawableLevel = "35" Drawable = "@Drawable/Roundabout_8_right_day"/>
+		<Item DrawableLevel = "36" Drawable = "@Drawable/Roundabout_10_right_day"/>
+		<Item DrawableLevel = "37" Drawable = "@Drawable/Roundabout_16_right_day"/>
+		<Item DrawableLevel = "38" Drawable = "@Drawable/Roundabout_2_right_day"/>
+		<Item DrawableLevel = "39" Drawable = "@Drawable/Roundabout_14_right_day"/>
+		<Item DrawableLevel = "40" Drawable = "@Drawable/Roundabout_12_right_day"/>
+		<Item DrawableLevel = "41" Drawable = "@Drawable/Roundabout_12_left_day"/>
+		<Item DrawableLevel = "42" Drawable = "@Drawable/Roundabout_10_left_day"/>
+		<Item DrawableLevel = "43" Drawable = "@Drawable/Roundabout_8_left_day"/>
+		<Item DrawableLevel = "44" Drawable = "@Drawable/Roundabout_6_left_day"/>
+		<Item DrawableLevel = "45" Drawable = "@Drawable/Roundabout_16_left_day"/>
+		<Item DrawableLevel = "46" Drawable = "@Drawable/Roundabout_14_left_day"/>
+		<Item DrawableLevel = "47" Drawable = "@Drawable/Roundabout_2_left_day"/>
+		<Item DrawableLevel = "48" Drawable = "@Drawable/Roundabout_4_left_day"/>
+	</LevelList>
+</Resource>

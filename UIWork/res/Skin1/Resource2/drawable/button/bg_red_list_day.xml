@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <LevelList>
+		<Item DrawableLevel = "0" Drawable = "@Drawable/bg_red_day_1920x872_00"/>
+		<Item DrawableLevel = "1" Drawable = "@Drawable/bg_red_day_1920x872_01"/>
+		<Item DrawableLevel = "2" Drawable = "@Drawable/bg_red_day_1920x872_02"/>
+		<Item DrawableLevel = "3" Drawable = "@Drawable/bg_red_day_1920x872_03"/>
+		<Item DrawableLevel = "4" Drawable = "@Drawable/bg_red_day_1920x872_04"/>
+		<Item DrawableLevel = "5" Drawable = "@Drawable/bg_red_day_1920x872_05"/>
+		<Item DrawableLevel = "6" Drawable = "@Drawable/bg_red_day_1920x872_06"/>
+		<Item DrawableLevel = "7" Drawable = "@Drawable/bg_red_day_1920x872_07"/>
+		<Item DrawableLevel = "8" Drawable = "@Drawable/bg_red_day_1920x872_08"/>
+		<Item DrawableLevel = "9" Drawable = "@Drawable/bg_red_day_1920x872_09"/>
+		<Item DrawableLevel = "10" Drawable = "@Drawable/bg_red_day_1920x872_10"/>
+		<Item DrawableLevel = "11" Drawable = "@Drawable/bg_red_day_1920x872_11"/>
+		<Item DrawableLevel = "12" Drawable = "@Drawable/bg_red_day_1920x872_12"/>
+		<Item DrawableLevel = "13" Drawable = "@Drawable/bg_red_day_1920x872_13"/>
+		<Item DrawableLevel = "14" Drawable = "@Drawable/bg_red_day_1920x872_14"/>
+		<Item DrawableLevel = "15" Drawable = "@Drawable/bg_red_day_1920x872_15"/>
+		<Item DrawableLevel = "16" Drawable = "@Drawable/bg_red_day_1920x872_16"/>
+		<Item DrawableLevel = "17" Drawable = "@Drawable/bg_red_day_1920x872_17"/>
+		<Item DrawableLevel = "18" Drawable = "@Drawable/bg_red_day_1920x872_18"/>
+		<Item DrawableLevel = "19" Drawable = "@Drawable/bg_red_day_1920x872_19"/>
+		<Item DrawableLevel = "20" Drawable = "@Drawable/bg_red_day_1920x872_20"/>
+		<Item DrawableLevel = "21" Drawable = "@Drawable/bg_red_day_1920x872_21"/>
+		<Item DrawableLevel = "22" Drawable = "@Drawable/bg_red_day_1920x872_22"/>
+		<Item DrawableLevel = "23" Drawable = "@Drawable/bg_red_day_1920x872_23"/>
+		<Item DrawableLevel = "24" Drawable = "@Drawable/bg_red_day_1920x872_24"/>
+	</LevelList>
+</Resource>

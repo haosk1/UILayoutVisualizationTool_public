@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/LayoutParent"
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent">
+        <!--HMI界面布局部分，此元器件LayoutWidth表示半屏尺寸-->
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1407"
+            LayoutHeight="837"
+            LayoutTopMargin="103">
+            <!--返回按钮-->
+            <ImageButton
+                Id="@Id/PreDefine/BtnReturn"
+                LayoutWidth="117"
+                LayoutHeight="117"
+                LayoutTopMargin="26"
+                LayoutLeftMargin="26"
+                ClickDataCollection="BTN_Back"
+                Drawable="@Drawable/icon_close"
+                BGHorizontalGravity="Center"
+                BGVerticalGravity="Center"
+                LayoutVerticalGravity="Center"
+                Background="@Drawable/btn_h104_background_normal_prox"
+                VisibleSpeechs="@String/NAVI_ADD_SELECT_ON_MAP_VisibleSpeechs_01" />
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

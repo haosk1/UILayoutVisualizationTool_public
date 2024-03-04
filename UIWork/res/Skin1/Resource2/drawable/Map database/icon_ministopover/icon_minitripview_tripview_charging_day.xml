@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Resource>
+    <LevelList>
+		<Item DrawableLevel = "1" Drawable = "@Drawable/tripview_charging1_day"/>
+		<Item DrawableLevel = "2" Drawable = "@Drawable/tripview_charging2_day"/>
+		<Item DrawableLevel = "3" Drawable = "@Drawable/tripview_charging3_day"/>
+		<Item DrawableLevel = "4" Drawable = "@Drawable/tripview_charging4_day"/>
+    </LevelList>
+</Resource>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/ListItem"
+        LayoutWidth="FillParent"
+        LayoutHeight="164"
+        Clickable="true"
+        Focusable="true"
+        Background="@Drawable/bg_prox_traffic_list">
+        <RelativeLayout
+            Id="@+Id/LayoutInfo"
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent"
+            ClickDataCollection="BTN_Resctiction_Info"
+            Clickable="true">
+            <!--序号-->
+            <TextActor
+                Id="@+Id/Number"
+                TextFont="@Font/UIFont40_UIDigit_M"
+                TextColor="@Color/ListFavColor"
+                LayoutWidth="WrapContent"
+                LayoutHeight="60"
+                LayoutTopMargin="51"
+                LayoutRightMargin="554"
+                MinFormatWidth="60"
+                PaddingTop="2"
+                LayoutAlignParentRight="true" />
+            <!--限行位置-->
+            <TextActor
+                Id="@+Id/Location"
+                TextFont="@Font/UIFont34_Text_R"
+                TextColor="@Color/ListFavColor"
+                HorizontalGravity="Left"
+                LayoutWidth="494"
+                LayoutHeight="40"
+                LayoutTopMargin="37"
+                LayoutLeftMargin="118"
+                PaddingTop="2" />
+            <!--限行时间-->
+            <TextActor
+                Id="@+Id/RestrictionTime"
+                LayoutWidth="494"
+                LayoutHeight="34"
+                LayoutTopMargin="91"
+                LayoutLeftMargin="118"
+                PaddingTop="2"
+                HorizontalGravity="Left"
+                TextFont="@Font/UIFont28_Text_L"
+                TextColor="@Color/ListFavColor" />
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

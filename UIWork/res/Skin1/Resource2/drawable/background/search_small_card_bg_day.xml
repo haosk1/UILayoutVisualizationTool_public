@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" Drawable = "@Drawable/small_card_bg_day"/>
+<!-->Press-->
+		<Item StateEnabled = "true" StatePressed = "true" Drawable = "@Drawable/small_card_bg_pressed_day"/>
+    </StateList>\
+</Resource>

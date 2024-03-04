@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <DayNightStateList>
+<!--Day-->
+		<Item DayOrNight = "Day" Drawable = "@Drawable/ABC_character_m_c_six_day"/>
+<!--Night-->
+		<Item DayOrNight = "Night" Drawable = "@Drawable/ABC_character_m_c_six_night"/>
+    </DayNightStateList>
+</Resource>

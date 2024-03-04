@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/CategoryLayout"
+        LayoutWidth="FillParent"
+        LayoutCenterVertical="true"
+        LayoutHeight="97"
+        PaddingTop="32"
+        PaddingLeft="27"
+        Focusable="true">
+        <TextActor
+            Id="@+Id/CategoryTitle"
+            LayoutHeight="52"
+            LayoutWidth="WrapContent"
+            HorizontalGravity="Left"
+            VerticalGravity="Center"
+            TextFont="@Font/UIFont40_Text_R"
+            TextColor="@Color/DayBlack_NightWhite" />
+    </RelativeLayout>
+</Resource>

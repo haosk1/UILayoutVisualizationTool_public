@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/LayoutRelative"
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent"
+        Background="@Drawable/navi_image_mask_bg"
+        Clickable="true">
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <RelativeLayout
+                Id="@+Id/MainLayout"
+                LayoutWidth="1136"
+                LayoutHeight="872"
+                LayoutTopMargin="96"
+                Clickable="true"
+                Background="@Drawable/card_bg_day_and_night">
+                <RelativeLayout
+                    Id="@+Id/FullScreen"
+                    LayoutWidth="1104"
+                    LayoutHeight="840"
+                    LayoutTopMargin="16"
+                    LayoutLeftMargin="16">
+                    <!--返回部品-->
+                    <RelativeLayout
+                        LayoutWidth="147"
+                        LayoutHeight="147"
+                        LayoutTopMargin="8"
+                        LayoutLeftMargin="8"
+                        HorizontalGravity="Center"
+                        VerticalGravity="Center">
+                        <ImageButton
+                            Id="@+Id/Return"
+                            LayoutWidth="117"
+                            LayoutHeight="117"
+                            PaddingLeft = "1"
+                            PaddingTop = "1"
+                            Background="@Drawable/h104_background_prox"
+                            Drawable="@Drawable/favorite_back"
+                            ClickDataCollection="BTN_Back"
+                            VisibleSpeechs="@String/MX_LANG_NAVI_ADD_STOPOVER_VisibleSpeechs_01" />
+                    </RelativeLayout>
+                    <LinearLayout
+                        Id="@Id/PreDefine/EditBoxLayout"
+                        LayoutWidth="916"
+                        LayoutHeight="106"
+                        LayoutTopMargin="30"
+                        LayoutLeftMargin="158"
+                        Background="@Drawable/search_bg_106_raised">
+                        <EditBox
+                            Id="@Id/PreDefine/EditText"
+                            Style="@Style/EditBoxStyle"
+                            LayoutWidth="702"
+                            LayoutHeight="FillParent"
+                            LayoutLeftMargin="41"
+                            LayoutTopMargin="0"
+                            PaddingTop="1"
+                            PaddingLeft="7"
+                            TextFont=" @Font/UIFont46_Text_R"
+                            TextShadow="false"
+                            TextHintColor="@Color/EditHintColor"
+                            TextColor="@Color/DayBlack_NightWhite"
+                            ClickDataCollection="BTN_Input_Field" />
+                        <ImageButton
+                            Id="@Id/PreDefine/Btn_DeleteAll"
+                            LayoutHeight="80"
+                            LayoutWidth="80"
+                            LayoutAlignParentRight="true"
+                            LayoutTopMargin="12"
+                            LayoutLeftMargin = "57"
+                            ClickDataCollection="BTN_Input_Delete_All"
+                            Drawable="@Drawable/close_favorite" />
+                    </LinearLayout>
+                    <LinearLayout
+                        Id="@Id/PreDefine/LayoutShift"
+                        LayoutWidth="359"
+                        LayoutHeight="152"
+                        LayoutTopMargin="26"
+                        LayoutLeftMargin="743"
+                        Background="@Drawable/button_card_bg"
+                        VerticalGravity="Center"
+                        Visible="Gone">
+                        <ImageButton
+                            Id="@Id/PreDefine/BTN_Shift_Left"
+                            LayoutWidth="117"
+                            LayoutHeight="117"
+                            LayoutLeftMargin="38"
+                            Background="@Drawable/h104_background_normal_prox_raised"
+                            Drawable="@Drawable/arrow_left" />
+                        <ImageButton
+                            Id="@Id/PreDefine/BTN_Shift_Right"
+                            LayoutWidth="117"
+                            LayoutHeight="117"
+                            LayoutLeftMargin="5"
+                            Background="@Drawable/h104_background_normal_prox_raised"
+                            Drawable="@Drawable/arrow_right" />
+                    </LinearLayout>
+                    <LinearLayout
+                        Id="@+Id/FullScreen_WithOutTitle"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="678"
+                        Orientation="Vertical"
+                        LayoutTopMargin="162">
+                        <!--快捷检索部品，无引导-->
+                        <LinearLayout
+                            Id="@+Id/LayoutShortCut"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="0"
+                            LayoutWeight = "185"
+                            Visible="Gone"
+                            VerticalGravity="Top">
+                            <RelativeLayout
+                                LayoutWidth="316"
+                                LayoutLeftMargin="30"
+                                LayoutHeight="185"
+                                LayoutTopMargin = "-40"
+                                Background="@Drawable/big_card_bg">
+                                <!--家和公司 收藏按钮-->
+                                <LinearLayout
+                                    Id="@+Id/LayoutShortCutHome"
+                                    Clickable="true"
+                                    LayoutWidth="104"
+                                    LayoutHeight="185"
+                                    HorizontalGravity="Center"
+                                    VerticalGravity="Center"
+                                    Orientation="Vertical"
+                                    VisibleSpeechs="@String/MX_LANG_NAVI_SEARCH_MAIN_NO_GUIDANCE_TEXT_Home_VisibleSpeechs_01">
+                                    <ImageButton
+                                        Id="@+Id/BtnShortCutHome"
+                                        LayoutWidth="104"
+                                        LayoutHeight="104"
+                                        LayoutTopMargin = "45"
+                                        DuplicateParentState="true"
+                                        Clickable="false"
+                                        Background="@Drawable/background_home_work_fav"
+                                        Drawable="@Drawable/home_add" />
+                                    <TextActor
+                                        LayoutHeight="34"
+                                        LayoutWidth="100"
+                                        LayoutLeftMargin="-2"
+                                        LayoutTopMargin = "11"
+                                        HorizontalGravity="Center"
+                                        DuplicateParentState="true"
+                                        VerticalGravity = "Center"
+                                        ShowEllipsis="true"
+                                        Text="@String/MX_LANG_NAVI_SEARCH_MAIN_NO_GUIDANCE_TEXT_Home"
+                                        TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL"
+                                        TextColor="@Color/DayBlack_NightWhite" />
+                                </LinearLayout>
+                                <ImageActor
+                                    LayoutWidth="2"
+                                    LayoutHeight="56"
+                                    LayoutLeftMargin="104"
+                                    LayoutTopMargin="64"
+                                    Drawable="@Drawable/citylist_line" />
+                                <LinearLayout
+                                    Id="@+Id/LayoutShortCutCompany"
+                                    Clickable="true"
+                                    LayoutWidth="104"
+                                    LayoutHeight="185"
+                                    LayoutLeftMargin="106"
+                                    HorizontalGravity="Center"
+                                    VerticalGravity="Center"
+                                    Orientation="Vertical"
+                                    VisibleSpeechs="@String/MX_LANG_NAVI_SEARCH_MAIN_NO_GUIDANCE_TEXT_Work_VisibleSpeechs_01">
+                                    <ImageButton
+                                        Id="@+Id/BtnShortCutCompany"
+                                        LayoutWidth="104"
+                                        LayoutHeight="104"
+                                        LayoutTopMargin = "44"
+                                        Clickable="false"
+                                        DuplicateParentState="true"
+                                        Background="@Drawable/background_home_work_fav"
+                                        Drawable="@Drawable/work_s" />
+                                    <TextActor
+                                        LayoutHeight="34"
+                                        LayoutWidth="86"
+                                        LayoutTopMargin="12"
+                                        DuplicateParentState="true"
+                                        ShowEllipsis="true"
+                                        HorizontalGravity="Center"
+                                        WordWrapped="true"
+                                        Text="@String/MX_LANG_NAVI_SEARCH_MAIN_NO_GUIDANCE_TEXT_Work"
+                                        TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL"
+                                        TextColor="@Color/DayBlack_NightWhite" />
+                                </LinearLayout>
+                                <ImageActor
+                                    LayoutWidth="2"
+                                    LayoutHeight="56"
+                                    LayoutLeftMargin="210"
+                                    LayoutTopMargin="64"
+                                    Drawable="@Drawable/citylist_line" />
+                                <LinearLayout
+                                    Id="@+Id/LayoutShortCutFavorite"
+                                    Clickable="true"
+                                    LayoutWidth="104"
+                                    LayoutHeight="185"
+                                    LayoutLeftMargin="212"
+                                    HorizontalGravity="Center"
+                                    VerticalGravity="Center"
+                                    Orientation="Vertical"
+                                    VisibleSpeechs="@String/MX_LANG_NAVI_SEARCH_MAIN_NO_GUIDANCE_TEXT_Favorite_VisibleSpeechs_01">
+                                    <ImageButton
+                                        Id="@+Id/Favorite"
+                                        LayoutWidth="104"
+                                        LayoutHeight="104"
+                                        LayoutTopMargin = "43"
+                                        Clickable="false"
+                                        Background="@Drawable/background_home_work_fav"
+                                        Drawable="@Drawable/icon_fav_s"
+                                        DuplicateParentState="true"
+                                        ClickDataCollection="BTN_Favorite" />
+                                    <TextActor
+                                        LayoutHeight="34"
+                                        LayoutWidth="96"
+                                        LayoutTopMargin="11"
+                                        DuplicateParentState="true"
+                                        ShowEllipsis="true"
+                                        HorizontalGravity="Center"
+                                        PaddingLeft="7"
+                                        PaddingTop = "1"
+                                        Text="@String/MX_LANG_NAVI_SEARCH_MAIN_NO_GUIDANCE_TEXT_Favorite_EV"
+                                        TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL"
+                                        TextColor="@Color/DayBlack_NightWhite" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                            <!--快捷按钮部品,无引导-->
+                            <LinearLayout
+                                Id="@+Id/LayoutShortCut1"
+                                LayoutWidth="147"
+                                LayoutHeight="185"
+                                LayoutLeftMargin="16"
+                                LayoutTopMargin = "-1"
+                                HorizontalGravity="Center"
+                                VerticalGravity="Bottom"
+                                Orientation="Vertical"
+                                Clickable="true"
+                                VisibleSpeechs="@String/MX_LANG_NAVI_SEARCH_MAIN_NO_GUIDANCE_VisibleSpeechs_02">
+                                <RelativeLayout
+                                    LayoutWidth="147"
+                                    LayoutHeight="147"
+                                    HorizontalGravity="Center"
+                                    VerticalGravity="Center"
+                                    DuplicateParentState="true">
+                                    <ImageButton
+                                        Id="@+Id/BtnShortCut1"
+                                        LayoutWidth="117"
+                                        LayoutHeight="117"
+                                        PaddingLeft = "1"
+                                        PaddingTop = "1"
+                                        Clickable="false"
+                                        DuplicateParentState="true"
+                                        Background="@Drawable/small_card_bg"
+                                        Drawable="@Drawable/icon_parking"
+                                        ClickDataCollection="BTN_Search_Shortcut_Parking" />
+                                </RelativeLayout>
+                                <TextActor
+                                    Id="@+Id/TextShortCut1"
+                                    LayoutHeight="68"
+                                    LayoutWidth="146"
+                                    VerticalGravity="Top"
+                                    LayoutTopMargin="-9"
+                                    LayoutLeftMargin="-1"
+                                    PaddingLeft = "1"
+                                    HorizontalGravity="Center"
+                                    LineIntervalMultiFactor="0"
+                                    DuplicateParentState="true"
+                                    Text="@String/MX_LANG_NAVI_SEARCH_MORE_CATEGORY_DETAIL_INFO_TEXT_POI_Name_ParkingLot"
+                                    WordWrapped="true"
+                                    TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL"
+                                    SingleLine="false"
+                                    TextColor="@Color/DayBlack_NightWhite" />
+                            </LinearLayout>
+                            <LinearLayout
+                                Id="@+Id/LayoutShortCut2"
+                                LayoutWidth="147"
+                                LayoutHeight="185"
+                                LayoutLeftMargin="-1"
+                                LayoutTopMargin = "-1"
+                                HorizontalGravity="Center"
+                                VerticalGravity="Bottom"
+                                Orientation="Vertical"
+                                Clickable="true">
+                                <RelativeLayout
+                                    LayoutWidth="147"
+                                    LayoutHeight="147"
+                                    HorizontalGravity="Center"
+                                    VerticalGravity="Center"
+                                    DuplicateParentState="true">
+                                    <ImageButton
+                                        Id="@+Id/BtnShortCut2"
+                                        LayoutWidth="117"
+                                        LayoutHeight="117"
+                                        PaddingLeft = "1"
+                                        PaddingTop = "1"
+                                        Clickable="false"
+                                        DuplicateParentState="true"
+                                        Drawable="@Drawable/srh_icon_gas"
+                                        Background="@Drawable/small_card_bg"
+                                        ClickDataCollection="BTN_Search_Shortcut_Gas" />
+                                </RelativeLayout>
+                                <TextActor
+                                    Id="@+Id/TextShortCut2"
+                                    LayoutHeight="68"
+                                    LayoutWidth="146"
+                                    LayoutTopMargin="-9"
+                                    HorizontalGravity="Center"
+                                    SingleLine="false"
+                                    VerticalGravity="Top"
+                                    WordWrapped="true"
+                                    LineIntervalMultiFactor="0"
+                                    DuplicateParentState="true"
+                                    LayoutLeftMargin="-2"
+                                    PaddingLeft = "3"
+                                    TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL"
+                                    TextColor="@Color/DayBlack_NightWhite" />
+                            </LinearLayout>
+                            <LinearLayout
+                                Id="@+Id/LayoutShortCut3"
+                                LayoutWidth="147"
+                                LayoutHeight="185"
+                                LayoutLeftMargin="-1"
+                                LayoutTopMargin = "-1"
+                                HorizontalGravity="Center"
+                                VerticalGravity="Bottom"
+                                Orientation="Vertical"
+                                Clickable="true"
+                                VisibleSpeechs="@String/MX_LANG_NAVI_SEARCH_MAIN_NO_GUIDANCE_VisibleSpeechs_04">
+                                <RelativeLayout
+                                    LayoutWidth="147"
+                                    LayoutHeight="147"
+                                    HorizontalGravity="Center"
+                                    VerticalGravity="Center"
+                                    DuplicateParentState="true">
+                                    <ImageButton
+                                        Id="@+Id/BtnShortCut3"
+                                        LayoutWidth="117"
+                                        LayoutHeight="117"
+                                        PaddingLeft = "1"
+                                        PaddingTop = "1"
+                                        Clickable="false"
+                                        DuplicateParentState="true"
+                                        Drawable="@Drawable/logo_m"
+                                        Background="@Drawable/small_card_bg"
+                                        ClickDataCollection="BTN_Search_Shortcut_4S_Store" />
+                                </RelativeLayout>
+                                <TextActor
+                                    Id="@+Id/TextShortCut3"
+                                    LayoutHeight="68"
+                                    LayoutWidth="146"
+                                    LayoutTopMargin="-9"
+                                    LayoutLeftMargin = "1"
+                                    PaddingLeft = "1"
+                                    LineIntervalMultiFactor="0"
+                                    DuplicateParentState="true"
+                                    SingleLine="false"
+                                    HorizontalGravity="Center"
+                                    VerticalGravity="Top"
+                                    WordWrapped="true"
+                                    TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL"
+                                    Text="@String/MX_LANG_NAVI_SEARCH_MORE_CATEGORY_DETAIL_INFO_TEXT_POI_Name_VolkswagenDealer"
+                                    TextColor="@Color/DayBlack_NightWhite" />
+                            </LinearLayout>
+                            <LinearLayout
+                                Id="@+Id/LayoutShortCut4"
+                                LayoutWidth="147"
+                                LayoutHeight="185"
+                                LayoutLeftMargin="-1"
+                                LayoutTopMargin = "-1"
+                                HorizontalGravity="Center"
+                                VerticalGravity="Bottom"
+                                Orientation="Vertical"
+                                Clickable="true"
+                                VisibleSpeechs="@String/MX_LANG_NAVI_SEARCH_MAIN_NO_GUIDANCE_VisibleSpeechs_05">
+                                <RelativeLayout
+                                    LayoutWidth="147"
+                                    LayoutHeight="147"
+                                    HorizontalGravity="Center"
+                                    VerticalGravity="Center"
+                                    DuplicateParentState="true">
+                                    <ImageButton
+                                        Id="@+Id/BtnShortCut4"
+                                        LayoutWidth="117"
+                                        LayoutHeight="117"
+                                        PaddingLeft = "1"
+                                        PaddingTop = "1"
+                                        Clickable="false"
+                                        DuplicateParentState="true"
+                                        Drawable="@Drawable/icon_scene"
+                                        Background="@Drawable/small_card_bg"
+                                        ClickDataCollection="BTN_Search_Shortcut_Scene" />
+                                </RelativeLayout>
+                                <TextActor
+                                    Id="@+Id/TextShortCut4"
+                                    LayoutHeight="68"
+                                    LayoutWidth="146"
+                                    LayoutTopMargin="-9"
+                                    DuplicateParentState="true"
+                                    VerticalGravity="Top"
+                                    SingleLine="false"
+                                    HorizontalGravity="Center"
+                                    LineIntervalMultiFactor="0"
+                                    WordWrapped="true"
+                                    LayoutLeftMargin="3"
+                                    Text="@String/MX_LANG_NAVI_SEARCH_MORE_CATEGORY_DETAIL_INFO_TEXT_POI_Name_TouristAttraction"
+                                    TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL"
+                                    TextColor="@Color/DayBlack_NightWhite" />
+                            </LinearLayout>
+                            <LinearLayout
+                                Id="@+Id/LayoutShortCutMore"
+                                LayoutWidth="147"
+                                LayoutHeight="185"
+                                LayoutLeftMargin="-1"
+                                LayoutTopMargin = "-1"
+                                HorizontalGravity="Center"
+                                VerticalGravity="Bottom"
+                                Orientation="Vertical"
+                                Clickable="true"
+                                VisibleSpeechs="@String/MX_LANG_NAVI_SEARCH_MAIN_NO_GUIDANCE_VisibleSpeechs_06">
+                                <RelativeLayout
+                                    LayoutWidth="147"
+                                    LayoutHeight="147"
+                                    HorizontalGravity="Center"
+                                    VerticalGravity="Center"
+                                    DuplicateParentState="true">
+                                    <ImageButton
+                                        LayoutWidth="117"
+                                        LayoutHeight="117"
+                                        PaddingLeft = "1"
+                                        PaddingTop = "1"
+                                        DuplicateParentState="true"
+                                        Clickable="false"
+                                        Drawable="@Drawable/srh_icon_more"
+                                        Background="@Drawable/small_card_bg"
+                                        ClickDataCollection="BTN_More_Category" />
+                                </RelativeLayout>
+                                <TextActor
+                                    LayoutHeight="68"
+                                    LayoutWidth="146"
+                                    LayoutTopMargin="-9"
+                                    LayoutLeftMargin = "1"
+                                    DuplicateParentState="true"
+                                    VerticalGravity="Top"
+                                    SingleLine="false"
+                                    HorizontalGravity="Center"
+                                    LineIntervalMultiFactor="0"
+                                    Text="@String/MX_LANG_NAVI_SEARCH_RESULT_DETAIL_PICTURE_WITHOUT_GUIDANCE_TEXT_More"
+                                    TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL"
+                                    TextColor="@Color/DayBlack_NightWhite" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!--快捷检索部品，有引导-->
+                        <LinearLayout
+                            Id="@+Id/LayoutShortCutWithGuidance"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="0"
+                            LayoutWeight = "185"
+                            Visible="Gone"
+                            VerticalGravity="Top">
+                            <LinearLayout
+                                Id="@+Id/FavoriteWithGuidance"
+                                LayoutWidth="147"
+                                LayoutHeight="185"
+                                LayoutLeftMargin="-5"
+                                LayoutTopMargin="-12"
+                                HorizontalGravity="Center"
+                                VerticalGravity="Center"
+                                Orientation="Vertical"
+                                Clickable="true"
+                                VisibleSpeechs="@String/MX_LANG_NAVI_SEARCH_MAIN_NO_GUIDANCE_TEXT_Favorite_VisibleSpeechs_01">
+                                <!--收藏按钮-->
+                                <RelativeLayout
+                                    LayoutWidth="147"
+                                    LayoutHeight="147"
+                                    HorizontalGravity="Center"
+                                    VerticalGravity="Center"
+                                    DuplicateParentState="true">
+                                    <ImageButton
+                                        LayoutWidth="117"
+                                        LayoutHeight="117"
+                                        PaddingLeft = "1"
+                                        PaddingTop = "1"
+                                        DuplicateParentState="true"
+                                        Clickable="false"
+                                        Background="@Drawable/small_card_bg"
+                                        Drawable="@Drawable/icon_fav_s"
+                                        ClickDataCollection="BTN_FavoriteWithGuidance" />
+                                </RelativeLayout>
+                                <TextActor
+                                    LayoutHeight="68"
+                                    LayoutWidth="146"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    LayoutTopMargin="-10"
+                                    DuplicateParentState="true"
+                                    VerticalGravity="Top"
+                                    SingleLine="false"
+                                    PaddingLeft = "-1"
+                                    HorizontalGravity="Center"
+                                    LineIntervalMultiFactor="0"
+                                    Text="@String/MX_LANG_NAVI_SEARCH_MAIN_NO_GUIDANCE_TEXT_Favorite_EV"
+                                    TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL" />
+                            </LinearLayout>
+                            <!--快捷按钮部品，有引导-->
+                            <LinearLayout
+                                Id="@+Id/BtnShortCut1WithGuidance"
+                                LayoutWidth="147"
+                                LayoutHeight="185"
+                                LayoutLeftMargin="-9"
+                                LayoutTopMargin="-12"
+                                HorizontalGravity="Center"
+                                VerticalGravity="Center"
+                                Orientation="Vertical"
+                                Clickable="true"
+                                VisibleSpeechs="@String/NAVI_SEARCH_MAIN_WITH_GUIDANCE_VisibleSpeechs_02">
+                                <RelativeLayout
+                                    LayoutWidth="147"
+                                    LayoutHeight="147"
+                                    HorizontalGravity="Center"
+                                    VerticalGravity="Center"
+                                    DuplicateParentState="true">
+                                    <ImageButton
+                                        LayoutWidth="117"
+                                        LayoutHeight="117"
+                                        PaddingLeft = "1"
+                                        PaddingTop = "1"
+                                        Background="@Drawable/small_card_bg"
+                                        Drawable="@Drawable/icon_parking"
+                                        DuplicateParentState="true"
+                                        Clickable="false"
+                                        ClickDataCollection="BTN_Search_Shortcut_Parking" />
+                                </RelativeLayout>
+                                <TextActor
+                                    LayoutHeight="68"
+                                    LayoutWidth="146"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    LayoutTopMargin="-10"
+                                    VerticalGravity="Top"
+                                    SingleLine="false"
+                                    LayoutLeftMargin="1"
+                                    LineIntervalMultiFactor="0"
+                                    HorizontalGravity="Center"
+                                    DuplicateParentState="true"
+                                    WordWrapped="true"
+                                    TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL"
+                                    Text="@String/MX_LANG_NAVI_SEARCH_MORE_CATEGORY_DETAIL_INFO_TEXT_POI_Name_ParkingLot" />
+                            </LinearLayout>
+                            <LinearLayout
+                                Id="@+Id/LayoutShortCut2WithGuidance"
+                                LayoutWidth="147"
+                                LayoutHeight="195"
+                                LayoutLeftMargin="-9"
+                                LayoutTopMargin="-17"
+                                HorizontalGravity="Center"
+                                VerticalGravity="Center"
+                                Orientation="Vertical"
+                                Clickable="true"
+                                VisibleSpeechs="@String/NAVI_SEARCH_MAIN_WITH_GUIDANCE_VisibleSpeechs_03">
+                                <RelativeLayout
+                                    LayoutWidth="147"
+                                    LayoutHeight="147"
+                                    HorizontalGravity="Center"
+                                    VerticalGravity="Center"
+                                    DuplicateParentState="true">
+                                    <ImageButton
+                                        Id="@+Id/BtnShortCut2WithGuidance"
+                                        LayoutWidth="117"
+                                        LayoutHeight="117"
+                                        PaddingLeft = "1"
+                                        PaddingTop = "1"
+                                        Clickable="false"
+                                        DuplicateParentState="true"
+                                        Background="@Drawable/small_card_bg"
+                                        Drawable="@Drawable/srh_icon_gas"
+                                        ClickDataCollection="BTN_Search_Shortcut_Gas" />
+                                </RelativeLayout>
+                                <TextActor
+                                    Id="@+Id/TextShortCut2WithGuide"
+                                    LayoutHeight="68"
+                                    LayoutWidth="146"
+                                    DuplicateParentState="true"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    LayoutTopMargin="-10"
+                                    VerticalGravity="Top"
+                                    SingleLine="false"
+                                    LayoutLeftMargin="1"
+                                    LineIntervalMultiFactor="0"
+                                    HorizontalGravity="Center"
+                                    WordWrapped="true"
+                                    TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL" />
+                            </LinearLayout>
+                            <LinearLayout
+                                Id="@+Id/LayoutShortCut3WithGuidance"
+                                LayoutWidth="147"
+                                LayoutHeight="195"
+                                LayoutLeftMargin="-9"
+                                LayoutTopMargin="-17"
+                                HorizontalGravity="Center"
+                                VerticalGravity="Center"
+                                Orientation="Vertical"
+                                Clickable="true"
+                                VisibleSpeechs="@String/MX_LANG_NAVI_SEARCH_MAIN_WITH_GUIDANCE_VisibleSpeechs_04">
+                                <RelativeLayout
+                                    LayoutWidth="147"
+                                    LayoutHeight="147"
+                                    HorizontalGravity="Center"
+                                    VerticalGravity="Center"
+                                    DuplicateParentState="true">
+                                    <ImageButton
+                                        Id="@+Id/BtnShortCut3WithGuidance"
+                                        LayoutWidth="117"
+                                        LayoutHeight="117"
+                                        PaddingLeft = "1"
+                                        PaddingTop = "1"
+                                        DuplicateParentState="true"
+                                        Clickable="false"
+                                        Background="@Drawable/small_card_bg"
+                                        Drawable="@Drawable/logo_m"
+                                        ClickDataCollection="BTN_Search_Shortcut_4S_Store" />
+                                </RelativeLayout>
+                                <TextActor
+                                    LayoutHeight="68"
+                                    LayoutWidth="146"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    LayoutTopMargin="-10"
+                                    TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL"
+                                    VerticalGravity="Top"
+                                    SingleLine="false"
+                                    LayoutLeftMargin = "1"
+                                    LineIntervalMultiFactor="0"
+                                    HorizontalGravity="Center"
+                                    Text="@String/MX_LANG_NAVI_SEARCH_MORE_CATEGORY_DETAIL_INFO_TEXT_POI_Name_VolkswagenDealer"
+                                    DuplicateParentState="true" />
+                            </LinearLayout>
+                            <LinearLayout
+                                Id="@+Id/BtnShortCut4WithGuidance"
+                                LayoutWidth="147"
+                                LayoutHeight="185"
+                                LayoutLeftMargin="-9"
+                                LayoutTopMargin="-12"
+                                HorizontalGravity="Center"
+                                VerticalGravity="Center"
+                                Orientation="Vertical"
+                                Clickable="true"
+                                VisibleSpeechs="@String/MX_LANG_NAVI_SEARCH_MAIN_WITH_GUIDANCE_VisibleSpeechs_05">
+                                <RelativeLayout
+                                    LayoutWidth="147"
+                                    LayoutHeight="147"
+                                    HorizontalGravity="Center"
+                                    VerticalGravity="Center"
+                                    DuplicateParentState="true">
+                                    <ImageButton
+                                        LayoutWidth="117"
+                                        LayoutHeight="117"
+                                        PaddingLeft = "1"
+                                        PaddingTop = "1"
+                                        Background="@Drawable/small_card_bg"
+                                        Drawable="@Drawable/icon_toilet"
+                                        DuplicateParentState="true"
+                                        Clickable="false"
+                                        ClickDataCollection="BTN_Search_Shortcut_WC" />
+                                </RelativeLayout>
+                                <TextActor
+                                    LayoutHeight="68"
+                                    LayoutWidth="146"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    LayoutTopMargin="-10"
+                                    LayoutLeftMargin="3"
+                                    VerticalGravity="Top"
+                                    SingleLine="false"
+                                    LineIntervalMultiFactor="0"
+                                    DuplicateParentState="true"
+                                    HorizontalGravity="Center"
+                                    Text="@String/MX_LANG_NAVI_SEARCH_MORE_CATEGORY_DETAIL_INFO_TEXT_POI_Name_Toilet"
+                                    TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL" />
+                            </LinearLayout>
+                            <LinearLayout
+                                Id="@+Id/BtnShortCut5WithGuidance"
+                                LayoutWidth="147"
+                                LayoutHeight="185"
+                                LayoutLeftMargin="-9"
+                                LayoutTopMargin="-12"
+                                HorizontalGravity="Center"
+                                VerticalGravity="Center"
+                                Orientation="Vertical"
+                                Clickable="true"
+                                VisibleSpeechs="@String/MX_LANG_NAVI_SEARCH_MAIN_WITH_GUIDANCE_VisibleSpeechs_06">
+                                <RelativeLayout
+                                    LayoutWidth="147"
+                                    LayoutHeight="147"
+                                    HorizontalGravity="Center"
+                                    VerticalGravity="Center"
+                                    DuplicateParentState="true">
+                                    <ImageButton
+                                        LayoutWidth="117"
+                                        LayoutHeight="117"
+                                        PaddingLeft = "1"
+                                        PaddingTop = "1"
+                                        Background="@Drawable/small_card_bg"
+                                        DuplicateParentState="true"
+                                        Clickable="false"
+                                        Drawable="@Drawable/icon_wash"
+                                        ClickDataCollection="BTN_Search_Shortcut_WashCar" />
+                                </RelativeLayout>
+                                <TextActor
+                                    LayoutHeight="68"
+                                    LayoutWidth="146"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    LayoutTopMargin="-10"
+                                    PaddingLeft = "1"
+                                    DuplicateParentState="true"
+                                    VerticalGravity="Top"
+                                    SingleLine="false"
+                                    HorizontalGravity="Center"
+                                    LineIntervalMultiFactor="0"
+                                    Text="@String/MX_LANG_NAVI_SEARCH_MORE_CATEGORY_DETAIL_INFO_TEXT_POI_Name_CarWash"
+                                    TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL" />
+                            </LinearLayout>
+                            <LinearLayout
+                                Id="@+Id/BtnShortCut6WithGuidance"
+                                LayoutWidth="147"
+                                LayoutHeight="185"
+                                LayoutTopMargin="-12"
+                                LayoutLeftMargin="-9"
+                                HorizontalGravity="Center"
+                                VerticalGravity="Center"
+                                Orientation="Vertical"
+                                Clickable="true"
+                                VisibleSpeechs="@String/NAVI_SEARCH_MAIN_WITH_GUIDANCE_VisibleSpeechs_06">
+                                <RelativeLayout
+                                    LayoutWidth="147"
+                                    LayoutHeight="147"
+                                    HorizontalGravity="Center"
+                                    VerticalGravity="Center"
+                                    DuplicateParentState="true">
+                                    <ImageButton
+                                        LayoutWidth="117"
+                                        LayoutHeight="117"
+                                        PaddingLeft = "1"
+                                        PaddingTop = "1"
+                                        Background="@Drawable/small_card_bg"
+                                        Drawable="@Drawable/icon_food"
+                                        DuplicateParentState="true"
+                                        Clickable="false"
+                                        ClickDataCollection="BTN_Search_Shortcut_Food" />
+                                </RelativeLayout>
+                                <TextActor
+                                    LayoutHeight="68"
+                                    LayoutWidth="146"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    LayoutTopMargin="-9"
+                                    PaddingLeft = "1"
+                                    VerticalGravity="Top"
+                                    SingleLine="false"
+                                    LineIntervalMultiFactor="0"
+                                    DuplicateParentState="true"
+                                    HorizontalGravity="Center"
+                                    Text="@String/MX_LANG_NAVI_SEARCH_MORE_CATEGORY_DETAIL_INFO_TEXT_POI_Name_Catering"
+                                    TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL" />
+                            </LinearLayout>
+                            <LinearLayout
+                                Id="@+Id/BtnShortCutMoreWithGuidance"
+                                LayoutWidth="147"
+                                LayoutHeight="185"
+                                LayoutTopMargin="-12"
+                                LayoutLeftMargin="-9"
+                                HorizontalGravity="Center"
+                                VerticalGravity="Center"
+                                Orientation="Vertical"
+                                Clickable="true"
+                                VisibleSpeechs="@String/NAVI_SEARCH_MAIN_WITH_GUIDANCE_VisibleSpeechs_07">
+                                <RelativeLayout
+                                    LayoutWidth="147"
+                                    LayoutHeight="147"
+                                    HorizontalGravity="Center"
+                                    VerticalGravity="Center"
+                                    DuplicateParentState="true">
+                                    <ImageButton
+                                        LayoutWidth="117"
+                                        LayoutHeight="117"
+                                        PaddingLeft = "1"
+                                        PaddingTop = "1"
+                                        Background="@Drawable/small_card_bg"
+                                        Drawable="@Drawable/icon_more_day"
+                                        ClickDataCollection="BTN_More_Category"
+                                        Clickable="false"
+                                        DuplicateParentState="true" />
+                                </RelativeLayout>
+                                <TextActor
+                                    LayoutHeight="68"
+                                    LayoutWidth="146"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    LayoutTopMargin="-10"
+                                    DuplicateParentState="true"
+                                    VerticalGravity="Top"
+                                    HorizontalGravity="Center"
+                                    SingleLine="false"
+                                    PaddingLeft = "1"
+                                    LineIntervalMultiFactor="0"
+                                    Text="@String/MX_LANG_NAVI_SEARCH_RESULT_DETAIL_PICTURE_WITHOUT_GUIDANCE_TEXT_More"
+                                    TextFont="@Font/BtnFont28_N_TextL_P_TextM_C_TextM_D_TextL" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <ImageActor
+                            Id = "@+Id/ImgPlaceHolderOne"
+                            LayoutWidth="FillParent"
+                            LayoutHeight = "21"/>
+                        <ImageActor
+                            Id = "@+Id/ImgPlaceHolderTwo"
+                            LayoutWidth="FillParent"
+                            LayoutHeight = "0"/>
+                        <RelativeLayout
+                            LayoutHeight="0"
+                            LayoutWeight = "472"
+                            LayoutWidth="FillParent">
+                            <SmoothListActorEx
+                                Id="@Id/PreDefine/SmoothListActor"
+                                LayoutLeftMargin="30"
+                                LayoutWidth="1008"
+                                LayoutHeight = "FillParent"
+                                DefaultDividerInterval="0"
+                                WipeEnabled="true"
+                                Orientation="Vertical"
+                                ListDeleteAnimation="true"
+                                VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_04" />
+                            <LinearLayout
+                                LayoutHeight="FillParent"
+                                LayoutWidth="66"
+                                LayoutLeftMargin="1038"
+                                Orientation="Vertical"
+                                Visible="Visible">
+                                <!--动态布局占位-->
+                                <RelativeLayout
+                                    Id="@+Id/TempLayoutScroll_17px"
+                                    LayoutHeight="0"
+                                    LayoutWidth="FillParent"
+                                    Visible="Gone" />
+                                <RelativeLayout
+                                    Id="@+Id/TempLayoutScroll_168px"
+                                    LayoutHeight="144"
+                                    LayoutWidth="FillParent"
+                                    Visible="Gone" />
+                                <SmoothListScrollBar
+                                    Id="@Id/PreDefine/SmoothListScrollBar"
+                                    LayoutWidth="66"
+                                    LayoutTopMargin = "-8"
+                                    LayoutHeight="FillParent"
+                                    ScrollBarLayout="@Layout/CActorScrollBarNew" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

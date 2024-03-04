@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Resource>
+    <LevelList>
+		<Item DrawableLevel = "0" Drawable = "@Drawable/Direction_to_destination_1_night_68_68"/>
+		<Item DrawableLevel = "1" Drawable = "@Drawable/Direction_to_destination_2_night_68_68"/>
+		<Item DrawableLevel = "2" Drawable = "@Drawable/Direction_to_destination_3_night_68_68"/>
+		<Item DrawableLevel = "3" Drawable = "@Drawable/Direction_to_destination_4_night_68_68"/>
+		<Item DrawableLevel = "4" Drawable = "@Drawable/Direction_to_destination_5_night_68_68"/>
+		<Item DrawableLevel = "5" Drawable = "@Drawable/Direction_to_destination_6_night_68_68"/>
+		<Item DrawableLevel = "6" Drawable = "@Drawable/Direction_to_destination_7_night_68_68"/>
+		<Item DrawableLevel = "7" Drawable = "@Drawable/Direction_to_destination_8_night_68_68"/>
+		<Item DrawableLevel = "8" Drawable = "@Drawable/Direction_to_destination_16_night_68_68"/>
+		<Item DrawableLevel = "9" Drawable = "@Drawable/Direction_to_destination_9_night_68_68"/>
+		<Item DrawableLevel = "10" Drawable = "@Drawable/Direction_to_destination_10_night_68_68"/>
+		<Item DrawableLevel = "11" Drawable = "@Drawable/Direction_to_destination_11_night_68_68"/>
+		<Item DrawableLevel = "12" Drawable = "@Drawable/Direction_to_destination_12_night_68_68"/>
+		<Item DrawableLevel = "13" Drawable = "@Drawable/Direction_to_destination_13_night_68_68"/>
+		<Item DrawableLevel = "14" Drawable = "@Drawable/Direction_to_destination_14_night_68_68"/>
+		<Item DrawableLevel = "15" Drawable = "@Drawable/Direction_to_destination_15_night_68_68"/>
+	</LevelList>
+</Resource>

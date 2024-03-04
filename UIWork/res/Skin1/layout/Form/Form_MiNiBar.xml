@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent">
+        <!--MiniTripView -->
+        <RelativeLayout
+            Id="@+Id/MiniTripView_Layout"
+            LayoutWidth="103"
+            LayoutHeight="FillParent"
+            LayoutAlignParentRight="true"
+            LayoutRightMargin="3">
+            <!--BarBG-->
+            <ImageActor
+                Id="@Id/PreDefine/MiniTripView_Bar_background"
+                LayoutHeight="500"
+                LayoutTopMargin="314"
+                LayoutCenterHorizontal="true"
+                Background="@Drawable/minitripview_bg"
+                Visible="Visible" />
+            <TrafficFlow_RainBowBar
+                Id="@Id/PreDefine/RainbowBar"
+                LayoutWidth="FillParent"
+                LayoutHeight="540"
+                LayoutTopMargin="298"
+                LayoutHorizontalGravity="Center"
+                ThumbSizeFixup="true"
+                ThumbDrawable="@Drawable/carsor_l_c"
+                Orientation="Vertical"
+                Clickable="true"
+                TrafficFlowRainBowBarInvalidRouteStatusColor="#3D3D3D"
+                TrafficFlowRainbowBarLayoutLeftMargin="46"
+                TrafficFlowRainbowBarLayoutTopMargin="0"
+                TrafficFlowRainbowBarLayoutWidth="10"
+                TrafficFlowRainbowBarLayoutHeight="540"
+                MaskDrawable="@Drawable/minitripview"
+                Visible="Invisible" />
+            <!--经由地/目的地图标-->
+            <ImageActor
+                Id="@Id/PreDefine/MiniTripView_IMAGE_Stopover"
+                LayoutHeight="WrapContent"
+                LayoutWidth="WrapContent"
+                LayoutAlignParentBottom="true"
+                LayoutBottomMargin="766"
+                LayoutCenterHorizontal="true"
+                DuplicateParentState="true"
+                Clickable="true"
+                Drawable="@Drawable/hmi_searchresult_l_c"
+                Visible="Invisible" />
+        </RelativeLayout>
+        <ImageActor
+            Id="@Id/PreDefine/MiniTripView_IMAGE_UnArrive"
+            LayoutWidth="142"
+            LayoutHeight="70"
+            LayoutTopMargin = "261"
+            LayoutRightMargin = "23"
+            LayoutAlignParentRight="true"
+            Drawable="@Drawable/icon_Unreachable"
+            Clickable = "true"
+            Visible="Gone" />
+        <!--左侧服务区按钮占位,这个布局修改也要修改动态布局function -->
+        <RelativeLayout
+            Id="@Id/PreDefine/MiniTripView_Btn"
+            LayoutWidth="60"
+            LayoutHeight="552"
+            LayoutTopMargin="286"
+            LayoutRightMargin="63"
+            LayoutAlignParentRight="true" />
+    </RelativeLayout>
+</Resource>

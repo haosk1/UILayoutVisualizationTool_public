@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <SLaneInfoDrawable>
+		<Item SpecialLaneDrawable = "@Drawable/DrawLevel_SpecialLane"/>
+		<Item RecommendedDrawable = "@Drawable/Bus_DrawLevel_RecommendLane"/>
+		<Item AvailableDrawable = "@Drawable/Bus_DrawLevel_AvailableLane"/>
+		<Item DisableDrawable = "@Drawable/Bus_DrawLevel_DisableLane"/>
+	</SLaneInfoDrawable>
+</Resource>

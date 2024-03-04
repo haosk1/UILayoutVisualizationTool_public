@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "false" Drawable = "@Drawable/list_bg_left_right_upper_normal_day"/>
+<!-->Check-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "true" Drawable = "@Drawable/list_bg_left_right_upper_normal_selected_night"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" Drawable = "@Drawable/list_bg_left_right_pressed_FillColor"/>
+<!-->Disable-->
+		<Item StateEnabled = "false" Drawable = "INVALID_ID"/>
+    </StateList>
+</Resource>

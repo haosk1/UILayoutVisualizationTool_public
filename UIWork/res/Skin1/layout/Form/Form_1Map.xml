@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Resource>
+	<RelativeLayout
+		LayoutHeight="FillParent"
+		LayoutWidth="FillParent"
+		Id = "@+Id/LayoutRelative">
+		<ScrollViewActor
+			Id="@Id/UIFWPreDefine/ScrollView"
+			LayoutHeight="FillParent"
+			LayoutWidth="FillParent"
+			Focusable="false"
+			Style="@Style/ScrollViewActorStyle"
+			/>
+	</RelativeLayout>
+</Resource>

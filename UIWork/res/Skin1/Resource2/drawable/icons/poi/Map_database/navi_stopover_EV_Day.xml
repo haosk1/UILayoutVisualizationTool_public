@@ -1,0 +1,11 @@
+<? xml version = "1.0" encoding = "UTF-8" ?>
+<Resource>
+        <LevelList>
+                <Item DrawableLevel = "0" Drawable = "@Drawable/current_car_position_m_c_day"/>
+                <Item DrawableLevel = "1" Drawable = "@Drawable/navi_stopover_EV_day_1"/>
+                <Item DrawableLevel = "2" Drawable = "@Drawable/navi_stopover_EV_day_2"/>
+                <Item DrawableLevel = "3" Drawable = "@Drawable/navi_stopover_EV_day_3"/>
+                <Item DrawableLevel = "4" Drawable = "@Drawable/navi_stopover_EV_day_4"/>
+                <Item DrawableLevel = "20" Drawable = "@Drawable/navi_destination_day"/>
+        </LevelList>
+</Resource>

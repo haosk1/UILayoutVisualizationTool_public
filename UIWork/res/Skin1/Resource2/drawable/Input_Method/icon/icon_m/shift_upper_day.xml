@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+  <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" Drawable = "@Drawable/shift_upper_case_m_c_six_day"/>
+<!-->Disable-->
+		<Item StateEnabled = "false" Drawable = "@Drawable/shift_upper_case_m_c_six_disable_day"/>
+  </StateList>
+</Resource>

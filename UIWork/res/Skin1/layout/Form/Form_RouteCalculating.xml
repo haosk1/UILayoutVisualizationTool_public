@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent"
+        Background="@Drawable/navi_image_mask_bg">
+        <LinearLayout
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent"
+            Orientation="Horizontal">
+            <!--占位用的smartcard -->
+            <ImageActor
+                Id="@Id/PreDefine/ImgSmartCard"
+                LayoutWidth="496"
+                LayoutHeight="FillParent"/>
+            <!--smartcard右侧LayoutWidth需要设置为FillParent，保证全半屏切换popup位置跟随变化 -->
+            <RelativeLayout
+                LayoutWidth="FillParent"
+                LayoutHeight="FillParent">
+                <RelativeLayout
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="WrapContent"
+                    LayoutCenterVertical = "true"
+					LayoutCenterHorizontal = "true"
+                    Background="@Drawable/popup_toast_bg">
+                    <TextActor
+                        LayoutWidth="WrapContent"
+                        LayoutLeftMargin = "144"
+                        LayoutRightMargin = "144"
+                        LayoutTopMargin = "59"
+                        LayoutBottomMargin = "56"
+                        PaddingTop = "1"
+                        HorizontalGravity="Center"
+                        TextColor="@Color/NormalBtn_RGB"
+                        TextFont="@Font/UIFont40_Text_L"
+                        Text="@String/MX_LANG_PO_NAVI_ROUTE_CALCULATING_TEXT_ROUTE_CALCULATING" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</Resource>

@@ -1,0 +1,982 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/LayoutRelative"
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent"
+        Background="@Drawable/navi_image_mask_bg"
+        Clickable="true">
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <RelativeLayout
+                Id="@Id/PreDefine/MainLayout"
+                LayoutWidth="1302"
+                LayoutHeight="872"
+                LayoutTopMargin="96"
+                Clickable="true"
+                Background="@Drawable/card_bg_day_and_night">
+                <!--阴影背景图 172*172-->
+                <RelativeLayout
+                    LayoutHeight="136"
+                    LayoutWidth="136"
+                    LayoutLeftMargin="30"
+                    LayoutTopMargin="30">
+                    <!--圆形BTN 热区 104*104 +16-->
+                    <RelativeLayout
+                        Id="@Id/PreDefine/BTN_Back"
+                        LayoutWidth="117"
+                        LayoutHeight="117"
+                        LayoutCenterInParent="true"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_CHARGING_SETTING_EV_VisibleSpeechs_01"
+                        Clickable="true">
+                        <!--圆形BTN背景图-->
+                        <RelativeLayout
+                            LayoutWidth="147"
+                            LayoutHeight="147"
+                            Background="@Drawable/btn_h104_background_normal_prox"
+                            LayoutLeftMargin="-14"
+                            LayoutRightMargin="-14"
+                            LayoutTopMargin="-14"
+                            LayoutBottomMargin="-14"
+                            DuplicateParentState="true">
+                            <ImageActor
+                                Id="@Id/PreDefine/BTN_Backbackground"
+                                LayoutWidth="69"
+                                LayoutHeight="69"
+                                LayoutLeftMargin="38"
+                                LayoutTopMargin="38"
+                                DuplicateParentState="true"
+                                Background="@Drawable/icon_close" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <TextActor
+                    Id="@+Id/Tilte_Setting"
+                    HorizontalGravity="Left"
+                    LayoutLeftMargin="180"
+                    LayoutTopMargin="72"
+                    LayoutHeight="52"
+                    PaddingTop="4"
+                    LayoutWidth="160"
+                    Text="@String/MX_LANG_NAVI_GUIDANCE_SETTING_TITLE_SETTING"
+                    TextFont="@Font/UIFont40_Text_M"
+                    TextColor="@Color/DayBlack_NightWhite" />
+                <LinearLayout
+                    LayoutHeight="WrapContent"
+                    LayoutWidth="300"
+                    LayoutTopMargin="170"
+                    Orientation="Vertical"
+                    LayoutLeftMargin="46"
+                    Background="@Drawable/mixin_bg_normal_DayNight">
+                    <!-- Guidance Btn -->
+                    <RelativeLayout
+                        LayoutHeight="130"
+                        LayoutWidth="300">
+                        <Button
+                            Id="@Id/PreDefine/Btn_Guidance_Setting"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="FillParent"
+                            PaddingTop="5"
+                            VerticalGravity="Center"
+                            Background="@Drawable/menu_bg_1_Setting"
+                            IsBgAnimator = "true"
+                            Text = "@String/MX_LANG_NAVI_GUIDANCE_SETTING_TEXT_Guidance_Setting"
+                            TextFont="@Font/UIFont40_Text_R"
+                            TextColor="@Color/ListFavColor"
+                            VisibleSpeechs="@String/MX_LANG_NAVI_GUIDANCE_SETTING_VisibleSpeechs_02"
+                            ClickDataCollection="Btn_Guidance_Setting" />
+                        <ImageActor
+                            LayoutHeight="2"
+                            LayoutWidth="300"
+                            LayoutTopMargin="128"
+                            Background="@Drawable/menu_line_DayNight" />
+                    </RelativeLayout>
+                    <!-- map Btn与分割线 -->
+                    <RelativeLayout
+                        LayoutHeight="130"
+                        LayoutWidth="300">
+                        <Button
+                            Id="@Id/PreDefine/Btn_Map_Setting"
+                            LayoutWidth="300"
+                            LayoutHeight="130"
+                            PaddingTop="5"
+                            Background="@Drawable/menu_bg_2_Setting"
+                            VerticalGravity="Center"
+                            IsBgAnimator = "true"
+                            Text = "@String/MX_LANG_NAVI_GUIDANCE_SETTING_TEXT_Map_Setting"
+                            TextFont="@Font/UIFont40_Text_R"
+                            TextColor="@Color/ListFavColor"
+                            VisibleSpeechs="@String/MX_LANG_NAVI_CHARGING_SETTING_VisibleSpeechs_02"
+                            ClickDataCollection="Btn_Map_Setting" />
+                        <ImageActor
+                            LayoutHeight="2"
+                            LayoutWidth="300"
+                            LayoutTopMargin="128"
+                            Background="@Drawable/menu_line_DayNight" />
+                    </RelativeLayout>
+                    <LinearLayout
+                        LayoutHeight="132"
+                        LayoutWidth="300"
+                        Orientation="Vertical">
+                        <RelativeLayout
+                            LayoutHeight="0"
+                            LayoutWeight="130"
+                            LayoutWidth="300">
+                            <Button
+                                Id="@Id/PreDefine/BTN_Audio_Setup_Setting"
+                                LayoutWidth="300"
+                                LayoutHeight="FillParent"
+                                PaddingTop="5"
+                                PaddingLeft="-1"
+                                Background="@Drawable/menu_bg_2_Setting"
+                                VerticalGravity="Center"
+                                IsBgAnimator = "true"
+                                Text = "@String/MX_LANG_NAVI_GUIDANCE_SETTING_TEXT_Audio_Setup_Setting"
+                                TextFont="@Font/UIFont40_Text_R"
+                                TextColor="@Color/ListFavColor"
+                                VisibleSpeechs="@String/MX_LANG_NAVI_MAP_SETTING_VisibleSpeechs_05"
+                                ClickDataCollection="BTN_Audio_Setup_Setting" />
+                            <ImageActor
+                                Id="@Id/PreDefine/Icon_line_Audio"
+                                LayoutHeight="2"
+                                LayoutWidth="300"
+                                LayoutTopMargin="128"
+                                Background="@Drawable/menu_line_DayNight" />
+                        </RelativeLayout>
+                        <ImageActor
+                            Id="@Id/PreDefine/BTN_Audio_Setup_Blank"
+                            LayoutHeight="0"
+                            LayoutWeight="2"
+                            LayoutWidth="300"
+                            Visible="Gone" />
+                    </LinearLayout>
+                    <!-- Group Btn与分割线 -->
+                    <LinearLayout
+                        Id="@Id/PreDefine/LayoutGroupDriving"
+                        LayoutHeight="132"
+                        LayoutWidth="300"
+                        LayoutTopMargin="-2"
+                        Orientation="Vertical">
+                        <RelativeLayout
+                            LayoutWeight="130"
+                            LayoutHeight="0"
+                            LayoutWidth="300">
+                            <Button
+                                Id="@Id/PreDefine/BTN_Group_Driving_Setting"
+                                LayoutWidth="300"
+                                LayoutHeight="FillParent"
+                                PaddingTop="3"
+                                Background="@Drawable/menu_bg_2_Setting"
+                                VerticalGravity="Center"
+                                PaddingLeft="3"
+                                IsBgAnimator = "true"
+                                Text = "@String/MX_LANG_NAVI_GUIDANCE_SETTING_TEXT_Group_Driving_Setting"
+                                TextFont="@Font/UIFont40_Text_R"
+                                TextColor="@Color/ListFavColor"
+                                VisibleSpeechs="@String/MX_LANG_NAVI_MAP_SETTING_VisibleSpeechs_06"
+                                ClickDataCollection="BTN_Group_Driving_Setting" />
+                            <ImageActor
+                                Id="@Id/PreDefine/Icon_line"
+                                LayoutHeight="2"
+                                LayoutWidth="300"
+                                LayoutTopMargin="128"
+                                Visible="Gone"
+                                Background="@Drawable/menu_line_DayNight" />
+                        </RelativeLayout>
+                        <ImageActor
+                            Id="@Id/PreDefine/BTN_Group_Driving_Blank"
+                            LayoutWeight="2"
+                            LayoutHeight="0"
+                            LayoutWidth="300"
+                            Visible="Gone" />
+                    </LinearLayout>
+                    <!-- Charging Btn与分割线 -->
+                    <LinearLayout
+                        Id="@Id/PreDefine/LayoutCharging"
+                        LayoutHeight="130"
+                        LayoutWidth="300"
+                        LayoutTopMargin="-2"
+                        Visible="Gone">
+                        <Button
+                            Id="@Id/PreDefine/BTN_Charging_Setting"
+                            LayoutWidth="300"
+                            LayoutHeight="130"
+                            PaddingTop="5"
+                            PaddingLeft="1"
+                            Background="@Drawable/menu_bg_3_Setting"
+                            VerticalGravity="Center"
+                            Text="@String/MX_LANG_NAVI_CHARGING_SETTING_EV_TEXT_Chargingsetting"
+                            TextFont="@Font/UIFont40_Text_R"
+                            TextColor="@Color/ListFavColor"
+                            ClickDataCollection="BTN_Charging_Setting" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--列表-->
+                <RelativeLayout
+                    Id="@+Id/SuperListLayout"
+                    LayoutWidth="910"
+                    LayoutHeight="654"
+                    LayoutTopMargin="160"
+                    LayoutLeftMargin="376">
+                    <RelativeLayout
+                        Id="@+Id/Linear_1"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="FillParent">
+                        <UIScrollViewEx
+                            Id="@Id/PreDefine/ScrollViewEx"
+                            LayoutWidth="880"
+                            LayoutHeight="654"
+                            ShowsIndicator="false"
+                            Orientation="Vertical"
+                            Visible="Visible"
+                            BounceVertical="true"
+                            BounceHorizontal="false"
+                            VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_01">
+                            <LinearLayout
+                                LayoutWidth="880"
+                                LayoutHeight="654"
+                                Orientation="Vertical">
+                                <!--充电偏好-->
+                                <LinearLayout
+                                    Id="@+Id/LayoutOneList"
+                                    LayoutWidth="880"
+                                    LayoutHeight="110"
+                                    LayoutTopMargin = "10"
+                                    LayoutBottomMargin = "10"
+                                    VerticalGravity="Center"
+                                    Clickable="true"
+                                    Focusable="true"
+                                    Visible="Visible"
+                                    Background="@Drawable/bg_prox_pressed_selected_DayNight"
+                                    VisibleSpeechs = "@String/MX_LANG_NAVI_CHARGING_SETTING_EV_VisibleSpeechs_05">
+                                    <TextActor
+                                        Id="@+Id/FirstListName"
+                                        LayoutWidth="670"
+                                        LayoutHeight="WrapContent"
+                                        LayoutLeftMargin="36"
+                                        HorizontalGravity="Left"
+                                        VerticalGravity="Center"
+                                        PaddingTop="6"
+                                        Text="@String/MX_LANG_NAVI_CHARGING_SETTING_EV_TEXT_Charging_Prefer"
+                                        TextFont="@Font/UIFont34_Text_R"
+                                        TextColor="@Color/ListFavColor"
+                                        DuplicateParentState="true" />
+                                    <!--箭头 Background="@Drawable/h84_background_normal_clear_list"-->
+                                    <ImageActor
+                                        Id="@+Id/Arrow"
+                                        LayoutWidth="104"
+                                        LayoutHeight="104"
+                                        LayoutLeftMargin="46"
+                                        DuplicateParentState="true"
+                                        LayoutAlignParentRight="true"
+                                        LayoutCenterVertical="true"
+                                        Drawable="@Drawable/arrow_right_withoutbg" />
+                                </LinearLayout>
+                                <!-- 低电提醒 -->
+                                <RelativeLayout
+                                    Id = "@+Id/LayoutLowPower"
+                                    LayoutWidth = "880"
+                                    LayoutHeight = "110"
+                                    LayoutTopMargin="10"
+                                    LayoutBottomMargin = "10"
+                                    Clickable = "true"
+                                    Focusable = "true"
+                                    Visible = "Visible"
+                                    Background = "@Drawable/bg_prox_pressed_selected_DayNight" >
+                                    <TextActor
+                                            Id = "@+Id/Text_LayoutLowPower"
+                                            LayoutWidth = "670"
+                                            LayoutHeight = "WrapContent"
+                                            LayoutLeftMargin="36"
+                                            VerticalGravity = "Center"
+                                            LayoutCenterVertical = "true"
+                                            PaddingTop = "6"
+                                            HorizontalGravity = "Left"
+                                            DuplicateParentState="true"
+                                            Text = "@String/MX_LANG_NAVI_NOTIFICATIONS_SETTING_TEXT_Battery_Warning"
+                                            TextFont = "@Font/UIFont34_Text_R"
+                                            TextColor = "@Color/ListFavColor"/>
+                                    <VividCheckbox
+                                            Id = "@+Id/BTN_LayoutLowPower"
+                                            LayoutHeight = "104"
+                                            LayoutWidth = "104"
+                                            LayoutCenterVertical = "true"
+                                            LayoutLeftMargin = "740"
+                                            Clickable = "false"
+                                            Focusable = "false"
+                                            UnCheckToCheck="@Drawable/Gradient_Switch_M_Z06Z10_F_C"
+                                            CheckToUnCheck="@Drawable/Gradient_Switch_M_Z10Z06_F_C"
+                                            UnCheckToCheckBackground="@Drawable/Switch_M_Z06Z10_B"
+                                            CheckToUnCheckBackground="@Drawable/Switch_M_Z10Z06_B"/>
+                                </RelativeLayout>
+                                <!--EV路线开关-->
+                                <RelativeLayout
+                                    Id="@+Id/LayoutOneCheckbox"
+                                    LayoutWidth="880"
+                                    LayoutHeight="110"
+                                    LayoutTopMargin="10"
+                                    LayoutBottomMargin = "10"
+                                    Clickable="true"
+                                    Focusable = "true"
+                                    Visible="Visible"
+                                    Background="@Drawable/bg_prox_pressed_selected_DayNight">
+                                    <TextActor
+                                        Id="@+Id/Text_LayoutOneCheckbox"
+                                        LayoutWidth="670"
+                                        LayoutHeight="WrapContent"
+                                        LayoutLeftMargin="36"
+                                        VerticalGravity="Center"
+                                        LayoutCenterVertical="true"
+                                        PaddingTop="6"
+                                        HorizontalGravity="Left"
+                                        DuplicateParentState="true"
+                                        Text="@String/MX_LANG_NAVI_ROUTE_OPTION_EV_TEXT_EV_Route"
+                                        TextFont="@Font/UIFont34_Text_R"
+                                        TextColor="@Color/ListFavColor" />
+                                    <VividCheckbox
+                                        Id="@+Id/BTN_LayoutOneCheckbox"
+                                        LayoutHeight="104"
+                                        LayoutWidth="104"
+                                        LayoutCenterVertical="true"
+                                        LayoutLeftMargin="740"
+                                        Clickable="false"
+                                        Focusable="false"
+                                        UnCheckToCheck="@Drawable/Gradient_Switch_M_Z06Z10_F_C"
+                                        CheckToUnCheck="@Drawable/Gradient_Switch_M_Z10Z06_F_C"
+                                        UnCheckToCheckBackground="@Drawable/Switch_M_Z06Z10_B"
+                                        CheckToUnCheckBackground="@Drawable/Switch_M_Z10Z06_B" />
+                                </RelativeLayout>
+                                <!--路线偏好选项-->
+                                <RelativeLayout
+                                    LayoutWidth="880"
+                                    LayoutHeight="364">
+                                    <RelativeLayout
+                                        LayoutWidth="FillParent"
+                                        LayoutHeight="130">
+                                        <!--标题-->
+                                        <TextActor
+                                            LayoutWidth="WrapContent"
+                                            LayoutHeight="52"
+                                            LayoutLeftMargin="36"
+                                            LayoutTopMargin="53"
+                                            HorizontalGravity="Left"
+                                            VerticalGravity="Center"
+                                            PaddingTop="4"
+                                            Text="@String/MX_LANG_NAVI_CHARGING_SETTING_EV_TEXT_Route_Profile"
+                                            TextFont="@Font/UIFont40_Text_L"
+                                            TextColor="@Color/DayBlack_NightWhite" />
+                                    </RelativeLayout>
+                                    <!--选项-->
+                                    <RelativeLayout
+                                        LayoutWidth="880"
+                                        LayoutHeight="234"
+                                        LayoutTopMargin="130">
+                                        <RelativeLayout
+                                            LayoutWidth="880"
+                                            LayoutHeight="214"
+                                            LayoutTopMargin="10"
+                                            Background="@Drawable/mixin_bg_normal_DayNight">
+                                        </RelativeLayout>
+                                        <!--第一行-->
+                                        <LinearLayout
+                                            LayoutWidth="880"
+                                            LayoutHeight="117"
+                                            Orientation="Horizontal">
+                                            <RelativeLayout
+                                                Id="@+Id/BtnMinimum"
+                                                LayoutHeight="117"
+                                                LayoutWidth="439"
+                                                Background="@Drawable/list_bg_left"
+                                                Focusable="true"
+                                                Clickable="true"
+                                                VisibleSpeechs="@String/MX_LANG_NAVI_CHARGING_SETTING_EV_VisibleSpeechs_04">
+                                                <VividCheckbox
+                                                    Id="@+Id/RadioBtnMinimum"
+                                                    LayoutHeight="104"
+                                                    LayoutWidth="104"
+                                                    LayoutTopMargin = "13"
+                                                    LayoutLeftMargin="36"
+                                                    Clickable="false"
+                                                    Focusable="false"
+                                                    UnCheckToCheck="@Drawable/Gradient_Radiobutton_M_Z06Z10_F_C"
+                                                    CheckToUnCheck="@Drawable/Gradient_Radiobutton_M_Z10Z06_F_C"
+                                                    UnCheckToCheckBackground="@Drawable/Radiobutton_M_Z06Z10_B"
+                                                    CheckToUnCheckBackground="@Drawable/Radiobutton_M_Z10Z06_B" />
+                                                <TextActor
+                                                    LayoutHeight="40"
+                                                    LayoutWidth="280"
+                                                    LayoutTopMargin="45"
+                                                    PaddingTop = "4"
+                                                    LayoutLeftMargin="140"
+                                                    HorizontalGravity="Left"
+                                                    DuplicateParentState="true"
+                                                    Text="@String/MX_LANG_DD_ROUTE_PROFILE_SETTING_TEXT_Minimum_Charging"
+                                                    TextFont="@Font/BtnFont34_N_TextL_P_TextR_C_TextR_D_TextL"
+                                                    TextColor="@Color/ListSettingColor" />
+                                            </RelativeLayout>
+                                            <!--分割线-->
+                                            <ImageActor
+                                                LayoutWidth="2"
+                                                LayoutHeight="56"
+                                                LayoutTopMargin="37"
+                                                Drawable="@Drawable/citylist_line_dayAndnight" />
+                                            <RelativeLayout
+                                                Id="@+Id/BtnMostreliable"
+                                                LayoutHeight="117"
+                                                LayoutWidth="439"
+                                                Background="@Drawable/list_bg_right"
+                                                Focusable="true"
+                                                Clickable="true"
+                                                VisibleSpeechs="@String/MX_LANG_NAVI_CHARGING_SETTING_EV_VisibleSpeechs_02">
+                                                <VividCheckbox
+                                                    Id="@+Id/RadioBtnMostreliable"
+                                                    LayoutHeight="104"
+                                                    LayoutWidth="104"
+                                                    LayoutTopMargin = "13"
+                                                    LayoutLeftMargin="19"
+                                                    Clickable="false"
+                                                    Focusable="false"
+                                                    UnCheckToCheck="@Drawable/Gradient_Radiobutton_M_Z06Z10_F_C"
+                                                    CheckToUnCheck="@Drawable/Gradient_Radiobutton_M_Z10Z06_F_C"
+                                                    UnCheckToCheckBackground="@Drawable/Radiobutton_M_Z06Z10_B"
+                                                    CheckToUnCheckBackground="@Drawable/Radiobutton_M_Z10Z06_B" />
+                                                <TextActor
+                                                    LayoutHeight="40"
+                                                    LayoutWidth="280"
+                                                    LayoutTopMargin="45"
+                                                    PaddingTop = "4"
+                                                    LayoutLeftMargin="140"
+                                                    HorizontalGravity="Left"
+                                                    DuplicateParentState="true"
+                                                    Text="@String/MX_LANG_DD_ROUTE_PROFILE_SETTING_TEXT_Reliable"
+                                                    TextFont="@Font/BtnFont34_N_TextL_P_TextR_C_TextR_D_TextL"
+                                                    TextColor="@Color/ListSettingColor" />
+                                            </RelativeLayout>
+                                        </LinearLayout>
+                                        <!--第二行-->
+                                        <LinearLayout
+                                            Id="@+Id/GuidanceLayout2"
+                                            LayoutWidth="439"
+                                            LayoutHeight="117"
+                                            LayoutTopMargin="117">
+                                            <RelativeLayout
+                                                Id="@+Id/BtnCustom"
+                                                LayoutHeight="117"
+                                                LayoutWidth="439"
+                                                Background="@Drawable/list_bg_left_down"
+                                                Focusable="true"
+                                                Clickable="true"
+                                                VisibleSpeechs="@String/MX_LANG_NAVI_CHARGING_SETTING_EV_VisibleSpeechs_03">
+                                                <VividCheckbox
+                                                    Id="@+Id/RadioBtnCustom"
+                                                    LayoutHeight="104"
+                                                    LayoutWidth="104"
+                                                    LayoutLeftMargin="36"
+                                                    Clickable="false"
+                                                    Focusable="false"
+                                                    UnCheckToCheck="@Drawable/Gradient_Radiobutton_M_Z06Z10_F_C"
+                                                    CheckToUnCheck="@Drawable/Gradient_Radiobutton_M_Z10Z06_F_C"
+                                                    UnCheckToCheckBackground="@Drawable/Radiobutton_M_Z06Z10_B"
+                                                    CheckToUnCheckBackground="@Drawable/Radiobutton_M_Z10Z06_B" />
+                                                <TextActor
+                                                    LayoutHeight="40"
+                                                    LayoutWidth="280"
+                                                    LayoutTopMargin="32"
+                                                    PaddingTop = "4"
+                                                    LayoutLeftMargin="140"
+                                                    HorizontalGravity="Left"
+                                                    DuplicateParentState="true"
+                                                    Text="@String/MX_LANG_DD_ROUTE_PROFILE_SETTING_TEXT_Custom"
+                                                    TextFont="@Font/BtnFont34_N_TextL_P_TextR_C_TextR_D_TextL"
+                                                    TextColor="@Color/ListSettingColor" />
+                                            </RelativeLayout>
+                                        </LinearLayout>
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                                <!--焦虑电量文言-->
+                                <RelativeLayout
+                                        LayoutWidth="880"
+                                        LayoutHeight="180"
+                                        Clickable="true"
+                                        Visible="Visible"
+                                        LayoutTopMargin="10"
+                                        LayoutBottomMargin = "10"
+                                        Background="@Drawable/mixin_bg_normal_DayNight">
+                                    <RelativeLayout
+                                        LayoutWidth="880"
+                                        LayoutHeight="180"
+                                        Clickable="true"
+                                        Visible="Visible"
+                                        LayoutTopMargin="17">
+                                        <TextActor
+                                            LayoutWidth="687"
+                                            LayoutHeight="52"
+                                            LayoutLeftMargin="36"
+                                            LayoutTopMargin="8"
+                                            HorizontalGravity="Left"
+                                            VerticalGravity="Center"
+                                            PaddingTop="4"
+                                            Text="@String/MX_LANG_NAVI_CHARGING_SETTING_EV_BTN_Low_Battery_Threshold"
+                                            TextFont="@Font/UIFont34_Text_R"
+                                            TextColor="@Color/DayBlack_NightWhite"
+                                            SingleLine="true" />
+                                        <LinearLayout
+                                            LayoutWidth="WrapContent"
+                                            LayoutHeight="52"
+                                            LayoutTopMargin="10"
+                                            LayoutRightMargin = "58"
+                                            HorizontalGravity="Right"
+                                            Orientation="Horizontal"
+                                            LayoutAlignParentRight="true">
+                                            <TextActor
+                                                Id="@+Id/LB_SOC_Volume_Value"
+                                                LayoutWidth="WrapContent"
+                                                LayoutHeight="WrapContent"
+                                                PaddingTop="3"
+                                                TextFont="@Font/UIFont34_UIDigit_R"
+                                                TextColor="@Color/DayBlack_NightWhite" />
+                                            <TextActor
+                                                LayoutWidth="WrapContent"
+                                                LayoutHeight="WrapContent"
+                                                PaddingTop="5"
+                                                PaddingRight="1"
+                                                Text="%"
+                                                TextFont="@Font/UIFont34"
+                                                TextColor="@Color/DayBlack_NightWhite" />
+                                        </LinearLayout>
+                                    </RelativeLayout>
+                                    <!--焦虑电量的滚动条布局-->
+                                    <!--音量BTN和音量条-->
+                                    <RelativeLayout
+                                        LayoutWidth="FillParent"
+                                        LayoutHeight="160"
+                                        LayoutTopMargin="77"
+                                        LayoutLeftMargin="-18"
+                                        LayoutBottomMargin="4"
+                                        LayoutRightMargin="-4"
+                                        LayoutAlignParentRight="true"
+                                        LayoutAlignParentBottom="true">
+                                        <!--左边调小音量按钮-->
+                                        <ImageButton
+                                            Id="@+Id/LB_SOC_BtnVolumeSub"
+                                            LayoutWidth="92"
+                                            LayoutHeight="92"
+                                            LayoutLeftMargin="40"
+                                            LayoutTopMargin="-2"
+                                            LayoutCenterVertical="true"
+                                            LayoutAlignParentLeft="true"
+                                            DuplicateParentState="true"
+                                            Background="@Drawable/h84_background_normal_clear_list"
+                                            Drawable="@Drawable/btn_reduce_Voice_com" />
+                                        <!--音量条中间部分-->
+                                        <ImageActor
+                                            LayoutHeight="WrapContent"
+                                            LayoutWidth="616"
+                                            LayoutLeftMargin="150"
+                                            LayoutCenterVertical="true"
+                                            LayoutRightMargin="136"
+                                            LayoutAlignParentRight="true"
+                                            PaddingTop="2"
+                                            DuplicateParentState="true"
+                                            Background="@Drawable/inactive_bg_day_and_night" />
+                                        <RelativeLayout
+                                            LayoutWidth="WrapContent"
+                                            LayoutHeight="WrapContent"
+                                            LayoutCenterInParent="true">
+                                            <ActorInsideSliderCtrl
+                                                Id="@+Id/LB_SOC_SliderCtrl"
+                                                LayoutHeight="60"
+                                                LayoutWidth="664"
+                                                PaddingLeft = "8"
+                                                PaddingRight = "-1"
+                                                LayoutVerticalGravity="Center"
+                                                VerticalGravity="Center"
+                                                Orientation="Horizontal"
+                                                DuplicateParentState="true"
+                                                Clickable="true"
+                                                LeftTopSubBackground="@Drawable/active_bg_padding_DayNight"
+                                                ThumbDrawable="@Drawable/icon_Inactive_bg_day" />
+                                        </RelativeLayout>
+                                        <!--右边调大音量按钮-->
+                                        <ImageButton
+                                            Id="@+Id/LB_SOC_BtnVolumeAdd"
+                                            LayoutWidth="92"
+                                            LayoutHeight="92"
+                                            LayoutRightMargin="26"
+                                            LayoutCenterVertical="true"
+                                            LayoutAlignParentRight="true"
+                                            DuplicateParentState="true"
+                                            Background="@Drawable/h84_background_normal_clear_list"
+                                            Drawable="@Drawable/btn_add_Voice_com" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                                <!--UISOC电量文言-->
+                                <RelativeLayout
+                                    LayoutWidth="880"
+                                    LayoutHeight="180"
+                                    Clickable="true"
+                                    Visible="Visible"
+                                    LayoutTopMargin="10"
+                                    LayoutBottomMargin = "10"
+                                    Background="@Drawable/mixin_bg_normal_DayNight">
+                                    <RelativeLayout
+                                        LayoutWidth="880"
+                                        LayoutHeight="180"
+                                        Clickable="true"
+                                        Visible="Visible"
+                                        LayoutTopMargin="17">
+                                        <TextActor
+                                            LayoutWidth="687"
+                                            LayoutHeight="52"
+                                            LayoutLeftMargin="36"
+                                            LayoutTopMargin="8"
+                                            HorizontalGravity="Left"
+                                            VerticalGravity="Center"
+                                            PaddingTop="4"
+                                            Text="@String/MX_LANG_NAVI_CHARGING_SETTING_EV_BTN_UI_Value"
+                                            TextFont="@Font/UIFont34_Text_R"
+                                            TextColor="@Color/DayBlack_NightWhite"
+                                            SingleLine="true" />
+                                        <LinearLayout
+                                            LayoutWidth="WrapContent"
+                                            LayoutHeight="52"
+                                            LayoutTopMargin="10"
+                                            LayoutRightMargin = "58"
+                                            HorizontalGravity="Right"
+                                            Orientation="Horizontal"
+                                            LayoutAlignParentRight="true">
+                                            <TextActor
+                                                Id="@+Id/UI_SOC_Volume_Value"
+                                                LayoutWidth="WrapContent"
+                                                LayoutHeight="WrapContent"
+                                                PaddingTop="3"
+                                                TextFont="@Font/UIFont34_UIDigit_R"
+                                                TextColor="@Color/DayBlack_NightWhite" />
+                                            <TextActor
+                                                LayoutWidth="WrapContent"
+                                                LayoutHeight="WrapContent"
+                                                PaddingTop="5"
+                                                PaddingRight="1"
+                                                Text="%"
+                                                TextFont="@Font/UIFont34"
+                                                TextColor="@Color/DayBlack_NightWhite" />
+                                        </LinearLayout>
+                                    </RelativeLayout>
+                                <!--UISOC的滚动条布局-->
+                                    <!--音量BTN和音量条-->
+                                    <RelativeLayout
+                                        LayoutWidth="FillParent"
+                                        LayoutHeight="FillParent"
+                                        LayoutTopMargin="77"
+                                        LayoutLeftMargin="-18"
+                                        LayoutBottomMargin="4"
+                                        LayoutRightMargin="-4"
+                                        LayoutAlignParentRight="true"
+                                        LayoutAlignParentBottom="true">
+                                        <!--左边调小音量按钮-->
+                                        <ImageButton
+                                            Id="@+Id/UI_SOC_BtnVolumeSub"
+                                            LayoutWidth="92"
+                                            LayoutHeight="92"
+                                            LayoutLeftMargin="40"
+                                            LayoutTopMargin="-2"
+                                            LayoutCenterVertical="true"
+                                            LayoutAlignParentLeft="true"
+                                            DuplicateParentState="true"
+                                            Background="@Drawable/h84_background_normal_clear_list"
+                                            Drawable="@Drawable/btn_reduce_Voice_com" />
+                                        <!--音量条中间部分-->
+                                        <ImageActor
+                                            LayoutHeight="WrapContent"
+                                            LayoutWidth="616"
+                                            LayoutLeftMargin="150"
+                                            LayoutCenterVertical="true"
+                                            LayoutRightMargin="136"
+                                            LayoutAlignParentRight="true"
+                                            PaddingTop="2"
+                                            DuplicateParentState="true"
+                                            Background="@Drawable/inactive_bg_day_and_night" />
+                                        <RelativeLayout
+                                            LayoutWidth="WrapContent"
+                                            LayoutHeight="WrapContent"
+                                            LayoutCenterInParent="true">
+                                            <ActorInsideSliderCtrl
+                                                Id="@+Id/UI_SOC_SliderCtrl"
+                                                LayoutHeight="60"
+                                                LayoutWidth="664"
+                                                PaddingLeft = "8"
+                                                PaddingRight = "-1"
+                                                LayoutVerticalGravity="Center"
+                                                VerticalGravity="Center"
+                                                Orientation="Horizontal"
+                                                DuplicateParentState="true"
+                                                Clickable="true"
+                                                LeftTopSubBackground="@Drawable/active_bg_padding_DayNight"
+                                                ThumbDrawable="@Drawable/icon_Inactive_bg_day" />
+                                        </RelativeLayout>
+                                        <!--右边调大音量按钮-->
+                                        <ImageButton
+                                            Id="@+Id/UI_SOC_BtnVolumeAdd"
+                                            LayoutWidth="92"
+                                            LayoutHeight="92"
+                                            LayoutRightMargin="26"
+                                            LayoutCenterVertical="true"
+                                            LayoutAlignParentRight="true"
+                                            DuplicateParentState="true"
+                                            Background="@Drawable/h84_background_normal_clear_list"
+                                            Drawable="@Drawable/btn_add_Voice_com" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                                <!--RDSOC电量文言-->
+                                <RelativeLayout
+                                    LayoutWidth="880"
+                                    LayoutHeight="180"
+                                    Clickable="true"
+                                    Visible="Visible"
+                                    LayoutTopMargin="10"
+                                    LayoutBottomMargin = "10"
+                                    Background="@Drawable/mixin_bg_normal_DayNight">
+                                    <RelativeLayout
+                                        LayoutWidth="880"
+                                        LayoutHeight="180"
+                                        Clickable="true"
+                                        Visible="Visible"
+                                        LayoutTopMargin="17">
+                                        <TextActor
+                                            LayoutWidth="687"
+                                            LayoutHeight="52"
+                                            LayoutLeftMargin="36"
+                                            LayoutTopMargin="8"
+                                            HorizontalGravity="Left"
+                                            VerticalGravity="Center"
+                                            PaddingTop="4"
+                                            Text="@String/MX_LANG_NAVI_CHARGING_SETTING_EV_BTN_RD_Value"
+                                            TextFont="@Font/UIFont34_Text_R"
+                                            TextColor="@Color/DayBlack_NightWhite"
+                                            SingleLine="true" />
+                                        <LinearLayout
+                                            LayoutWidth="WrapContent"
+                                            LayoutHeight="52"
+                                            LayoutTopMargin="10"
+                                            LayoutRightMargin = "58"
+                                            HorizontalGravity="Right"
+                                            Orientation="Horizontal"
+                                            LayoutAlignParentRight="true">
+                                            <TextActor
+                                                Id="@+Id/RD_SOC_Volume_Value"
+                                                LayoutWidth="WrapContent"
+                                                LayoutHeight="WrapContent"
+                                                PaddingTop="3"
+                                                TextFont="@Font/UIFont34_UIDigit_R"
+                                                TextColor="@Color/DayBlack_NightWhite" />
+                                            <TextActor
+                                                LayoutWidth="WrapContent"
+                                                LayoutHeight="WrapContent"
+                                                PaddingTop="5"
+                                                PaddingRight="1"
+                                                Text="%"
+                                                TextFont="@Font/UIFont34"
+                                                TextColor="@Color/DayBlack_NightWhite" />
+                                        </LinearLayout>
+                                    </RelativeLayout>
+                                    <!--RDSOC的滚动条布局-->
+                                    <!--音量BTN和音量条-->
+                                    <RelativeLayout
+                                        LayoutWidth="FillParent"
+                                        LayoutHeight="FillParent"
+                                        LayoutTopMargin="77"
+                                        LayoutLeftMargin="-18"
+                                        LayoutBottomMargin="4"
+                                        LayoutRightMargin="-4"
+                                        LayoutAlignParentRight="true"
+                                        LayoutAlignParentBottom="true">
+                                        <!--左边调小音量按钮-->
+                                        <ImageButton
+                                            Id="@+Id/RD_SOC_BtnVolumeSub"
+                                            LayoutWidth="92"
+                                            LayoutHeight="92"
+                                            LayoutLeftMargin="40"
+                                            LayoutTopMargin="-2"
+                                            LayoutCenterVertical="true"
+                                            LayoutAlignParentLeft="true"
+                                            DuplicateParentState="true"
+                                            Background="@Drawable/h84_background_normal_clear_list"
+                                            Drawable="@Drawable/btn_reduce_Voice_com" />
+                                        <!--音量条中间部分-->
+                                        <ImageActor
+                                            LayoutHeight="WrapContent"
+                                            LayoutWidth="616"
+                                            LayoutLeftMargin="150"
+                                            LayoutCenterVertical="true"
+                                            LayoutRightMargin="136"
+                                            LayoutAlignParentRight="true"
+                                            PaddingTop="2"
+                                            DuplicateParentState="true"
+                                            Background="@Drawable/inactive_bg_day_and_night" />
+                                        <RelativeLayout
+                                            LayoutWidth="WrapContent"
+                                            LayoutHeight="WrapContent"
+                                            LayoutCenterInParent="true">
+                                            <ActorInsideSliderCtrl
+                                                Id="@+Id/RD_SOC_SliderCtrl"
+                                                LayoutHeight="60"
+                                                LayoutWidth="664"
+                                                PaddingLeft = "8"
+                                                PaddingRight = "-1"
+                                                LayoutVerticalGravity="Center"
+                                                VerticalGravity="Center"
+                                                Orientation="Horizontal"
+                                                DuplicateParentState="true"
+                                                Clickable="true"
+                                                LeftTopSubBackground="@Drawable/active_bg_padding_DayNight"
+                                                ThumbDrawable="@Drawable/icon_Inactive_bg_day" />
+                                        </RelativeLayout>
+                                        <!--右边调大音量按钮-->
+                                        <ImageButton
+                                            Id="@+Id/RD_SOC_BtnVolumeAdd"
+                                            LayoutWidth="92"
+                                            LayoutHeight="92"
+                                            LayoutRightMargin="26"
+                                            LayoutCenterVertical="true"
+                                            LayoutAlignParentRight="true"
+                                            DuplicateParentState="true"
+                                            Background="@Drawable/h84_background_normal_clear_list"
+                                            Drawable="@Drawable/btn_add_Voice_com" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                                <!--ACSOC电量文言-->
+                                <RelativeLayout
+                                    LayoutWidth="880"
+                                    LayoutHeight="180"
+                                    Clickable="true"
+                                    Visible="Visible"
+                                    LayoutTopMargin="10"
+                                    LayoutBottomMargin = "10"
+                                    Background="@Drawable/mixin_bg_normal_DayNight">
+                                    <RelativeLayout
+                                        LayoutWidth="880"
+                                        LayoutHeight="180"
+                                        Clickable="true"
+                                        Visible="Visible"
+                                        LayoutTopMargin="17">
+                                        <TextActor
+                                            LayoutWidth="709"
+                                            LayoutHeight="52"
+                                            LayoutLeftMargin="36"
+                                            LayoutTopMargin="8"
+                                            HorizontalGravity="Left"
+                                            VerticalGravity="Center"
+                                            PaddingTop="4"
+                                            Text="@String/MX_LANG_NAVI_CHARGING_SETTING_EV_BTN_ACS_Value"
+                                            TextFont="@Font/UIFont34_Text_R"
+                                            TextColor="@Color/DayBlack_NightWhite"
+                                            SingleLine="true" />
+                                        <LinearLayout
+                                            LayoutWidth="WrapContent"
+                                            LayoutHeight="52"
+                                            LayoutTopMargin="10"
+                                            LayoutRightMargin = "58"
+                                            HorizontalGravity="Right"
+                                            Orientation="Horizontal"
+                                            LayoutAlignParentRight="true">
+                                            <TextActor
+                                                Id="@+Id/ACS_SOC_Volume_Value"
+                                                LayoutWidth="WrapContent"
+                                                LayoutHeight="WrapContent"
+                                                PaddingTop="3"
+                                                TextFont="@Font/UIFont34_UIDigit_R"
+                                                TextColor="@Color/DayBlack_NightWhite" />
+                                            <TextActor
+                                                LayoutWidth="WrapContent"
+                                                LayoutHeight="WrapContent"
+                                                PaddingTop="5"
+                                                PaddingRight="1"
+                                                Text="%"
+                                                TextFont="@Font/UIFont34"
+                                                TextColor="@Color/DayBlack_NightWhite" />
+                                        </LinearLayout>
+                                    </RelativeLayout>
+                                    <!--ACSOC的滚动条布局-->
+                                    <!--音量BTN和音量条-->
+                                    <RelativeLayout
+                                        LayoutWidth="FillParent"
+                                        LayoutHeight="FillParent"
+                                        LayoutTopMargin="77"
+                                        LayoutLeftMargin="-18"
+                                        LayoutBottomMargin="4"
+                                        LayoutRightMargin="-4"
+                                        LayoutAlignParentRight="true"
+                                        LayoutAlignParentBottom="true">
+                                        <!--左边调小音量按钮-->
+                                        <ImageButton
+                                            Id="@+Id/ACS_SOC_BtnVolumeSub"
+                                            LayoutWidth="92"
+                                            LayoutHeight="92"
+                                            LayoutLeftMargin="40"
+                                            LayoutTopMargin="-2"
+                                            LayoutCenterVertical="true"
+                                            LayoutAlignParentLeft="true"
+                                            DuplicateParentState="true"
+                                            Background="@Drawable/h84_background_normal_clear_list"
+                                            Drawable="@Drawable/btn_reduce_Voice_com" />
+                                        <!--音量条中间部分-->
+                                        <ImageActor
+                                            LayoutHeight="WrapContent"
+                                            LayoutWidth="616"
+                                            LayoutLeftMargin="150"
+                                            LayoutCenterVertical="true"
+                                            LayoutRightMargin="136"
+                                            LayoutAlignParentRight="true"
+                                            PaddingTop="2"
+                                            DuplicateParentState="true"
+                                            Background="@Drawable/inactive_bg_day_and_night" />
+                                        <RelativeLayout
+                                            LayoutWidth="WrapContent"
+                                            LayoutHeight="WrapContent"
+                                            LayoutCenterInParent="true">
+                                            <ActorInsideSliderCtrl
+                                                Id="@+Id/ACS_SOC_SliderCtrl"
+                                                LayoutHeight="60"
+                                                LayoutWidth="664"
+                                                PaddingLeft = "8"
+                                                PaddingRight = "-1"
+                                                LayoutVerticalGravity="Center"
+                                                VerticalGravity="Center"
+                                                Orientation="Horizontal"
+                                                DuplicateParentState="true"
+                                                Clickable="true"
+                                                LeftTopSubBackground="@Drawable/active_bg_padding_DayNight"
+                                                ThumbDrawable="@Drawable/icon_Inactive_bg_day" />
+                                        </RelativeLayout>
+                                        <!--右边调大音量按钮-->
+                                        <ImageButton
+                                            Id="@+Id/ACS_SOC_BtnVolumeAdd"
+                                            LayoutWidth="92"
+                                            LayoutHeight="92"
+                                            LayoutRightMargin="26"
+                                            LayoutCenterVertical="true"
+                                            LayoutAlignParentRight="true"
+                                            DuplicateParentState="true"
+                                            Background="@Drawable/h84_background_normal_clear_list"
+                                            Drawable="@Drawable/btn_add_Voice_com" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </UIScrollViewEx>
+                        <ScrollViewBar
+                            Id="@Id/PreDefine/ScrollViewBar"
+                            LayoutHeight="654"
+                            LayoutWidth="30"
+                            LayoutAlignParentRight="true"
+                            LayoutTopMargin="6"
+                            LayoutRightMargin="2"
+                            ScrollBarLayout="@Layout/CActorScrollbarNewThirty" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@Id/PreDefine/LayoutParent"
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent">
+        <TransparencyActor
+            Id="@+Id/TransparencyScreen"
+            LayoutHeight="FillParent"
+            LayoutWidth="FillParent" />
+        <Function
+            Id="@+Id/Fragment_RouteInitialGuidance"
+            LayoutHeight="FillParent"
+            LayoutWidth="FillParent" />
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <RelativeLayout
+				Id = "@+Id/Animator"
+				LayoutHeight = "FillParent"
+				LayoutWidth = "FillParent">
+            <!-- 限行部品 -->
+            <RelativeLayout
+                LayoutHeight="FillParent"
+                LayoutWidth="FillParent"
+                LayoutRightMargin="-4"
+                LayoutLeftMargin="564">
+                <RelativeLayout
+                    Id="@Id/PreDefine/Restriction_Layout"
+                    LayoutHeight="WrapContent"
+                    LayoutWidth="884"
+                    LayoutCenterHorizontal="true"
+                    LayoutTopMargin="78"
+                    PaddingBottom = "68"
+                    Clickable="true"
+                    Background="@Drawable/popup_toast_bg"
+                    Visible="Gone">
+                    <TextActor
+                        Id="@Id/PreDefine/Text_Restriction"
+                        LayoutWidth="688"
+                        LayoutHeight="104"
+                        LayoutCenterInParent="true"
+                        PaddingTop="73"
+                        SingleLine="false"
+                        VerticalGravity="Center"
+                        HorizontalGravity="Left"
+                        LineIntervalAddFactor="-6"
+                        LineIntervalMultiFactor="0.1"
+                        TextFont="@Font/UIFont34_Text_L"
+                        TextColor="@Color/DayBlack_NightWhite" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <!--避开限行-->
+            <RelativeLayout
+                Id="@Id/PreDefine/AvoidRestriction_Layout"
+                LayoutWidth="705"
+                LayoutHeight="WrapContent"
+                LayoutTopMargin="87"
+                LayoutLeftMargin="703"
+                Visible="Gone"
+                Background="@Drawable/popup_toast_bg"
+                VisibleSpeechs="@String/MX_LANG_NAVI_ROUTE_SELECTION_RESTRICTION_REMIND3_VisibleSpeechs_01"
+                Clickable="true">
+                <ImageButton
+                    Id="@Id/PreDefine/BTN_Route_Restriction_Info"
+                    LayoutWidth="41"
+                    LayoutHeight="41"
+                    LayoutLeftMargin="583"
+                    LayoutTopMargin="53"
+                    Background="@Drawable/btn_h48_Avoid_normal_prox"
+                    BGHorizontalGravity="Center"
+                    BGVerticalGravity="Center"
+                    VisibleSpeechs="@String/MX_LANG_NAVI_ROUTE_SELECTION_RESTRICTION_REMIND3_VisibleSpeechs_01"
+                    ClickDataCollection="BTN_Route_Restriction_Info" />
+                <TextActor
+                    LayoutHeight="WrapContent"
+                    LayoutWidth="WrapContent"
+                    LayoutLeftMargin="137"
+                    LayoutRightMargin="108"
+                    LayoutTopMargin="51"
+                    LayoutBottomMargin="52"
+                    PaddingTop="5"
+                    SingleLine="false"
+                    WordWrapped="true"
+                    LineIntervalAddFactor="0"
+                    HorizontalGravity="Center"
+                    TextColor="@Color/DayBlack_NightWhite"
+                    TextFont="@Font/UIFont34_Text_L"
+                    Text="@String/MX_LANG_NAVI_ROUTE_SELECTION_RESTRICTION_REMIND3_" />
+            </RelativeLayout>
+            <LinearLayout
+				Id = "@+Id/SceneCare_Layout2"
+				LayoutWidth = "864"
+                LayoutRightMargin = "-4"
+				LayoutHeight = "WrapContent"
+				VerticalGravity="Center"
+				LayoutTopMargin = "78"
+				LayoutAlignParentRight = "true"
+				Visible = "Gone"
+				Background = "@Drawable/popup_toast_bg"
+				Clickable = "true"
+				Orientation = "Vertical">
+				<TextActor
+					Id = "@+Id/SceneCare_Text2"       
+					LayoutWidth = "688"
+					LayoutHeight = "WrapContent"
+					LayoutLeftMargin = "88"
+					LayoutTopMargin = "66"
+					LineIntervalMultiFactor="0.0"
+					LineIntervalAddFactor = "-1"
+					TextColor = "@Color/DayBlack_NightWhite"             
+					TextFont="@Font/UIFont34_Text_L"
+					SingleLine="false"
+					HorizontalGravity="Left"
+					WordWrapped="true"/>
+				<RelativeLayout
+					Id = "@+Id/BtnChargingRoute"
+					LayoutWidth = "322"
+					LayoutHeight = "116"
+					LayoutTopMargin = "1"
+					LayoutLeftMargin = "488"
+					LayoutBottomMargin = "48"
+					Clickable = "true">
+					<ImageActor
+						LayoutWidth = "358"
+						LayoutHeight = "152"
+						LayoutTopMargin="-18"			
+						LayoutBottomMargin="-18"
+						LayoutRightMargin="-18"
+						LayoutLeftMargin="-18"
+						BGHorizontalGravity="Center"
+						BGVerticalGravity="Center"
+						Background = "@Drawable/background_84h_normal_view_raised"
+						DuplicateParentState = "true"/>
+					<TextActor
+						LayoutWidth = "FillParent"
+						LayoutHeight = "FillParent"
+						LayoutTopMargin = "3"
+						PaddingTop = "2"
+						PaddingLeft = "-2"
+						HorizontalGravity = "Center"
+						DuplicateParentState = "true"
+						TextFont = "@Font/BtnFont34_N_TextL_P_TextM_C_TextM_D_TextL"
+						TextColor = "@Color/NormalBtn_RGB"
+						Text = "@String/MX_LANG_NAVI_ROUTE_SELECTION_CHARGING_EV3_BTN_Charging_Route"/>				
+				</RelativeLayout>
+			</LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                Id="@+Id/RLayout_With_Guidance_Left_Part"
+                LayoutWidth="WrapContent"
+                LayoutHeight="FillParent"
+                LayoutLeftMargin="5">
+                <!--路线剩余信息-->
+                <RelativeLayout
+                    Id="@Id/PreDefine/LayoutRouteInfo"
+                    LayoutWidth="620"
+                    LayoutHeight="164"
+                    LayoutLeftMargin="-23"
+                    LayoutBottomMargin="94"
+                    LayoutAlignParentBottom="true"
+                    Clickable="true"
+                    Background="@Drawable/card_bgNew"
+                    Visible="Gone">
+                    <!--停止引导BTN-->
+                    <RelativeLayout
+                        Id="@Id/PreDefine/RouteInfo_BtnStopGuide"
+                        LayoutWidth="132"
+                        LayoutHeight="132"
+                        LayoutLeftMargin="12"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_ROUTE_INITIAL_GUIDANCE_OPERATE_VisibleSpeechs_02"
+                        Clickable="true">
+                        <ImageActor
+                            LayoutWidth="48"
+                            LayoutHeight="48"
+                            LayoutCenterHorizontal="true"
+                            LayoutTopMargin="46"
+                            DuplicateParentState="true"
+                            Drawable="@Drawable/exit_48"
+                            ClickDataCollection="BTN_Stop_Guidance" />
+                        <TextActor
+                            LayoutWidth="FillParent"
+                            LayoutHeight="40"
+                            LayoutCenterHorizontal="true"
+                            LayoutBottomMargin="1"
+                            LayoutAlignParentBottom="true"
+                            TextColor="@Color/Color_D0021B"
+                            DuplicateParentState="true"
+                            TextFont="@Font/BtnFont20_N_TextL_P_TextM_C_TextM_D_TextL"
+                            Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_OPERATE_TEXT_Exit" />
+                        <ImageActor
+                            LayoutWidth="2"
+                            LayoutHeight="56"
+                            LayoutLeftMargin="110"
+                            LayoutTopMargin="54"
+                            Drawable="@Drawable/citylist_line" />
+                    </RelativeLayout>
+                    <!--剩余信息显示 (距离/时间/预计到达时间)-->
+                    <RelativeLayout
+                        LayoutWidth="356"
+                        LayoutHeight="104"
+                        LayoutLeftMargin="120"
+                        LayoutTopMargin="32">
+                        <LinearLayout
+                            LayoutWidth="FillParent"
+                            LayoutHeight="40"
+                            LayoutTopMargin="10"
+                            LayoutLeftMargin="7"
+                            HorizontalGravity="Center">
+                            <LinearLayout
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="40"
+                                HorizontalGravity="Right">
+                                <!--剩余距离:"9999"-->
+                                <TextActor
+                                    Id="@Id/PreDefine/RouteInfo_RestDistance"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="40"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    DuplicateParentState="true"
+                                    PaddingTop="4"
+                                    TextFont="@Font/UIFont34_Text_R" />
+                                <!--剩余距离单位:"km" or "m"-->
+                                <TextActor
+                                    Id="@Id/PreDefine/RouteInfo_Unit"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="40"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    DuplicateParentState="true"
+                                    PaddingLeft="2"
+                                    PaddingTop="4"
+                                    HorizontalGravity="Right"
+                                    TextFont="@Font/UIFont34_Text_L" />
+                            </LinearLayout>
+                            <LinearLayout
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="40"
+                                LayoutLeftMargin="36"
+                                Orientation="Horizontal"
+                                HorizontalGravity="Left">
+                                <!--剩余时间(23h59min->23)-->
+                                <TextActor
+                                    Id="@Id/PreDefine/RouteInfo_HourNum"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="40"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    DuplicateParentState="true"
+                                    PaddingLeft="1"
+                                    PaddingTop="4"
+                                    TextFont="@Font/UIFont34_Text_R" />
+                                <!--预计剩余时间(23h59min->h)-->
+                                <TextActor
+                                    Id="@Id/PreDefine/RouteInfo_HourUnit"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="40"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    DuplicateParentState="true"
+                                    PaddingTop="4"
+                                    PaddingLeft="1"
+                                    TextFont="@Font/UIFont34_Text_L"
+                                    Text="h" />
+                                <TextActor
+                                    Id="@Id/PreDefine/RouteInfo_MinNum"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="40"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    DuplicateParentState="true"
+                                    PaddingTop="4"
+                                    PaddingLeft="1"
+                                    TextFont="@Font/UIFont34_Text_R" />
+                                <TextActor
+                                    Id="@Id/PreDefine/RouteInfo_MinUnit"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="40"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    DuplicateParentState="true"
+                                    PaddingTop="4"
+                                    PaddingLeft="1"
+                                    TextFont="@Font/UIFont34_Text_L"
+                                    Text="min" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!--第二行 预计到达时间-->
+                        <LinearLayout
+                            LayoutHeight="63"
+                            LayoutWidth="FillParent"
+                            LayoutTopMargin="41"
+                            LayoutLeftMargin="4"
+                            HorizontalGravity="Center">
+                            <!--预计到达时间 16:30-->
+                            <TextActor
+                                Id="@Id/PreDefine/RouteInfo_ArriveTime"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="40"
+                                LayoutTopMargin="9"
+                                Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_OPERATE_TEXT_Route_Info_Time"
+                                PaddingTop="4"
+                                TextColor="@Color/DayBlackAlpha70_NightWhiteAlpha60"
+                                LayoutAlignParentRight="true"
+                                DuplicateParentState="true"
+                                TextFont="@Font/UIFont34_Text_R" />
+                            <!--到达时间超过一天时-->
+                            <TextActor
+                                Id="@Id/PreDefine/RouteInfo_ArriveDay"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="40"
+                                HorizontalGravity="Left"
+                                PaddingLeft = "3"
+                                Text="+10"
+                                TextColor="@Color/DayBlackAlpha60_NightWhiteAlpha60"
+                                DuplicateParentState="true"
+                                TextFont="@Font/UIFont22_Text_L" />
+                            <!--固定显示arrival-->
+                            <TextActor
+                                Id="@+Id/RouteInfo_ArriveText"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="40"
+                                LayoutLeftMargin="14"
+                                LayoutTopMargin="10"
+                                Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_OPERATE_TEXT_Route_Info_Arrival"
+                                PaddingTop="3"
+                                TextColor="@Color/DayBlackAlpha60_NightWhiteAlpha60"
+                                DuplicateParentState="true"
+                                TextFont="@Font/UIFont34_Text_L" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!--展开View list-->
+                    <RelativeLayout
+                        Id="@Id/PreDefine/RouteInfo_BtnMore"
+                        LayoutWidth="132"
+                        LayoutHeight="132"
+                        LayoutAlignParentRight="true"
+                        LayoutRightMargin="20"
+                        Clickable="true"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_DISPLAY_VisibleSpeechs_01"
+                        ClickDataCollection="BTN_More">
+                        <ImageActor
+                            LayoutWidth="80"
+                            LayoutHeight="80"
+                            LayoutTopMargin="30"
+                            LayoutLeftMargin="2"
+                            LayoutCenterHorizontal="true"
+                            Drawable="@Drawable/arrow_up_icon_routeinfo"
+                            DuplicateParentState="true" />
+                        <TextActor
+                            LayoutWidth="FillParent"
+                            LayoutHeight="40"
+                            LayoutAlignParentBottom="true"
+                            LayoutBottomMargin="1"
+                            PaddingLeft="1"
+                            LayoutCenterHorizontal="true"
+                            DuplicateParentState="true"
+                            TextColor="@Color/BtnRouteInfoColor"
+                            TextFont="@Font/BtnFont20_N_TextL_P_TextM_C_TextM_D_TextL"
+                            Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_OPERATE_TEXT_More" />
+                        <ImageActor
+                            LayoutWidth="2"
+                            LayoutHeight="56"
+                            LayoutLeftMargin="12"
+                            LayoutTopMargin="54"
+                            Drawable="@Drawable/citylist_line" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+            <!-- TEXT_Route_Remind -->
+            <RelativeLayout
+                LayoutHeight="FillParent"
+                LayoutWidth="FillParent"
+                LayoutLeftMargin="564">
+                <LinearLayout
+                    Id = "@+Id/LayoutRouteRemind"
+                    LayoutWidth = "864"
+                    LayoutHeight = "WrapContent"
+                    LayoutTopMargin="78"
+                    LayoutCenterHorizontal="true"
+                    LayoutRightMargin = "-4"
+                    Clickable = "true"
+                    Orientation = "Vertical"
+                    Background = "@Drawable/popup_toast_bg"
+                    Visible = "Gone"> 
+                    <LinearLayout
+                        Id = "@+Id/LayoutRouteRemind1"
+                        LayoutWidth = "FillParent"
+                        LayoutHeight = "WrapContent"
+                        Clickable="false"
+                        Orientation = "Vertical"
+                        Background = "@Drawable/popup_toast_clear_bg"
+                        Visible = "Visible">
+                        <ImageActor
+                            LayoutWidth = "FillParent"
+                            LayoutHeight = "53"/>
+                        <RelativeLayout
+                            LayoutWidth = "FillParent"
+                            DuplicateParentState="true"
+                            LayoutHeight = "WrapContent">
+                            <TextActor
+                                Id = "@+Id/TextRouteRemind1"
+                                LayoutWidth = "688"
+                                LayoutHeight = "WrapContent"
+                                MaxFormatHeight = "80"
+                                LayoutTopMargin = "15"
+                                LayoutLeftMargin="88"
+                                SingleLine = "false"
+                                Visible = "Gone"
+                                HorizontalGravity="Left"
+                                LineIntervalAddFactor="-6"
+                                LineIntervalMultiFactor="0.1"
+                                DuplicateParentState="true"
+                                Text = "@String/MX_LANG_NAVI_ROUTE_SELECTION_REMIND1_TEXT_Route_Remind2"
+                                TextFont = "@Font/UIFont34_Text_L"
+                                TextColor = "@Color/NormalBtn"/>
+                            <TextActor
+                                Id = "@+Id/TextRemindSmall"
+                                LayoutWidth = "628"
+                                LayoutHeight = "40"
+                                LayoutTopMargin = "15"
+                                LayoutLeftMargin="88"
+                                SingleLine = "true"
+                                WordWrapped = "true"
+                                HorizontalGravity="Left"
+                                LineIntervalAddFactor="-6"
+                                DuplicateParentState="true"
+                                LineIntervalMultiFactor="0.1"
+                                Text = "@String/MX_LANG_NAVI_ROUTE_SELECTION_REMIND1_TEXT_Route_Remind2"
+                                TextFont = "@Font/UIFont34_Text_L"
+                                TextColor = "@Color/NormalBtn"/>
+                            <TextActor
+								Id = "@+Id/TextRemindBig"
+								LayoutWidth = "688"
+                                LayoutHeight = "WrapContent"
+                                LayoutTopMargin = "15"
+                                LayoutLeftMargin="88"
+                                SingleLine = "false"
+                                WordWrapped = "true"
+                                HorizontalGravity="Left"
+                                LineIntervalAddFactor="-6"
+                                DuplicateParentState="true"
+                                LineIntervalMultiFactor="0.1"
+                                Text = "@String/MX_LANG_NAVI_ROUTE_SELECTION_REMIND1_TEXT_Route_Remind2"
+                                TextFont = "@Font/UIFont34_Text_L"
+                                TextColor = "@Color/NormalBtn"/>
+                            <ImageActor
+                                LayoutWidth = "540"
+                                LayoutBelow = "@Id/TextRouteRemind1"
+                                LayoutLeftMargin="88"
+                                LayoutHeight = "10"/>
+                            <TextActor
+                                Id = "@+Id/NumberRouteRemind"
+                                LayoutWidth = "64"
+                                LayoutHeight = "64"
+                                LayoutLeftMargin = "716"
+                                Visible = "Invisible"
+                                PaddingLeft="1"
+                                LayoutTopMargin = "2"
+                                PaddingTop = "4"
+                                LayoutAlignParentTop = "true"
+                                HorizontalGravity = "Center"
+                                VerticalGravity = "Center"
+                                TextFont = "@Font/UIFont34_Text_R"
+                                Background = "@Drawable/general_message64"
+                                TextColor = "@Color/Color_FFFFFF"/>
+                            <ImageButton
+                                Id="@Id/PreDefine/BTN_Route_Restriction_Info1"
+                                LayoutWidth="41"
+                                LayoutHeight="41"
+                                LayoutLeftMargin="712"
+                                LayoutTopMargin="16"
+                                Visible = "Gone"
+                                Background="@Drawable/btn_h48_Avoid_normal_prox"
+                                BGHorizontalGravity="Center"
+                                BGVerticalGravity="Center"
+                                ClickDataCollection="BTN_Route_Restriction_Info"/>
+                        </RelativeLayout>
+                        <ImageActor
+                            LayoutWidth = "FillParent"
+                            LayoutHeight = "53"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        Id = "@+Id/LayoutRouteRemind2"
+                        LayoutWidth = "FillParent"
+                        LayoutHeight = "WrapContent"
+                        Orientation = "Vertical"
+                        LayoutTopMargin = "-36"
+                        LayoutBelow ="@Id/LayoutRouteRemind1"
+                        Visible = "Gone">
+                        <ImageActor
+                            LayoutWidth = "796"
+                            LayoutHeight = "2"
+                            LayoutLeftMargin = "34"
+                            Background = "@Drawable/card_list_line"/>
+                        <ImageActor
+                            LayoutWidth = "FillParent"
+                            LayoutHeight = "28"/>
+                        <RelativeLayout
+                            LayoutWidth = "FillParent"
+                            DuplicateParentState="true"
+                            LayoutHeight = "WrapContent">
+                            <TextActor
+                                Id = "@+Id/TextRouteRemind2"
+                                LayoutWidth = "688"
+                                LayoutHeight = "WrapContent"
+                                MaxFormatHeight = "80"
+                                LayoutLeftMargin = "88"
+                                SingleLine = "false"
+                                WordWrapped = "true"
+                                LayoutTopMargin = "6"
+                                DuplicateParentState="true"
+                                HorizontalGravity="Left"
+                                LineIntervalAddFactor="-6"
+                                LineIntervalMultiFactor="0.1"
+                                Text = "@String/MX_LANG_NAVI_ROUTE_SELECTION_REMIND1_TEXT_Route_Remind5"
+                                TextFont = "@Font/UIFont34_Text_L"
+                                TextColor = "@Color/NormalBtn"/>
+                            <ImageButton
+                                Id="@Id/PreDefine/BTN_Route_Restriction_Info2"
+                                LayoutWidth="41"
+                                LayoutHeight="41"
+                                LayoutLeftMargin="712"
+                                LayoutTopMargin="7"
+                                Visible = "Gone"
+                                Background="@Drawable/btn_h48_Avoid_normal_prox"
+                                BGHorizontalGravity="Center"
+                                BGVerticalGravity="Center"
+                                ClickDataCollection="BTN_Route_Restriction_Info"/>
+                        </RelativeLayout>
+                        <ImageActor
+                            LayoutWidth = "FillParent"
+                            LayoutHeight = "61"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        Id = "@+Id/LayoutRouteRemind3"
+                        LayoutWidth = "FillParent"
+                        LayoutHeight = "WrapContent"
+                        LayoutTopMargin ="-34"
+                        Orientation = "Vertical"
+                        Visible = "Gone">
+                        <ImageActor
+                            LayoutWidth = "796"
+                            LayoutHeight = "2"
+                            LayoutLeftMargin = "34"
+                            Background = "@Drawable/card_list_line"/>
+                        <ImageActor
+                            LayoutWidth = "FillParent"
+                            LayoutHeight = "28"/>
+                        <RelativeLayout
+                            LayoutWidth = "FillParent"
+                            DuplicateParentState="true"
+                            LayoutHeight = "WrapContent">
+                            <TextActor
+                                Id = "@+Id/TextRouteRemind3"
+                                LayoutWidth = "688"
+                                LayoutHeight = "WrapContent"
+                                LayoutLeftMargin = "88"
+                                LayoutTopMargin = "6"
+                                SingleLine = "false"
+                                WordWrapped = "true"
+                                DuplicateParentState="true"
+                                HorizontalGravity="Left"
+                                LineIntervalAddFactor="-6"
+                                LineIntervalMultiFactor="0.1"
+                                Text = "@String/MX_LANG_NAVI_ROUTE_SELECTION_REMIND1_TEXT_Route_Remind6"
+                                TextFont = "@Font/UIFont34_Text_L"
+                                TextColor = "@Color/NormalBtn"/>
+                            <ImageButton
+                                Id="@Id/PreDefine/BTN_Route_Restriction_Info3"
+                                LayoutWidth="41"
+                                LayoutHeight="41"
+                                LayoutLeftMargin="712"
+                                LayoutTopMargin="7"
+                                Visible = "Gone"
+                                Background="@Drawable/btn_h48_Avoid_normal_prox"
+                                BGHorizontalGravity="Center"
+                                BGVerticalGravity="Center"
+                                ClickDataCollection="BTN_Route_Restriction_Info"/>
+                        </RelativeLayout>
+                        <ImageActor
+                            LayoutWidth = "FillParent"
+                            LayoutHeight = "63"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+        <!--回自车 hero btn -->
+        <RelativeLayout
+            Id="@Id/PreDefine/CenterLayoutParent"
+            LayoutHeight="FillParent"
+            LayoutWidth="1314"
+            LayoutAlignParentRight="true"
+            Clickable="false">
+            <!--回自车 hero btn -->
+            <RelativeLayout
+                Id="@Id/PreDefine/ReturnCCP"
+                LayoutWidth="WrapContent"
+                LayoutHeight="164"
+                LayoutCenterHorizontal="true"
+                LayoutAlignParentBottom="true"
+                LayoutBottomMargin="94"
+                Visible = "Gone"
+                Background="@Drawable/background_96h_hero_prox_day_shadows">
+                <RelativeLayout
+                    LayoutTopMargin="6"
+                    Id="@Id/PreDefine/BtnReturnCCP"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="164"
+                    LayoutLeftMargin="18"
+                    LayoutRightMargin="18"
+                    LayoutCenterInParent="true"
+                    Clickable="true">
+                    <LinearLayout
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="104"
+                        LayoutLeftMargin="12"
+                        LayoutRightMargin="12"
+                        LayoutCenterInParent="true"
+                        DuplicateParentState="true"
+                        Background="@Drawable/Gradient_background_96h_hero_prox">
+                        <ImageActor
+                            LayoutLeftMargin="28"
+                            LayoutCenterVertical="true"
+                            DuplicateParentState="true"
+                            Drawable="@Drawable/back_to_destination_day" />
+                        <!--占位-->
+                        <ImageActor
+                            Id="@Id/PreDefine/SpaceBefore"
+                            LayoutWidth="2"
+                            LayoutHeight="FillParent"
+                            Visible="Gone" />
+                        <TextActor
+                            Id="@Id/PreDefine/TxtReturnCCP"
+                            LayoutHeight="FillParent"
+                            LayoutWidth="WrapContent"
+                            LayoutLeftMargin="8"
+                            LayoutRightMargin="47"
+                            PaddingTop="4"
+                            DuplicateParentState="true"
+                            Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_OPERATE_BTN_Continue_Guide"
+                            TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                            TextColor="@Color/HeroBtnText_RGB" />
+                        <!--占位-->
+                        <ImageActor
+                            Id="@Id/PreDefine/SpaceAfter"
+                            LayoutWidth="2"
+                            LayoutHeight="FillParent"
+                            Visible="Gone" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

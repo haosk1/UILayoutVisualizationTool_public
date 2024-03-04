@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <DayNightStateList>
+<!--Day-->
+		<Item DayOrNight = "Day" Drawable = "@Drawable/navi_small_display_btn_permanent_ar_day"/>
+<!--Night-->
+		<Item DayOrNight = "Night" Drawable = "@Drawable/navi_small_display_btn_permanent_ar_night"/>
+    </DayNightStateList>
+</Resource>

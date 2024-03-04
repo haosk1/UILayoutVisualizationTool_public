@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="516"
+        LayoutHeight="168"
+        Background="@Drawable/speed_big_516_limit_bg"
+        DuplicateParentState="true">
+        <RelativeLayout
+            Id="@Id/PreDefine/Img_AverageSpeed_BG"
+            LayoutWidth="120"
+            LayoutHeight="120"
+            LayoutLeftMargin="32"
+            LayoutTopMargin="25"
+            Background="@Drawable/speed_limit_bg_96">
+            <!--限速文言-->
+            <TextActor
+                Id="@Id/PreDefine/Img_SpeedLimitValue_BigPattern"
+                LayoutWidth="FillParent"
+                LayoutHeight="FillParent"
+                LayoutCenterHorizontal="true"
+                PaddingTop="2"
+                TextFont="@Font/UIFont42_UIDigit_M"
+                TextColor="@Color/Color_000000" />
+        </RelativeLayout>
+        <!--实际车速-->
+        <TextActor
+            Id="@Id/PreDefine/Img_AverageSpeed_BigPattern"
+            LayoutWidth="WrapContent"
+            LayoutHeight="70"
+            LayoutRightMargin="278"
+            LayoutTopMargin="33"
+            LayoutAlignParentRight="true"
+            HorizontalGravity="Right"
+            TextFont="@Font/UIFont46_UIDigit_R"
+            TextColor="@Color/SpeedLimit_Value_Color" />
+        <!--实际车速单位-->
+        <TextActor
+            Id="@Id/PreDefine/Img_AverageSpeed_Unit"
+            LayoutWidth="74"
+            LayoutHeight="48"
+            LayoutRightMargin="202"
+            LayoutTopMargin="51"
+            LayoutAlignParentRight="true"
+            HorizontalGravity="Left"
+            Text="km/h"
+            TextFont="@Font/UIFont28_Text_L"
+            TextColor="@Color/SpeedLimit_Unit_Color" />
+        <!--实际平均速度说明文言-->
+        <TextActor
+            LayoutWidth="165"
+            LayoutHeight="48"
+            LayoutRightMargin="192"
+            LayoutBottomMargin="27"
+            LayoutAlignParentRight="true"
+            LayoutAlignParentBottom="true"
+            Text="@String/MX_LANG_Detail_Description_SYMBOL_Kanban_TEXT_Average_Speed"
+            TextFont="@Font/UIFont28_Text_L"
+            TextColor="@Color/DayBlackAlpha70_NightWhiteAlpha60" />
+        <!--限速区域剩余距离-->
+        <TextActor
+            Id="@Id/PreDefine/Img_RemainDist_BigPattern"
+            LayoutLeftOf = "@Id/PreDefine/Img_RemainDist_Unit"
+            LayoutRightMargin = "2"
+            LayoutWidth="WrapContent"
+            LayoutHeight="70"
+            LayoutTopMargin="33"
+            HorizontalGravity="Right"
+            TextFont="@Font/UIFont46_UIDigit_R"
+            TextColor="@Color/DayBlack_NightWhite" />
+        <!--限速区域剩余距离单位-->
+        <TextActor
+            Id="@Id/PreDefine/Img_RemainDist_Unit"
+            LayoutWidth="WrapContent"
+            LayoutHeight="48"
+            LayoutRightMargin="62"
+            LayoutTopMargin="51"
+            LayoutAlignParentRight="true"
+            HorizontalGravity="Left"
+            TextFont="@Font/UIFont28_Text_L"
+            TextColor="@Color/DayBlack_NightWhite" />
+        <!--限速区域剩余距离说明-->
+        <TextActor
+            LayoutWidth="WrapContent"
+            LayoutHeight="48"
+            LayoutRightMargin="69"
+            LayoutBottomMargin="27"
+            LayoutAlignParentRight="true"
+            LayoutAlignParentBottom="true"
+            Text="@String/MX_LANG_Detail_Description_SYMBOL_Kanban_TEXT_Surplus_Distance"
+            TextFont="@Font/UIFont28_Text_L"
+            TextColor="@Color/DayBlackAlpha70_NightWhiteAlpha60" />
+    </RelativeLayout>
+</Resource>

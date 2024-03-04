@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <ScaleDrawableRectCustomStateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false"  PaddingRight = "-2" PaddingLeft = "-6" PaddingBottom = "5"  Drawable = "@Drawable/bg_prox_night"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true"  PaddingRight = "-2" PaddingLeft = "-6" PaddingBottom = "5"  Drawable = "@Drawable/bg_prox_night"/>
+    </ScaleDrawableRectCustomStateList>
+</Resource>

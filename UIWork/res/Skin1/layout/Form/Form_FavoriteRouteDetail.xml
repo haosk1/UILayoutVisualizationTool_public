@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@Id/PreDefine/RealtiveMain"
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent">
+        <TransparencyActor
+            Id="@+Id/TransparencyScreen"
+            LayoutHeight="FillParent"
+            LayoutWidth="FillParent" />
+        <!--HMI界面布局部分，此元器件LayoutWidth表示半屏尺寸-->
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <!--左侧布局-->
+            <LinearLayout
+                Id="@Id/PreDefine/LinearLayout_Main"
+                LayoutHeight="FillParent"
+                LayoutWidth="WrapContent">
+                <RelativeLayout
+                    Id="@+Id/RealtiveMain"
+                    LayoutWidth="724"
+                    LayoutHeight="872"
+                    LayoutTopMargin="96"
+                    Background="@Drawable/card_bg_day_and_night"
+                    Clickable="true">
+                    <!--title 部分-->
+                    <LinearLayout
+                        LayoutWidth="FillParent"
+                        LayoutHeight="170">
+                        <!--返回按钮-->
+                        <RelativeLayout
+                            LayoutWidth="168"
+                            LayoutHeight="170"
+                            LayoutTopMargin="12"
+                            LayoutLeftMargin="12">
+                            <ImageButton
+                                Id="@+Id/BtnReturn"
+                                LayoutHeight="136"
+                                LayoutWidth="136"
+                                LayoutLeftMargin="18"
+                                LayoutTopMargin="18"
+                                ClickDataCollection="BTN_Back"
+                                Drawable="@Drawable/icon_back"
+                                Background="@Drawable/btn_h104_background_normal_prox"
+                                VisibleSpeechs="@String/NAVI_FAVORITE_ROUTE_DETAIL_VisibleSpeechs_01" />
+                        </RelativeLayout>
+                        <!--文言-->
+                        <TextActor
+                            Id="@+Id/FavRouteTitle"
+                            LayoutWidth="364"
+                            LayoutHeight="52"
+                            LayoutTopMargin="74"
+                            HorizontalGravity="Left"
+                            Text="@String/MX_LANG_NAVI_FAVORITE_ROUTE_DETAIL _Title_Favorite_Route"
+                            TextFont="@Font/UIFont40_Text_M"
+                            TextColor="@Color/BtnFavoriteColor" />
+                        <!--收藏按钮-->
+                        <RelativeLayout
+                            LayoutWidth="172"
+                            LayoutHeight="170"
+                            LayoutTopMargin="12">
+                            <ImageButton
+                                Id="@+Id/Btn_Favorite"
+                                LayoutTopMargin="18"
+                                LayoutRightMargin="22"
+                                LayoutHeight="136"
+                                LayoutWidth="136"
+                                ClickDataCollection="BTN_Detail_Favorite"
+                                Drawable="@Drawable/favorite_m"
+                                Background="@Drawable/btn_h104_background_normal_prox"
+                                LayoutAlignParentRight="true" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <!--List部分-->
+                    <RelativeLayout
+                        LayoutWidth="FillParent"
+                        LayoutHeight="530"
+                        LayoutLeftMargin="34"
+                        LayoutTopMargin="164">
+                        <SmoothListActorEx
+                            Id="@Id/PreDefine/SmoothListActor"
+                            LayoutWidth="656"
+                            LayoutHeight="528" />
+                        <SmoothListScrollBar
+                            Id="@Id/PreDefine/SmoothListScrollBar"
+                            LayoutWidth="30"
+                            LayoutHeight="528"
+                            LayoutTopMargin="4"
+                            LayoutLeftMargin="642"
+                            Clickable="true"
+                            ScrollBarLayout="@Layout/CActorScrollbarNewThirty" />
+                    </RelativeLayout>
+                    <!--底部按钮布局1-->
+                    <LinearLayout
+                        LayoutTopMargin="701"
+                        LayoutVerticalGravity="Center"
+                        VerticalGravity="Center"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="147">
+                        <!--快捷导航-->
+                        <ImageButton
+                            Id="@+Id/Btn_Navigate"
+                            LayoutWidth="136"
+                            LayoutHeight="136"
+                            LayoutLeftMargin="30"
+                            PaddingLeft = "1"
+                            ClickDataCollection="Btn_Navigate"
+                            Drawable="@Drawable/icon_list_navigation"
+                            Background="@Drawable/btn_h104_background_normal_prox"
+                            VisibleSpeechs="@String/NAVI_FAVORITE_ROUTE_DETAIL_VisibleSpeechs_04" />
+                        <!--算路-->
+                        <RelativeLayout
+                            Id="@+Id/Btn_Calculate"
+                            LayoutWidth="566"
+                            LayoutHeight="172"
+                            LayoutLeftMargin="-20"
+                            LayoutTopMargin = "-1"
+                            Background="@Drawable/background_104h_hero_prox_day_shadows">
+                            <RelativeLayout
+                                Id="@+Id/Btn_Calculate_Click"
+                                LayoutWidth="530"
+                                LayoutHeight="136"
+                                LayoutCenterInParent="true"
+                                Clickable="true"
+                                ClickDataCollection="Btn_Calculate"
+                                VisibleSpeechs="@String/NAVI_FAVORITE_ROUTE_DETAIL_VisibleSpeechs_05">
+                                <RelativeLayout
+                                    LayoutWidth="506"
+                                    LayoutHeight="112"
+                                    LayoutCenterInParent="true"
+                                    DuplicateParentState="true"
+                                    Background="@Drawable/Gradient_background_104h_hero_prox">
+                                    <TextActor
+                                        LayoutHeight="56"
+                                        LayoutWidth="398"
+                                        PaddingTop="2"
+                                        LayoutCenterInParent="true"
+                                        DuplicateParentState="true"
+                                        Text="@String/MX_LANG_NAVI_MAP_POI_PICKVIEW_WITHOUT_GUIDANCE_TEXT_Calculate"
+                                        TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                                        TextColor="@Color/Color_000000" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

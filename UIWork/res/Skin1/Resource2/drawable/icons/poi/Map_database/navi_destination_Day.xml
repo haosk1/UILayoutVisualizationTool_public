@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" Drawable = "@Drawable/navi_destination_day"/>
+<!-->Disable-->
+		<Item StateEnabled = "false" Drawable = "@Drawable/navi_destination_disable_day"/>
+    </StateList>
+</Resource>

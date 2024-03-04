@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/ListItem"
+        LayoutWidth="FillParent"
+        LayoutHeight="130">
+        <RelativeLayout
+            Id="@+Id/BtnDetailLayout"
+            LayoutWidth="880"
+            LayoutHeight="94"
+            LayoutCenterVertical="true"
+            Clickable="true"
+            Focusable="true"
+            ClickDataCollection="BTN_Category_Close">
+            <RelativeLayout
+                Id="@+Id/BtnDetailLayoutWithImgDropdown"
+                LayoutWidth="698"
+                LayoutHeight="FillParent">
+                <VividCheckbox
+                    Id="@+Id/ImgCheckbox"
+                    LayoutWidth="104"
+                    LayoutHeight="104"
+                    LayoutLeftMargin="20"
+                    LayoutCenterVertical="true"
+                    UnCheckToCheck="@Drawable/Gradient_Checkbox_M_Z06Z10_F_C"
+                    CheckToUnCheck="@Drawable/Gradient_Checkbox_M_Z10Z06_F_C"
+                    UnCheckToCheckBackground="@Drawable/Checkbox_M_Z06Z10_B"
+                    CheckToUnCheckBackground="@Drawable/Checkbox_M_Z10Z06_B"
+                    HalfCheckedDrawable="@Drawable/check_box_not_all_selected_icon"
+                    HalfCheckedDrawableBackground="@Drawable/check_box_selected_FillColor"
+                    Enable3States="true"
+                    ClickDataCollection="BTN_Check_Box" />
+                <TextActor
+                    Id="@+Id/TxtCategoryName"
+                    LayoutWidth="574"
+                    LayoutHeight="40"
+                    PaddingTop="4"
+                    LayoutLeftMargin="123"
+                    HorizontalGravity="Left"
+                    LayoutCenterVertical="true"
+                    DuplicateParentState="true"
+                    TextFont="@Font/UIFont34_Text_R"
+                    TextColor="@Color/DayBlack_NightWhite" />
+            </RelativeLayout>
+            <ImageButton
+                Id="@+Id/ImgDropdown"
+                LayoutWidth="80"
+                LayoutHeight="80"
+                LayoutRightMargin="36"
+                Background="@Drawable/h64_background_normal"
+                LayoutAlignParentRight="true"
+                LayoutCenterVertical="true" />
+        </RelativeLayout>
+        <ImageActor
+            Id="@+Id/Split_Line"
+            LayoutWidth="FillParent"
+            LayoutHeight="2"
+            LayoutAlignParentBottom="true"
+            Background="@Drawable/card_list_line" />
+    </RelativeLayout>
+</Resource>

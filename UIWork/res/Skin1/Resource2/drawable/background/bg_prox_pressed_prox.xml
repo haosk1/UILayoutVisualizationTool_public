@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <LinearGradientDrawable>
+		<Item Drawable = "@Drawable/bg_prox_pressed_night"/>
+		<Item StartColor = "@Color/AmbientLightColorA"/>
+		<Item EndColor = "@Color/AmbientLightColorB"/>
+    	<Item Direction = "FreedomAngle"/>
+		<Item Angle = "75.0"/>
+    </LinearGradientDrawable>
+</Resource>

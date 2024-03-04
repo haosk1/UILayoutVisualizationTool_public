@@ -1,0 +1,2333 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <!--导航部分-->
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent">
+        <!--HMI界面布局部分，此元器件LayoutWidth表示半屏尺寸-->
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <Function
+                Id="@+Id/Fragment_RouteCalcResult"
+                LayoutHeight="FillParent"
+                LayoutWidth="FillParent" />
+            <!--限行部品-->
+			<RelativeLayout
+					Id = "@Id/PreDefine/Restriction_Layout"
+					LayoutWidth = "724"
+					LayoutHeight = "WrapContent"
+					LayoutTopMargin = "78"
+                    LayoutRightMargin = "-4"
+                    LayoutAlignParentRight="true"
+					Visible = "Gone"
+					Background = "@Drawable/popup_toast_bg"
+					Clickable = "true">
+					<TextActor
+						Id = "@Id/PreDefine/Text_Restriction"
+						LayoutHeight = "WrapContent"
+						LayoutWidth="WrapContent"
+						LayoutTopMargin="58"
+						LayoutBottomMargin = "63"
+						LineIntervalAddFactor = "-14"
+						PaddingTop = "6"
+						SingleLine = "false"
+						WordWrapped = "true"
+						HorizontalGravity="Left"
+						TextColor = "@Color/DayBlack_NightWhite"
+						TextFont="@Font/UIFont34_Text_L"
+						MaxFormatWidth="558"
+						LayoutCenterInParent = "true"/>
+			</RelativeLayout>
+			<!--避开限行-->
+			<RelativeLayout
+					Id = "@Id/PreDefine/AvoidRestriction_Layout"
+					LayoutWidth = "724"
+					LayoutHeight = "WrapContent"
+					LayoutTopMargin = "78"
+					LayoutRightMargin = "-4"
+                    LayoutAlignParentRight="true"
+					Visible = "Gone"
+					Background = "@Drawable/popup_toast_bg"
+                    VisibleSpeechs="@String/MX_LANG_NAVI_ROUTE_SELECTION_RESTRICTION_REMIND3_VisibleSpeechs_01"
+					Clickable = "true">
+					<ImageButton
+						Id = "@Id/PreDefine/BTN_Route_Restriction_Info"
+						LayoutWidth = "48"
+						LayoutHeight = "48"
+						LayoutLeftMargin = "598"
+						LayoutTopMargin="60"
+						LayoutBottomMargin = "42"
+						PaddingTop = "6"
+						Background = "@Drawable/btn_h48_Avoid_normal_prox"
+						BGHorizontalGravity="Center"
+						BGVerticalGravity="Center" 
+                        VisibleSpeechs="@String/MX_LANG_NAVI_ROUTE_SELECTION_RESTRICTION_REMIND3_VisibleSpeechs_01"
+						ClickDataCollection = "BTN_Route_Restriction_Info"/>
+					<TextActor 
+						LayoutHeight = "WrapContent"
+						LayoutWidth="WrapContent"
+						LayoutLeftMargin="88"
+						LayoutTopMargin="58"
+						LayoutBottomMargin = "61"
+						PaddingTop = "8"
+						SingleLine = "false"
+						WordWrapped = "true"
+						LineIntervalAddFactor = "-14"
+						HorizontalGravity="Center"
+						TextColor = "@Color/DayBlack_NightWhite"
+						TextFont="@Font/UIFont34_Text_L"
+						Text="@String/MX_LANG_NAVI_ROUTE_SELECTION_RESTRICTION_REMIND3_"/>
+			</RelativeLayout>
+            <RelativeLayout
+                Id="@+Id/LayoutAllSeletect"
+                LayoutWidth="724"
+                LayoutHeight="872"
+                LayoutTopMargin="96"
+                Background="@Drawable/background_RouteSelect"
+                Clickable="true">
+                <!--返回部品-->
+                <RelativeLayout
+                    LayoutWidth="172"
+                    LayoutHeight="172"
+                    LayoutTopMargin="12"
+                    LayoutLeftMargin="12">
+                    <ImageButton
+                        Id="@+Id/BtnReturn"
+                        LayoutWidth="136"
+                        LayoutHeight="136"
+                        LayoutCenterInParent="true"
+                        Clickable="true"
+                        Drawable="@Drawable/icon_close"
+                        Background="@Drawable/btn_h104_background_normal_prox"
+                        BGHorizontalGravity="Center"
+                        BGVerticalGravity="Center"
+                        ClickDataCollection="BTN_Close"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_ROUTE_SELECTION_VisibleSpeechs_01" />
+                </RelativeLayout>
+                <!--标题部品-->
+                <TextActor
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="52"
+                    LayoutTopMargin="72"
+                    LayoutLeftMargin="180"
+                    PaddingTop="4"
+                    HorizontalGravity="Left"
+                    VerticalGravity="Center"
+                    TextColor="@Color/DayBlack_NightWhite"
+                    TextFont="@Font/UIFont40_Text_M"
+                    Text="@String/MX_LANG_NAVI_ROUTE_SELECTION_Title_Route_Select" />
+                <!--收藏部品-->
+                <RelativeLayout
+                    LayoutWidth="172"
+                    LayoutHeight="172"
+                    LayoutTopMargin="12"
+                    LayoutLeftMargin="540">
+                    <ImageButton
+                        Id="@+Id/BtnFavorite"
+                        LayoutWidth="136"
+                        LayoutHeight="136"
+                        LayoutCenterInParent="true"
+                        Drawable="@Drawable/route_select_fav_m"
+                        Background="@Drawable/btn_h104_background_normal_prox"
+                        BGHorizontalGravity="Center"
+                        BGVerticalGravity="Center"
+                        Visible="Gone"
+                        ClickDataCollection="BTN_Favorite"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_ROUTE_SELECTION_PROCESS_WITH_STOPOVER_VisibleSpeechs_02" />
+                </RelativeLayout>
+                <!--路线列表部品  无途经点-->
+                <LinearLayout
+                    Id="@+Id/LayoutSingleList"
+                    LayoutWidth="648"
+                    LayoutHeight="WrapContent"
+                    LayoutLeftMargin="38"
+                    LayoutTopMargin="168"
+                    Orientation="Vertical"
+                    VerticalGravity="Top"
+                    Visible="Gone"
+                    Clickable="true">
+                    <!--路线列表1-->
+                    <RelativeLayout
+                        Id="@+Id/LayoutSingle1"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="160"
+                        Background="@Drawable/navi_display_route_selection"
+                        Clickable="true"
+                        Visible="Gone"
+                        ClickDataCollection="BTN_Route_Selected">
+                        <!--路线序号-->
+                        <TextActor
+                            Id="@+Id/TEXT_Route1"
+                            LayoutWidth="60"
+                            LayoutHeight="60"
+                            LayoutLeftMargin="38"
+                            LayoutTopMargin="38"
+                            PaddingTop = "4"
+                            PaddingLeft = "-1"
+                            TextColor="@Color/DayBlack_NightWhite"
+                            TextFont="@Font/UIFont40_UIDigit_M"
+                            Text="1." />
+                        <!--第一排-->
+                        <LinearLayout
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="40"
+                            LayoutLeftMargin="114"
+                            LayoutTopMargin="28"
+                            DuplicateParentState="true">
+                            <!--剩余时间小时-->
+                            <LinearLayout
+                                Id="@+Id/Layout1_RestTime_Hour"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="FillParent"
+                                DuplicateParentState="true"
+                                Visible="Visible">
+                                <TextActor
+                                    Id="@+Id/Text1_RestTime_Hour"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    PaddingTop = "4"
+                                    HorizontalGravity="Left"
+                                    DuplicateParentState="true"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont34_Text_R"
+                                    Text="00" />
+                                <TextActor
+                                    Id="@+Id/Text1_RestTime_Hour_Unit"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    PaddingTop = "4"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont34_Text_L"
+                                    Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Time_TEXT_Hour" />
+                            </LinearLayout>
+                            <!--剩余时间分钟-->
+                            <LinearLayout
+                                Id="@+Id/Layout1_RestTime_Min"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="FillParent"
+                                DuplicateParentState="true"
+                                Visible="Visible">
+                                <TextActor
+                                    Id="@+Id/Text1_RestTime_Min"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    PaddingTop = "4"
+                                    HorizontalGravity="Left"
+                                    DuplicateParentState="true"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont34_Text_R"
+                                    Text="00" />
+                                <TextActor
+                                    Id="@+Id/Text1_RestTime_Min_Unit"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    PaddingTop = "4"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont34_Text_L"
+                                    Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Time_TEXT_Min1" />
+                            </LinearLayout>
+                            <!--充电次数可达-->
+                            <LinearLayout
+                                Id="@+Id/Layout_ChargingTimes1"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="40"
+                                LayoutLeftMargin="16"
+                                DuplicateParentState="true"
+                                Visible="Gone">
+                                <ImageActor
+                                    LayoutWidth="41"
+                                    LayoutHeight="41"
+                                    DuplicateParentState="true"
+                                    Drawable="@Drawable/Navi_Charging" />
+                                <TextActor
+                                    Id="@+Id/TEXT_ChargingTimes1"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="34"
+                                    LayoutLeftMargin="6"
+                                    LayoutTopMargin="3"
+                                    DuplicateParentState="true"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont28_Text_M"/>
+                                <TextActor
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="34"
+                                    LayoutTopMargin="3"
+                                    DuplicateParentState="true"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont28_Text_L"
+                                    Text="@String/MX_LANG_NAVI_ROUTE_SELECTION_PROCESS_EV_TEXT_Charging_Times" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!--无法到达与Tagging布局-->
+                        <LinearLayout
+                            LayoutWidth="321"
+                            LayoutHeight="48"
+                            LayoutLeftMargin = "289"
+                            LayoutTopMargin="24"
+                            HorizontalGravity="Right"
+                            DuplicateParentState="true">
+                            <!--无法抵达-->
+                            <RelativeLayout
+                                Id="@+Id/Layout_ChargingTimeUnreach1"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="48"
+                                LayoutRightMargin="10"
+                                Background="@Drawable/navi_card_unreachable_bg"
+                                DuplicateParentState="true"
+                                Visible="Gone">
+                                <TextActor
+                                    Id="@+Id/TEXT_Route_ChargingTimeUnreach1"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="30"
+                                    HorizontalGravity="Center"
+                                    LayoutTopMargin="9"
+                                    LayoutBottomMargin="9"
+                                    LayoutLeftMargin="15"
+                                    LayoutRightMargin="15"
+                                    PaddingTop="2"
+                                    DuplicateParentState="true"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont24_Text_L"
+                                    Text="@String/MX_LANG_NAVI_ROUTE_SELECTION_WITH_STOPOVER2_EV_TEXT_Destination_SOC_Info2" />
+                            </RelativeLayout>
+                            <!--不显示充电次数与无法抵达时占位-->
+                            <ImageActor
+                                Id="@+Id/Actor_NoCharging1"
+                                LayoutWidth="163"
+                                LayoutHeight="48" />
+                            <!--路线tagging-->
+                            <RelativeLayout
+                                Id="@+Id/Layout_Route1_Tagging2"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="48"
+                                LayoutAlignParentRight="true"
+                                HorizontalGravity = "Center"
+                                Background="@Drawable/navi_card_recommend_bg"
+                                DuplicateParentState="true">
+                                <TextActor
+                                    Id="@+Id/TEXT_Route1_Tagging2"
+                                    LayoutWidth="WrapContent"
+                                    MaxFormatWidth = "130"
+                                    LayoutHeight="30"
+                                    LayoutTopMargin="9"
+                                    LayoutBottomMargin="9"
+                                    LayoutLeftMargin="15"
+                                    LayoutRightMargin="15"
+                                    PaddingTop="2"
+                                    DuplicateParentState="true"
+                                    TextAutoScrollMode="AutoScroll"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont24_Text_L"
+                                    Text="@String/MX_LANG_DD_ROUTE_PROFILE_SETTING_TEXT_Minimum_Charging" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <!--第二排-->
+                        <LinearLayout
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="40"
+                            LayoutLeftMargin="114"
+                            LayoutTopMargin="86">
+                            <!--剩余距离-->
+                            <TextActor
+                                Id="@+Id/Text1_RestTime_Number"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="34"
+                                LayoutTopMargin = "6"
+                                PaddingTop = "-1"
+                                DuplicateParentState="true"
+                                HorizontalGravity="Left"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont28_Text_M"
+                                Text="0" />
+                            <TextActor
+                                Id="@+Id/Text1_RestTime_Text"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="34"
+                                LayoutTopMargin = "6"
+                                PaddingTop = "-1"
+                                LayoutRightMargin="28"
+                                HorizontalGravity="Left"
+                                DuplicateParentState="true"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont28_Text_L"
+                                Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Distance_TEXT_M" />
+                            <!--收费金额及icon-->
+                            <ImageActor
+                                Id="@+Id/IconSingle1_TollCost"
+                                LayoutWidth="40"
+                                LayoutHeight="40"
+                                Drawable="@Drawable/navi_charge" />
+                            <TextActor
+                                Id="@+Id/TxtSingle1_TollCost"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="34"
+                                LayoutRightMargin="16"
+                                PaddingTop = "-1"
+                                LayoutTopMargin = "6"
+                                DuplicateParentState="true"
+                                HorizontalGravity="Left"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont28_Text_L" />
+                            <!--交通灯数及icon-->
+                            <ImageActor
+                                Id="@+Id/IconSingle1_TrafficLight"
+                                LayoutWidth="40"
+                                LayoutHeight="40"
+                                DuplicateParentState="true"
+                                Drawable="@Drawable/traffic_s_day_and_night_40" />
+                            <TextActor
+                                Id="@+Id/TxtSingle1_TrafficLight"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="34"
+                                PaddingTop = "-1"
+                                LayoutTopMargin = "6"
+                                DuplicateParentState="true"
+                                HorizontalGravity="Left"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont28_Text_L"
+                                Text="0" />
+                        </LinearLayout>
+                        <LinearLayout
+                            Id="@+Id/LayoutRouteOptions1"
+                            LayoutWidth="96"
+                            LayoutHeight="40"
+                            LayoutLeftMargin="514"
+                            LayoutTopMargin="86"
+                            HorizontalGravity="Right"
+                            DuplicateParentState="true">
+                            <!--高速icon-->
+                            <ImageActor
+                                Id="@+Id/IconSingle1_HighWay"
+                                LayoutWidth="40"
+                                LayoutHeight="40"
+                                Drawable="@Drawable/navi_Highways" />
+                            <!--航道icon-->
+                            <ImageActor
+                                Id="@+Id/IconSingle1_Ferry"
+                                LayoutWidth="40"
+                                LayoutHeight="40"
+                                LayoutLeftMargin="16"
+                                Drawable="@Drawable/navi_transport" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!--路线列表2-->
+                    <RelativeLayout
+                        Id="@+Id/LayoutSingle2"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="160"
+                        Background="@Drawable/navi_display_route_selection"
+                        Clickable="true"
+                        Visible="Gone"
+                        ClickDataCollection="BTN_Route_Selected">
+                        <!--路线序号-->
+                        <TextActor
+                            Id="@+Id/TEXT_Route2"
+                            LayoutWidth="60"
+                            LayoutHeight="60"
+                            LayoutLeftMargin="38"
+                            LayoutTopMargin="38"
+                            PaddingTop = "4"
+                            TextColor="@Color/DayBlack_NightWhite"
+                            TextFont="@Font/UIFont40_UIDigit_M"
+                            Text="2." />
+                        <!--第一排-->
+                        <LinearLayout
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="40"
+                            LayoutLeftMargin="114"
+                            LayoutTopMargin="28"
+                            DuplicateParentState="true">
+                            <!--剩余时间小时-->
+                            <LinearLayout
+                                Id="@+Id/Layout2_RestTime_Hour"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="FillParent"
+                                DuplicateParentState="true"
+                                Visible="Visible">
+                                <TextActor
+                                    Id="@+Id/Text2_RestTime_Hour"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    PaddingTop = "4"
+                                    HorizontalGravity="Left"
+                                    DuplicateParentState="true"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont34_Text_R"
+                                    Text="00" />
+                                <TextActor
+								  Id = "@+Id/Text2_RestTime_Hour_Unit"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    PaddingTop = "4"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont34_Text_L"
+                                    Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Time_TEXT_Hour" />
+                            </LinearLayout>
+                            <!--剩余时间分钟-->
+                            <LinearLayout
+                                Id="@+Id/Layout2_RestTime_Min"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="FillParent"
+                                DuplicateParentState="true"
+                                Visible="Visible">
+                                <TextActor
+                                    Id="@+Id/Text2_RestTime_Min"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    PaddingTop = "4"
+                                    HorizontalGravity="Left"
+                                    DuplicateParentState="true"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont34_Text_R"
+                                    Text="00" />
+                                <TextActor
+								  Id = "@+Id/Text2_RestTime_Min_Unit"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    PaddingTop = "4"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont34_Text_L"
+                                    Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Time_TEXT_Min1" />
+                            </LinearLayout>
+                            <!--充电次数可达-->
+                            <LinearLayout
+                                Id="@+Id/Layout_ChargingTimes2"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="40"
+                                LayoutLeftMargin="16"
+                                DuplicateParentState="true"
+                                Visible="Gone">
+                                <ImageActor
+                                    LayoutWidth="41"
+                                    LayoutHeight="41"
+                                    DuplicateParentState="true"
+                                    Drawable="@Drawable/Navi_Charging" />
+                                <TextActor
+                                    Id="@+Id/TEXT_ChargingTimes2"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="34"
+                                    LayoutLeftMargin="6"
+                                    LayoutTopMargin="3"
+                                    DuplicateParentState="true"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont28_Text_M"/>
+                                <TextActor
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="34"
+                                    LayoutTopMargin="3"
+                                    DuplicateParentState="true"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont28_Text_L"
+                                    Text="@String/MX_LANG_NAVI_ROUTE_SELECTION_PROCESS_EV_TEXT_Charging_Times" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!--无法到达与Tagging布局-->
+                        <LinearLayout
+                            LayoutWidth="321"
+                            LayoutHeight="48"
+                            LayoutLeftMargin = "289"
+                            LayoutTopMargin="24"
+                            HorizontalGravity="Right"
+                            DuplicateParentState="true">
+                            <!--无法抵达-->
+                            <RelativeLayout
+                                Id="@+Id/Layout_ChargingTimeUnreach2"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="48"
+                                LayoutRightMargin="10"
+                                Background="@Drawable/navi_card_unreachable_bg"
+                                DuplicateParentState="true"
+                                Visible="Gone">
+                                <TextActor
+                                    Id="@+Id/TEXT_Route_ChargingTimeUnreach2"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="30"
+                                    HorizontalGravity="Center"
+                                    LayoutTopMargin="9"
+                                    LayoutBottomMargin="9"
+                                    LayoutLeftMargin="15"
+                                    LayoutRightMargin="15"
+                                    PaddingTop="2"
+                                    DuplicateParentState="true"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont24_Text_L"
+                                    Text="@String/MX_LANG_NAVI_ROUTE_SELECTION_WITH_STOPOVER2_EV_TEXT_Destination_SOC_Info2" />
+                            </RelativeLayout>
+                            <!--不显示充电次数与无法抵达时占位-->
+                            <ImageActor
+                                Id="@+Id/Actor_NoCharging2"
+                                LayoutWidth="163"
+                                LayoutHeight="48" />
+                            <!--路线tagging-->
+                            <RelativeLayout
+                                Id="@+Id/Layout_Route2_Tagging2"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="48"
+                                LayoutAlignParentRight="true"
+                                HorizontalGravity = "Center"
+                                Background="@Drawable/navi_card_recommend_bg"
+                                DuplicateParentState="true">
+                                <TextActor
+                                    Id="@+Id/TEXT_Route2_Tagging2"
+                                    LayoutWidth="WrapContent"
+                                    MaxFormatWidth = "130"
+                                    LayoutHeight="30"
+                                    LayoutTopMargin="9"
+                                    LayoutBottomMargin="9"
+                                    LayoutLeftMargin="15"
+                                    LayoutRightMargin="15"
+                                    PaddingTop="2"
+                                    DuplicateParentState="true"
+                                    TextAutoScrollMode="AutoScrollWhenFocused"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont24_Text_L"
+                                    Text="@String/MX_LANG_DD_ROUTE_PROFILE_SETTING_TEXT_Minimum_Charging" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <!--第二排-->
+                        <LinearLayout
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="40"
+                            LayoutLeftMargin="114"
+                            LayoutTopMargin="86">
+                            <!--剩余距离-->
+                            <TextActor
+                                Id="@+Id/Text2_RestTime_Number"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="34"
+                                LayoutTopMargin = "6"
+                                PaddingTop = "-1"
+                                DuplicateParentState="true"
+                                HorizontalGravity="Left"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont28_Text_M"
+                                Text="0" />
+                            <TextActor
+                                Id="@+Id/Text2_RestTime_Text"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="34"
+                                LayoutTopMargin = "6"
+                                PaddingTop = "-1"
+                                LayoutRightMargin="28"
+                                HorizontalGravity="Left"
+                                DuplicateParentState="true"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont28_Text_L"
+                                Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Distance_TEXT_M" />
+                            <!--收费金额及icon-->
+                            <ImageActor
+                                Id="@+Id/IconSingle2_TollCost"
+                                LayoutWidth="40"
+                                LayoutHeight="40"
+                                Drawable="@Drawable/navi_charge" />
+                            <TextActor
+                                Id="@+Id/TxtSingle2_TollCost"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="34"
+                                LayoutTopMargin="6"
+                                LayoutRightMargin="16"
+                                PaddingTop = "-1"
+                                DuplicateParentState="true"
+                                HorizontalGravity="Left"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont28_Text_L" />
+                            <!--交通灯数及icon-->
+                            <ImageActor
+                                Id="@+Id/IconSingle2_TrafficLight"
+                                LayoutWidth="40"
+                                LayoutHeight="40"
+                                DuplicateParentState="true"
+                                Drawable="@Drawable/traffic_s_day_and_night_40" />
+                            <TextActor
+                                Id="@+Id/TxtSingle2_TrafficLight"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="34"
+                                LayoutTopMargin="6"
+                                PaddingTop = "-1"
+                                DuplicateParentState="true"
+                                HorizontalGravity="Left"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont28_Text_L"
+                                Text="0" />
+                        </LinearLayout>
+                        <LinearLayout
+                            Id="@+Id/LayoutRouteOptions2"
+                            LayoutWidth="96"
+                            LayoutHeight="40"
+                            LayoutLeftMargin="514"
+                            LayoutTopMargin="86"
+                            HorizontalGravity="Right"
+                            DuplicateParentState="true">
+                            <!--高速icon-->
+                            <ImageActor
+                                Id="@+Id/IconSingle2_HighWay"
+                                LayoutWidth="40"
+                                LayoutHeight="40"
+                                Drawable="@Drawable/navi_Highways" />
+                            <!--航道icon-->
+                            <ImageActor
+                                Id="@+Id/IconSingle2_Ferry"
+                                LayoutWidth="40"
+                                LayoutHeight="40"
+                                LayoutLeftMargin="16"
+                                Drawable="@Drawable/navi_transport" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!--路线列表3-->
+                    <RelativeLayout
+                        Id="@+Id/LayoutSingle3"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="160"
+                        Background="@Drawable/navi_display_route_selection"
+                        Clickable="true"
+                        Visible="Gone"
+                        ClickDataCollection="BTN_Route_Selected">
+                        <!--路线序号-->
+                        <TextActor
+                            Id="@+Id/TEXT_Route3"
+                            LayoutWidth="60"
+                            LayoutHeight="60"
+                            LayoutLeftMargin="38"
+                            LayoutTopMargin="38"
+                            PaddingTop = "4"
+                            PaddingLeft = "-1"
+                            TextColor="@Color/DayBlack_NightWhite"
+                            TextFont="@Font/UIFont40_UIDigit_M"
+                            Text="3." />
+                        <!--第一排-->
+                        <LinearLayout
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="40"
+                            LayoutLeftMargin="114"
+                            LayoutTopMargin="28"
+                            DuplicateParentState="true">
+                            <!--剩余时间小时-->
+                            <LinearLayout
+                                Id="@+Id/Layout3_RestTime_Hour"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="FillParent"
+                                DuplicateParentState="true"
+                                Visible="Visible">
+                                <TextActor
+                                    Id="@+Id/Text3_RestTime_Hour"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    PaddingTop = "4"
+                                    HorizontalGravity="Left"
+                                    DuplicateParentState="true"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont34_Text_R"
+                                    Text="00" />
+                                <TextActor
+								  Id = "@+Id/Text3_RestTime_Hour_Unit"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    PaddingTop = "4"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont34_Text_L"
+                                    Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Time_TEXT_Hour" />
+                            </LinearLayout>
+                            <!--剩余时间分钟-->
+                            <LinearLayout
+                                Id="@+Id/Layout3_RestTime_Min"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="FillParent"
+                                DuplicateParentState="true"
+                                Visible="Visible">
+                                <TextActor
+                                    Id="@+Id/Text3_RestTime_Min"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    PaddingTop = "4"
+                                    HorizontalGravity="Left"
+                                    DuplicateParentState="true"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont34_Text_R"
+                                    Text="00" />
+                                <TextActor
+                                    Id="@+Id/Text3_RestTime_Min_Unit"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    PaddingTop = "4"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont34_Text_L"
+                                    Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Time_TEXT_Min1" />
+                            </LinearLayout>
+                            <!--充电次数可达-->
+                            <LinearLayout
+                                Id="@+Id/Layout_ChargingTimes3"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="40"
+                                LayoutLeftMargin="16"
+                                DuplicateParentState="true"
+                                Visible="Gone">
+                                <ImageActor
+                                    LayoutWidth="41"
+                                    LayoutHeight="41"
+                                    DuplicateParentState="true"
+                                    Drawable="@Drawable/Navi_Charging" />
+                                <TextActor
+                                    Id="@+Id/TEXT_ChargingTimes3"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="34"
+                                    LayoutLeftMargin="6"
+                                    LayoutTopMargin="3"
+                                    DuplicateParentState="true"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont28_Text_M"/>
+                                <TextActor
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="34"
+                                    LayoutTopMargin="3"
+                                    DuplicateParentState="true"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont28_Text_L"
+                                    Text="@String/MX_LANG_NAVI_ROUTE_SELECTION_PROCESS_EV_TEXT_Charging_Times" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!--无法到达与Tagging布局-->
+                        <LinearLayout
+                            LayoutWidth="321"
+                            LayoutHeight="48"
+                            LayoutLeftMargin = "289"
+                            LayoutTopMargin="24"
+                            HorizontalGravity="Right"
+                            DuplicateParentState="true">
+                            <!--无法抵达-->
+                            <RelativeLayout
+                                Id="@+Id/Layout_ChargingTimeUnreach3"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="48"
+                                LayoutRightMargin="10"
+                                Background="@Drawable/navi_card_unreachable_bg"
+                                DuplicateParentState="true"
+                                Visible="Gone">
+                                <TextActor
+                                    Id="@+Id/TEXT_Route_ChargingTimeUnreach3"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="30"
+                                    HorizontalGravity="Center"
+                                    LayoutTopMargin="9"
+                                    LayoutBottomMargin="9"
+                                    LayoutLeftMargin="15"
+                                    LayoutRightMargin="15"
+                                    PaddingTop="2"
+                                    DuplicateParentState="true"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont24_Text_L"
+                                    Text="@String/MX_LANG_NAVI_ROUTE_SELECTION_WITH_STOPOVER2_EV_TEXT_Destination_SOC_Info2" />
+                            </RelativeLayout>
+                            <!--不显示充电次数与无法抵达时占位-->
+                            <ImageActor
+                                Id="@+Id/Actor_NoCharging3"
+                                LayoutWidth="163"
+                                LayoutHeight="48" />
+                            <!--路线tagging-->
+                            <RelativeLayout
+                                Id="@+Id/Layout_Route3_Tagging2"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="48"
+                                LayoutAlignParentRight="true"
+                                HorizontalGravity = "Center"
+                                Background="@Drawable/navi_card_recommend_bg"
+                                DuplicateParentState="true">
+                                <TextActor
+                                    Id="@+Id/TEXT_Route3_Tagging2"
+                                    LayoutWidth="WrapContent"
+                                    MaxFormatWidth = "130"
+                                    LayoutHeight="30"
+                                    LayoutTopMargin="9"
+                                    LayoutBottomMargin="9"
+                                    LayoutLeftMargin="15"
+                                    LayoutRightMargin="15"
+                                    PaddingTop="2"
+                                    DuplicateParentState="true"
+                                    TextAutoScrollMode="AutoScrollWhenFocused"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont24_Text_L"
+                                    Text="@String/MX_LANG_DD_ROUTE_PROFILE_SETTING_TEXT_Minimum_Charging" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <!--第二排-->
+                        <LinearLayout
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="40"
+                            LayoutLeftMargin="114"
+                            LayoutTopMargin="86">
+                            <!--剩余距离-->
+                            <TextActor
+                                Id="@+Id/Text3_RestTime_Number"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="34"
+                                LayoutTopMargin = "6"
+                                PaddingTop = "-1"
+                                DuplicateParentState="true"
+                                HorizontalGravity="Left"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont28_Text_M"
+                                Text="0" />
+                            <TextActor
+                                Id="@+Id/Text3_RestTime_Text"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="34"
+                                LayoutTopMargin = "6"
+                                PaddingTop = "-1"
+                                LayoutRightMargin="28"
+                                HorizontalGravity="Left"
+                                DuplicateParentState="true"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont28_Text_L"
+                                Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Distance_TEXT_M" />
+                            <!--收费金额及icon-->
+                            <ImageActor
+                                Id="@+Id/IconSingle3_TollCost"
+                                LayoutWidth="40"
+                                LayoutHeight="40"
+                                Drawable="@Drawable/navi_charge" />
+                            <TextActor
+                                Id="@+Id/TxtSingle3_TollCost"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="34"
+                                LayoutTopMargin="6"
+                                LayoutRightMargin="16"
+                                PaddingTop = "-1"
+                                DuplicateParentState="true"
+                                HorizontalGravity="Left"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont28_Text_L" />
+                            <!--交通灯数及icon-->
+                            <ImageActor
+                                Id="@+Id/IconSingle3_TrafficLight"
+                                LayoutWidth="40"
+                                LayoutHeight="40"
+                                DuplicateParentState="true"
+                                Drawable="@Drawable/traffic_s_day_and_night_40" />
+                            <TextActor
+                                Id="@+Id/TxtSingle3_TrafficLight"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="34"
+                                LayoutTopMargin="6"
+                                PaddingTop = "-1"
+                                DuplicateParentState="true"
+                                HorizontalGravity="Left"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont28_Text_L"
+                                Text="0" />
+                        </LinearLayout>
+                        <LinearLayout
+                            Id="@+Id/LayoutRouteOptions3"
+                            LayoutWidth="96"
+                            LayoutHeight="40"
+                            LayoutLeftMargin="514"
+                            LayoutTopMargin="86"
+                            HorizontalGravity="Right"
+                            DuplicateParentState="true">
+                            <!--高速icon-->
+                            <ImageActor
+                                Id="@+Id/IconSingle3_HighWay"
+                                LayoutWidth="40"
+                                LayoutHeight="40"
+                                Drawable="@Drawable/navi_Highways" />
+                            <!--航道icon-->
+                            <ImageActor
+                                Id="@+Id/IconSingle3_Ferry"
+                                LayoutWidth="40"
+                                LayoutHeight="40"
+                                LayoutLeftMargin="16"
+                                Drawable="@Drawable/navi_transport" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        Id="@+Id/OneRouteInfoLayout"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="20" />
+                    <!--路线计算中Layout-->
+                    <RelativeLayout
+                        Id="@+Id/LinearCalculating"
+                        LayoutWidth="153"
+                        LayoutHeight="170"
+                        LayoutLeftMargin="247"
+                        LayoutTopMargin = "24"
+                        Visible="Gone">
+                        <AutomaticImageActor
+                            Id="@+Id/AutomaticCalculating"
+                            LayoutWidth="80"
+                            LayoutHeight="80"
+                            ImageChangeTimer="100"
+                            LayoutLeftMargin="36"
+                            Cyclable="true"
+                            Visible="Gone"
+                            Drawable="@Drawable/loading_anim_seq_l_LayerList" />
+                        <TextActor
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="40"
+                            LayoutTopMargin="126"
+                            LayoutLeftMargin="8"
+                            PaddingTop = "2"
+                            HorizontalGravity="Center"
+                            TextColor="@Color/DayBlack_NightWhite"
+                            TextFont="@Font/UIFont34_Text_L"
+                            Text="@String/MX_LANG_NAVI_MAP_DESTINATION_VIEW_LOADING_TEXT_Loading" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <!--路线列表部品 有途经点-->
+                <LinearLayout
+                    Id="@+Id/LayoutSingleListWS"
+                    LayoutWidth="670"
+                    LayoutHeight="524"
+                    LayoutLeftMargin="38"
+                    LayoutTopMargin="168"
+                    Orientation="Vertical"
+                    VerticalGravity="Top"
+                    Visible="Gone"
+                    Clickable="true">
+                    <HorizontalSpliteScreenLayout
+                        Id="@+Id/SpliteScreen_RouteInfo_WS"
+                        LayoutWidth="648"
+                        LayoutHeight="160"
+                        Clickable="true"
+                        Bounces="false">
+                        <!--路线列表1-->
+                        <RelativeLayout
+                            Id="@+Id/LayoutSingle1WS"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="160"
+                            Background="@Drawable/navi_display_route_selection"
+                            Clickable="true"
+                            Visible="Gone"
+                            ClickDataCollection="BTN_Route_Selected">
+                            <!--路线序号-->
+                            <TextActor
+                                Id="@+Id/TEXT_Route1WS"
+                                LayoutWidth="60"
+                                LayoutHeight="60"
+                                LayoutLeftMargin="38"
+                                LayoutTopMargin="38"
+                                PaddingTop = "4"
+                                PaddingLeft = "-1"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont40_UIDigit_M"
+                                Text="1." />
+                            <!--第一排-->
+                            <LinearLayout
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="40"
+                                LayoutLeftMargin="114"
+                                LayoutTopMargin="28"
+                                DuplicateParentState="true">
+                                <!--剩余时间小时-->
+                                <LinearLayout
+                                    Id="@+Id/Layout1_RestTime_HourWS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    DuplicateParentState="true"
+                                    Visible="Visible">
+                                    <TextActor
+                                        Id="@+Id/Text1_RestTime_HourWS"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="FillParent"
+                                        PaddingTop = "4"
+                                        HorizontalGravity="Left"
+                                        DuplicateParentState="true"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont34_Text_R"
+                                        Text="00" />
+                                    <TextActor
+									  Id = "@+Id/Text1_RestTime_HourWS_Unit"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="FillParent"
+                                        PaddingTop = "4"
+                                        HorizontalGravity="Left"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont34_Text_L"
+                                        Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Time_TEXT_Hour" />
+                                </LinearLayout>
+                                <!--剩余时间分钟-->
+                                <LinearLayout
+                                    Id="@+Id/Layout1_RestTime_MinWS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    DuplicateParentState="true"
+                                    Visible="Visible">
+                                    <TextActor
+                                        Id="@+Id/Text1_RestTime_MinWS"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="FillParent"
+                                        PaddingTop = "4"
+                                        HorizontalGravity="Left"
+                                        DuplicateParentState="true"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont34_Text_R"
+                                        Text="00" />
+                                    <TextActor
+									  Id = "@+Id/Text1_RestTime_MinWS_Unit"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="FillParent"
+                                        PaddingTop = "4"
+                                        HorizontalGravity="Left"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont34_Text_L"
+                                        Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Time_TEXT_Min1" />
+                                </LinearLayout>
+                                <!--充电次数可达-->
+                                <LinearLayout
+                                    Id="@+Id/Layout_ChargingTimes1WS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="40"
+                                    LayoutLeftMargin="16"
+                                    DuplicateParentState="true"
+                                    Visible="Gone">
+                                    <ImageActor
+                                        LayoutWidth="41"
+                                        LayoutHeight="41"
+                                        DuplicateParentState="true"
+                                        Drawable="@Drawable/Navi_Charging" />
+                                    <TextActor
+                                        Id="@+Id/TEXT_ChargingTimes1WS"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="34"
+                                        LayoutLeftMargin="6"
+                                        LayoutTopMargin="3"
+                                        DuplicateParentState="true"
+                                        HorizontalGravity="Left"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont28_Text_M"/>
+                                    <TextActor
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="34"
+                                        LayoutTopMargin="3"
+                                        DuplicateParentState="true"
+                                        HorizontalGravity="Left"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont28_Text_L"
+                                        Text="@String/MX_LANG_NAVI_ROUTE_SELECTION_PROCESS_EV_TEXT_Charging_Times" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <!--无法到达与Tagging布局-->
+                            <LinearLayout
+                                LayoutWidth="321"
+                                LayoutHeight="48"
+                                LayoutLeftMargin = "289"
+                                LayoutTopMargin="24"
+                                HorizontalGravity="Right"
+                                DuplicateParentState="true">
+                                <!--无法抵达-->
+                                <RelativeLayout
+                                    Id="@+Id/Layout_ChargingTimeUnreach1WS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="48"
+                                    LayoutRightMargin="10"
+                                    Background="@Drawable/navi_card_unreachable_bg"
+                                    DuplicateParentState="true"
+                                    Visible="Gone">
+                                    <TextActor
+                                        Id="@+Id/TEXT_Route_ChargingTimeUnreach1WS"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="30"
+                                        HorizontalGravity="Center"
+                                        LayoutTopMargin="9"
+                                        LayoutBottomMargin="9"
+                                        LayoutLeftMargin="15"
+                                        LayoutRightMargin="15"
+                                        PaddingTop="2"
+                                        DuplicateParentState="true"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont24_Text_L"
+                                        Text="@String/MX_LANG_NAVI_ROUTE_SELECTION_WITH_STOPOVER2_EV_TEXT_Destination_SOC_Info2" />
+                                </RelativeLayout>
+                                <!--不显示充电次数与无法抵达时占位-->
+                                <ImageActor
+                                    Id="@+Id/Actor_NoCharging1WS"
+                                    LayoutWidth="163"
+                                    LayoutHeight="48" />
+                                <!--路线tagging-->
+                                <RelativeLayout
+                                    Id="@+Id/Layout_Route1_Tagging2WS"
+                                    LayoutWidth="WrapContent"
+                                    MaxFormatWidth = "130"
+                                    LayoutHeight="48"
+                                    LayoutAlignParentRight="true"
+                                    HorizontalGravity = "Center"
+                                    Background="@Drawable/navi_card_recommend_bg"
+                                    DuplicateParentState="true">
+                                    <TextActor
+                                        Id="@+Id/TEXT_Route1_Tagging2WS"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="30"
+                                        HorizontalGravity="Left"
+                                        LayoutTopMargin="9"
+                                        LayoutBottomMargin="9"
+                                        LayoutLeftMargin="15"
+                                        LayoutRightMargin="15"
+                                        PaddingTop="2"
+                                        DuplicateParentState="true"
+                                        TextAutoScrollMode="AutoScroll"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont24_Text_L"
+                                        Text="@String/MX_LANG_DD_ROUTE_PROFILE_SETTING_TEXT_Minimum_Charging" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                            <!--第二排-->
+                            <LinearLayout
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="40"
+                                LayoutLeftMargin="114"
+                                LayoutTopMargin="86">
+                                <!--剩余距离-->
+                                <TextActor
+                                    Id="@+Id/Text1_RestTime_NumberWS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="34"
+                                    LayoutTopMargin = "6"
+                                    DuplicateParentState="true"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont28_Text_M"
+                                    Text="0" />
+                                <TextActor
+                                    Id="@+Id/Text1_RestTime_TextWS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="34"
+                                    LayoutTopMargin = "6"
+                                    PaddingTop = "-1"
+                                    LayoutRightMargin="28"
+                                    HorizontalGravity="Left"
+                                    DuplicateParentState="true"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont28_Text_L"
+                                    Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Distance_TEXT_M" />
+                                <!--收费金额及icon-->
+                                <ImageActor
+                                    Id="@+Id/IconSingle1_TollCostWS"
+                                    LayoutWidth="40"
+                                    LayoutHeight="40"
+                                    Drawable="@Drawable/navi_charge" />
+                                <TextActor
+                                    Id="@+Id/TxtSingle1_TollCostWS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="34"
+                                    LayoutTopMargin="6"
+                                    PaddingTop = "-1"
+                                    LayoutRightMargin="16"
+                                    DuplicateParentState="true"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont28_Text_L" />
+                                <!--交通灯数及icon-->
+                                <ImageActor
+                                    Id="@+Id/IconSingle1_TrafficLightWS"
+                                    LayoutWidth="40"
+                                    LayoutHeight="40"
+                                    DuplicateParentState="true"
+                                    Drawable="@Drawable/traffic_s_day_and_night_40" />
+                                <TextActor
+                                    Id="@+Id/TxtSingle1_TrafficLightWS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="34"
+                                    LayoutTopMargin="6"
+                                    PaddingTop = "-1"
+                                    DuplicateParentState="true"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont28_Text_L"
+                                    Text="0" />
+                            </LinearLayout>
+                            <LinearLayout
+                                Id="@+Id/LayoutRouteOptions1WS"
+                                LayoutWidth="96"
+                                LayoutHeight="40"
+                                LayoutLeftMargin="514"
+                                LayoutTopMargin="86"
+                                HorizontalGravity="Right"
+                                DuplicateParentState="true">
+                                <!--高速icon-->
+                                <ImageActor
+                                    Id="@+Id/IconSingle1_HighWayWS"
+                                    LayoutWidth="40"
+                                    LayoutHeight="40"
+                                    Drawable="@Drawable/navi_Highways" />
+                                <!--航道icon-->
+                                <ImageActor
+                                    Id="@+Id/IconSingle1_FerryWS"
+                                    LayoutWidth="40"
+                                    LayoutHeight="40"
+                                    LayoutLeftMargin="16"
+                                    Drawable="@Drawable/navi_transport" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                        <!--路线列表2-->
+                        <RelativeLayout
+                            Id="@+Id/LayoutSingle2WS"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="160"
+                            Background="@Drawable/navi_display_route_selection"
+                            Clickable="true"
+                            Visible="Gone"
+                            ClickDataCollection="BTN_Route_Selected">
+                            <!--路线序号-->
+                            <TextActor
+                                Id="@+Id/TEXT_Route2WS"
+                                LayoutWidth="60"
+                                LayoutHeight="60"
+                                LayoutLeftMargin="38"
+                                LayoutTopMargin="38"
+                                PaddingTop = "4"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont40_UIDigit_M"
+                                Text="2." />
+                            <!--第一排-->
+                            <LinearLayout
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="40"
+                                LayoutLeftMargin="114"
+                                LayoutTopMargin="28"
+                                DuplicateParentState="true">
+                                <!--剩余时间小时-->
+                                <LinearLayout
+                                    Id="@+Id/Layout2_RestTime_HourWS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    DuplicateParentState="true"
+                                    Visible="Visible">
+                                    <TextActor
+                                        Id="@+Id/Text2_RestTime_HourWS"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="FillParent"
+                                        PaddingTop = "4"
+                                        HorizontalGravity="Left"
+                                        DuplicateParentState="true"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont34_Text_R"
+                                        Text="00" />
+                                    <TextActor
+									  Id = "@+Id/Text2_RestTime_HourWS_Unit"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="FillParent"
+                                        PaddingTop = "4"
+                                        HorizontalGravity="Left"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont34_Text_L"
+                                        Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Time_TEXT_Hour" />
+                                </LinearLayout>
+                                <!--剩余时间分钟-->
+                                <LinearLayout
+                                    Id="@+Id/Layout2_RestTime_MinWS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    DuplicateParentState="true"
+                                    Visible="Visible">
+                                    <TextActor
+                                        Id="@+Id/Text2_RestTime_MinWS"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="FillParent"
+                                        PaddingTop = "4"
+                                        HorizontalGravity="Left"
+                                        DuplicateParentState="true"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont34_Text_R"
+                                        Text="00" />
+                                    <TextActor
+                                        Id="@+Id/Text2_RestTime_MinWS_Unit"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="FillParent"
+                                        PaddingTop = "4"
+                                        HorizontalGravity="Left"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont34_Text_L"
+                                        Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Time_TEXT_Min1" />
+                                </LinearLayout>
+                                <!--充电次数可达-->
+                                <LinearLayout
+                                    Id="@+Id/Layout_ChargingTimes2WS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="40"
+                                    LayoutLeftMargin="16"
+                                    DuplicateParentState="true"
+                                    Visible="Gone">
+                                    <ImageActor
+                                        LayoutWidth="41"
+                                        LayoutHeight="41"
+                                        DuplicateParentState="true"
+                                        Drawable="@Drawable/Navi_Charging" />
+                                    <TextActor
+                                        Id="@+Id/TEXT_ChargingTimes2WS"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="34"
+                                        LayoutLeftMargin="6"
+                                        LayoutTopMargin="3"
+                                        DuplicateParentState="true"
+                                        HorizontalGravity="Left"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont28_Text_M"/>
+                                    <TextActor
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="34"
+                                        LayoutTopMargin="3"
+                                        DuplicateParentState="true"
+                                        HorizontalGravity="Left"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont28_Text_L"
+                                        Text="@String/MX_LANG_NAVI_ROUTE_SELECTION_PROCESS_EV_TEXT_Charging_Times" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <!--无法到达与Tagging布局-->
+                            <LinearLayout
+                                LayoutWidth="321"
+                                LayoutHeight="48"
+                                LayoutLeftMargin = "289"
+                                LayoutTopMargin="24"
+                                HorizontalGravity="Right"
+                                DuplicateParentState="true">
+                                <!--无法抵达-->
+                                <RelativeLayout
+                                    Id="@+Id/Layout_ChargingTimeUnreach2WS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="48"
+                                    LayoutRightMargin="10"
+                                    Background="@Drawable/navi_card_unreachable_bg"
+                                    DuplicateParentState="true"
+                                    Visible="Gone">
+                                    <TextActor
+                                        Id="@+Id/TEXT_Route_ChargingTimeUnreach2WS"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="30"
+                                        HorizontalGravity="Center"
+                                        LayoutTopMargin="9"
+                                        LayoutBottomMargin="9"
+                                        LayoutLeftMargin="15"
+                                        LayoutRightMargin="15"
+                                        PaddingTop="2"
+                                        DuplicateParentState="true"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont24_Text_L"
+                                        Text="@String/MX_LANG_NAVI_ROUTE_SELECTION_WITH_STOPOVER2_EV_TEXT_Destination_SOC_Info2" />
+                                </RelativeLayout>
+                                <!--不显示充电次数与无法抵达时占位-->
+                                <ImageActor
+                                    Id="@+Id/Actor_NoCharging2WS"
+                                    LayoutWidth="163"
+                                    LayoutHeight="48" />
+                                <!--路线tagging-->
+                                <RelativeLayout
+                                    Id="@+Id/Layout_Route2_Tagging2WS"
+                                    LayoutWidth="WrapContent"
+                                    MaxFormatWidth = "130"
+                                    LayoutHeight="48"
+                                    LayoutAlignParentRight="true"
+                                    HorizontalGravity = "Center"
+                                    Background="@Drawable/navi_card_recommend_bg"
+                                    DuplicateParentState="true">
+                                    <TextActor
+                                        Id="@+Id/TEXT_Route2_Tagging2WS"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="30"
+                                        HorizontalGravity="Left"
+                                        LayoutTopMargin="9"
+                                        LayoutBottomMargin="9"
+                                        LayoutLeftMargin="15"
+                                        LayoutRightMargin="15"
+                                        PaddingTop="2"
+                                        DuplicateParentState="true"
+                                        TextAutoScrollMode="AutoScrollWhenFocused"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont24_Text_L"
+                                        Text="@String/MX_LANG_DD_ROUTE_PROFILE_SETTING_TEXT_Minimum_Charging" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                            <!--第二排-->
+                            <LinearLayout
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="40"
+                                LayoutLeftMargin="114"
+                                LayoutTopMargin="86">
+                                <!--剩余距离-->
+                                <TextActor
+                                    Id="@+Id/Text2_RestTime_NumberWS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="34"
+                                    LayoutTopMargin = "6"
+                                    PaddingTop = "-1"
+                                    DuplicateParentState="true"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont28_Text_M"
+                                    Text="0" />
+                                <TextActor
+                                    Id="@+Id/Text2_RestTime_TextWS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="34"
+                                    LayoutTopMargin = "6"
+                                    PaddingTop = "-1"
+                                    LayoutRightMargin="28"
+                                    HorizontalGravity="Left"
+                                    DuplicateParentState="true"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont28_Text_L"
+                                    Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Distance_TEXT_M" />
+                                <!--收费金额及icon-->
+                                <ImageActor
+                                    Id="@+Id/IconSingle2_TollCostWS"
+                                    LayoutWidth="40"
+                                    LayoutHeight="40"
+                                    Drawable="@Drawable/navi_charge" />
+                                <TextActor
+                                    Id="@+Id/TxtSingle2_TollCostWS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="34"
+                                    LayoutTopMargin="6"
+                                    PaddingTop = "-1"
+                                    LayoutRightMargin="16"
+                                    DuplicateParentState="true"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont28_Text_L" />
+                                <!--交通灯数及icon-->
+                                <ImageActor
+                                    Id="@+Id/IconSingle2_TrafficLightWS"
+                                    LayoutWidth="40"
+                                    LayoutHeight="40"
+                                    DuplicateParentState="true"
+                                    Drawable="@Drawable/traffic_s_day_and_night_40" />
+                                <TextActor
+                                    Id="@+Id/TxtSingle2_TrafficLightWS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="34"
+                                    LayoutTopMargin="6"
+                                    PaddingTop = "-1"
+                                    DuplicateParentState="true"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont28_Text_L"
+                                    Text="0" />
+                            </LinearLayout>
+                            <LinearLayout
+                                Id="@+Id/LayoutRouteOptions2WS"
+                                LayoutWidth="96"
+                                LayoutHeight="40"
+                                LayoutLeftMargin="514"
+                                LayoutTopMargin="86"
+                                HorizontalGravity="Right"
+                                DuplicateParentState="true">
+                                <!--高速icon-->
+                                <ImageActor
+                                    Id="@+Id/IconSingle2_HighWayWS"
+                                    LayoutWidth="40"
+                                    LayoutHeight="40"
+                                    Drawable="@Drawable/navi_Highways" />
+                                <!--航道icon-->
+                                <ImageActor
+                                    Id="@+Id/IconSingle2_FerryWS"
+                                    LayoutWidth="40"
+                                    LayoutHeight="40"
+                                    LayoutLeftMargin="16"
+                                    Drawable="@Drawable/navi_transport" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                        <!--路线列表3-->
+                        <RelativeLayout
+                            Id="@+Id/LayoutSingle3WS"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="160"
+                            Background="@Drawable/navi_display_route_selection"
+                            Clickable="true"
+                            Visible="Gone"
+                            ClickDataCollection="BTN_Route_Selected">
+                            <!--路线序号-->
+                            <TextActor
+                                Id="@+Id/TEXT_Route3WS"
+                                LayoutWidth="60"
+                                LayoutHeight="60"
+                                LayoutLeftMargin="38"
+                                LayoutTopMargin="38"
+                                PaddingTop = "4"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont40_UIDigit_M"
+                                Text="3." />
+                            <!--第一排-->
+                            <LinearLayout
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="40"
+                                LayoutLeftMargin="114"
+                                LayoutTopMargin="28"
+                                DuplicateParentState="true">
+                                <!--剩余时间小时-->
+                                <LinearLayout
+                                    Id="@+Id/Layout3_RestTime_HourWS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    DuplicateParentState="true"
+                                    Visible="Visible">
+                                    <TextActor
+                                        Id="@+Id/Text3_RestTime_HourWS"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="FillParent"
+                                        PaddingTop = "4"
+                                        HorizontalGravity="Left"
+                                        DuplicateParentState="true"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont34_Text_R"
+                                        Text="00" />
+                                    <TextActor
+									  Id = "@+Id/Text3_RestTime_HourWS_Unit"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="FillParent"
+                                        PaddingTop = "4"
+                                        HorizontalGravity="Left"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont34_Text_L"
+                                        Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Time_TEXT_Hour" />
+                                </LinearLayout>
+                                <!--剩余时间分钟-->
+                                <LinearLayout
+                                    Id="@+Id/Layout3_RestTime_MinWS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="FillParent"
+                                    DuplicateParentState="true"
+                                    Visible="Visible">
+                                    <TextActor
+                                        Id="@+Id/Text3_RestTime_MinWS"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="FillParent"
+                                        PaddingTop = "4"
+                                        HorizontalGravity="Left"
+                                        DuplicateParentState="true"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont34_Text_R"
+                                        Text="00" />
+                                    <TextActor
+									  Id = "@+Id/Text3_RestTime_MinWS_Unit"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="FillParent"
+                                        PaddingTop = "4"
+                                        HorizontalGravity="Left"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont34_Text_L"
+                                        Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Time_TEXT_Min1" />
+                                </LinearLayout>
+                                <!--充电次数可达-->
+                                <LinearLayout
+                                    Id="@+Id/Layout_ChargingTimes3WS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="40"
+                                    LayoutLeftMargin="16"
+                                    DuplicateParentState="true"
+                                    Visible="Gone">
+                                    <ImageActor
+                                        LayoutWidth="41"
+                                        LayoutHeight="41"
+                                        DuplicateParentState="true"
+                                        Drawable="@Drawable/Navi_Charging" />
+                                    <TextActor
+                                        Id="@+Id/TEXT_ChargingTimes3WS"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="34"
+                                        LayoutLeftMargin="6"
+                                        LayoutTopMargin="3"
+                                        DuplicateParentState="true"
+                                        HorizontalGravity="Left"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont28_Text_M"/>
+                                    <TextActor
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="34"
+                                        LayoutTopMargin="3"
+                                        DuplicateParentState="true"
+                                        HorizontalGravity="Left"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont28_Text_L"
+                                        Text="@String/MX_LANG_NAVI_ROUTE_SELECTION_PROCESS_EV_TEXT_Charging_Times" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <!--无法到达与Tagging布局-->
+                            <LinearLayout
+                                LayoutWidth="321"
+                                LayoutHeight="48"
+                                LayoutLeftMargin = "289"
+                                LayoutTopMargin="24"
+                                HorizontalGravity="Right"
+                                DuplicateParentState="true">
+                                <!--无法抵达-->
+                                <RelativeLayout
+                                    Id="@+Id/Layout_ChargingTimeUnreach3WS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="48"
+                                    LayoutRightMargin="10"
+                                    Background="@Drawable/navi_card_unreachable_bg"
+                                    DuplicateParentState="true"
+                                    Visible="Gone">
+                                    <TextActor
+                                        Id="@+Id/TEXT_Route_ChargingTimeUnreach3WS"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="30"
+                                        HorizontalGravity="Center"
+                                        LayoutTopMargin="9"
+                                        LayoutBottomMargin="9"
+                                        LayoutLeftMargin="15"
+                                        LayoutRightMargin="15"
+                                        PaddingTop="2"
+                                        DuplicateParentState="true"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont24_Text_L"
+                                        Text="@String/MX_LANG_NAVI_ROUTE_SELECTION_WITH_STOPOVER2_EV_TEXT_Destination_SOC_Info2" />
+                                </RelativeLayout>
+                                <!--不显示充电次数与无法抵达时占位-->
+                                <ImageActor
+                                    Id="@+Id/Actor_NoCharging3WS"
+                                    LayoutWidth="163"
+                                    LayoutHeight="48" />
+                                <!--路线tagging-->
+                                <RelativeLayout
+                                    Id="@+Id/Layout_Route3_Tagging2WS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="48"
+                                    LayoutAlignParentRight="true"
+                                    HorizontalGravity = "Center"
+                                    Background="@Drawable/navi_card_recommend_bg"
+                                    DuplicateParentState="true">
+                                    <TextActor
+                                        Id="@+Id/TEXT_Route3_Tagging2WS"
+                                        LayoutWidth="WrapContent"
+                                        MaxFormatWidth = "130"
+                                        LayoutHeight="30"
+                                        HorizontalGravity="Left"
+                                        LayoutTopMargin="9"
+                                        LayoutBottomMargin="9"
+                                        LayoutLeftMargin="15"
+                                        LayoutRightMargin="15"
+                                        PaddingTop="2"
+                                        DuplicateParentState="true"
+                                        TextAutoScrollMode="AutoScrollWhenFocused"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont24_Text_L"
+                                        Text="@String/MX_LANG_DD_ROUTE_PROFILE_SETTING_TEXT_Minimum_Charging" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                            <!--第二排-->
+                            <LinearLayout
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="40"
+                                LayoutLeftMargin="114"
+                                LayoutTopMargin="86">
+                                <!--剩余距离-->
+                                <TextActor
+                                    Id="@+Id/Text3_RestTime_NumberWS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="34"
+                                    LayoutTopMargin = "6"
+                                    PaddingTop = "-1"
+                                    DuplicateParentState="true"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont28_Text_M"
+                                    Text="0" />
+                                <TextActor
+                                    Id="@+Id/Text3_RestTime_TextWS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="34"
+                                    LayoutTopMargin = "6"
+                                    PaddingTop = "-1"
+                                    LayoutRightMargin="28"
+                                    HorizontalGravity="Left"
+                                    DuplicateParentState="true"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont28_Text_L"
+                                    Text="@String/MX_LANG_Detail_Description_Display_Rules_of_Distance_TEXT_M" />
+                                <!--收费金额及icon-->
+                                <ImageActor
+                                    Id="@+Id/IconSingle3_TollCostWS"
+                                    LayoutWidth="40"
+                                    LayoutHeight="40"
+                                    Drawable="@Drawable/navi_charge" />
+                                <TextActor
+                                    Id="@+Id/TxtSingle3_TollCostWS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="34"
+                                    LayoutTopMargin="6"
+                                    PaddingTop = "-1"
+                                    LayoutRightMargin="16"
+                                    DuplicateParentState="true"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont28_Text_L" />
+                                <!--交通灯数及icon-->
+                                <ImageActor
+                                    Id="@+Id/IconSingle3_TrafficLightWS"
+                                    LayoutWidth="40"
+                                    LayoutHeight="40"
+                                    DuplicateParentState="true"
+                                    Drawable="@Drawable/traffic_s_day_and_night_40" />
+                                <TextActor
+                                    Id="@+Id/TxtSingle3_TrafficLightWS"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="34"
+                                    LayoutTopMargin="6"
+                                    PaddingTop = "-1"
+                                    DuplicateParentState="true"
+                                    HorizontalGravity="Left"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont28_Text_L"
+                                    Text="0" />
+                            </LinearLayout>
+                            <LinearLayout
+                                Id="@+Id/LayoutRouteOptions3WS"
+                                LayoutWidth="96"
+                                LayoutHeight="40"
+                                LayoutLeftMargin="514"
+                                LayoutTopMargin="86"
+                                HorizontalGravity="Right"
+                                DuplicateParentState="true">
+                                <!--高速icon-->
+                                <ImageActor
+                                    Id="@+Id/IconSingle3_HighWayWS"
+                                    LayoutWidth="40"
+                                    LayoutHeight="40"
+                                    Drawable="@Drawable/navi_Highways" />
+                                <!--航道icon-->
+                                <ImageActor
+                                    Id="@+Id/IconSingle3_FerryWS"
+                                    LayoutWidth="40"
+                                    LayoutHeight="40"
+                                    LayoutLeftMargin="16"
+                                    Drawable="@Drawable/navi_transport" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </HorizontalSpliteScreenLayout>
+                    <!--分页符号-->
+                   <LinearLayout
+						Id = "@+Id/BBBallLayout"
+						LayoutWidth = "160"
+						LayoutHeight = "20"
+                        LayoutLeftMargin = "244"
+						LayoutTopMargin = "-2"
+                        LayoutBottomMargin = "8"
+						HorizontalGravity = "Center"
+						Visible = "Gone">
+						<RelativeLayout
+							Id = "@+Id/BBBall_1_BigPattern"
+							LayoutWidth = "12"
+							LayoutHeight = "12"
+							LayoutTopMargin = "4"
+							IsBgAnimator = "true"
+							Background = "@Drawable/mixin_strip_active_prox">
+							<ImageActor
+								IsBgAnimator = "true"
+								DuplicateParentState = "true"
+								Background = "@Drawable/mixin_strip_active_prox"/>
+						</RelativeLayout>
+						<RelativeLayout
+							Id = "@+Id/BBBall_2_BigPattern"
+							LayoutWidth = "12"
+							LayoutHeight = "12"
+							LayoutLeftMargin = "20"
+							LayoutTopMargin = "4"
+							IsBgAnimator = "true"
+							Background = "@Drawable/mixin_strip_active_prox">
+							<ImageActor
+								IsBgAnimator = "true"
+								DuplicateParentState = "true"
+								Background = "@Drawable/mixin_strip_active_prox"/>
+						</RelativeLayout>
+						<RelativeLayout
+							Id = "@+Id/BBBall_3_BigPattern"
+							LayoutWidth = "12"
+							LayoutHeight = "12"
+							LayoutLeftMargin = "20"
+							LayoutTopMargin = "4"
+							IsBgAnimator = "true"
+							Background = "@Drawable/mixin_strip_active_prox">
+							<ImageActor
+								IsBgAnimator = "true"
+								DuplicateParentState = "true"
+								Background = "@Drawable/mixin_strip_active_prox"/>
+						</RelativeLayout>
+					</LinearLayout>
+                    <!--途经地LIST-->
+                    <RelativeLayout
+                        Id="@+Id/ListStopover"
+                        LayoutWidth="662"
+                        LayoutHeight="WrapContent"
+                        LayoutLeftMargin = "8"
+                        LayoutTopMargin = "2"
+                        Visible="Gone">
+                        <SmoothListActorEx
+                            Id="@Id/PreDefine/SmoothListActor"
+                            LayoutWidth="632"
+                            LayoutHeight="FillParent"
+                            VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_01" />
+                        <SmoothListScrollBar
+                            Id="@Id/PreDefine/SmoothListScrollBar"
+                            LayoutWidth="30"
+                            LayoutHeight="FillParent"
+                            LayoutLeftMargin="632"
+                            ScrollBarLayout="@Layout/CActorScrollBarRouteSelect" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <!--路线计算中LayoutStart-->
+                <RelativeLayout
+                    Id="@+Id/LinearCalculatingStart"
+                    LayoutWidth="FillParent"
+                    LayoutHeight="FillParent">
+                    <AutomaticImageActor
+                        Id="@+Id/AutomaticCalculatingStart"
+                        LayoutWidth="80"
+                        LayoutHeight="80"
+                        ImageChangeTimer="100"
+                        LayoutLeftMargin="321"
+                        LayoutTopMargin="390"
+                        Cyclable="true"
+                        Visible="Gone"
+                        Drawable="@Drawable/loading_anim_seq_l_LayerList" />
+                    <TextActor
+                        LayoutWidth="FillParent"
+                        LayoutHeight="40"
+                        LayoutTopMargin="516"
+                        PaddingTop = "2"
+                        HorizontalGravity="Center"
+                        TextColor="@Color/DayBlack_NightWhite"
+                        TextFont="@Font/UIFont34_Text_L"
+                        Text="@String/MX_LANG_PO_NAVI_ROUTE_CALCULATING_TEXT_ROUTE_CALCULATING" />
+                </RelativeLayout>
+                <!--最下方的一排按钮-->
+                <LinearLayout
+                    Id="@+Id/Linear_StartNavigation"
+                    LayoutWidth="724"
+                    LayoutHeight="172"
+                    LayoutTopMargin="688"
+                    LayoutLeftMargin="12"
+                    Visible="Gone">
+                    <!--途经地按钮-->
+                    <RelativeLayout
+                        LayoutWidth="172"
+                        LayoutHeight="172">
+                        <ImageButton
+                            Id="@+Id/Btn_Add_Stopover"
+                            LayoutWidth="136"
+                            LayoutHeight="136"
+                            LayoutCenterInParent="true"
+                            ClickDataCollection="Btn_Add_Stopover"
+                            Clickable="true"
+                            Drawable="@Drawable/add_80"
+                            Background="@Drawable/btn_h104_background_normal_prox"
+                            BGHorizontalGravity="Center"
+                            BGVerticalGravity="Center"
+                            VisibleSpeechs="@String/MX_LANG_NAVI_ROUTE_SELECTION_PROCESS_VisibleSpeechs_02" />
+                    </RelativeLayout>
+                    <!--熟路按钮-->
+                    <RelativeLayout
+                        Id="@+Id/BtnStartNavigationCommute"
+                        LayoutWidth="266"
+                        LayoutHeight="136"
+                        LayoutTopMargin = "18"
+                        LayoutLeftMargin="-20"
+                        Clickable="true"
+                        DuplicateParentState="true"
+                        ClickDataCollection="BtnStartNavigationCommute"
+                        VisibleSpeechs = "@String/MX_LANG_NAVI_ROUTE_SELECTION_PROCESS_VisibleSpeechs_03">
+                        <ImageActor
+                            LayoutWidth="FillParent"
+                            LayoutHeight="172"
+                            LayoutTopMargin="-18"
+                            LayoutBottomMargin="-18"
+                            LayoutRightMargin="-18"
+                            LayoutLeftMargin="-18"
+                            BGHorizontalGravity="Center"
+                            BGVerticalGravity="Center"
+                            Background="@Drawable/background_104h_normal_view"
+                            DuplicateParentState="true" />
+                        <!--按钮中显示的内容，文字-->
+                        <TextActor
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="56"
+                            PaddingTop = "2"
+                            LayoutCenterInParent = "true"
+                            Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_OPERATE_TEXT_Familiar_Route"
+                            TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                            TextColor="@Color/NormalBtn_RGB"
+                            DuplicateParentState="true" />
+                    </RelativeLayout>
+                    <!--开始导航部品-->
+                    <RelativeLayout
+                        LayoutWidth="302"
+                        LayoutHeight="172"
+                        LayoutLeftMargin = "-20">
+                        <!--倒计时的动画-->
+                        <RelativeLayout
+                            Id="@+Id/Layout_Btn_Go_Countdown"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="FillParent"
+                            Background="@Drawable/background_cta_btn_countdown_bg_10s_view"
+                            Visible="Gone">
+                            <AutomaticImageActor
+                                Id="@+Id/Automatic_Btn_Go_Countdown"
+                                LayoutWidth="FillParent"
+                                LayoutHeight="FillParent"
+                                ImageChangeTimer="40"
+                                Cyclable="false"
+                                Drawable="@Drawable/drawablelevel_background_cta_btn_countdown_10s_view"
+                                Visible="Gone"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            LayoutWidth="266"
+                            LayoutHeight="136"
+                            LayoutTopMargin = "18"
+                            LayoutLeftMargin = "18">
+                            <!--常态的阴影-->
+                            <ImageActor
+                                LayoutWidth="FillParent"
+                                LayoutHeight="FillParent"
+                                Id="@+Id/shadows_btn_go_normal"
+                                LayoutTopMargin="-18"
+                                LayoutBottomMargin="-18"
+                                LayoutRightMargin="-18"
+                                LayoutLeftMargin="-18"
+                                BGHorizontalGravity="Center"
+                                BGVerticalGravity="Center"
+                                Background="@Drawable/background_104h_hero_prox_day_shadows" />
+                            <RelativeLayout
+                                Id="@+Id/StartNavigationLayout"
+                                LayoutWidth="FillParent"
+                                LayoutHeight="FillParent"
+                                Clickable="true"
+                                DuplicateParentState="true"
+                                LayoutLeftMargin = "2"
+                                Background="@Drawable/Gradient_btn_go"
+                                ClickDataCollection="BTN_Go"
+                                VisibleSpeechs="@String/MX_LANG_NAVI_ROUTE_SELECTION_RESTRICTION_REMIND4_VisibleSpeechs_02">
+                                <TextActor
+                                    Id="@+Id/StartNavigationText"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="56"
+                                    PaddingTop = "2"
+                                    LayoutCenterInParent="true"
+                                    DuplicateParentState="true"
+                                    TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                                    TextColor="@Color/Hero_Btn_Color"
+                                    Enabled="false"
+                                    Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV1_TEXT_Go" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <!--回避道路、服务区、充电站布局-->
+            <LinearLayout
+                Id="@+Id/RouteOptionLayout"
+                LayoutWidth="598"
+                LayoutHeight="136"
+                LayoutLeftMargin="712"
+                LayoutTopMargin="820"
+                Visible="Gone">
+                <!--回避道路部品-->
+                <RelativeLayout
+                    Id="@+Id/BtnRouteOption"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="136"
+                    DuplicateParentState="true"
+                    Clickable="true"
+                    ClickDataCollection="BTN_Route_Option"
+                    VisibleSpeechs="@String/MX_LANG_NAVI_ROUTE_OPTION_TEXT_Route_Option_VisibleSpeechs_01">
+                    <ImageActor
+                        LayoutWidth="FillParent"
+                        LayoutHeight="172"
+                        LayoutTopMargin="-18"
+                        LayoutBottomMargin="-18"
+                        LayoutRightMargin="-18"
+                        LayoutLeftMargin="-18"
+                        BGHorizontalGravity="Center"
+                        BGVerticalGravity="Center"
+                        Background="@Drawable/background_104h_normal_view"
+                        DuplicateParentState="true" />
+                    <TextActor
+                        Id="@+Id/RouteOptionText"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="48"
+                        LayoutLeftMargin="66"
+                        LayoutTopMargin="45"
+                        HorizontalGravity="Left"
+                        DuplicateParentState="true"
+                        TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                        TextColor="@Color/NormalBtn_RGB"
+                        Text="推荐" />
+                    <ImageActor
+                        LayoutWidth="80"
+                        LayoutHeight="80"
+                        LayoutAlignParentRight = "true"
+                        LayoutRightMargin="40"
+                        LayoutTopMargin="28"
+                        DuplicateParentState="true"
+                        Drawable="@Drawable/arrow_down_icon" />
+                </RelativeLayout>
+                <!--服务区部品-->
+                <ImageButton
+                    Id="@+Id/BTN_Route_Service"
+                    LayoutWidth="136"
+                    LayoutHeight="136"
+                    LayoutLeftMargin = "-16"
+                    Background="@Drawable/btn_h104_background_normal_prox"
+                    Drawable="@Drawable/navi_service_area"
+                    BGHorizontalGravity="Center"
+                    BGVerticalGravity="Center"
+                    Visible="Gone"
+                    ClickDataCollection="BTN_Route_Service"
+                    VisibleSpeechs="@String/MX_LANG_NAVI_ROUTE_SELECTION_PROCESS_EV_VisibleSpeechs_03" />
+                <!--充电站部品-->
+                <ImageButton
+                    Id="@+Id/BTN_Charging_Edit"
+                    LayoutWidth="136"
+                    LayoutHeight="136"
+                    LayoutLeftMargin = "-16"
+                    Background="@Drawable/btn_h104_background_normal_prox"
+                    Drawable="@Drawable/icon_layers_settings"
+                    BGHorizontalGravity="Center"
+                    BGVerticalGravity="Center"
+                    Visible="Gone"
+                    ClickDataCollection="BTN_Charging_Edit"
+                    VisibleSpeechs = "@String/MX_LANG_NAVI_ROUTE_SELECTION_PROCESS_EV_VisibleSpeechs_04"/>
+            </LinearLayout>
+            <!-- TEXT_Route_Remind -->
+			<LinearLayout
+				Id = "@+Id/LayoutRouteRemind"
+				LayoutWidth = "724"
+				LayoutHeight = "WrapContent"
+				LayoutTopMargin="78"
+				LayoutLeftMargin = "704"
+                LayoutRightMargin = "-4"
+				Clickable = "true"
+				Orientation = "Vertical"
+				Background = "@Drawable/popup_toast_bg"
+				Visible = "Gone">
+				<LinearLayout
+					Id = "@+Id/LayoutRouteRemind1"
+					LayoutWidth = "FillParent"
+					LayoutHeight = "WrapContent"
+					Clickable="false"
+					Orientation = "Vertical"
+					Background = "@Drawable/popup_toast_clear_bg"
+					Visible = "Visible"
+                    VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV2_EV_VisibleSpeechs_04">
+					<ImageActor
+						LayoutWidth = "FillParent"
+						LayoutHeight = "52"/>
+					<RelativeLayout
+						LayoutWidth = "FillParent"
+						DuplicateParentState="true"
+						LayoutHeight = "WrapContent">
+                        <TextActor
+							Id = "@+Id/BTN_Route_Restriction_Info1Text"
+							LayoutWidth = "532"
+							LayoutHeight = "WrapContent"
+							LayoutLeftMargin="16"
+							PaddingTop = "8"
+							SingleLine = "false"
+							WordWrapped = "true"
+							Visible = "Gone"
+							HorizontalGravity="Left"
+							LineIntervalAddFactor="3"
+							LineIntervalMultiFactor="0.1"
+							DuplicateParentState="true"
+							Text = "@String/MX_LANG_NAVI_ROUTE_SELECTION_RESTRICTION_REMIND3_"
+							TextFont = "@Font/UIFont34_Text_L"
+							TextColor = "@Color/NormalBtn"/>
+						<TextActor
+							Id = "@+Id/TextRouteRemind1"
+							LayoutWidth = "600"
+							LayoutHeight = "WrapContent"
+							MaxFormatHeight = "80"
+							LayoutTopMargin = "14"
+							LayoutLeftMargin="62"
+							SingleLine = "false"
+                            WordWrapped = "true"
+							Visible = "Gone"
+							HorizontalGravity="Left"
+							LineIntervalAddFactor="-6"
+							LineIntervalMultiFactor="0.1"
+							DuplicateParentState="true"
+							Text = "@String/MX_LANG_NAVI_ROUTE_SELECTION_REMIND1_TEXT_Route_Remind2"
+							TextFont = "@Font/UIFont34_Text_L"
+							TextColor = "@Color/NormalBtn"/>
+						<TextActor
+							Id = "@+Id/TextRemindSmall"
+							LayoutWidth = "540"
+							LayoutHeight = "40"
+							LayoutTopMargin = "14"
+							LayoutLeftMargin="62"
+							SingleLine = "true"
+							HorizontalGravity="Left"
+							LineIntervalAddFactor="-6"
+							DuplicateParentState="true"
+							LineIntervalMultiFactor="0.1"
+							Text = "@String/MX_LANG_NAVI_ROUTE_SELECTION_REMIND1_TEXT_Route_Remind2"
+							TextFont = "@Font/UIFont34_Text_L"
+							TextColor = "@Color/NormalBtn"/>
+                        <TextActor
+							Id = "@+Id/TextRemindBig"
+							LayoutWidth = "600"
+							LayoutHeight = "WrapContent"
+							LayoutTopMargin = "14"
+							LayoutLeftMargin="62"
+							SingleLine = "false"
+							HorizontalGravity="Left"
+							LineIntervalAddFactor="-6"
+							DuplicateParentState="true"
+							LineIntervalMultiFactor="0.1"
+							Text = "@String/MX_LANG_NAVI_ROUTE_SELECTION_REMIND1_TEXT_Route_Remind2"
+							TextFont = "@Font/UIFont34_Text_L"
+							TextColor = "@Color/NormalBtn"/>
+                        <ImageActor
+							LayoutWidth = "540"
+							LayoutBelow = "@Id/TextRouteRemind1"
+							LayoutLeftMargin="88"
+							LayoutHeight = "11"/>
+						<TextActor
+							Id = "@+Id/NumberRouteRemind"
+							LayoutWidth = "64"
+							LayoutHeight = "64"
+							LayoutLeftMargin = "602"
+							Visible = "Invisible"
+							PaddingLeft="1"
+                            LayoutTopMargin = "2"
+							PaddingTop = "4"
+							LayoutAlignParentTop = "true"
+							HorizontalGravity = "Center"
+							VerticalGravity = "Center"
+							TextFont = "@Font/UIFont34_Text_R"
+							Text = "2"
+							Background = "@Drawable/general_message64"
+							TextColor = "@Color/Color_FFFFFF"/>
+                        <ImageButton
+							Id="@Id/PreDefine/BTN_Route_Restriction_Info1"
+							LayoutWidth="41"
+							LayoutHeight="41"
+							LayoutLeftMargin="601"
+							LayoutTopMargin="11"
+							Visible = "Gone"
+							Background="@Drawable/btn_h48_Avoid_normal_prox"
+							BGHorizontalGravity="Center"
+							BGVerticalGravity="Center"
+							ClickDataCollection="BTN_Route_Restriction_Info"/>
+					</RelativeLayout>
+					<ImageActor
+						LayoutWidth = "FillParent"
+						LayoutHeight = "50"/>
+				</LinearLayout>
+				<LinearLayout
+					Id = "@+Id/LayoutRouteRemind2"
+					LayoutWidth = "FillParent"
+					LayoutHeight = "WrapContent"
+					Orientation = "Vertical"
+					LayoutTopMargin = "-36"
+					LayoutBelow ="@Id/LayoutRouteRemind1"
+					Visible = "Gone">
+					<ImageActor
+						LayoutWidth = "656"
+						LayoutHeight = "2"
+						LayoutLeftMargin = "34"
+						Background = "@Drawable/card_list_line"/>
+					<ImageActor
+						LayoutWidth = "FillParent"
+						LayoutHeight = "28"/>
+                    <RelativeLayout
+						LayoutWidth = "FillParent"
+						DuplicateParentState="true"
+						LayoutHeight = "WrapContent">
+                        <TextActor
+                            Id = "@+Id/TextRouteRemind2"
+                            LayoutWidth = "600"
+                            LayoutHeight = "WrapContent"
+                            MaxFormatHeight = "80"
+                            LayoutLeftMargin = "62"
+                            SingleLine = "false"
+                            WordWrapped = "true"
+                            LayoutTopMargin = "2"
+                            DuplicateParentState="true"
+                            HorizontalGravity="Left"
+                            LineIntervalAddFactor="-6"
+                            LineIntervalMultiFactor="0.1"
+                            Text = "@String/MX_LANG_NAVI_ROUTE_SELECTION_RESTRICTION_REMIND3_"
+                            TextFont = "@Font/UIFont34_Text_L"
+                            TextColor = "@Color/NormalBtn"/>
+                        <ImageButton
+							Id="@Id/PreDefine/BTN_Route_Restriction_Info2"
+							LayoutWidth="41"
+							LayoutHeight="41"
+							LayoutLeftMargin="598"
+							LayoutTopMargin="4"
+							Visible = "Gone"
+							Background="@Drawable/btn_h48_Avoid_normal_prox"
+							BGHorizontalGravity="Center"
+							BGVerticalGravity="Center"
+							ClickDataCollection="BTN_Route_Restriction_Info"/>
+					</RelativeLayout>
+					<ImageActor
+						LayoutWidth = "FillParent"
+						LayoutHeight = "61"/>
+				</LinearLayout>
+				<LinearLayout
+					Id = "@+Id/LayoutRouteRemind3"
+					LayoutWidth = "FillParent"
+					LayoutHeight = "WrapContent"
+					LayoutTopMargin ="-38"
+					Orientation = "Vertical"
+					Visible = "Gone">
+					<ImageActor
+						LayoutWidth = "656"
+						LayoutHeight = "2"
+						LayoutLeftMargin = "34"
+						Background = "@Drawable/card_list_line"/>
+					<ImageActor
+						LayoutWidth = "FillParent"
+						LayoutHeight = "28"/>
+                    <RelativeLayout
+						LayoutWidth = "FillParent"
+						DuplicateParentState="true"
+						LayoutHeight = "WrapContent">
+                        <TextActor
+                            Id = "@+Id/TextRouteRemind3"
+                            LayoutWidth = "600"
+                            LayoutHeight = "WrapContent"
+                            LayoutLeftMargin = "62"
+                            SingleLine = "false"
+                            WordWrapped = "true"
+                            DuplicateParentState="true"
+                            HorizontalGravity="Left"
+                            LayoutTopMargin = "2"
+                            LineIntervalAddFactor="-6"
+                            LineIntervalMultiFactor="0.1"
+                            Text = "@String/MX_LANG_NAVI_ROUTE_SELECTION_RESTRICTION_REMIND3_"
+                            TextFont = "@Font/UIFont34_Text_L"
+                            TextColor = "@Color/NormalBtn"/>
+                        <ImageButton
+							Id="@Id/PreDefine/BTN_Route_Restriction_Info3"
+							LayoutWidth="41"
+							LayoutHeight="41"
+							LayoutLeftMargin="598"
+							LayoutTopMargin="4"
+							Visible = "Gone"
+							Background="@Drawable/btn_h48_Avoid_normal_prox"
+							BGHorizontalGravity="Center"
+							BGVerticalGravity="Center"
+							ClickDataCollection="BTN_Route_Restriction_Info"/>
+					</RelativeLayout>
+					<ImageActor
+						LayoutWidth = "FillParent"
+						LayoutHeight = "59"/>
+				</LinearLayout>
+			</LinearLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

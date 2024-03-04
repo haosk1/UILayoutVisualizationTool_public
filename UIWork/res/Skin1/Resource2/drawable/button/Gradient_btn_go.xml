@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <ScaleDrawableRectCustomStateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" PaddingTop = "12" PaddingBottom = "12" PaddingLeft = "10" PaddingRight = "12" Drawable = "@Drawable/btn_104h_background_hero_Go"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" PaddingTop = "12" PaddingLeft = "12" PaddingBottom = "12" PaddingRight = "12" Drawable = "@Drawable/btn_104h_background_hero_Go"/>
+<!-->Disable-->
+		<Item StateEnabled = "false"  PaddingTop = "12" PaddingBottom = "12" PaddingLeft = "16"  PaddingRight = "16" Drawable = "@Drawable/btn_104h_background_hero_Go"/>
+    </ScaleDrawableRectCustomStateList>
+</Resource>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/RelativeLayoutLayout"
+        LayoutWidth="WrapContent"
+        LayoutHeight="WrapContent">
+        <LinearLayout
+            Id="@+Id/LinearLayoutLayout"
+            LayoutWidth="1104"
+            LayoutHeight="28"
+        />
+    </RelativeLayout>
+</Resource>

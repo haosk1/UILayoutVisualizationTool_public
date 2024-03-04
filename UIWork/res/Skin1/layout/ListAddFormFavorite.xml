@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <HorizontalWipeLayoutEx
+        LayoutWidth="FillParent"
+        LayoutHeight="136"
+        Orientation="Horizontal"
+        VerticalGravity="Center"
+        MaxWipeWidth="164"
+        RightWipeEnabled="true"
+        Clickable="true"
+        Focusable="true">
+        <!-- 信息按钮 -->
+        <RelativeLayout
+            Id="@+Id/BtnInfo"
+            LayoutWidth="FillParent"
+            LayoutHeight="136"
+            LayoutCenterVertical="true"
+            Clickable="true"
+            Background="@Drawable/mixin_bg">
+            <!-- 家或公司或收藏点的图标 -->
+            <ImageActor
+                Id="@+Id/Icon_BG"
+                LayoutWidth="64"
+                LayoutHeight="64"
+                LayoutTopMargin="36"
+                LayoutLeftMargin="32"
+                DuplicateParentState="true" />
+            <!--本地、手机、微信Icon-->
+            <ImageActor
+                Id="@+Id/Icon_From"
+                LayoutWidth = "50"
+                LayoutHeight = "50"
+                LayoutTopMargin = "72"
+                LayoutLeftMargin = "63"
+                PaddingBottom = "9"
+                Background="@Drawable/image_logo_s_bg"
+                DuplicateParentState="true" />
+            <RelativeLayout
+                LayoutWidth="856"
+                LayoutHeight="FillParent"
+                LayoutLeftMargin="128"
+                LayoutTopMargin = "15"
+                DuplicateParentState="true">
+                <TextActor
+                    Id="@+Id/ListSrhAddrResult"
+                    LayoutWidth="856"
+                    LayoutHeight="52"
+                    LayoutTopMargin="5"
+                    LayoutAlignParentLeft="true"
+                    HorizontalGravity="Left"
+                    ShowEllipsis="true"
+                    TextFont="@Font/UIFont40_Text_R"
+                    TextColor="@Color/ListFavColor"
+                    DuplicateParentState="true" />
+                <!-- 第二行地址名称 -->
+                <TextActor
+                    Id="@+Id/ListSrhAddr"
+                    LayoutWidth="856"
+                    LayoutHeight="40"
+                    LayoutTopMargin="59"
+                    HorizontalGravity="Left"
+                    ShowEllipsis="true"
+                    PaddingTop="4"
+                    TextFont="@Font/UIFont34_Text_L"
+                    TextColor="@Color/DayBlack_NightWhite_Grey_pressed"
+                    DuplicateParentState="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <HorizontalWipeDecoration
+            LayoutWidth="141"
+            LayoutHeight="117"
+            LayoutLeftMargin="864"
+            DeleteRegionX="164">
+            <LinearLayout
+                Id="@+Id/LayoutLeftSwipe"
+                LayoutWidth="141"
+                LayoutHeight="117"
+                VerticalGravity="Top">
+                <ImageButton
+                    Id="@+Id/LeftSwipeDelete"
+                    LayoutWidth="141"
+                    LayoutHeight="117"
+                    LayoutAlignParentRight="true"
+                    Clickable="true" />
+            </LinearLayout>
+        </HorizontalWipeDecoration>
+    </HorizontalWipeLayoutEx>
+</Resource>

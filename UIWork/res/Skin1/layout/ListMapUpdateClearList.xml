@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="1210"
+        LayoutHeight="130">
+        <RelativeLayout
+            Id="@+Id/LayoutMain"
+            LayoutWidth="1210"
+            LayoutHeight="130"
+            Clickable="true">
+            <LinearLayout
+                LayoutWidth="FillParent"
+                LayoutHeight="110"
+                LayoutCenterVertical="true"
+                Orientation="Horizontal"
+                Focusable="true"
+                DuplicateParentState="true">
+                <!--空白占位-->
+                <ImageActor
+                    Id="@+Id/ImgBtnOccupy"
+                    LayoutWidth="68"
+                    LayoutHeight="FillParent" />
+                <!--city check Box-->
+                <VividCheckbox
+                    Id="@+Id/ImgCheckboxCity"
+                    LayoutWidth="104"
+                    LayoutHeight="104"
+                    LayoutTopMargin="2"
+                    LayoutLeftMargin="1"
+                    LayoutCenterVertical="true"
+                    UnCheckToCheck="@Drawable/Gradient_Checkbox_M_Z06Z10_F_C"
+                    CheckToUnCheck="@Drawable/Gradient_Checkbox_M_Z10Z06_F_C"
+                    UnCheckToCheckBackground="@Drawable/Checkbox_M_Z06Z10_B"
+                    CheckToUnCheckBackground="@Drawable/Checkbox_M_Z10Z06_B"
+                    ClickDataCollection="BTN_Check_Box" />
+                <TextActor
+                    Id="@+Id/TxtCityName"
+                    LayoutWidth="516"
+                    LayoutHeight="40"
+                    LayoutTopMargin="37"
+                    LayoutLeftMargin="-2"
+                    HorizontalGravity="Left"
+                    LayoutCenterVertical="true"
+                    DuplicateParentState="true"
+                    TextFont="@Font/UIFont34_Text_R"
+                    TextColor="@Color/Color_000000day_and_FFFFFFnight" />
+                <TextActor
+                    Id="@+Id/TxtCityDataSize"
+                    LayoutWidth="260"
+                    LayoutHeight="40"
+                    LayoutLeftMargin="217"
+                    LayoutTopMargin="37"
+                    HorizontalGravity="Right"
+                    LayoutCenterVertical="true"
+                    DuplicateParentState="true"
+                    TextFont="@Font/UIFont34_Text_L"
+                    TextColor="@Color/Color_000000day_and_FFFFFFnight" />
+            </LinearLayout>
+            <LinearLayout
+                LayoutWidth="1214"
+                LayoutHeight="110"
+                LayoutLeftMargin="124"
+                LayoutCenterVertical="true"
+                Clickable="false"
+                Focusable="true">
+                <TextActor
+                    Id="@+Id/TxtProvinceName"
+                    LayoutWidth="574"
+                    LayoutHeight="45"
+                    LayoutTopMargin="35"
+                    HorizontalGravity="Left"
+                    LayoutCenterVertical="true"
+                    DuplicateParentState="true"
+                    TextFont="@Font/UIFont34_Text_R"
+                    TextColor="@Color/Color_000000day_and_FFFFFFnight" />
+                <TextActor
+                    Id="@+Id/TxtProvinceDataSize"
+                    LayoutWidth="200"
+                    LayoutHeight="40"
+                    LayoutTopMargin="37"
+                    LayoutLeftMargin="176"
+                    HorizontalGravity="Right"
+                    LayoutCenterVertical="true"
+                    DuplicateParentState="true"
+                    TextFont="@Font/UIFont34_Text_L"
+                    TextColor="@Color/Color_000000day_and_FFFFFFnight" />
+            </LinearLayout>
+            <!--箭头-->
+            <ImageButton
+                Id="@+Id/ImgDropdown"
+                LayoutWidth="132"
+                LayoutHeight="132"
+                Clickable="true"
+                LayoutCenterVertical="true"
+                LayoutAlignParentRight="true"
+                LayoutRightMargin="10"
+                Drawable="@Drawable/arrow_up_icon"
+                Background="@Drawable/h64_background_normal" />
+        </RelativeLayout>
+        <VividCheckbox
+            Id="@+Id/ImgCheckboxProvince"
+            LayoutWidth="104"
+            LayoutHeight="104"
+            LayoutLeftMargin="20"
+            LayoutCenterVertical="true"
+            UnCheckToCheck="@Drawable/Gradient_Checkbox_M_Z06Z10_F_C"
+            CheckToUnCheck="@Drawable/Gradient_Checkbox_M_Z10Z06_F_C"
+            UnCheckToCheckBackground="@Drawable/Checkbox_M_Z06Z10_B"
+            CheckToUnCheckBackground="@Drawable/Checkbox_M_Z10Z06_B"
+            HalfCheckedDrawable="@Drawable/check_box_not_all_selected_icon"
+            HalfCheckedDrawableBackground="@Drawable/check_box_selected_FillColor"
+            Enable3States="true"
+            ClickDataCollection="BTN_Check_Box" />
+        <ImageActor
+            Id="@+Id/ImgDividerProvince"
+            LayoutWidth="FillParent"
+            LayoutAlignParentBottom="true"
+            LayoutHeight="2" />
+        <ImageActor
+            Id="@+Id/ImgDividerCity"
+            Background="@Drawable/card_list_line_day"
+            LayoutTopMargin="-12"
+            LayoutWidth="FillParent"
+            LayoutHeight="2"
+            LayoutAlignParentBottom="true"
+            Visible="Gone" />
+    </RelativeLayout>
+</Resource>

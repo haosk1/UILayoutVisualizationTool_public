@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "false" StateFocused = "false" Drawable = "@Drawable/navi_stopover_EV_day_1"/>
+<!-->Disable-->
+		<Item StateEnabled = "false" Drawable = "@Drawable/navi_stopover_EV_disable_day_1"/>
+    </StateList>
+</Resource>

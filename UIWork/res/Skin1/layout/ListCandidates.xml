@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+	<LinearLayout
+		LayoutWidth="WrapContent"
+		LayoutHeight="FillParent">
+		<ImageActor
+			Id = "@Id/PreDefine/CandidatesCharListDivider1"
+			LayoutWidth="2"
+			LayoutHeight="52"
+			LayoutTopMargin = "6"
+			Drawable="@Drawable/vertical_divider"/>
+		<Button
+			Id = "@Id/PreDefine/CharListBtn1"
+			LayoutWidth="280"
+			LayoutHeight="FillParent"
+			LayoutLeftMargin = "6"
+			Background="@Drawable/words_btn"
+			Focusable="true"
+			PaddingLeft = "30"
+			PaddingRight = "30"
+			PaddingTop = "6"
+			TextFont = "@Font/UIFont40_Text_R"
+        	TextColor ="@Color/DayBlack_NightWhite"/>
+		<ImageActor
+			LayoutWidth="2"
+			LayoutHeight="52"
+			LayoutLeftMargin = "7"
+			LayoutTopMargin = "6"
+			Drawable="@Drawable/vertical_divider"/>
+	</LinearLayout>
+</Resource>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Resource>
+    <LevelList>
+          <Item DrawableLevel = "0" Drawable = "@Drawable/Leave_parking_N_day_68_68"/>
+          <Item DrawableLevel = "1" Drawable = "@Drawable/Leave_parking_NE_day_68_68"/>
+          <Item DrawableLevel = "2" Drawable = "@Drawable/Leave_parking_NE_day_68_68"/>
+          <Item DrawableLevel = "3" Drawable = "@Drawable/Leave_parking_NE_day_68_68"/>
+          <Item DrawableLevel = "4" Drawable = "@Drawable/Leave_parking_E_day_68_68"/>
+          <Item DrawableLevel = "5" Drawable = "@Drawable/Leave_parking_SE_day_68_68"/>
+          <Item DrawableLevel = "6" Drawable = "@Drawable/Leave_parking_SE_day_68_68"/>
+          <Item DrawableLevel = "7" Drawable = "@Drawable/Leave_parking_SE_day_68_68"/>
+          <Item DrawableLevel = "8" Drawable = "@Drawable/Leave_parking_SE_day_68_68"/>
+          <Item DrawableLevel = "9" Drawable = "@Drawable/Leave_parking_NW_day_68_68_2"/>
+          <Item DrawableLevel = "10" Drawable = "@Drawable/Leave_parking_NW_day_68_68_2"/>
+          <Item DrawableLevel = "11" Drawable = "@Drawable/Leave_parking_NW_day_68_68_2"/>
+          <Item DrawableLevel = "12" Drawable = "@Drawable/Leave_parking_W_day_68_68"/>
+          <Item DrawableLevel = "13" Drawable = "@Drawable/Leave_parking_NW_day_68_68"/>
+          <Item DrawableLevel = "14" Drawable = "@Drawable/Leave_parking_NW_day_68_68"/>
+          <Item DrawableLevel = "15" Drawable = "@Drawable/Leave_parking_NW_day_68_68"/>
+	</LevelList>
+</Resource>

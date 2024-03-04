@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent">
+        <!--HMI界面布局部分，此元器件LayoutWidth表示半屏尺寸-->
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <RelativeLayout
+                Id="@+Id/RealtiveMain"
+                LayoutWidth="724"
+                LayoutHeight="872"
+                LayoutTopMargin="96"
+                Background="@Drawable/card_bg_day_and_night"
+                Clickable="true">
+                <!--close btn -->
+                <ImageButton
+                    Id="@+Id/BtnReturn"
+                    LayoutWidth="136"
+                    LayoutHeight="136"
+                    LayoutLeftMargin="30"
+                    LayoutTopMargin="30"
+                    Background="@Drawable/btn_h104_background_normal_prox"
+                    Drawable="@Drawable/icon_close"
+                    VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_SERVICE_VisibleSpeechs_01"
+                    ClickDataCollection="BTN_Back" />
+                <TextActor
+                    LayoutHeight="52"
+                    LayoutLeftMargin="180"
+                    LayoutTopMargin="72"
+                    PaddingTop="4"
+                    TextColor="@Color/DayBlack_NightWhite"
+                    TextFont="@Font/UIFont40_Text_M"
+                    Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_SERVICE_TITLE_Service_Information" />
+                <!--List-->
+                <SuperList
+                    Id="@+Id/SuperList"
+                    LayoutWidth="648"
+                    LayoutHeight="688"
+                    LayoutCenterHorizontal="true"
+                    LayoutTopMargin="168"
+                    VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_01" />
+                <SmoothListScrollBar
+                    Id="@Id/PreDefine/SmoothListScrollBar"
+                    LayoutWidth="30"
+                    LayoutHeight="642"
+                    LayoutAlignParentRight="true"
+                    LayoutRightMargin="16"
+                    LayoutTopMargin="172"
+                    ScrollBarLayout="@Layout/CActorScrollBarRouteSelect" />
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

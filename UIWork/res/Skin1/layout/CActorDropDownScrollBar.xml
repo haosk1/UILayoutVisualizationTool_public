@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<Resource>
+	<LinearLayout
+		LayoutHeight="FillParent"
+        LayoutWidth="FillParent">
+		<DropDownScrollBarTrack
+			Id="@Id/ScrollBarLayout/ScrollBarTrack"
+            LayoutHeight="FillParent"
+            LayoutWidth="FillParent"
+            Clickable="true"
+            HotTrack="true"
+            ThumbDrawable="@Drawable/handlebar_bg_day_and_night"
+            ThumbSizeFixup="true" />
+	</LinearLayout>
+</Resource>

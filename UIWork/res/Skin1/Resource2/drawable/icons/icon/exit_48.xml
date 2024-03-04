@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "false" Drawable = "@Drawable/exit"/>
+<!-->Check-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "true" Drawable = "@Drawable/exit_pressed"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" Drawable = "@Drawable/exit_pressed"/>
+<!-->Disable-->
+		<Item StateEnabled = "false" Drawable = "@Drawable/exit_disabled"/>
+    </StateList>
+</Resource>

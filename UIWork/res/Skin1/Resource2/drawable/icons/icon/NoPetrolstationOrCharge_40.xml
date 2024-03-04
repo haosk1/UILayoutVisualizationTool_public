@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <LevelList>
+		<Item DrawableLevel = "0" Drawable = "@Drawable/nopetrol_40"/>
+		<Item DrawableLevel = "1" Drawable = "@Drawable/no_wallbox_40"/>
+	</LevelList>
+</Resource>

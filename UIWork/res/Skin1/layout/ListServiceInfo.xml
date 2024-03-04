@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="69"
+        Focusable="true"
+        BGVerticalGravity="Bottom">
+        <LinearLayout
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent"
+            Orientation="Vertical"
+            Focusable="true"
+            VerticalGravity="Center">
+            <LinearLayout
+                LayoutWidth="FillParent"
+                LayoutHeight="43">
+                <TextActor
+                    Id="@+Id/TextURLId"
+                    LayoutWidth="171"
+                    LayoutHeight="FillParent"
+                    PaddingLeft="17"
+                    HorizontalGravity="Left"
+                    TextFont="@Font/UIFont18"
+                    TextColor="@Color/Color_White" />
+                <TextActor
+                    Id="@+Id/TextURLStr"
+                    LayoutWidth="1029"
+                    LayoutHeight="FillParent"
+                    PaddingLeft="17"
+                    HorizontalGravity="Center"
+                    TextFont="@Font/UIFont18"
+                    TextColor="@Color/Color_White" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</Resource>

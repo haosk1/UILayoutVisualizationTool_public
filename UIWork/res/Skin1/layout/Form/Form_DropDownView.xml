@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <!--界面拖拽元器件-->
+    <RelativeLayout
+        Id="@+Id/LayoutRelative"
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent">
+        <!--半屏时占位控件，全屏时隐藏，达到控件布局可以动态切换-->
+        <RelativeLayout
+            Id="@Id/PreDefine/ImgSmartCard"
+            LayoutWidth="496"
+            LayoutHeight="FillParent" />
+        <RelativeLayout
+            LayoutHeight="FillParent"
+            LayoutWidth="FillParent"
+            LayoutRightOf="@Id/PreDefine/ImgSmartCard">
+            <RelativeLayout
+                LayoutTopMargin="248"
+                LayoutHeight="729"
+                LayoutWidth="584"
+                Visible="Visible">
+                <UIDropDownSlideActor
+                    Id="@Id/PreDefine/UIDropDownSlideActor"
+                    LayoutHeight="729"
+                    LayoutWidth="584"
+                    Clickable="true">
+                    <!--切图不符合条件，利用现有资源手动调整显示位置，以保证显示时是上方为直角，可以和TBT完美重合-->
+                    <ImageActor
+                        LayoutHeight="760"
+                        LayoutWidth="FillParent"
+                        LayoutTopMargin="-40"
+                        Background="@Drawable/card_bg_day_and_night" />
+                </UIDropDownSlideActor>
+            </RelativeLayout>
+            <!--界面拖拽bar 一条TBT情况-->
+            <RelativeLayout
+                Id="@Id/PreDefine/LayoutScrollBar"
+                LayoutWidth="FillParent"
+                LayoutHeight="FillParent">
+                <DropDownScrollBar
+                    Id="@Id/PreDefine/DropDownScrollBar"
+                    LayoutTopMargin="244"
+                    LayoutHeight="729"
+                    LayoutWidth="584"
+                    ScrollBarLayout="@Layout/CActorDropDownScrollBar"
+                    Visible="Gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

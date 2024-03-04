@@ -1,0 +1,234 @@
+﻿<? xml version = "1.0" encoding = "UTF-8" ?>
+<Resource>
+	<RelativeLayout
+		Id = "@+Id/LayoutParent"
+		LayoutWidth = "FillParent"
+		LayoutHeight = "WrapContent">
+	<RelativeLayout
+		Id = "@+Id/RelativeLayoutChargingStation"
+		LayoutWidth = "506"
+		LayoutHeight = "180"
+		LayoutLeftMargin = "32">
+		<!--1级List 推荐充电站 长按识别使用-->
+		<LinearLayout
+			Id = "@+Id/Lnr_Point_ChargingStation"
+			LayoutWidth = "FillParent"
+			LayoutHeight = "FillParent"
+			Clickable = "true"
+			Focusable = "true"
+			HorizontalGravity = "Left"
+			VerticalGravity = "Center"
+			Orientation = "Vertical"
+			Background = "@Drawable/card_right_angle_conrners_tripview_bg">
+			<LinearLayout
+				LayoutWidth = "FillParent"
+				LayoutHeight = "178"
+				DuplicateParentState = "true">
+				<RelativeLayout
+				LayoutHeight = "178"
+				LayoutWidth = "73"
+				LayoutLeftMargin = "20">
+				<!--推荐充电站图标-->
+				<ImageActor
+					Id = "@+Id/PointImageType_ChargingStation"
+					LayoutWidth = "64"
+					LayoutHeight = "64"
+					LayoutTopMargin = "58"/>
+				</RelativeLayout>
+				<LinearLayout
+					LayoutHeight = "FillParent"
+					HorizontalGravity = "Left"
+					DuplicateParentState = "true"
+					Orientation = "Vertical"
+					LayoutWidth = "FillParent"
+					LayoutLeftMargin = "7">
+                    <LinearLayout
+						LayoutWidth = "FillParent"
+						LayoutHeight = "40"
+						LayoutTopMargin = "25"
+						DuplicateParentState = "true">
+					<!--推荐充电站名称-->
+					<TextActor
+						Id = "@+Id/TxtPointTitle_ChargingStation"
+						Style = "@Style/cns_TripView_Title"
+						LayoutWidth = "376"
+						LayoutHeight = "40"
+						DuplicateParentState = "true"/>
+                   </LinearLayout>
+				   <LinearLayout
+						LayoutWidth = "FillParent"
+						LayoutTopMargin = "7"
+						DuplicateParentState = "true">
+						<LinearLayout
+							LayoutWidth = "WrapContent"
+							LayoutHeight = "40"
+							DuplicateParentState = "true">
+							<!--推荐充电站详细地址信息-->
+							<TextActor
+								Id = "@+Id/TxtPointDetailAddress_ChargingStation"
+								Style = "@Style/cns_TripView_Title"
+								LayoutWidth = "WrapContent"
+								LayoutHeight = "40"
+								DuplicateParentState = "true"/>
+							<TextActor
+								Id = "@+Id/TxtPointDetailAddressUnit_ChargingStation"
+								Style = "@Style/cns_TripView_Address"
+								LayoutWidth = "WrapContent"
+								LayoutHeight = "40"
+								DuplicateParentState = "true"/>
+						</LinearLayout> 
+						<TextActor
+							Id = "@+Id/TxtPointDetailAddress_ChargingStationtime"
+							Style = "@Style/cns_TripView_Title"
+							LayoutWidth = "WrapContent"
+							LayoutLeftMargin = "21"
+							LayoutHeight = "40"
+							DuplicateParentState = "true"/>
+					</LinearLayout>
+					<LinearLayout
+						LayoutWidth = "FillParent"
+						LayoutTopMargin = "11"
+						DuplicateParentState = "true">
+						<!--电量图标-->
+						<ImageActor
+							Id = "@Id/PreDefine/Img_ChargingPower"
+							LayoutWidth = "48"
+							LayoutHeight = "48"
+							LayoutTopMargin = "-5"
+							DuplicateParentState = "true"
+							Background = "@Drawable/newpower_tripview"/>
+						<!--充电时间-->
+						<LinearLayout
+							Id = "@+Id/Txt_ChargingTime"
+							LayoutHeight = "40"
+							LayoutWidth = "WrapContent"
+							DuplicateParentState = "true">
+							<TextActor
+								Id = "@+Id/Txt_ChargingTime_HourNum"
+								LayoutWidth = "WrapContent"
+								LayoutHeight = "40"
+								Style = "@Style/cns_TripView_Title"
+								DuplicateParentState = "true"/>
+							<TextActor
+								Id = "@+Id/Txt_ChargingTime_HourUnit"
+								LayoutWidth = "WrapContent"
+								LayoutHeight = "40"
+								Style = "@Style/cns_TripView_Address"
+								DuplicateParentState = "true"
+								Text = "@String/MX_LANG_Detail_Description_Display_Rules_of_Time_TEXT_Hour"/>
+							<TextActor
+								Id = "@+Id/Txt_ChargingTime_MinNum"
+								LayoutWidth = "WrapContent"
+								LayoutHeight = "40"
+								DuplicateParentState = "true"
+								Style = "@Style/cns_TripView_Title"/>
+							<TextActor
+								Id = "@+Id/Txt_ChargingTime_MinUnit"
+								LayoutWidth = "WrapContent"
+								LayoutHeight = "40"
+								Style = "@Style/cns_TripView_Address"
+								DuplicateParentState = "true"
+								Text = "@String/MX_LANG_Detail_Description_Display_Rules_of_Time_TEXT_Min1"/>
+						</LinearLayout> 
+					</LinearLayout> 
+				</LinearLayout>
+			</LinearLayout>
+			<!--List分割线-->
+			<ImageActor
+				LayoutWidth = "FillParent"
+				LayoutHeight = "2"
+				Background = "@Drawable/radio_button_line"/>
+		</LinearLayout>
+	</RelativeLayout>
+	<RelativeLayout
+		Id = "@+Id/RelativeLayoutChargingStation_Sec"
+		LayoutWidth = "506"
+		LayoutHeight = "128"
+		LayoutLeftMargin = "32"
+		Visible = "Gone">
+		<!--1级List 推荐充电站 长按识别使用-->
+		<LinearLayout
+			Id = "@+Id/Lnr_Point_ChargingStation_Sec"
+			LayoutWidth = "FillParent"
+			LayoutHeight = "FillParent"
+			Clickable = "true"
+			Focusable = "true"
+			HorizontalGravity = "Left"
+			VerticalGravity = "Center"
+			Orientation = "Vertical"
+			Background = "@Drawable/card_right_angle_conrners_tripview_bg">
+			<LinearLayout
+				LayoutWidth = "FillParent"
+				LayoutHeight = "126"
+				DuplicateParentState = "true">
+				<RelativeLayout
+				LayoutHeight = "126"
+				LayoutWidth = "73"
+				LayoutLeftMargin = "20">
+				<!--推荐充电站图标-->
+				<ImageActor
+					Id = "@+Id/PointImageType_ChargingStation_Sec"
+					LayoutWidth = "64"
+					LayoutHeight = "64"
+					LayoutTopMargin = "32"/>
+				</RelativeLayout>
+				<LinearLayout
+					LayoutHeight = "FillParent"
+					HorizontalGravity = "Left"
+					DuplicateParentState = "true"
+					Orientation = "Vertical"
+					LayoutWidth = "FillParent"
+					LayoutLeftMargin = "7">
+                    <LinearLayout
+						LayoutWidth = "FillParent"
+						LayoutHeight = "40"
+						LayoutTopMargin = "25"
+						DuplicateParentState = "true">
+					<!--推荐充电站名称-->
+					<TextActor
+						Id = "@+Id/TxtPointTitle_ChargingStation_Sec"
+						Style = "@Style/cns_TripView_Title"
+						LayoutWidth = "376"
+						LayoutHeight = "40"
+						DuplicateParentState = "true"/>
+                   </LinearLayout>
+				   <LinearLayout
+						LayoutWidth = "FillParent"
+						DuplicateParentState = "true">
+						<LinearLayout
+							LayoutWidth = "WrapContent"
+							LayoutHeight = "40"
+							DuplicateParentState = "true">
+							<!--推荐充电站详细地址信息-->
+							<TextActor
+								Id = "@+Id/TxtPointDetailAddress_ChargingStation_Sec"
+								Style = "@Style/cns_TripView_Title"
+								LayoutWidth = "WrapContent"
+								LayoutHeight = "40"
+								DuplicateParentState = "true"/>
+							<TextActor
+								Id = "@+Id/TxtPointDetailAddressUnit_ChargingStation_Sec"
+								Style = "@Style/cns_TripView_Address"
+								LayoutWidth = "WrapContent"
+								LayoutHeight = "40"
+								DuplicateParentState = "true"/>
+						</LinearLayout> 
+						<TextActor
+							Id = "@+Id/TxtPointDetailAddress_ChargingStationtime_Sec"
+							Style = "@Style/cns_TripView_Title"
+							LayoutWidth = "WrapContent"
+							LayoutLeftMargin = "21"
+							LayoutHeight = "40"
+							DuplicateParentState = "true"/>
+					</LinearLayout>
+				</LinearLayout>
+			</LinearLayout>
+			<!--List分割线-->
+			<ImageActor
+				LayoutWidth = "FillParent"
+				LayoutHeight = "2"
+				Background = "@Drawable/radio_button_line"/>
+		</LinearLayout>
+	</RelativeLayout>
+	</RelativeLayout>
+</Resource>

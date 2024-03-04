@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutHeight="104"
+        LayoutWidth="2">
+        <ImageActor
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent"
+            Drawable="@Drawable/citylist_line"/>
+    </RelativeLayout>
+</Resource>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/LayoutRelative"
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent"
+        Background="@Drawable/navi_image_mask_bg"
+        Clickable="true">
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <RelativeLayout
+                Id="@+Id/MainLayout"
+                LayoutWidth="1136"
+                LayoutHeight="872"
+                LayoutTopMargin="96"
+                Clickable="true"
+                Background="@Drawable/card_bg_day_and_night">
+                <RelativeLayout
+                    Id="@+Id/FullScreen"
+                    LayoutWidth="1104"
+                    LayoutHeight="840"
+                    LayoutTopMargin="16"
+                    LayoutLeftMargin="16">
+                    <RelativeLayout
+                        LayoutWidth="147"
+                        LayoutHeight="147"
+                        LayoutTopMargin="8"
+                        LayoutLeftMargin="8">
+                        <ImageButton
+                            Id="@+Id/BtnReturn"
+                            LayoutHeight="117"
+                            LayoutWidth="117"
+                            PaddingLeft = "1"
+                            PaddingTop = "1"
+                            LayoutCenterInParent="true"
+                            VisibleSpeechs="@String/MX_LANG_NAVI_FAVORITE_MAIN_VisibleSpeechs_01"
+                            Drawable="@Drawable/icon_back"
+                            Background="@Drawable/btn_h104_background_normal_prox"
+                            ClickDataCollection="BTN_Back" />
+                    </RelativeLayout>
+                    <!--Favorite文言-->
+                    <LinearLayout
+                        LayoutWidth="429"
+                        LayoutHeight="51"
+                        LayoutLeftMargin="164"
+                        LayoutTopMargin="55">
+                        <TextActor
+                            Id="@+Id/NativeTitle"
+                            LayoutHeight="FillParent"
+                            LayoutTopMargin="6"
+                            Text="@String/MX_LANG_NAVI_FAVORITE_MAIN_TITLE_Favorite_Main"
+                            TextFont="@Font/UIFont40_Text_M"
+                            TextColor="@Color/BtnFavoriteColor" />
+                        <!--未同步数据Icon-->
+                        <ImageActor
+                            Id = "@+Id/Icon_UnsynchronizedData"
+                            Visible = "Gone"
+                            LayoutWidth = "40"
+                            LayoutHeight = "40"
+                            LayoutTopMargin = "9"
+                            LayoutLeftMargin = "22"
+                            Background = "@Drawable/link_unsynchronized_40" />
+                    </LinearLayout>
+                    <!--loading-->
+					<RelativeLayout
+						Id = "@Id/PreDefine/Layout_Loading"
+						LayoutWidth="FillParent"
+						LayoutHeight="FillParent">
+						<AutomaticImageActor
+                            Id="@+Id/LoadingImage"
+							ImageChangeTimer = "83"
+							LayoutCenterInParent="true"	
+							Cyclable = "true"
+							Drawable="@Drawable/loading_anim_seq_l_LayerList"
+                            Visible = "Gone"/>
+                        <TextActor
+                            Id="@+Id/loading_text"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="52"
+                            PaddingTop="2"
+                            PaddingLeft="4"
+                            LayoutTopMargin="496"
+                            LayoutCenterHorizontal="true"
+                            TextColor="@Color/DayBlack_NightWhite"
+                            TextFont="@Font/UIFont34_Text_L"
+                            Text="@String/MX_LANG_NAVI_MAP_DESTINATION_VIEW_LOADING_TEXT_Loading"/>
+					</RelativeLayout>
+                    <!--无收藏信息-->
+                    <TextActor
+                        Id="@+Id/TxtNoList"
+                        LayoutHeight="40"
+                        LayoutWidth="612"
+                        Visible="Gone"
+                        HorizontalGravity="Center"
+                        LayoutTopMargin="400"
+                        LayoutLeftMargin="246"
+                        PaddingTop="1"
+                        Text="@String/MX_LANG_NAVI_ADD_SELECT_IN_FAVORITE_EMPTY_TEXT_No_Content"
+                        TextFont="@Font/UIFont40_Text_L"
+                        TextColor="@Color/BtnFavoriteColor" />
+                    <LinearLayout
+                        Id="@+Id/NativePage"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="FillParent"
+                        Visible = "Gone">
+                        <SmoothListActorEx
+                            Id="@+Id/NativeList"
+                            LayoutWidth="1008"
+                            LayoutHeight="678"
+                            LayoutLeftMargin="30"
+                            LayoutTopMargin="162"
+                            ListDeleteAnimation="true"
+                            WipeEnabled="true"
+                            VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_04" />
+                        <SmoothListScrollBar
+                            Id="@+Id/NativeListBar"
+                            LayoutWidth="66"
+                            LayoutHeight="678"
+                            LayoutTopMargin="162"
+                            ScrollBarLayout="@Layout/CActorScrollBarNew" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

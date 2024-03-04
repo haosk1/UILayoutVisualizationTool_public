@@ -1,0 +1,539 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<Resource>
+	<Font name = "UIFont10">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+		<Item name="FontWidth">10</Item>
+		<Item name="FontHeight">10</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+        <Font name = "UIFont16">
+                <Item name="FontType">Gray</Item>
+                <Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+                <Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+                <Item name="FontWidth">16</Item>
+                <Item name="FontHeight">16</Item>
+                <Item name="FontXOffset">0</Item>
+                <Item name="FontYOffset">0</Item>
+        </Font>
+	<Font name = "UIFont18">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+		<Item name="FontWidth">18</Item>
+		<Item name="FontHeight">18</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+        <Font name = "UIFont20">
+                <Item name="FontType">Gray</Item>
+                <Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+                <Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+                <Item name="FontWidth">20</Item>
+                <Item name="FontHeight">20</Item>
+                <Item name="FontXOffset">0</Item>
+                <Item name="FontYOffset">0</Item>
+        </Font>
+        <Font name = "UIFont22">
+                <Item name="FontType">Gray</Item>
+                <Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+                <Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+                <Item name="FontWidth">22</Item>
+                <Item name="FontHeight">22</Item>
+                <Item name="FontXOffset">0</Item>
+                <Item name="FontYOffset">0</Item>
+        </Font>
+	<Font name = "UIFont24">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+		<Item name="FontWidth">24</Item>
+		<Item name="FontHeight">24</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont26">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+		<Item name="FontWidth">26</Item>
+		<Item name="FontHeight">26</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont28">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+		<Item name="FontWidth">28</Item>
+		<Item name="FontHeight">28</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont30">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+		<Item name="FontWidth">30</Item>
+		<Item name="FontHeight">30</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont32">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+		<Item name="FontWidth">32</Item>
+		<Item name="FontHeight">32</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont34">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+		<Item name="FontWidth">34</Item>
+		<Item name="FontHeight">34</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont36">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+		<Item name="FontWidth">36</Item>
+		<Item name="FontHeight">36</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+		<Font name = "UIFont37">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+		<Item name="FontWidth">37</Item>
+		<Item name="FontHeight">37</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont40">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+		<Item name="FontWidth">40</Item>
+		<Item name="FontHeight">40</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont48">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+		<Item name="FontWidth">48</Item>
+		<Item name="FontHeight">48</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+<!--Normal graphic Font GP&&MP2023 Start-->
+	<!--数字字体-->
+	<Font name = "UIFont54_UIDigit_M">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWCarUIDigit-Medium.ttf</Item>
+		<Item name="FontWidth">54</Item>
+		<Item name="FontHeight">54</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont48_UIDigit_M">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWCarUIDigit-Medium.ttf</Item>
+		<Item name="FontWidth">48</Item>
+		<Item name="FontHeight">48</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont46_UIDigit_M">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWCarUIDigit-Medium.ttf</Item>
+		<Item name="FontWidth">46</Item>
+		<Item name="FontHeight">46</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont42_UIDigit_M">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWCarUIDigit-Medium.ttf</Item>
+		<Item name="FontWidth">42</Item>
+		<Item name="FontHeight">42</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont40_UIDigit_M">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWCarUIDigit-Medium.ttf</Item>
+		<Item name="FontWidth">40</Item>
+		<Item name="FontHeight">40</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont34_UIDigit_M">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWCarUIDigit-Medium.ttf</Item>
+		<Item name="FontWidth">34</Item>
+		<Item name="FontHeight">34</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont32_UIDigit_M">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWCarUIDigit-Medium.ttf</Item>
+		<Item name="FontWidth">32</Item>
+		<Item name="FontHeight">32</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont40_UIDigit_R">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWCarUIDigit-Regular.ttf</Item>
+		<Item name="FontWidth">40</Item>
+		<Item name="FontHeight">40</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont34_UIDigit_R">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWCarUIDigit-Regular.ttf</Item>
+		<Item name="FontWidth">34</Item>
+		<Item name="FontHeight">34</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont46_UIDigit_R">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWCarUIDigit-Regular.ttf</Item>
+		<Item name="FontWidth">46</Item>
+		<Item name="FontHeight">46</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont28_Text_R">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+		<Item name="FontWidth">28</Item>
+		<Item name="FontHeight">28</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<!--54pt-->
+	<Font name = "UIFont54_Text_M">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Medium.ttf</Item>
+		<Item name="FontWidth">54</Item>
+		<Item name="FontHeight">54</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<!--48pt-->
+	<Font name = "UIFont48_Text_M">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Medium.ttf</Item>
+		<Item name="FontWidth">48</Item>
+		<Item name="FontHeight">48</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<!--46pt-->
+	<Font name = "UIFont46_Text_R">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+		<Item name="FontWidth">46</Item>
+		<Item name="FontHeight">46</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont46_Text_M">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Medium.ttf</Item>
+		<Item name="FontWidth">46</Item>
+		<Item name="FontHeight">46</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont46_Text_L">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Light.ttf</Item>
+		<Item name="FontWidth">46</Item>
+		<Item name="FontHeight">46</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont46_Text_B">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Bold.ttf</Item>
+		<Item name="FontWidth">46</Item>
+		<Item name="FontHeight">46</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<!--40pt-->
+	<Font name = "UIFont40_Text_L">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Light.ttf</Item>
+		<Item name="FontWidth">40</Item>
+		<Item name="FontHeight">40</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont40_Text_R">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+		<Item name="FontWidth">40</Item>
+		<Item name="FontHeight">40</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont40_Text_M">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Medium.ttf</Item>
+		<Item name="FontWidth">40</Item>
+		<Item name="FontHeight">40</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<!--34pt-->
+	<Font name = "UIFont34_Text_L">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Light.ttf</Item>
+		<Item name="FontWidth">34</Item>
+		<Item name="FontHeight">34</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont34_Text_R">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+		<Item name="FontWidth">34</Item>
+		<Item name="FontHeight">34</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont34_Text_M">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Medium.ttf</Item>
+		<Item name="FontWidth">34</Item>
+		<Item name="FontHeight">34</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont34_Text_B">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Bold.ttf</Item>
+		<Item name="FontWidth">34</Item>
+		<Item name="FontHeight">34</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<!--32pt-->
+	<Font name = "UIFont32_Text_L">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Light.ttf</Item>
+		<Item name="FontWidth">32</Item>
+		<Item name="FontHeight">32</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont32_Text_R">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+		<Item name="FontWidth">32</Item>
+		<Item name="FontHeight">32</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont32_Text_M">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Medium.ttf</Item>
+		<Item name="FontWidth">32</Item>
+		<Item name="FontHeight">32</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont32_Text_B">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Bold.ttf</Item>
+		<Item name="FontWidth">32</Item>
+		<Item name="FontHeight">32</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<!--30pt-->
+	<Font name = "UIFont30_Text_L">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Light.ttf</Item>
+		<Item name="FontWidth">30</Item>
+		<Item name="FontHeight">30</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont30_Text_M">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Medium.ttf</Item>
+		<Item name="FontWidth">30</Item>
+		<Item name="FontHeight">30</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<!--28pt-->
+	<Font name = "UIFont28_Text_L">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Light.ttf</Item>
+		<Item name="FontWidth">28</Item>
+		<Item name="FontHeight">28</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont28_Text_M">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Medium.ttf</Item>
+		<Item name="FontWidth">28</Item>
+		<Item name="FontHeight">28</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont28_Text_B">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Bold.ttf</Item>
+		<Item name="FontWidth">28</Item>
+		<Item name="FontHeight">28</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<!--24pt-->
+	<Font name = "UIFont24_Text_L">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Light.ttf</Item>
+		<Item name="FontWidth">24</Item>
+		<Item name="FontHeight">24</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont24_Text_M">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Medium.ttf</Item>
+		<Item name="FontWidth">24</Item>
+		<Item name="FontHeight">24</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont24_Text_R">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+		<Item name="FontWidth">24</Item>
+		<Item name="FontHeight">24</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<!--22pt-->
+	<Font name = "UIFont22_Text_L">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Light.ttf</Item>
+		<Item name="FontWidth">22</Item>
+		<Item name="FontHeight">22</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont22_Text_M">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Medium.ttf</Item>
+		<Item name="FontWidth">22</Item>
+		<Item name="FontHeight">22</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<!--20pt-->
+	<Font name = "UIFont20_Text_L">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Light.ttf</Item>
+		<Item name="FontWidth">20</Item>
+		<Item name="FontHeight">20</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont20_Text_M">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Medium.ttf</Item>
+		<Item name="FontWidth">20</Item>
+		<Item name="FontHeight">20</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont20_Text_R">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Regular.TTF</Item>
+		<Item name="FontWidth">20</Item>
+		<Item name="FontHeight">20</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<Font name = "UIFont30_Text_B">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Bold.ttf</Item>
+		<Item name="FontWidth">30</Item>
+		<Item name="FontHeight">30</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+	<!--18pt-->
+	<Font name = "UIFont18_Text_M">
+		<Item name="FontType">Gray</Item>
+		<Item name="FontFamily">ZYHei_plus_VWCarUI-Regular.ttf</Item>
+		<Item name="FontFamilySec">VWTextCarUI-Medium.ttf</Item>
+		<Item name="FontWidth">18</Item>
+		<Item name="FontHeight">18</Item>
+		<Item name="FontXOffset">0</Item>
+		<Item name="FontYOffset">0</Item>
+	</Font>
+</Resource>

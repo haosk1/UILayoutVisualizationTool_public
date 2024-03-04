@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <DayNightStateList>
+<!--Day-->
+		<Item DayOrNight = "Day" Drawable = "@Drawable/radio_button_bg_1_Tava_day"/>
+<!--Night-->
+		<Item DayOrNight = "Night" Drawable = "@Drawable/radio_button_bg_1_Tava_night"/>
+    </DayNightStateList>
+</Resource>

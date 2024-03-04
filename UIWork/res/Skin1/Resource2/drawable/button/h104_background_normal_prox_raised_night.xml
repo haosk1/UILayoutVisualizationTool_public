@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "false" Drawable = "@Drawable/h104_background_normal_view_night_raisedx2"/>
+<!-->Checked-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "true" Drawable = "@Drawable/h104_background_normal_active_night"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" Drawable = "@Drawable/h104_background_normal_pressed_night"/>
+<!-->Disable-->
+		<Item StateEnabled = "false" Drawable = "@Drawable/h104_background_normal_disable_night_raisedx2"/>
+    </StateList>
+</Resource>

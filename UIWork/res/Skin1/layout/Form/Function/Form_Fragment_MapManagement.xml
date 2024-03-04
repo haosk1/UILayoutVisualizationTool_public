@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@Id/PreDefine/LayoutRelativeSetting"
+        LayoutHeight="FillParent"
+        Background="@Drawable/navi_image_mask_bg"
+        LayoutWidth="FillParent"
+        Clickable="true">
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <RelativeLayout
+                Id="@Id/PreDefine/MainLayout"
+                LayoutWidth="1302"
+                LayoutHeight="872"
+                LayoutTopMargin="96"
+                Clickable="true"
+                Background="@Drawable/card_bg_day_and_night">
+                <RelativeLayout
+                    Id="@+Id/FullScreen"
+                    LayoutWidth="1270"
+                    LayoutHeight="840"
+                    LayoutTopMargin="16"
+                    LayoutLeftMargin="16">
+                    <!--返回BTN-->
+                    <!--阴影背景图 172*172-->
+                    <RelativeLayout
+                        LayoutHeight="136"
+                        LayoutWidth="136"
+                        LayoutLeftMargin="14"
+                        LayoutTopMargin="14">
+                        <!--圆形BTN 热区 104*104 +16-->
+                        <RelativeLayout
+                            Id="@+Id/BTN_Back"
+                            LayoutWidth="117"
+                            LayoutHeight="117"
+                            LayoutCenterInParent="true"
+                            Clickable="true"
+                            ClickDataCollection="BTN_Back"
+                            VisibleSpeechs="@String/MX_LANG_NAVI_MAP_MANAGEMENT_VisibleSpeechs_01">
+                            <!--圆形BTN背景图-->
+                            <RelativeLayout
+                                LayoutWidth="147"
+                                LayoutHeight="147"
+                                Background="@Drawable/btn_h104_background_normal_prox"
+                                LayoutLeftMargin="-14"
+                                LayoutRightMargin="-14"
+                                LayoutTopMargin="-14"
+                                LayoutBottomMargin="-14"
+                                DuplicateParentState="true">
+                                <ImageActor
+                                    LayoutWidth="69"
+                                    LayoutHeight="69"
+                                    LayoutLeftMargin="38"
+                                    LayoutTopMargin="38"
+                                    DuplicateParentState="true"
+                                    Background="@Drawable/icon_back" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                    <!--地图管理-->
+                    <LinearLayout
+                        Id="@+Id/MapManagement"
+                        LayoutWidth="400"
+                        LayoutHeight="100"
+                        LayoutLeftMargin="270"
+                        LayoutTopMargin="34"
+                        Focusable="true"
+                        Clickable="true"
+                        HorizontalGravity="Center"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_MAP_SETTING_VisibleSpeechs_16"
+                        Orientation="Vertical">
+                        <TextActor
+                            Id="@+Id/BtnMapManagement"
+                            LayoutWidth="320"
+                            LayoutHeight="50"
+                            Text="@String/MX_LANG_NAVI_MAP_MANAGEMENT_TEXT_Map_Management"
+                            TextColor="@Color/DayBlack_NightWhite"
+                            TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                            LayoutTopMargin="24"
+                            DuplicateParentState="true"
+                            ClickDataCollection="BTN_Map_Management" />
+                        <ImageActor
+							Id="@+Id/bg_management1"
+                            LayoutHeight="8"
+                            LayoutWidth="395"
+                            LayoutTopMargin="18"
+							IsBgAnimator="true"
+							Background="@Drawable/header_tab_active_hero"/>
+                    </LinearLayout>
+                    <!--版权信息-->
+                    <LinearLayout
+                        Id="@+Id/Copyright"
+                        LayoutWidth="334"
+                        LayoutHeight="100"
+                        LayoutLeftMargin="668"
+                        LayoutTopMargin="34"
+                        HorizontalGravity="Center"
+                        Clickable="true"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_MAP_MANAGEMENT_VisibleSpeechs_04"
+                        Orientation="Vertical">
+                        <TextActor
+                            Id="@+Id/BtnCopyright"
+                            LayoutWidth="250"
+                            LayoutHeight="50"
+                            Text="@String/MX_LANG_NAVI_MAP_MANAGEMENT_TEXT_Map_Copyright"
+                            TextColor="@Color/DayBlack_NightWhite"
+                            TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                            LayoutTopMargin="24"
+                            DuplicateParentState="true"
+                            ClickDataCollection="BTN_Map_Copyright" />
+                        <ImageActor
+							Id="@+Id/bg_management2"
+                            LayoutHeight="8"
+                            LayoutWidth="324"
+                            LayoutTopMargin="18"
+							IsBgAnimator="true"
+							Background="@Drawable/header_tab_active_hero_raised"/>
+                    </LinearLayout>
+                    <RelativeLayout
+                        Id="@+Id/Layout_BtnUpdate"
+                        LayoutWidth="258"
+                        LayoutHeight="136"
+                        LayoutTopMargin="14"
+                        LayoutRightMargin="41"
+                        LayoutAlignParentRight="true"
+                        Clickable="true"
+                        Focusable="true"
+                        Visible="Gone"
+                        ClickDataCollection="BTN_Update"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_MAP_MANAGEMENT_VisibleSpeechs_03">
+                        <!--背景图-->
+                        <ImageActor
+                            LayoutWidth="290"
+                            LayoutHeight="172"
+                            LayoutTopMargin="-18"
+                            LayoutBottomMargin="-18"
+                            LayoutRightMargin="-18"
+                            LayoutLeftMargin="-18"
+                            Background="@Drawable/background_104h_normal_view"
+                            DuplicateParentState="true" />
+                        <!--文言-->
+                        <TextActor
+                            LayoutWidth="122"
+                            LayoutHeight="56"
+                            PaddingTop="2"
+                            PaddingLeft="-5"
+                            LayoutCenterInParent="true"
+                            DuplicateParentState="true"
+                            Text="@String/MX_LANG_NAVI_MAP_MANAGEMENT_TEXT_Update"
+                            TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                            TextColor="@Color/NormalBtn_RGB" />
+                    </RelativeLayout>
+                    <LinearLayout
+                        Id="@+Id/LayoutList"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="682"
+                        LayoutTopMargin="158"
+                        LayoutLeftMargin = "-16">
+                        <SmoothListActorEx
+                            Id="@Id/PreDefine/SmoothListActor"
+                            LayoutWidth="1210"
+                            LayoutHeight="682"
+                            LayoutLeftMargin="46"
+                            Orientation="Vertical"
+                            VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_01" />
+                        <SmoothListScrollBar
+                            Id="@Id/PreDefine/SmoothListScrollBar"
+                            LayoutWidth="30"
+                            LayoutHeight="682"
+                            LayoutLeftMargin = "-2"
+                            LayoutTopMargin="-8"
+                            ScrollBarLayout="@Layout/CActorScrollbarNewThirty" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        Id="@+Id/LayoutDB"
+                        LayoutWidth="1173"
+                        LayoutHeight="837"
+                        LayoutTopMargin="0"
+                        LayoutLeftMargin="54"
+                        Visible="Gone">
+                        <RelativeLayout
+                            Id="@+Id/LayoutDBInfo"
+                            LayoutWidth="1162"
+                            LayoutHeight="626"
+                            LayoutTopMargin="-6">
+                            <!-- <UIScrollViewEx
+						Id = "@Id/PreDefine/ScrollViewEx"
+						LayoutWidth = "1400"
+						LayoutHeight = "663"
+						LayoutLeftMargin="0"
+						LayoutTopMargin = "0"
+						ShowsIndicator = "false"
+						Orientation = "Vertical"
+						BounceVertical = "true"
+						BounceHorizontal = "false">
+						
+					</UIScrollViewEx> -->
+                            <TextActor
+                                Id="@+Id/DBInfo"
+                                LayoutHeight="626"
+                                LayoutWidth="1162"
+                                HorizontalGravity="Left"
+                                TextFont="@Font/UIFont34_Text_L"
+                                WordWrapped="true"
+                                SingleLine="false"
+                                LineIntervalMultiFactor="0.1"
+                                LineIntervalAddFactor="-6"
+                                TextColor="@Color/DayBlack_NightWhite" />
+                            <!-- </UIScrollViewEx> -->
+                        </RelativeLayout>
+                        <TextActor
+                            Id="@+Id/DB_NoInfo"
+                            LayoutHeight="51"
+                            LayoutWidth="1162"
+                            LayoutTopMargin="456"
+                            PaddingLeft="4"
+                            Visible="Gone"
+                            TextFont="@Font/UIFont34_Text_L"
+                            TextColor="@Color/DayBlack_NightWhite" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

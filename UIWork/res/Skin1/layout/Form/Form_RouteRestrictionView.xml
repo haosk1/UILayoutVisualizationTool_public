@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent">
+        <!--HMI界面布局部分，此元器件LayoutWidth表示半屏尺寸-->
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <RelativeLayout
+                Id="@+Id/RealtiveMain"
+                LayoutWidth="724"
+                LayoutHeight="872"
+                LayoutTopMargin="96"
+				Background="@Drawable/card_bg_day_and_night"
+                Clickable="true">
+                <RelativeLayout
+					Id = "@+Id/AnimationInfo"
+					LayoutWidth = "692"
+					LayoutHeight = "840"
+					LayoutTopMargin = "16"
+					LayoutLeftMargin= "16">
+                <!--返回部品-->
+                <RelativeLayout
+                    LayoutWidth="172"
+                    LayoutHeight="172"
+                    LayoutTopMargin="-4"
+                    VisibleSpeechs = "@String/NAVI_MAP_TRAFFIC_EVENT_DETAIL_VisibleSpeechs_01"
+                    LayoutLeftMargin="-4">
+                    <ImageButton
+                        Id="@+Id/BtnReturn"
+                        LayoutWidth="136"
+                        LayoutHeight="136"
+                        LayoutCenterInParent="true"
+                        LayoutVerticalGravity="Center"
+                        Drawable="@Drawable/icon_back"
+                        Background="@Drawable/btn_h104_background_normal_prox"
+                        BGHorizontalGravity="Center"
+                        BGVerticalGravity="Center"
+                        ClickDataCollection="BTN_Back"
+                        DuplicateParentState="true" />
+                </RelativeLayout>
+                <TextActor
+                    LayoutHeight="60"
+                    LayoutLeftMargin="164"
+                    LayoutTopMargin="52"
+                    PaddingTop="6"
+                    TextColor="@Color/DayBlack_NightWhite"
+                    TextFont="@Font/UIFont40_Text_M"
+                    Text="@String/MX_LANG_NAVI_ROUTE_RESTRICTION_VIEW_LOAD_Title_Route_Restriction" />
+                <!--List-->
+                <RelativeLayout
+                    Id="@+Id/ListAndBarLayout"
+                    LayoutWidth="724"
+                    LayoutHeight="676"
+                    LayoutTopMargin="154"
+                    HorizontalGravity="Left">
+                    <SmoothListActorEx
+                        Id="@Id/PreDefine/SmoothListActor"
+                        LayoutWidth="656"
+                        LayoutHeight="676"
+                        LayoutLeftMargin="18"
+                        DefaultDividerInterval="4" 
+                        VisibleSpeechs = "@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_04"/>
+                    <SmoothListScrollBar
+                        Id="@Id/PreDefine/SmoothListScrollBar"
+                        LayoutWidth="30"
+                        LayoutHeight="670"
+                        LayoutAlignParentRight="true"
+                        LayoutRightMargin="0"
+                        LayoutTopMargin="8"
+                        ScrollBarLayout="@Layout/CActorScrollBarRouteSelect" />
+                </RelativeLayout>
+                <!--loading-->
+                <RelativeLayout
+                    Id="@+Id/RealtiveLoading"
+                    LayoutWidth = "692"
+					LayoutHeight = "840"
+					LayoutTopMargin = "16"
+					LayoutLeftMargin= "16"
+                    ClipChildren="false"
+                    Visible="Gone">
+                    <AutomaticImageActor
+                        Id="@+Id/ImageLoading"
+                        LayoutWidth="80"
+                        LayoutHeight="80"
+                        ImageChangeTimer="83"
+						LayoutTopMargin = "358"
+						LayoutLeftMargin = "289"
+                        Cyclable="true"
+                        Drawable="@Drawable/loading_anim_seq_l_LayerList"
+                        Visible="Gone" />
+                    <TextActor
+                        Id="@+Id/loading"
+                        LayoutWidth="597"
+                        LayoutHeight="50"
+                        LayoutTopMargin="481"
+                        LayoutLeftMargin="32"
+                        Text="@String/MX_LANG_NAVI_MAP_DESTINATION_VIEW_LOADING_TEXT_Loading"
+                        TextFont="@Font/UIFont34_Text_L"
+                        TextColor="@Color/DayBlack_NightWhite" />
+                </RelativeLayout>
+                <!--Noresult message-->
+                <RelativeLayout
+                    Id="@+Id/Linear_NoResult_parent"
+                    LayoutWidth="692"
+                    LayoutHeight="840"
+                    ClipChildren="false"
+                    Orientation="Vertical"
+                    Visible="Gone"
+                    LayoutTopMargin = "16"
+                    VisibleSpeechs = "@String/MX_LANG_NAVI_MAP_RESTRICTION_VIEW_FAILED_VisibleSpeechs_01"
+					LayoutLeftMargin = "16">
+                    <TextActor
+                        Id="@+Id/NoResult"
+                        LayoutWidth="612"
+                        LayoutHeight="40"
+                        LayoutCenterInParent="true"
+                        PaddingTop="-12"
+                        Text="@String/MX_LANG_NAVI_ROUTE_RESTRICTION_VIEW_FAILED_TEXT_Route_Resctiction_Failed"
+                        TextFont="@Font/UIFont34_Text_L"
+                        TextColor="@Color/DayBlack_NightWhite" />
+                    <Button
+                        Id="@+Id/BtnRetry"
+                        LayoutBottomMargin="-4"
+                        LayoutHeight="172"
+                        LayoutWidth="724"
+                        LayoutAlignParentBottom="true"
+                        LayoutLeftMargin= "-20"
+                        Background="@Drawable/background_104h_normal_view_raised"
+                        TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                        TextColor="@Color/NormalBtn_RGB"
+                        Text="@String/MX_LANG_NAVI_MAP_RESTRICTION_VIEW_FAILED_BTN_Resctiction_Retry"
+                        ClickDataCollection="BTN_Route_Resctiction_Retry" />
+                </RelativeLayout>
+				</RelativeLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

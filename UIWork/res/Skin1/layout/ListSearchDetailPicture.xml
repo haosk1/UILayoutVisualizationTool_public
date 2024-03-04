@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/BtnInfo"
+        LayoutWidth="662"
+        LayoutHeight="212"
+        Clickable="true"
+        Focusable="true">
+        <LinearLayout
+            Id="@+Id/ListInfoLayout"
+            LayoutWidth="662"
+            LayoutHeight="212"
+            Orientation="Horizontal"
+            Clickable="true">
+            <LinearLayout
+                Id="@+Id/Layout_PictureOne"
+                LayoutWidth="304"
+                LayoutHeight="188"
+                LayoutLeftMargin="30"
+                HorizontalGravity="Center"
+                VerticalGravity="Center">
+                <DIYImageActor
+                    Id="@+Id/BtnPictureOne"
+                    LayoutWidth="304"
+                    LayoutHeight="188"
+                    Clickable="true"
+                    MaskDrawable="@Drawable/image_card_bg"
+                    ClickDataCollection="BTN_Detail_Picture" />
+            </LinearLayout>
+            <LinearLayout
+                Id="@+Id/Layout_PictureTwo"
+                LayoutLeftMargin="24"
+                LayoutWidth="304"
+                LayoutHeight="188"
+                HorizontalGravity="Center"
+                VerticalGravity="Center">
+                <DIYImageActor
+                    Id="@+Id/BtnPictureTwo"
+                    LayoutWidth="304"
+                    LayoutHeight="188"
+                    Clickable="true"
+                    MaskDrawable="@Drawable/image_card_bg"
+                    ClickDataCollection="BTN_Detail_Picture" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</Resource>

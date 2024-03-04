@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+	<Color name = "UFOGuideLineColor">#333181</Color>
+	<Color name = "ScrollViewDistanceColor">#D70C0C</Color>
+	<Color name = "ScrollLineColor">#ff562e</Color>
+	<Color name = "DirectionArrowsActorColor">#ff0000</Color>
+	<Color name = "TextHintColor">#C0C0C0</Color>
+	<Color name = "BackGroundBlack">#000000</Color>
+	<Color name = "Color_Red">#FF0000</Color>
+</Resource>

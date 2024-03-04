@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/LayoutRelative"
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent"
+        Background="@Drawable/navi_image_mask_bg"
+        Clickable="true">
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <RelativeLayout
+                Id="@+Id/SuperListLayout"
+                LayoutWidth="1302"
+                LayoutHeight="873"
+                LayoutTopMargin="96"
+                LayoutLeftMargin="0"
+                Clickable="true"
+                Background="@Drawable/card_bg_day_and_night">
+                <!--返回部品-->
+                <RelativeLayout
+                    LayoutWidth = "172"
+                    LayoutHeight = "172"
+                    LayoutLeftMargin = "12"
+                    LayoutTopMargin = "12"
+                    LayoutAlignParentLeft = "true"
+                    Clickable="true">
+                    <ImageButton
+                        Id="@+Id/BtnReturn"
+                        LayoutWidth = "136"
+                        LayoutHeight= "136"
+                        LayoutLeftMargin = "18"
+                        LayoutTopMargin = "18"
+                        Background="@Drawable/h104_background_prox"
+                        Drawable="@Drawable/favorite_back"
+                        LayoutCenterInParent="true"
+                        ClickDataCollection="BTN_Back"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_MAP_UPDATE_CLEAR_LIST_VisibleSpeechs_01" />
+                </RelativeLayout>
+                <!--clearlist文言-->
+                <TextActor
+                    Id="@+Id/Tilte_Setting"
+                    LayoutLeftMargin="180"
+                    LayoutTopMargin="76"
+                    Text="@String/MX_LANG_NAVI_MAP_UPDATE_CLEAR_LIST_TEXT_Clear_List"
+                    TextFont="@Font/UIFont40_Text_M"
+                    TextColor="@Color/Color_000000day_and_FFFFFFnight" />
+                <!--Clear部品-->
+                <RelativeLayout
+                    Id="@+Id/BtnClear"
+                    LayoutWidth="172"
+                    LayoutHeight="172"
+                    LayoutRightMargin="12"
+                    LayoutTopMargin="12"
+                    LayoutAlignParentRight="true"
+                    Clickable="true">
+                    <ImageActor
+                        LayoutWidth="136"
+                        LayoutHeight="136"
+                        PaddingTop="-6"
+                        LayoutTopMargin="18"
+                        LayoutCenterInParent="true"
+                        DuplicateParentState="true"
+                        Drawable="@Drawable/Delete_day_and_night_60_68"
+                        Background="@Drawable/h104_background_prox" />
+                </RelativeLayout>
+                <!--请移除多少空间元器件和文言-->
+                <ImageActor
+                    LayoutWidth="64"
+                    LayoutHeight="64"
+                    LayoutLeftMargin="357"
+                    LayoutTopMargin="180"
+                    Drawable="@Drawable/icon_infor_day_and_night"/>
+                <TextActor
+                    Id="@+Id/TxtSpaceInfo"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="45"
+                    LayoutLeftMargin="433"
+                    LayoutTopMargin="192"
+                    LayoutAlignParentLeft="true"
+                    HorizontalGravity="Center"
+                    VerticalGravity="Center"
+                    Text="@String/MX_LANG_NAVI_MAP_UPDATE_CLEAR_LIST2_TEXT_Space1"
+                    TextFont="@Font/UIFont34_Text_L"
+                    TextColor="@Color/DayBlack_NightWhite_Grey" />
+                <LinearLayout
+                    Id="@+Id/LayoutList"
+                    LayoutWidth="FillParent"
+                    LayoutHeight="570"
+                    LayoutTopMargin="268">
+                    <SmoothListActorEx
+                        Id="@Id/PreDefine/SmoothListActor"
+                        LayoutWidth="1212"
+                        LayoutHeight="570"
+                        LayoutLeftMargin="46"
+                        VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_02" />
+                    <SmoothListScrollBar
+                        Id="@Id/PreDefine/SmoothListScrollBar"
+                        LayoutHeight="570"
+                        LayoutWidth="30"
+                        LayoutRightMargin="-1"
+                        DuplicateParentState="true"
+                        ScrollBarLayout="@Layout/CActorScrollbarNewThirty" />
+                </LinearLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

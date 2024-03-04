@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <!--导航部分-->
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent">
+        <!--HMI界面布局部分，此元器件LayoutWidth表示半屏尺寸-->
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <Function
+                Id="@+Id//Fragment_RouteCalcResult"
+                LayoutHeight="FillParent"
+                LayoutWidth="FillParent" />
+            <RelativeLayout
+                Id="@+Id/LayoutAllSeletect"
+                LayoutWidth="724"
+                LayoutHeight="872"
+                LayoutTopMargin="96"
+                Background="@Drawable/background_RouteSelect"
+                Clickable="true">
+                <!--返回部品-->
+                <RelativeLayout
+                    LayoutWidth="172"
+                    LayoutHeight="172"
+                    LayoutTopMargin="12"
+                    LayoutLeftMargin="12">
+                    <ImageButton
+                        Id="@+Id/BtnReturn"
+                        LayoutWidth="136"
+                        LayoutHeight="136"
+                        LayoutCenterInParent="true"
+                        Clickable="true"
+                        Drawable="@Drawable/icon_back"
+                        Background="@Drawable/btn_h104_background_normal_prox"
+                        BGHorizontalGravity="Center"
+                        BGVerticalGravity="Center"
+                        ClickDataCollection="BTN_Close"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_CHARGING_EDIT_EV_VisibleSpeechs_01" />
+                </RelativeLayout>
+                <!--标题部品-->
+                <TextActor
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="52"
+                    LayoutTopMargin="72"
+                    PaddingTop = "5"
+                    LayoutLeftMargin="180"
+                    HorizontalGravity="Left"
+                    TextColor="@Color/DayBlack_NightWhite"
+                    TextFont="@Font/UIFont40_Text_M"
+                    Text="@String/MX_LANG_NAVI_CHARGING_EDIT_EV_Title_EV_Route_Edit" />
+                <!--途经地LIST-->
+                <RelativeLayout
+                    Id="@+Id/ListStopover"
+                    LayoutWidth="662"
+                    LayoutHeight="528"
+                    LayoutTopMargin="164"
+                    LayoutLeftMargin="46">
+                    <ImageActor
+                        Id="@+Id/IconList"
+                        LayoutWidth="41"
+                        LayoutHeight="WrapContent"
+                        LayoutTopMargin="31"
+                        LayoutLeftMargin="26" />
+                    <SmoothListActorEx
+                        Id="@Id/PreDefine/SmoothListActor"
+                        LayoutWidth="632"
+                        LayoutHeight="528"
+                        VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_01" />
+                    <SmoothListScrollBar
+                        Id="@Id/PreDefine/SmoothListScrollBar"
+                        LayoutWidth="30"
+                        LayoutHeight="528"
+                        LayoutLeftMargin="632"
+                        ScrollBarLayout="@Layout/CActorScrollBarRouteSelect" />
+                </RelativeLayout>
+                <LinearLayout
+                    Id="@+Id/Linear_StartNavigation"
+                    LayoutWidth="664"
+                    LayoutHeight="136"
+                    LayoutTopMargin="706"
+                    LayoutLeftMargin="30">
+                    <!--完成-->
+                    <RelativeLayout
+                        Id="@+Id/BTN_Done"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="FillParent"
+                        Clickable="true"
+                        DuplicateParentState="true"
+                        ClickDataCollection="BTN_Go"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_CHARGING_EDIT_EV_VisibleSpeechs_02">
+                        <ImageActor
+                            LayoutWidth="FillParent"
+                            LayoutHeight="172"
+                            LayoutTopMargin="-18"
+                            LayoutBottomMargin="-18"
+                            LayoutRightMargin="-18"
+                            LayoutLeftMargin="-18"
+                            BGHorizontalGravity="Center"
+                            BGVerticalGravity="Center"
+                            Background="@Drawable/background_104h_normal_view"
+                            DuplicateParentState="true" />
+                        <!--按钮中显示的内容，文字-->
+                        <TextActor
+                            LayoutWidth="FillParent"
+                            LayoutHeight="56"
+                            PaddingTop = "2"
+                            LayoutCenterInParent = "true"
+                            Text="@String/MX_LANG_NAVI_CHARGING_EDIT_EV_BTN_Done"
+                            TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                            TextColor="@Color/NormalBtn_RGB"
+                            DuplicateParentState="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

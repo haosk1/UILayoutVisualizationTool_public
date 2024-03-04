@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="97"
+        LayoutCenterVertical="true">
+        <TextActor
+            Id="@+Id/TxtTitle"
+            LayoutHeight="45"
+            LayoutTopMargin="30"
+            LayoutLeftMargin="50"
+            TextFont="@Font/UIFont40_Text_R"
+            TextColor="@Color/SearchMoreCategoryTitleColor" />
+    </RelativeLayout>
+</Resource>

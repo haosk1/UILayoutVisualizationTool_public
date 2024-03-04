@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <ScaleDrawableRectCustomStateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "false" PaddingTop = "-4" PaddingLeft = "-4" PaddingRight = "-4" Drawable = "@Drawable/bg_prox_day"/>
+<!-->Checked-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "true" Drawable = "@Drawable/navi_card_list_active_bg_day"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" Drawable = "@Drawable/navi_card_list_active_bg_day"/>
+<!-->Disable-->
+		<Item StateEnabled = "false" Drawable = "@Drawable/navi_card_list_active_bg_day"/>
+    </ScaleDrawableRectCustomStateList>
+</Resource>
+

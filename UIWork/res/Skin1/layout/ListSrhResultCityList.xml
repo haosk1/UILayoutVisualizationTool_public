@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="168">
+        <LinearLayout
+            Id="@+Id/LayoutInfo"
+            LayoutHeight="164"
+            LayoutWidth="FillParent"
+            LayoutTopMargin = "1"
+            Clickable="true"
+            Background="@Drawable/bg_prox">
+            <TextActor
+                Id="@+Id/CityName"
+                LayoutHeight="40"
+                LayoutWidth="468"
+                LayoutTopMargin="62"
+                LayoutLeftMargin="62"
+                HorizontalGravity="Left"
+                TextFont="@Font/UIFont34_Text_R"
+                TextColor="@Color/ListFavColor"
+                DuplicateParentState = "true" />
+             
+        </LinearLayout>
+       <TextActor
+            Id="@+Id/ResultNum"
+            LayoutHeight="40"
+            LayoutWidth="300"
+            LayoutTopMargin="63"
+            LayoutRightMargin="148"
+            HorizontalGravity="Right"
+            LayoutAlignParentRight="true"
+            TextFont="@Font/UIFont34_Text_L"
+            TextColor="@Color/ListFavColor"
+            DuplicateParentState = "true"
+            Text="@String/MX_LANG_NAVI_SEARCH_RESULT_LIST_ONLINE_CITY_TEXT_City_Number1" />
+        <ImageButton
+            Id="@+Id/LayoutBtn"
+            LayoutTopMargin="41"
+            LayoutRightMargin="42"
+            LayoutAlignParentRight="true"
+            LayoutWidth="80"
+            LayoutHeight="80"
+            Clickable = "false"
+            DuplicateParentState = "true"
+            Drawable="@Drawable/arrow_right_citylist"/>
+    </RelativeLayout>
+</Resource>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "false" Drawable = "@Drawable/mixin_background_square_outline_normal_night_raised"/>
+<!-->Check-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "true" Drawable = "@Drawable/mixin_background_square_outline_normal_night_raised"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" Drawable = "@Drawable/mixin_background_square_outline_normal_pressed_night"/>
+<!-->DisableCheck-->
+		<Item StateEnabled = "false" StateChecked = "true" Drawable = "INVALID_ID"/>	
+<!-->Disable-->
+		<Item StateEnabled = "false" StateChecked = "false" Drawable = "@Drawable/mixin_background_square_outline_normal_disable_night"/>
+    </StateList>
+</Resource>

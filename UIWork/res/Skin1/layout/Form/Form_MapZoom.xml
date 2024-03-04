@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent"
+        Id="@+Id/Layout">
+        <RelativeLayout
+            LayoutWidth="WrapContent"
+            LayoutHeight="39"
+            LayoutRightMargin="47"
+            LayoutTopMargin="429"
+            LayoutAlignParentRight="true"
+            LayoutAlignParentTop="true"
+            Clickable="true">
+            <ImageButton
+                Id="@+Id/DebugZoomIn"
+                LayoutWidth="39"
+                LayoutHeight="39"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Background="@Drawable/DrawBtnStyle1"
+                Drawable="@Drawable/SOP2_MQB_Icon_ScaleAdd" />
+            <ImageButton
+                Id="@+Id/DebugZoomOut"
+                LayoutWidth="39"
+                LayoutHeight="39"
+                LayoutLeftMargin="43"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Background="@Drawable/DrawBtnStyle1"
+                Drawable="@Drawable/SOP2_MQB_Icon_ScaleSub" />
+        </RelativeLayout>
+        <RelativeLayout
+            LayoutHeight="WrapContent"
+            LayoutWidth="WrapContent"
+            LayoutRightMargin="20"
+            LayoutBottomMargin="122"
+            LayoutAlignParentRight="true"
+            LayoutAlignParentBottom="true">
+            <LinearLayout
+                LayoutHeight="WrapContent"
+                LayoutWidth="WrapContent"
+                LayoutBottomMargin="16"
+                LayoutAlignParentRight="true"
+                LayoutAlignParentBottom="true">
+                <!--Scale数值-->
+                <TextActor
+                    Id="@Id/PreDefine/ScaleValue"
+                    Style="@Style/cns_Scale_Value" />
+                <!--IconAutoZoom-->
+                <ImageActor
+                    Id="@Id/PreDefine/ScaleAuto"
+                    Style="@Style/cns_ScaleAuto"
+                    Visible="Gone" />
+            </LinearLayout>
+            <!--ScaleBar-->
+            <ImageActor
+                Id="@Id/PreDefine/ScaleBar"
+                Style="@Style/cns_Scale_Bar" />
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

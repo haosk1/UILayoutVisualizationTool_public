@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="632"
+        LayoutHeight="112">
+        <RelativeLayout
+            LayoutWidth = "632"
+            LayoutHeight = "112"
+            Clickable="false"
+            Background= "@Drawable/navi_bg_ListEVRouteEdit_normal"> 
+        </RelativeLayout>
+        <RelativeLayout
+            Id="@+Id/ListStopover"
+            LayoutWidth="526"
+            LayoutTopMargin = "8"
+            LayoutHeight="96"
+            Clickable="true"
+            Focusable="true"
+            VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_01"
+            Background="@Drawable/bg_prox_EVRouteEdit">
+        <ImageActor
+            Id="@+Id/ICON_Stopover"
+            LayoutWidth="64"
+            LayoutHeight="64"
+            LayoutLeftMargin="30"
+            LayoutTopMargin="16"/>
+        <RelativeLayout
+            LayoutWidth="498"
+            LayoutHeight="96"
+            LayoutLeftMargin="92"
+            DuplicateParentState="true"
+            LayoutTopMargin="16">
+            <RelativeLayout
+                Id="@+Id/Stopover_Input"
+                LayoutWidth="380"
+                LayoutHeight="40"
+                DuplicateParentState="true"
+                LayoutTopMargin="12">
+                <TextActor
+                    Id="@+Id/TxtPointTitle"
+                    LayoutWidth="FillParent"
+                    LayoutHeight="FillParent"
+                    HorizontalGravity="Left"
+                    VerticalGravity="Center"
+                    LayoutTopMargin="2"
+                    LayoutLeftMargin = "32"
+                    PaddingTop="2"
+                    DuplicateParentState="true"
+                    TextFont="@Font/UIFont34_Text_L"
+                    TextColor="@Color/ListFavColor" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+        <!--删除途经地布局-->
+            <LinearLayout
+                Id="@+Id/Stopover_Delete_Layout"
+                LayoutWidth="96"
+                LayoutHeight="84"
+                LayoutTopMargin = "14"
+                LayoutLeftMargin="526">
+                <!--分割线-->
+                <ImageActor
+                    LayoutWidth="2"
+                    LayoutHeight="56"
+                    LayoutTopMargin="14"
+                    DuplicateParentState="true"
+                    Drawable="@Drawable/citylist_line_dayAndnight" />
+                <!--删除途经地-->
+                <ImageButton
+                    Id="@+Id/ImbDelete"
+                    LayoutWidth="84"
+                    LayoutHeight="84"
+                    LayoutLeftMargin="10"
+                    BGHorizontalGravity="Center"
+                    BGVerticalGravity="Center"
+                    Background="@Drawable/h64_background_normal"
+                    Drawable="@Drawable/navi_delete_m"
+                    ClickDataCollection="BTN_Delete" />
+            </LinearLayout>
+    </RelativeLayout>
+</Resource>

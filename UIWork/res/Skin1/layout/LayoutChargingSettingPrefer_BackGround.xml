@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <LinearLayout
+        LayoutHeight="WrapContent"
+        LayoutWidth="FillParent"
+        Orientation = "Vertical"
+        PaddingTop = "-10"
+        PaddingBottom = "-10"
+        LayoutTopMargin = "10"
+        LayoutBottomMargin = "10"
+        Background = "@Drawable/bg_prox_pressed_selected_DayNight">
+    </LinearLayout>
+</Resource>

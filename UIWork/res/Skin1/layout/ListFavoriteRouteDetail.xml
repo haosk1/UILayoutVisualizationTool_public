@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="148">
+        <RelativeLayout
+            Id="@+Id/ListMainLayout"
+            LayoutWidth="656"
+            LayoutHeight="148"
+            Clickable="false"
+            Background="@Drawable/bg_prox">
+            <LinearLayout
+                Id="@+Id/ListMain"
+                LayoutWidth="656"
+                LayoutHeight="148"
+                Clickable="true"
+                VerticalGravity="Center"
+                Background="@Drawable/bg_prox_search_result">
+                <!--经由地/目的地图标-->
+                <LinearLayout
+                    LayoutWidth="64"
+                    LayoutHeight="64"
+                    LayoutTopMargin = "-4"
+                    LayoutLeftMargin="42"
+                    DuplicateParentState="true"
+                    LayoutVerticalGravity="Center">
+                    <ImageActor
+                        Id="@+Id/ImgDestPointType"
+                        LayoutWidth="64"
+                        LayoutHeight="64"
+                        DuplicateParentState="true" />
+                    <ImageActor
+                        Id="@+Id/ImgDestPoint"
+                        LayoutWidth="64"
+                        LayoutHeight="64"
+                        DuplicateParentState="true"
+                        Drawable="@Drawable/navi_destination"
+                        Visible="Gone" />
+                </LinearLayout>
+                <LinearLayout
+                    Id="@+Id/ListInfo"
+                    Orientation="Vertical"
+                    LayoutLeftMargin="12"
+                    LayoutHeight="FillParent"
+                    DuplicateParentState="true">
+                    <TextActor
+                        Id="@+Id/ListFavRouteName"
+                        LayoutHeight="40"
+                        LayoutWidth="496"
+                        HorizontalGravity="Left"
+                        VerticalGravity="Top"
+                        LayoutTopMargin="32"
+                        ShowEllipsis="true"
+                        TextFont="@Font/UIFont34"
+                        TextColor="@Color/ListFavColor"
+                        DuplicateParentState="true" />
+                    <TextActor
+                        Id="@+Id/ListFavRouteDetail"
+                        LayoutHeight="34"
+                        LayoutWidth="496"
+                        VerticalGravity="Top"
+                        HorizontalGravity="Left"
+                        PaddingTop="1"
+                        LayoutTopMargin="9"
+                        ShowEllipsis="true"
+                        TextFont="@Font/UIFont28_Text_L"
+                        TextColor="@Color/ListFavColor"
+                        DuplicateParentState="true" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/LayoutParent"
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent">
+        <!--占位用的smartcard -->
+        <ImageActor
+            Id="@Id/PreDefine/ImgSmartCard"
+            LayoutWidth="496"
+            LayoutHeight="FillParent" />
+        <RelativeLayout
+            Id="@+Id/Layout_GuideView"
+            LayoutRightOf="@Id/PreDefine/ImgSmartCard"
+            Style="@Style/FULayoutGuideView"
+            Clickable="true">
+            <RelativeLayout
+                Id="@+Id/Layout_BigPattern"
+                Style="@Style/FULayoutGuideView"
+                LayoutAlignParentLeft="true"
+                Visible="Gone"
+                Clickable="true">
+                <!-- Page3  MotorWayInfo-->
+                <LinearLayout
+                    Id="@+Id/Layout_Page3_BigPattern"
+                    Style="@Style/FULayoutGuideView"
+                    Orientation="Vertical">
+                    <!--区间线速-->
+                    <RelativeLayout
+                        Id="@+Id/Layout_SpeedLimitInfo_BigPattern"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="WrapContent"
+                        LayoutLeftMargin="-4"
+                        Visible="Gone">
+                        <ActorCustomLayout
+                            Id="@+Id/CustomLayout_No_GUIDANCE_SpeedLimitInfo_BigPattern"
+                            CustomLayout="@Layout/Layout_No_GuidanceView_limSpeed"
+                            LayoutWidth="516"
+                            LayoutHeight="168"
+                            DuplicateParentState="true"
+                            Visible="Gone" />
+                        <ActorCustomLayout
+                            Id="@+Id/CustomLayout_With_GUIDANCE_SpeedLimitInfo_BigPattern"
+                            CustomLayout="@Layout/Layout_With_GuidanceView_limSpeed"
+                            LayoutWidth="592"
+                            LayoutHeight="168"
+                            DuplicateParentState="true"
+                            Visible="Gone" />
+                    </RelativeLayout>
+                    <!--第一个高速信息-->
+                    <RelativeLayout
+                        Id="@+Id/Layout_MotorWayInfo1_BigPattern"
+                        LayoutLeftMargin="16"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="WrapContent"
+                        Clickable="true"
+                        VisibleSpeechs = "@String/MX_LANG_NAVI_MAP_CCP_VIEW_WITH_GUIDANCE_MINI_OVERVIEW_MAP_DISPLAY_VisibleSpeechs_01"
+                        Visible="Gone">
+                        <ActorCustomLayout
+                            Id="@+Id/CustomLayout_No_GUIDANCE_MotorWayInfo1_BigPattern"
+                            CustomLayout="@Layout/Layout_No_GuidanceView"
+                            LayoutWidth="476"
+                            LayoutHeight="128"
+                            DuplicateParentState="true"
+                            Visible="Gone" />
+                        <ActorCustomLayout
+                            Id="@+Id/CustomLayout_With_GUIDANCE_MotorWayInfo1_BigPattern"
+                            CustomLayout="@Layout/Layout_With_GuidanceView"
+                            LayoutWidth="552"
+                            LayoutHeight="144"
+                            DuplicateParentState="true"
+                            Visible="Gone" />
+                        <!--后台测试真实距离-->
+                        <TextActor
+                            Id="@+Id/TextRealDistance1"
+                            LayoutHeight="FillParent"
+                            LayoutWidth="WrapContent"
+                            LayoutAlignParentRight="true"
+                            LayoutRightMargin="20"
+                            TextFont="@Font/UIFont26"
+                            TextColor="@Color/Crimson"
+                            TextShadow="true"
+                            TextShadowColor="@Color/BtnStyle1Color" />
+                    </RelativeLayout>
+                    <!--第二个高速信息-->
+                    <RelativeLayout
+                        Id="@+Id/Layout_MotorWayInfo2_BigPattern"
+                        LayoutLeftMargin="16"
+                        LayoutTopMargin="20"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="WrapContent"
+                        Clickable="true"
+                        Visible="Gone">
+                        <ActorCustomLayout
+                            Id="@+Id/CustomLayout_No_GUIDANCE_MotorWayInfo2_BigPattern"
+                            CustomLayout="@Layout/Layout_No_GuidanceView"
+                            LayoutWidth="476"
+                            LayoutHeight="128"
+                            DuplicateParentState="true"
+                            Visible="Gone" />
+                        <ActorCustomLayout
+                            Id="@+Id/CustomLayout_With_GUIDANCE_MotorWayInfo2_BigPattern"
+                            CustomLayout="@Layout/Layout_With_GuidanceView"
+                            LayoutWidth="552"
+                            LayoutHeight="144"
+                            DuplicateParentState="true"
+                            Visible="Gone" />
+                        <!--后台测试真实距离-->
+                        <TextActor
+                            Id="@+Id/TextRealDistance2"
+                            LayoutHeight="FillParent"
+                            LayoutWidth="WrapContent"
+                            LayoutAlignParentRight="true"
+                            LayoutRightMargin="20"
+                            TextFont="@Font/UIFont26"
+                            TextColor="@Color/Crimson"
+                            TextShadow="true"
+                            TextShadowColor="@Color/BtnStyle1Color" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <!-- Page2  KanBan-->
+                <LinearLayout
+                    Id="@+Id/Layout_Page2_BigPattern"
+                    Style="@Style/FULayoutGuideView"
+                    LayoutLeftMargin="6"
+                    LayoutTopMargin="5"
+                    Background="@Drawable/img_bg_night_shadows"
+                    Orientation="Vertical">
+                    <DIYImageActor
+                        Id="@+Id/KanBan_BigPattern"
+                        LayoutWidth="476"
+                        LayoutHeight="330"
+                        LayoutLeftMargin="10"
+                        LayoutTopMargin="15"
+                        Clickable="true"
+                        MaskDrawable="@Drawable/img_bg_night" />
+                </LinearLayout>
+                <!-- Page1 JV-->
+                <LinearLayout
+                    Id="@+Id/Layout_Page1_BigPattern"
+                    Style="@Style/FULayoutGuideView"
+                    LayoutLeftMargin="6"
+                    LayoutTopMargin="5"
+                    Background="@Drawable/img_bg_night_shadows"
+                    Orientation="Vertical">
+                    <DIYImageActor
+                        Id="@+Id/Junction_View_BigPattern"
+                        LayoutWidth="476"
+                        LayoutHeight="330"
+                        LayoutLeftMargin="10"
+                        LayoutTopMargin="15"
+                        Visible="Visible"
+                        Clickable="true"
+                        MaskDrawable="@Drawable/img_bg_night" />
+                </LinearLayout>
+                <!-- Page0 矢量扩大图-->
+            	<RelativeLayout
+                    Id = "@+Id/Intersection_BigPattern"
+                    LayoutHeight = "330"
+                    LayoutWidth = "476"
+                    LayoutLeftMargin = "16"
+                    LayoutTopMargin = "20"
+                    Clickable = "true"
+                    Visible = "Gone"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

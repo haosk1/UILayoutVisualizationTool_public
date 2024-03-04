@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <LayerList>
+		<Item DrawableLayer = "0" Drawable = "@Drawable/loading_anim_seq_s_f_c_color"/>
+		<Item DrawableLayer = "1" Drawable = "@Drawable/loading_anim_seq_s"/>
+	</LayerList>
+</Resource>

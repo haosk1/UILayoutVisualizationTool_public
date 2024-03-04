@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id = "@+Id/ListItem"
+		LayoutWidth = "FillParent"
+        LayoutHeight = "130"
+        Focusable="true">
+        <RelativeLayout
+            LayoutWidth = "FillParent"
+            LayoutHeight = "FillParent"
+            DuplicateParentState="true">
+            <RelativeLayout
+                LayoutWidth = "880"
+                LayoutHeight = "110"
+                Background = "@Drawable/bg_prox_pressed_selected_Click_DayNight"
+                LayoutTopMargin = "10"
+                DuplicateParentState="true"
+                Clickable = "true"
+                Focusable = "true">
+                <TextActor
+                    Id = "@+Id/Text_Setting_Button_Left"
+                    LayoutWidth = "670"
+                    LayoutHeight = "40"
+                    LayoutLeftMargin = "36"
+                    HorizontalGravity = "Left"
+                    VerticalGravity = "Center"
+                    LayoutTopMargin="37"
+                    DuplicateParentState="true"
+                    TextFont = "@Font/UIFont34_Text_R"
+                    TextColor = "@Color/ListFoodPrefer"/>
+                <TextActor
+                    Id = "@+Id/Text_Setting_Button_Center"
+                    LayoutWidth = "WrapContent"
+                    LayoutHeight = "52"
+                    LayoutRightMargin="143"
+                    LayoutTopMargin="31"
+                    LayoutAlignParentRight ="true"
+                    DuplicateParentState="true"
+                    HorizontalGravity = "Right"
+                    Visible = "Gone"
+                    TextFont = "@Font/UIFont40_Text_L"
+                    TextColor = "@Color/ListFavColor"/>
+				<!--下面的Background = "@Drawable/h64_background_normal_disable"-->
+                <ImageActor
+                    Id = "@+Id/BTN_Setting_Button"
+                    LayoutWidth = "132"
+                    LayoutHeight = "132"
+                    LayoutRightMargin = "10"
+                    LayoutAlignParentRight = "true"
+                    LayoutCenterVertical = "true"
+					DuplicateParentState="true"
+                    Drawable = "@Drawable/arrow_right_withoutbg"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

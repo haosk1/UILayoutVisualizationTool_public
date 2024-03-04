@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent"
+        LayoutTopMargin="45"
+        LayoutBottomMargin="20">
+        <ScrollBarTrack
+            Id="@Id/ScrollBarLayout/ScrollBarTrack"
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent"
+            PaddingLeft="12"
+            PaddingRight="6"
+            HorizontalGravity="Center"
+            VerticalGravity="Center"
+            ThumbDrawable="@Drawable/InputMethod_scrollbar"
+            ThumbSizeFixup="false"
+            Clickable="true"
+            HotTrack="true" />
+    </RelativeLayout>
+</Resource>

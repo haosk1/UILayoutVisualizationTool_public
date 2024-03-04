@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/BtnInfo"
+        LayoutWidth="FillParent"
+        LayoutHeight="222"
+        Clickable="true"
+        Focusable="true">
+        <RelativeLayout
+            Id="@+Id/LayoutInfo"
+            LayoutWidth="FillParent"
+            LayoutHeight="218"
+            LayoutTopMargin = "4"
+            Background="@Drawable/bg_prox"
+            ClickDataCollection="BTN_Search_Result"
+            Clickable="false"
+            Focusable="true">
+            <RelativeLayout
+                Id="@+Id/ListMain"
+                LayoutWidth="632"
+                LayoutHeight="198"
+                LayoutTopMargin="8"
+                LayoutLeftMargin="12"
+                Clickable="true"
+                Background="@Drawable/bg_prox_search_result">
+                <!-- 后台功能重要度显示工具 -->
+                <TextActor
+                    Id="@+Id/Debug_Importance"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="WrapContent"
+                    LayoutCenterVertical="true"
+                    LayoutLeftMargin="103"
+                    TextFont="@Font/UIFont46_UIDigit_M"
+                    TextColor="@Color/Color_FF0000"
+                    Visible="Gone" />
+                <TextActor
+                    Id="@+Id/Icon_ABCDE"
+                    LayoutWidth="60"
+                    LayoutHeight="60"
+                    LayoutTopMargin="71"
+                    LayoutLeftMargin="29"
+                    TextFont="@Font/UIFont40_UIDigit_M"
+                    TextColor="@Color/ListFavColor"
+                    Text="1"
+                    DuplicateParentState="true" />
+                <ImageActor
+                    Id="@+Id/Icon_VWMark"
+                    LayoutWidth="31"
+                    LayoutHeight="31"
+                    LayoutLeftMargin="44"
+                    Visible="Gone" />
+                <!--三排信息部分-->
+                <LinearLayout
+                    Id="@+Id/ListInfoLayout"
+                    LayoutWidth="388"
+                    LayoutHeight="FillParent"
+                    LayoutLeftMargin="106"
+                    Orientation="Vertical"
+                    HorizontalGravity="Left"
+                    DuplicateParentState="true">
+                    <!--第一排信息-->
+                    <LinearLayout
+                        Id="@+Id/ListFirstRow"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="40"
+                        LayoutTopMargin="26"
+                        Orientation="Horizontal"
+                        HorizontalGravity="Left"
+                        DuplicateParentState="true">
+                        <!--检索结果-->
+                        <TextActor
+                            Id="@+Id/ListMainBody"
+                            TextFont="@Font/UIFont34_Text_R"
+                            TextColor="@Color/ListFavColor"
+                            HorizontalGravity="Left"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="FillParent"
+                            DuplicateParentState="true"
+                            ShowEllipsis="true" />
+                    </LinearLayout>
+                    <!--第二排信息-->
+                    <LinearLayout
+                        Id="@+Id/ListSecondBody"
+                        LayoutTopMargin="14"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="34"
+                        Orientation="Horizontal"
+                        HorizontalGravity="Left"
+                        DuplicateParentState="true">
+                        <ImageActor
+                            LayoutTopMargin="0"
+                            Id="@+Id/Icon_pos"
+                            LayoutHeight="33"
+                            LayoutWidth="20"
+                            DuplicateParentState="true"
+                            Visible="Gone" />
+                        <!--距离-->
+                        <TextActor
+                            Id="@+Id/ListDistance"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="FillParent"
+                            DuplicateParentState="true"
+                            ShowEllipsis="true"
+                            HorizontalGravity="Left"
+                            TextFont="@Font/UIFont28_Text_L"
+                            TextColor="@Color/ListFavColor" />
+                        <ImageActor
+                            Id="@+Id/ListAddressPoint"
+                            HorizontalGravity="Left"
+                            LayoutWidth="5"
+                            LayoutHeight="5"
+                            LayoutTopMargin="14"
+                            LayoutRightMargin="6"
+                            LayoutLeftMargin="10"
+                            DuplicateParentState="true"
+                            Drawable="@Drawable/icon_separation_symbols_list" />
+                        <!--地址-->
+                        <TextActor
+                            Id="@+Id/ListAddress"
+                            TextFont="@Font/UIFont28_Text_L"
+                            TextColor="@Color/ListFavColor"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="FillParent"
+                            LayoutLeftMargin="5"
+                            HorizontalGravity="Left"
+                            DuplicateParentState="true"
+                            SingleLine="true"
+                            ShowEllipsis="true" />
+                    </LinearLayout>
+                    <!--第三排信息-->
+                    <LinearLayout
+                        LayoutTopMargin="14"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="48"
+                        HorizontalGravity="Left"
+                        Orientation="Horizontal"
+                        DuplicateParentState="true">
+                        <RelativeLayout
+                            Id="@+Id/ICON_CanBeReserved"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="48"
+                            Background="@Drawable/navi_card_cams_bg"
+                            DuplicateParentState="true"
+                            LayoutRightMargin="10"
+                            Visible="Gone">
+                            <TextActor
+                                LayoutHeight="30"
+                                LayoutWidth="WrapContent"
+                                PaddingLeft="17"
+                                PaddingRight="17"
+                                LayoutTopMargin="9"
+                                DuplicateParentState="true"
+                                HorizontalGravity="Center"
+                                TextFont="@Font/UIFont24_Text_L"
+                                TextColor="@Color/ListFavColor"
+                                Text="@String/MX_LANG_NAVI_CHARGING_STATION_PREFER_EV_FVW_TEXT_Resource_characteristics1" />
+                        </RelativeLayout>
+                        <LinearLayout
+                            Id="@+Id/ListDeepInfo"
+                            LayoutRightOf="@Id/ICON_CanBeReserved"
+                            LayoutWidth="488"
+                            LayoutHeight="FillParent"
+                            HorizontalGravity="Left"
+                            Orientation="Horizontal"
+                            DuplicateParentState="true"
+                            Visible="Gone">
+                            <RelativeLayout
+                                Id="@+Id/DeepInfoDC"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="48"
+                                Background="@Drawable/navi_card_DCFast_bg"
+                                DuplicateParentState="true"
+                                LayoutRightMargin="10"
+                                Visible="Gone">
+                                <TextActor
+                                    Id="@+Id/TextDeepInfoDC"
+                                    LayoutHeight="30"
+                                    LayoutWidth="WrapContent"
+                                    PaddingLeft="19"
+                                    PaddingRight="19"
+                                    ShowEllipsis="false"
+                                    LayoutTopMargin="11"
+                                    DuplicateParentState="true"
+                                    TextFont="@Font/UIFont24_Text_L"
+                                    TextColor="@Color/ListFavColor" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                Id="@+Id/DeepInfoAC"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="48"
+                                Background="@Drawable/navi_card_blue_bg"
+                                DuplicateParentState="true"
+                                LayoutRightMargin="10"
+                                Visible="Gone">
+                                <TextActor
+                                    Id="@+Id/TextDeepInfoAC"
+                                    LayoutHeight="30"
+                                    LayoutWidth="WrapContent"
+                                    PaddingLeft="19"
+                                    PaddingRight="19"
+                                    LayoutTopMargin="11"
+                                    DuplicateParentState="true"
+                                    ShowEllipsis="false"
+                                    TextFont="@Font/UIFont24_Text_L"
+                                    TextColor="@Color/ListFavColor" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                Id = "@+Id/ChargingPrice"
+                                LayoutWidth = "WrapContent"
+                                LayoutHeight = "48"
+                                Background = "@Drawable/navi_card_green_bg"
+                                DuplicateParentState="true"
+                                LayoutRightMargin = "10"
+                                Visible="Gone">
+                                <TextActor
+                                    Id = "@+Id/TextChargingPrice"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight = "30"
+                                    PaddingLeft="20"
+                                    PaddingRight="19"
+                                    ShowEllipsis="false"
+                                    LayoutTopMargin="11"
+                                    TextFont="@Font/UIFont24_Text_L"
+                                    TextColor="@Color/ListFavColor"
+                                    DuplicateParentState = "true"/>
+                            </RelativeLayout>
+                            <RelativeLayout
+                                Id="@+Id/DeepInfoBrand"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="48"
+                                Background="@Drawable/navi_card_cams_bg"
+                                DuplicateParentState="true"
+                                Visible="Gone">
+                                <TextActor
+                                    Id="@+Id/TextDeepInfoBrand"
+                                    LayoutHeight="30"
+                                    LayoutWidth="WrapContent"
+                                    PaddingLeft="20"
+                                    PaddingRight="20"
+                                    LayoutTopMargin="9"
+                                    ShowEllipsis="false"
+                                    DuplicateParentState="true"
+                                    TextFont="@Font/UIFont24_Text_L"
+                                    TextColor="@Color/ListFavColor"
+                                    Text="CAMS" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+					LayoutWidth = "FillParent"
+					LayoutHeight = "FillParent"
+					Orientation="Horizontal"
+					HorizontalGravity = "Right"
+					LayoutAlignParentRight = "true"
+                    LayoutRightMargin = "10"> 
+					<LinearLayout
+						Id = "@+Id/LayoutListStopOver"
+						LayoutWidth = "WrapContent"
+						LayoutHeight = "FillParent"
+						Orientation = "Horizontal">
+						<RelativeLayout
+							Id = "@+Id/LayoutAddStopover"
+							LayoutWidth = "122"
+							LayoutHeight = "132"
+							LayoutTopMargin = "41"
+							Visible = "Gone">
+							<ImageActor
+								Id = "@+Id/AddStopover_VerticalImg"	
+								LayoutWidth="2"
+								LayoutHeight="56"
+								LayoutTopMargin = "38"
+								LayoutLeftMargin = "4"
+								Drawable="@Drawable/citylist_line"/>
+							<ImageButton
+								Id="@+Id/AddStopover"
+								LayoutWidth="112"
+								LayoutHeight="112"
+								LayoutTopMargin = "10"
+								LayoutLeftMargin = "10"
+								ClickDataCollection = "BTN_Add_Stopover"
+								Drawable="@Drawable/naviadd_view"
+								Background="@Drawable/h104_background_normal_clear_list"/>
+						</RelativeLayout>
+					</LinearLayout>
+					<ImageActor
+						Id = "@+Id/ImageOccupyspace"
+						LayoutWidth = "10"
+						LayoutHeight = "FillParent"
+						Visible = "Gone"/>
+					<LinearLayout
+						Id = "@+Id/LayoutListCalcu"
+						LayoutWidth = "WrapContent"
+						LayoutHeight = "FillParent"
+						Orientation = "Horizontal">
+						<RelativeLayout
+							Id = "@+Id/LayoutCalculate"
+							LayoutWidth = "132"
+							LayoutHeight = "132"
+							LayoutTopMargin = "41">
+							<ImageActor
+								LayoutWidth="2"
+								LayoutHeight="56"
+								LayoutTopMargin = "38"
+								LayoutLeftMargin = "4"
+								Drawable="@Drawable/citylist_line"/>
+							<ImageButton
+								Id="@+Id/Calculate"
+								LayoutWidth="112"
+								LayoutHeight="112"
+								LayoutTopMargin = "10"
+								LayoutLeftMargin = "10"
+								ClickDataCollection = "BTN_Navigate"
+								Background="@Drawable/h104_background_normal_clear_list"
+								Drawable="@Drawable/icon_navi_overall_view"/>
+						</RelativeLayout>
+					</LinearLayout>
+				</LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

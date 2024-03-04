@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <LevelList>
+      <Item DrawableLevel = "0" Drawable = "@Drawable/hand_day_Level2_00"/>
+      <Item DrawableLevel = "1" Drawable = "@Drawable/hand_day_Level2_01"/>
+      <Item DrawableLevel = "2" Drawable = "@Drawable/hand_day_Level2_02"/>
+      <Item DrawableLevel = "3" Drawable = "@Drawable/hand_day_Level2_03"/>
+      <Item DrawableLevel = "4" Drawable = "@Drawable/hand_day_Level2_04"/>
+      <Item DrawableLevel = "5" Drawable = "@Drawable/hand_day_Level2_05"/>
+      <Item DrawableLevel = "6" Drawable = "@Drawable/hand_day_Level2_06"/>
+      <Item DrawableLevel = "7" Drawable = "@Drawable/hand_day_Level2_07"/>
+      <Item DrawableLevel = "8" Drawable = "@Drawable/hand_day_Level2_08"/>
+      <Item DrawableLevel = "9" Drawable = "@Drawable/hand_day_Level2_09"/>
+      <Item DrawableLevel = "10" Drawable = "@Drawable/hand_day_Level2_10"/>
+      <Item DrawableLevel = "11" Drawable = "@Drawable/hand_day_Level2_11"/>
+      <Item DrawableLevel = "12" Drawable = "@Drawable/hand_day_Level2_12"/>
+      <Item DrawableLevel = "13" Drawable = "@Drawable/hand_day_Level2_13"/>
+	</LevelList>
+</Resource>

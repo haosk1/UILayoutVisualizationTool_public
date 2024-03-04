@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <LinearGradientDrawable>
+		<Item Drawable = "@Drawable/menu_bg_2_active"/>
+		<Item StartColor = "@Color/AmbientLightColorA"/>
+		<Item EndColor = "@Color/AmbientLightColorB"/>
+    	<Item Direction = "FreedomAngle"/>
+		<Item Angle = "75.0"/>
+    </LinearGradientDrawable>
+</Resource>

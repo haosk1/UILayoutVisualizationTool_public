@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <LinearLayout
+        Id = "@Id/PreDefine/ChargingPreferItem"
+        LayoutWidth="FillParent"
+        LayoutHeight="WrapContent"
+        Orientation="Vertical"
+        Clickable="true"
+        Focusable="true">
+    </LinearLayout>
+</Resource>

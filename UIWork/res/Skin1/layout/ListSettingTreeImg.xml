@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/ListItem"
+        LayoutWidth="FillParent"
+        LayoutHeight="410"
+        Focusable="true"
+        Clickable="true">
+        <RelativeLayout
+            LayoutWidth="921"
+            LayoutHeight="111">
+            <TextActor
+                Id="@+Id/Text_Setting_Switch"
+                LayoutWidth="859"
+                LayoutHeight="40"
+                LayoutTopMargin="57"
+                HorizontalGravity="Left"
+                VerticalGravity="Center"
+                LayoutLeftMargin="36"
+                TextFont="@Font/UIFont34_Text_L"
+                TextColor="@Color/DayBlack_NightWhite" />
+        </RelativeLayout>
+        <RelativeLayout
+            Id="@+Id/RelativeLayout_Switch"
+            LayoutHeight="260"
+            LayoutWidth="880"
+            LayoutTopMargin="140"
+            Background="@Drawable/mixin_bg_normal_DayNight">
+            <!--Situative AR  -->
+            <RelativeLayout
+                Id="@+Id/BTN_FPK_1"
+                LayoutWidth="243"
+                LayoutHeight="206"
+                LayoutLeftMargin="27"
+                LayoutTopMargin="29"
+                Focusable="true"
+                Clickable="true"
+                Background="@Drawable/navi_display_btn_situative_ar">
+                <ImageActor
+                    Drawable="@Drawable/navi_display_btn_active"
+                    LayoutWidth="243"
+                    LayoutHeight="206"
+                    DuplicateParentState="true" />
+                <TextActor
+                    Id="@+Id/BTN_FPK_TEXT_1"
+                    LayoutLeftMargin="15"
+                    LayoutTopMargin="169"
+                    LayoutWidth="214"
+                    LayoutHeight="34"
+                    PaddingTop="3"
+                    HorizontalGravity="Center"
+                    VerticalGravity="Center"
+                    DuplicateParentState="true"
+                    TextFont="@Font/BtnFont34_N_TestL_P_TestR"
+                    TextColor="@Color/DayBlack_NightWhite" />
+            </RelativeLayout>
+            <!-- Map View -->
+            <RelativeLayout
+                Id="@+Id/BTN_FPK_2"
+                LayoutWidth="243"
+                LayoutHeight="206"
+                LayoutLeftMargin="319"
+                LayoutTopMargin="29"
+                Focusable="true"
+                Clickable="true"
+                Background="@Drawable/navi_display_btn_map_view">
+                <ImageActor
+                    Drawable="@Drawable/navi_display_btn_active"
+                    LayoutWidth="243"
+                    LayoutHeight="206"
+                    DuplicateParentState="true" />
+                <TextActor
+                    Id="@+Id/BTN_FPK_TEXT_2"
+                    LayoutLeftMargin="15"
+                    LayoutTopMargin="169"
+                    LayoutWidth="214"
+                    LayoutHeight="34"
+                    HorizontalGravity="Center"
+                    VerticalGravity="Center"
+                    PaddingTop="3"
+                    DuplicateParentState="true"
+                    TextFont="@Font/BtnFont34_N_TestL_P_TestR"
+                    TextColor="@Color/DayBlack_NightWhite" />
+            </RelativeLayout>
+            <!-- Permanent AR -->
+            <RelativeLayout
+                Id="@+Id/BTN_FPK_3"
+                LayoutWidth="243"
+                LayoutHeight="206"
+                LayoutLeftMargin="611"
+                LayoutTopMargin="29"
+                Focusable="true"
+                Clickable="true"
+                Background="@Drawable/navi_display_btn_permanent_ar">
+                <ImageActor
+                    Drawable="@Drawable/navi_display_btn_active"
+                    LayoutWidth="243"
+                    LayoutHeight="206"
+                    DuplicateParentState="true" />
+                <TextActor
+                    Id="@+Id/BTN_FPK_TEXT_3"
+                    LayoutLeftMargin="15"
+                    LayoutTopMargin="169"
+                    LayoutWidth="214"
+                    LayoutHeight="34"
+                    HorizontalGravity="Center"
+                    VerticalGravity="Center"
+                    PaddingTop="3"
+                    DuplicateParentState="true"
+                    TextFont="@Font/BtnFont34_N_TestL_P_TestR"
+                    TextColor="@Color/DayBlack_NightWhite" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

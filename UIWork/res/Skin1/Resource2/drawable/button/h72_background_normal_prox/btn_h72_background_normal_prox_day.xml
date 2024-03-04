@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "false" Drawable = "@Drawable/h72_background_normal_prox_day"/>
+<!-->Checked-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "true" Drawable = "@Drawable/h72_background_normal_active_day"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" Drawable = "@Drawable/h72_background_normal_pressed_day"/>
+<!-->Disable-->
+		<Item StateEnabled = "false" Drawable = "@Drawable/h72_background_normal_disable_day"/>
+    </StateList>
+</Resource>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent">
+        <!--地图-->
+        <TransparencyActor
+            Id="@+Id/TransparencyScreen"
+            LayoutHeight="FillParent"
+            LayoutWidth="FillParent" />
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1444"
+            LayoutHeight="FillParent">
+            <RelativeLayout
+                Id = "@+Id/AddSelectLayout"
+                LayoutHeight = "WrapContent"
+                LayoutWidth = "WrapContent"
+                LayoutTopMargin = "0"
+                LayoutLeftMargin = "0">
+            <!--返回按钮-->
+            <ImageButton
+                Id="@+Id/BtnReturn"
+                LayoutHeight="117"
+                LayoutWidth="117"
+                LayoutTopMargin="135"
+                LayoutLeftMargin="59"
+                Background="@Drawable/h104_background_prox"
+                Drawable="@Drawable/favorite_back"
+                PaddingLeft = "1"
+                PaddingTop = "1"
+                ClickDataCollection="BTN_Back"
+                VisibleSpeechs="@String/MX_LANG_NAVI_ADD_SELECT_ON_MAP_VisibleSpeechs_01" />
+            </RelativeLayout>
+            <!--标题-->
+            <RelativeLayout
+                Id="@+Id/TitleText"
+                LayoutHeight="168"
+                LayoutWidth="1060"
+                LayoutTopMargin="110"
+                LayoutCenterHorizontal="true"
+                VerticalGravity="Center"
+                HorizontalGravity="Center"
+                Clickable="true"
+                Background="@Drawable/popup_toast_bg">
+                <TextActor
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="40"
+                    LayoutTopMargin="4"
+                    PaddingLeft="4"
+                    Text="@String/MX_LANG_NAVI_ADD_SELECT_ON_MAP_TEXT_Select_Info"
+                    TextFont="@Font/UIFont34_Text_L"
+                    TextColor="@Color/BtnFavoriteColor" />
+            </RelativeLayout>
+            <!--Back To CCP-->
+            <RelativeLayout
+                Id="@Id/PreDefine/ReturnCCP"
+                LayoutWidth="WrapContent"
+                LayoutHeight="164"
+                LayoutAlignParentBottom="true"
+                LayoutBottomMargin="94"
+                LayoutCenterHorizontal="true"
+                Background="@Drawable/background_96h_hero_prox_day_shadows"
+                Clickable="true"
+                VisibleSpeechs="@String/MX_LANG_NAVI_ADD_SELECT_ON_MAP_DETAIL_MOVE_BTN_Restore_location_VisibleSpeechs_1"
+                Visible="Gone">
+                <RelativeLayout
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="128"
+                    LayoutLeftMargin="18"
+                    LayoutRightMargin="18"
+                    LayoutCenterInParent="true"
+                    DuplicateParentState="true">
+                    <LinearLayout
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="104"
+                        LayoutLeftMargin="12"
+                        LayoutRightMargin="12"
+                        LayoutCenterInParent="true"
+                        DuplicateParentState="true"
+                        Background="@Drawable/Gradient_background_96h_hero_prox">
+                        <ImageActor
+                            LayoutLeftMargin="28"
+                            LayoutCenterVertical="true"
+                            DuplicateParentState="true"
+                            Drawable="@Drawable/back_to_destination_day" />
+                        <!--占位-->
+                        <ImageActor
+                            Id="@Id/PreDefine/SpaceBefore"
+                            LayoutWidth="2"
+                            LayoutHeight="FillParent"
+                            Visible="Gone" />
+                        <TextActor
+                            Id="@Id/PreDefine/TxtReturnCCP"
+                            LayoutHeight="FillParent"
+                            LayoutWidth="WrapContent"
+                            LayoutLeftMargin="8"
+                            LayoutRightMargin="47"
+                            PaddingTop="4"
+                            DuplicateParentState="true"
+                            Text="@String/MX_LANG_NAVI_ADD_SELECT_ON_MAP_DETAIL_MOVE_BTN_Restore_location"
+                            TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                            TextColor="@Color/HeroBtnText_RGB" />
+                        <!--占位-->
+                        <ImageActor
+                            Id="@Id/PreDefine/SpaceAfter"
+                            LayoutWidth="2"
+                            LayoutHeight="FillParent"
+                            Visible="Gone" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

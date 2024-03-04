@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+	<DrawableColor name = "EditTextBackground">#FFFFFF</DrawableColor>
+	<DrawableColor name = "WhiteColorBackground">#FFFFFF</DrawableColor>
+	<DrawableColor name = "WhiteColorF2F2F2">#F2F2F2</DrawableColor>
+	<DrawableColor name = "BlueColor15202E">#15202E</DrawableColor>
+	<DrawableColor name = "GreenColorBackground">#00FF00</DrawableColor>
+	<DrawableColor name = "RedColorBackground">#FF0000</DrawableColor>
+	<DrawableColor name = "BlueColorBackground">#0000FF</DrawableColor>
+	<DrawableColor name = "newColorBackground">#FFFF00</DrawableColor>
+	<DrawableColor name = "OpenViewBackground">#000000</DrawableColor>
+	<DrawableColor name = "GPSNoiseBackground">#FFFFFF</DrawableColor>
+	<DrawableColor name = "GPSNoise">#A3D22C</DrawableColor>
+	<DrawableColor name = "CapacityInfo">#A3D22C</DrawableColor>
+	<DrawableColor name = "MABackground">#151617</DrawableColor>
+	<DrawableColor name = "NightMapItemBackground_Normal">#151617</DrawableColor>
+	<DrawableColor name = "NightMapItemBackground_Checked">#0B0C0F</DrawableColor>
+	<DrawableColor name = "MaDetailParkContainerBackground">#232426</DrawableColor>
+	<DrawableColor name = "MaDetailParkBackground_Normal">#12191F</DrawableColor>
+	<DrawableColor name = "MaDetailParkBackground_Checked">#36495C</DrawableColor>
+	<DrawableColor name = "MaFilterBtnBg_Checked">#000000</DrawableColor>
+	<DrawableColor name = "MaFilterBtnBg_Normal">#0E1313</DrawableColor>
+	<DrawableColor name = "MaFilterListBg">#1E2021</DrawableColor>
+	<DrawableColor name = "MaPictureShowBg">#101316</DrawableColor>
+	<DrawableColor name = "SeparatorColor">#74767E</DrawableColor>
+	<DrawableColor name = "SeparatorSubColor">#393C42</DrawableColor>
+	<DrawableColor name = "SeparatorYellow">#C1A700</DrawableColor>
+	
+</Resource>

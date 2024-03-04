@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/Root"
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent">
+        <Function
+            Id="@Id/PreDefine/Fragment_SearchMain"
+            LayoutHeight="FillParent"
+            LayoutWidth="FillParent" />
+        <!-- HMI界面布局部分，此元器件LayoutWidth表示半屏尺寸 -->
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <LinearLayout
+                Id="@+Id/BoardLayout"
+                LayoutWidth="724"
+                LayoutHeight="872"
+                LayoutTopMargin="96"
+                Background="@Drawable/card_bg_day_and_night"
+                Orientation="Vertical"
+                Clickable="true">
+                <!-- Title 部分 -->
+                <RelativeLayout
+                    LayoutWidth="FillParent"
+                    LayoutHeight="166">
+                    <RelativeLayout
+                        LayoutWidth="136"
+                        LayoutHeight="136"
+                        LayoutTopMargin="30"
+                        LayoutLeftMargin="30">
+                        <ImageButton
+                            Id="@Id/PreDefine/BtnReturn"
+                            LayoutHeight="136"
+                            LayoutWidth="136"
+                            LayoutLeftMargin="26"
+                            LayoutCenterInParent="true"
+                            LayoutVerticalGravity="Center"
+                            Drawable="@Drawable/icon_back"
+                            Background="@Drawable/btn_h104_background_normal_prox"
+                            VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CHARGING_RESERVATION_DETAIL_EV_VisibleSpeechs_01" />
+                    </RelativeLayout>
+                    <TextActor
+                        LayoutWidth="364"
+                        LayoutHeight="52"
+                        LayoutTopMargin="74"
+                        LayoutLeftMargin="180"
+                        HorizontalGravity="Left"
+                        TextFont="@Font/UIFont40_Text_M"
+                        TextColor="@Color/DayBlack_NightWhite"
+                        Text="@String/MX_LANG_NAVI_MAP_CHARGING_RESERVATION_DETAIL_EV_TITLE_Reserved_Pile" />
+                </RelativeLayout>
+                <!-- Loading -->
+                <RelativeLayout
+                    Id="@+Id/LoadingLayout"
+                    LayoutWidth="FillParent"
+                    LayoutHeight="FillParent"
+                    ClipChildren="false"
+                    Orientation="Vertical">
+                    <AutomaticImageActor
+                        Id="@+Id/LoadingImage_Color"
+                        LayoutWidth="80"
+                        LayoutHeight="80"
+                        LayoutTopMargin="224"
+                        LayoutLeftMargin="321"
+                        ImageChangeTimer="83"
+                        Cyclable="true"
+                        Visible = "Gone"
+                        Drawable="@Drawable/loading_anim_seq_l_LayerList" />
+                    <TextActor
+                        Id="@+Id/LoadingText"
+                        LayoutWidth="FillParent"
+                        LayoutHeight="51"
+                        LayoutTopMargin="346"
+                        TextColor="@Color/DayBlack_NightWhite"
+                        TextFont="@Font/UIFont34_Text_L"
+                        Text="@String/MX_LANG_NAVI_MAP_DESTINATION_VIEW_LOADING_TEXT_Loading" />
+                </RelativeLayout>
+                <!-- 可滑动详情 -->
+                <RelativeLayout
+                    Id="@+Id/DetailLayout"
+                    LayoutWidth="692"
+                    LayoutHeight="WrapContent"
+                    LayoutLeftMargin="16"
+                    LayoutTopMargin="6"
+                    Visible="Gone">
+                    <UIScrollViewEx
+                        Id="@Id/PreDefine/ScrollViewEx"
+                        LayoutWidth="692"
+                        LayoutHeight="520"
+                        Orientation="Vertical"
+                        BounceVertical="true"
+                        BounceHorizontal="false"
+                        ShowsIndicator="false"
+                        VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_01">
+                        <LinearLayout
+                            LayoutWidth="FillParent"
+                            LayoutHeight="WrapContent"
+                            LayoutLeftMargin="40"
+                            Orientation="Vertical">
+                            <!-- 充电桩地址 -->
+                            <TextActor
+                                Id="@+Id/PileAddress"
+                                LayoutHeight="WrapContent"
+                                LayoutWidth="559"
+                                LayoutTopMargin="4"
+                                HorizontalGravity="Left"
+                                TextFont="@Font/UIFont40_Text_R"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                SingleLine="false" />
+                            <RelativeLayout
+                                LayoutHeight="48"
+                                LayoutWidth="FillParent"
+                                LayoutTopMargin="20"
+                                VerticalGravity="Center">
+                                <!-- 充电桩距离 -->
+                                <TextActor
+                                    Id="@+Id/PileDistance"
+                                    LayoutHeight="40"
+                                    LayoutWidth="WrapContent"
+                                    LayoutTopMargin="6"
+                                    HorizontalGravity="Left"
+                                    TextFont="@Font/UIFont34_Text_M"
+                                    TextColor="@Color/DayBlack_NightWhite" />
+                                <!-- 充电桩距离单位 -->
+                                <TextActor
+                                    Id="@+Id/PileDistanceUnit"
+                                    LayoutHeight="40"
+                                    LayoutWidth="WrapContent"
+                                    LayoutTopMargin="6"
+                                    LayoutRightOf="@Id/PileDistance"
+                                    HorizontalGravity="Left"
+                                    TextFont="@Font/UIFont34_Text_L"
+                                    TextColor="@Color/DayBlack_NightWhite" />
+                                <!-- 充电桩类型 -->
+                                <TextActor
+                                    LayoutHeight="48"
+                                    LayoutWidth="WrapContent"
+                                    LayoutLeftMargin="166"
+                                    PaddingLeft="20"
+                                    PaddingRight="20"
+                                    PaddingTop="3"
+                                    LayoutCenterVertical="true"
+                                    TextFont="@Font/UIFont24_Text_L"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    Text="@String/MX_LANG_NAVI_SEARCH_MORE_CATEGORY_DETAIL_INFO_TEXT_POI_Name_ChargingStation"
+                                    Background="@Drawable/navi_card_white_bg" />
+                            </RelativeLayout>
+                            <TextActor
+                                LayoutHeight="40"
+                                LayoutWidth="559"
+                                LayoutTopMargin="30"
+                                HorizontalGravity="Left"
+                                TextFont="@Font/UIFont34_Text_R"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                Text="@String/MX_LANG_NAVI_MAP_CHARGING_RESERVATION_DETAIL_EV_TEXT_PileNumber" />
+                            <LinearLayout
+                                LayoutHeight="48"
+                                LayoutWidth="FillParent"
+                                LayoutTopMargin="18"
+                                Orientation="Horizontal">
+                                <!-- 充电桩编号 -->
+                                <TextActor
+                                    Id="@+Id/PileId"
+                                    LayoutHeight="40"
+                                    LayoutWidth="WrapContent"
+                                    LayoutTopMargin="4"
+                                    PaddingTop="4"
+                                    TextFont="@Font/UIFont34_Text_L"
+                                    TextColor="@Color/DayBlack_NightWhite" />
+                                <!-- 充电桩锁定标识 -->
+                                <ImageActor
+                                    Id="@+Id/IconLocked"
+                                    LayoutWidth="48"
+                                    LayoutHeight="48"
+                                    LayoutLeftMargin="20"
+                                    Drawable="@Drawable/icon_lock_48"
+                                    Visible="Invisible" />
+                            </LinearLayout>
+                            <LinearLayout
+                                LayoutHeight="152"
+                                LayoutWidth="FillParent"
+                                LayoutTopMargin="-2">
+                                <!-- 降地锁 -->
+                                <ImageButton
+                                    Id="@+Id/BtnUnlock"
+                                    LayoutWidth="104"
+                                    LayoutHeight="104"
+                                    LayoutLeftMargin="23"
+                                    LayoutVerticalGravity="Center"
+                                    VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CHARGING_RESERVATION_DETAIL_EV_VisibleSpeechs_02"
+                                    Background="@Drawable/h84_background_normal_lock"
+                                    Drawable="@Drawable/icon_nolock_48" />
+                                <!-- 蜂鸣 -->
+                                <ImageButton
+                                    Id="@+Id/BtnBeep"
+                                    LayoutWidth="104"
+                                    LayoutHeight="104"
+                                    LayoutLeftMargin="20"
+                                    LayoutVerticalGravity="Center"
+                                    VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CHARGING_RESERVATION_DETAIL_EV_VisibleSpeechs_03"
+                                    Background="@Drawable/h84_background_normal_lock"
+                                    Drawable="@Drawable/icon_fuel_48" />
+                                <!-- 取消预约 -->
+                                <RelativeLayout
+                                    Id="@+Id/BtnCancelReservation"
+                                    LayoutVerticalGravity="Center"
+                                    LayoutWidth="366"
+                                    LayoutHeight="152"
+                                    LayoutLeftMargin="14"
+                                    VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CHARGING_RESERVATION_DETAIL_EV_VisibleSpeechs_04"
+                                    Clickable="true"
+                                    Focusable="true">
+                                    <ImageActor
+                                        LayoutWidth="366"
+                                        LayoutHeight="152"
+                                        LayoutLeftMargin="-18"
+                                        LayoutBottomMargin="-18"
+                                        LayoutRightMargin="-18"
+                                        DuplicateParentState="true"
+                                        Background="@Drawable/background_84h_normal_view_raised" />
+                                    <TextActor
+                                        LayoutWidth="330"
+                                        LayoutHeight="116"
+                                        PaddingTop = "41"
+                                        PaddingLeft = "2"
+                                        DuplicateParentState="true"
+                                        TextFont="@Font/UIFont34_Text_L"
+                                        TextColor="@Color/NormalBtn_RGB"
+                                        Text="@String/MX_LANG_NAVI_MAP_CHARGING_RESERVATION_DETAIL_EV_TEXT_Cancel_Reservation" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                            <RelativeLayout
+                                LayoutHeight="40"
+                                LayoutWidth="FillParent">
+                                <!-- 预约倒计时 -->
+                                <TextActor
+                                    LayoutWidth="479"
+                                    LayoutHeight="FillParent"
+                                    HorizontalGravity="Left"
+                                    TextFont="@Font/UIFont34_Text_R"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    Text="@String/MX_LANG_NAVI_MAP_CHARGING_RESERVATION_DETAIL_EV_TEXT_Reserve_Time" />
+                                <TextActor
+                                    Id="@+Id/ReserveRemainingTime"
+                                    LayoutWidth="129"
+                                    LayoutHeight="FillParent"
+                                    LayoutAlignParentRight="true"
+                                    LayoutRightMargin="9"
+                                    HorizontalGravity="Right"
+                                    PaddingTop="1"
+                                    TextFont="@Font/UIFont34_Text_L"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    Visible="Gone" />
+                            </RelativeLayout>
+                            <LinearLayout
+                                LayoutTopMargin="23"
+                                LayoutHeight="40"
+                                LayoutWidth="612"
+                                Orientation="Vertical">
+                                <!-- 预约开始时间 -->
+                                <TextActor
+                                    Id="@+Id/ReserveStartTime"
+                                    LayoutWidth="FillParent"
+                                    LayoutHeight="FillParent"
+                                    PaddingTop="3"
+                                    TextFont="@Font/UIFont34_Text_L"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    HorizontalGravity="Left" />
+                                <!-- 预约结束时间 -->
+                                <TextActor
+                                    Id="@+Id/ReserveEndTime"
+                                    LayoutWidth="FillParent"
+                                    LayoutHeight="FillParent"
+                                    TextFont="@Font/UIFont34_Text_L"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    HorizontalGravity="Left" />
+                            </LinearLayout>
+                            <!-- 充电类型 -->
+                            <TextActor
+                                LayoutWidth="FillParent"
+                                LayoutHeight="40"
+                                LayoutTopMargin="32"
+                                HorizontalGravity="Left"
+                                TextFont="@Font/UIFont34_Text_R"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                Text="@String/MX_LANG_NAVI_MAP_CHARGING_RESERVATION_DETAIL_EV_TEXT_ChargingType" />
+                            <RelativeLayout
+                                Id="@+Id/LayoutChargingType"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="48"
+                                LayoutTopMargin="22"
+                                Background="@Drawable/navi_card_DCFast_bg">
+                                <RelativeLayout
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="48"
+                                    LayoutTopMargin="4"
+                                    LayoutLeftMargin="2"
+                                    PaddingLeft="20"
+                                    PaddingRight="20">
+                                    <TextActor
+                                        Id="@+Id/ChargingType"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="30"
+                                        LayoutLeftMargin = "5"
+                                        LayoutCenterInParent="true"
+                                        DuplicateParentState="true"
+                                        TextFont="@Font/UIFont24_Text_L"
+                                        TextColor="@Color/DayBlack_NightWhite" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+                            <!-- 电话号码 -->
+                            <TextActor
+                                LayoutHeight="40"
+                                LayoutWidth="559"
+                                LayoutTopMargin="30"
+                                HorizontalGravity="Left"
+                                TextFont="@Font/UIFont34_Text_R"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                Text="@String/MX_LANG_NAVI_MAP_CHARGING_RESERVATION_DETAIL_EV_TEXT_Phone_Number" />
+                            <LinearLayout
+                                LayoutWidth="718"
+								LayoutHeight="100"
+								LayoutTopMargin = "-14"
+                                VisibleSpeechs="@String/NAVI_MAP_CHARGING_RESERVATION_DETAIL_EV_VisibleSpeechs_02">
+                                <TextActor
+                                    Id="@+Id/PhoneNumber"
+                                    LayoutWidth = "510"
+									LayoutHeight = "52"
+									LayoutTopMargin = "13"
+									HorizontalGravity = "Left"
+									VerticalGravity = "Center"
+                                    LayoutVerticalGravity="Center"
+                                    SingleLine="true"
+                                    ShowEllipsis="true"
+                                    TextFont="@Font/UIFont34_Text_L"
+                                    TextColor="@Color/DayBlack_NightWhite" />
+                                <ImageButton
+                                    Id="@+Id/ImgBtnPhone"
+                                    LayoutHeight = "100"
+									LayoutWidth = "100"
+                                    LayoutRightOf="@Id/PreDefine/TxtPhoneNumber1"
+                                    ClickDataCollection="BTN_Detail_Call"
+                                    Drawable="@Drawable/icon_call_m_c"
+                                    Background="@Drawable/h64_background_normal" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </UIScrollViewEx>
+                    <ScrollViewBar
+                        Id="@Id/PreDefine/ScrollViewBar"
+                        LayoutWidth="30"
+                        LayoutHeight="520"
+                        LayoutTopMargin="18"
+                        LayoutLeftMargin="662"
+                        Clickable="true"
+                        ScrollBarLayout="@Layout/CActorScrollbarNewThirty" />
+                </RelativeLayout>
+                <!--底部按钮-->
+                <LinearLayout
+                    Id="@Id/PreDefine/LayoutBottomInfo"
+                    LayoutWidth="FillParent"
+                    LayoutHeight="WrapContent"
+                    LayoutBottomMargin="34"
+                    VerticalGravity="Center">
+                    <!--周边检索-->
+                    <ImageButton
+                        Id="@Id/PreDefine/Btn_SearchNearby"
+                        LayoutWidth = "136"
+                        LayoutHeight = "136"
+                        LayoutLeftMargin = "30"
+                        BGHorizontalGravity="Center"
+                        BGVerticalGravity="Center"
+                        ClickDataCollection="BTN_Search_Around"
+                        Drawable="@Drawable/icon_search_around"
+                        Background="@Drawable/btn_h104_background_normal_prox"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_SEARCH_RESULT_DETAIL_WITHOUT_GUIDANCE_VisibleSpeechs_05"
+                        VerticalGravity="Center" />
+                    <!--快捷导航-->
+                    <ImageButton
+                        Id="@Id/PreDefine/Btn_Navigate"
+                        LayoutWidth = "136"
+                        LayoutHeight = "136"
+                        BGHorizontalGravity="Center"
+                        BGVerticalGravity="Center"
+                        LayoutLeftMargin = "-2"
+                        ClickDataCollection="Btn_Navigate"
+                        Drawable="@Drawable/icon_list_navigation"
+                        Background="@Drawable/btn_h104_background_normal_prox"
+                        VerticalGravity="Center"
+                        VisibleSpeechs="@String/NAVI_GROUPDRIVING_FLEET_MAIN_MEMBER_DETAIL_VisibleSpeechs_04" />
+                    <!--算路-->
+                    <RelativeLayout
+                        Id="@Id/PreDefine/Layout_Calculate"
+                        LayoutWidth="432"
+                        LayoutHeight="172"
+                        LayoutLeftMargin="-20"
+                        LayoutTopMargin = "-1"
+                        Background="@Drawable/background_104h_hero_prox_day_shadows">
+                        <RelativeLayout
+                            Id="@Id/PreDefine/Btn_Calculate"
+                            LayoutWidth="396"
+                            LayoutHeight="136"
+                            LayoutCenterInParent="true"
+                            ClickDataCollection="Btn_Calculate"
+                            Clickable="true"
+                            Focusable="true"
+                            VisibleSpeechs="@String/MX_LANG_NAVI_MAP_POI_PICKVIEW_WITHOUT_GUIDANCE_FROM_CCP_VisibleSpeechs_07">
+                            <RelativeLayout
+                                LayoutWidth="372"
+                                LayoutHeight="112"
+                                LayoutCenterInParent="true"
+                                DuplicateParentState="true"
+                                Background="@Drawable/Gradient_background_104h_hero_prox">
+                                <TextActor
+                                    LayoutHeight="56"
+                                    LayoutWidth="256"
+                                    LayoutTopMargin = "29"
+                                    LayoutLeftMargin = "58"
+                                    DuplicateParentState="true"
+                                    Text="@String/MX_LANG_NAVI_MAP_CHARGING_RESERVATION_DETAIL_EV_TEXT_Set_Destination"
+                                    TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                                    TextColor="@Color/HeroBtnText_RGB"/>
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                     <!--添加途径地-->
+                    <RelativeLayout
+                        Id = "@Id/PreDefine/Layout_Add_Stopover"
+                        LayoutWidth="432"
+                        LayoutHeight="172"
+                        LayoutLeftMargin="-20"
+                        LayoutTopMargin = "-1"
+                        Visible = "Gone"
+                        Background = "@Drawable/background_104h_hero_prox_day_shadows">
+                        <RelativeLayout
+                            Id = "@Id/PreDefine/Btn_Add_Stopover"
+                            LayoutWidth="396"
+                            LayoutHeight="136"
+                            LayoutCenterInParent="true"
+                            ClickDataCollection="BTN_Add_Stopover"
+                            Clickable="true"
+                            Focusable="true"
+                            VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CHARGING_RESERVATION_DETAIL_EV_VisibleSpeechs_06">
+                            <RelativeLayout
+                                LayoutWidth="372"
+                                LayoutHeight="112"
+                                LayoutCenterInParent="true"
+                                DuplicateParentState="true"
+                                Background="@Drawable/Gradient_background_104h_hero_prox">
+                                <TextActor
+                                    LayoutHeight="56"
+                                    LayoutWidth="256"
+                                    LayoutTopMargin = "29"
+                                    LayoutLeftMargin = "58"
+                                    DuplicateParentState="true"
+                                    Text="@String/MX_LANG_NAVI_MAP_CHARGING_RESERVATION_DETAIL_EV_TEXT_Add_Stopover2"
+                                    TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                                    TextColor="@Color/HeroBtnText_RGB"
+                                    VisibleSpeechs = "@String/NAVI_GROUPDRIVING_FLEET_MAIN_MEMBER_DETAIL_WITHOUT_ROUTE_VisibleSpeechs_03" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

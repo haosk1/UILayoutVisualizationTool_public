@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+	<StateListAlpha>
+		<Item Color = "#111E21" AlphaValue = "230"/>
+	</StateListAlpha>
+</Resource>

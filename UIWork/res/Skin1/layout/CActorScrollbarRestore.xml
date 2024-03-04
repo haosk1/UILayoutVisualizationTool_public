@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent"
+        LayoutTopMargin="27"
+        LayoutBottomMargin="27">
+        <ScrollBarTrack
+            Id="@Id/ScrollBarLayout/ScrollBarTrack"
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent"
+            PaddingLeft="75"
+            PaddingRight="31"
+            HorizontalGravity="Center"
+            VerticalGravity="Center"
+            ThumbDrawable="@Drawable/RectCustom_scrollbar_bg"
+            ThumbSizeFixup="false"
+            IsThumbDrawableAnimator="true"
+            Clickable="true"
+            HotTrack="true" />
+    </RelativeLayout>
+</Resource>

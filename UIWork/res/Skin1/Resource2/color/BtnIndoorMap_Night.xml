@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateListAlpha>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "false" Color = "#FFFFFF"/>
+<!-->Check-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "true" Color = "#000000"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" Color = "#FFFFFF"/>
+    </StateListAlpha>
+</Resource>

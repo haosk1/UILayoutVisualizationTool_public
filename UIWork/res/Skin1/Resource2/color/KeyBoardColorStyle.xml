@@ -1,0 +1,15 @@
+﻿<Resource>
+    <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "false" StateFocused = "false" Color = "#080808"/>
+<!-->Focus-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "false" StateFocused = "true" Color = "#080808"/>
+<!-->Check-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "true" Color = "#080808"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" Color = "#080808"/>
+<!-->Disable-->
+		<Item StateEnabled = "false" Color = "#2d2d2d"/>
+    </StateList>
+</Resource>
+

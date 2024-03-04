@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+	<LevelList>
+		<Item DrawableLevel = "1" Drawable = "@Drawable/navi_Cruise_distance_level_64_night1"/>
+		<Item DrawableLevel = "2" Drawable = "@Drawable/navi_Cruise_distance_level_64_night2"/>
+		<Item DrawableLevel = "3" Drawable = "@Drawable/navi_Cruise_distance_level_64_night"/>
+		<Item DrawableLevel = "4" Drawable = "@Drawable/navi_Cruise_distance_level_64_night4"/>
+		<Item DrawableLevel = "5" Drawable = "@Drawable/navi_Cruise_distance_level_64_night5"/>
+	</LevelList>
+</Resource>

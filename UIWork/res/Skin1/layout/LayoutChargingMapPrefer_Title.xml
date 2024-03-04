@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutHeight="52"
+        LayoutWidth="FillParent"
+        LayoutTopMargin="20"
+        LayoutLeftMargin="30"
+        LayoutBottomMargin = "10">
+        <TextActor
+            Id="@Id/PreDefine/ChargingPreferTitle"
+            LayoutHeight="FillParent"
+            LayoutWidth="FillParent"
+            HorizontalGravity="Left"
+            VerticalGravity = "Top"
+            PaddingTop = "4"
+            TextFont="@Font/UIFont40_Text_R"
+            TextColor="@Color/DayBlack_NightWhite" />
+    </RelativeLayout>
+</Resource>

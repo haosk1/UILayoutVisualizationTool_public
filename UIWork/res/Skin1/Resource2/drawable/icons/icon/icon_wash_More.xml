@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <ScaleDrawableRectCustomStateList>
+<!-->Normal-->
+		<Item PaddingLeft = "0" Drawable = "@Drawable/icon_wash"/>
+    </ScaleDrawableRectCustomStateList>
+</Resource>
+
+
+
+
+

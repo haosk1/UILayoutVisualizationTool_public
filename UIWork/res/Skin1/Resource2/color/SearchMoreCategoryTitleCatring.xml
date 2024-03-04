@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <DayNightStateList>
+<!--Day-->
+		<Item DayOrNight = "Day" Color = "@Color/Color_B56250"/>
+<!--Night-->
+		<Item DayOrNight = "Night" Color = "@Color/Color_A86456"/>
+    </DayNightStateList>
+</Resource>

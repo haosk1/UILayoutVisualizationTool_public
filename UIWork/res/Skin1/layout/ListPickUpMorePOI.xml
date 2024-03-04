@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="141"
+        Clickable="true"
+        Background="@Drawable/bg_prox">
+        <LinearLayout
+            Id="@+Id/ListLayout"
+            LayoutWidth="653"
+            LayoutHeight="141"
+            Orientation="Horizontal"
+            Clickable="true"
+            ClickDataCollection="BTN_POI_Summary">
+            <!--序号-->
+            <TextActor
+                Id="@+Id/TxtNo"
+                LayoutWidth="51"
+                LayoutHeight="51"
+                LayoutLeftMargin="36"
+                LayoutVerticalGravity="Center"
+                TextFont="@Font/UIFont46_UIDigit_M"
+                TextColor="@Color/DayBlack_NightWhite"
+                DuplicateParentState="true" />
+            <LinearLayout
+                Id="@+Id/ListInfoLayout"
+                LayoutWidth="FillParent"
+                LayoutHeight="141"
+                LayoutWeight="1"
+                LayoutLeftMargin="14"
+                Orientation="Vertical"
+                HorizontalGravity="Left"
+                DuplicateParentState="true">
+                <!--POI名-->
+                <TextActor
+                    Id="@+Id/TxtName"
+                    TextFont="@Font/UIFont40_Text_R"
+                    TextColor="@Color/DayBlack_NightWhite"
+                    LayoutWidth="FillParent"
+                    LayoutHeight="WrapContent"
+                    LayoutTopMargin="28"
+                    HorizontalGravity="Left"
+                    DuplicateParentState="true"
+                    SingleLine="true"
+                    ShowEllipsis="true" />
+                <!--第二排信息-->
+                <LinearLayout
+                    LayoutTopMargin="10"
+                    LayoutWidth="FillParent"
+                    LayoutHeight="WrapContent"
+                    Orientation="Horizontal"
+                    HorizontalGravity="Left"
+                    DuplicateParentState="true">
+                    <ImageActor
+                        Id="@+Id/Icon_pos"
+                        LayoutHeight="0"
+                        LayoutWidth="0"
+                        DuplicateParentState="true" />
+                    <!--距离-->
+                    <TextActor
+                        Id="@+Id/TxtDistance"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="FillParent"
+                        TextFont="@Font/UIFont34_Text_L"
+                        TextColor="@Color/DayBlack_NightWhite"
+                        DuplicateParentState="true" />
+                    <!--地址-->
+                    <TextActor
+                        Id="@+Id/TxtAddress"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="FillParent"
+                        TextFont="@Font/UIFont34_Text_L"
+                        TextColor="@Color/DayBlack_NightWhite"
+                        DuplicateParentState="true"
+                        SingleLine="true"
+                        ShowEllipsis="true" />
+                </LinearLayout>
+            </LinearLayout>
+            <ImageActor
+                Id="@+Id/ImageLine1"
+                LayoutWidth="2"
+                LayoutHeight="48"
+                LayoutLeftMargin="10"
+                LayoutVerticalGravity="Center"
+                Background="@Drawable/citylist_line" />
+            <ImageButton
+                Id="@+Id/AddStopover"
+                LayoutWidth="96"
+                LayoutHeight="96"
+                LayoutLeftMargin="3"
+                LayoutVerticalGravity="Center"
+                ClickDataCollection="BTN_Add_Stopover"
+                Drawable="@Drawable/naviadd_view"
+                Background="@Drawable/h104_background_normal_clear_list" />
+            <ImageActor
+                Id="@+Id/ImageLine2"
+                LayoutWidth="2"
+                LayoutHeight="48"
+                LayoutLeftMargin="3"
+                LayoutVerticalGravity="Center"
+                Background="@Drawable/citylist_line" />
+            <ImageButton
+                Id="@+Id/CalcRoute"
+                LayoutWidth="96"
+                LayoutHeight="96"
+                LayoutLeftMargin="3"
+                LayoutRightMargin="22"
+                LayoutVerticalGravity="Center"
+                ClickDataCollection="BTN_Navigate"
+                Drawable="@Drawable/icon_navi_overall_view"
+                Background="@Drawable/h104_background_normal_clear_list" />
+        </LinearLayout>
+    </RelativeLayout>
+</Resource>

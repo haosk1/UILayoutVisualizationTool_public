@@ -1,0 +1,9 @@
+<? xml version = "1.0" encoding = "UTF-8" ?>
+<Resource>
+        <LevelList>
+                <Item StateEnabled = "true" DrawableLevel = "1" Drawable = "@Drawable/navi_stopover_disable_night_1"/>
+                <Item StateEnabled = "true" DrawableLevel = "2" Drawable = "@Drawable/navi_stopover_disable_night_2"/>
+                <Item StateEnabled = "true" DrawableLevel = "3" Drawable = "@Drawable/navi_stopover_disable_night_3"/>
+                <Item StateEnabled = "true" DrawableLevel = "4" Drawable = "@Drawable/navi_stopover_disable_night_4"/>
+        </LevelList>
+</Resource>

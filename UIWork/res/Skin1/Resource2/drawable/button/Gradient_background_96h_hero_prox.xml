@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <LinearGradientDrawable>
+		<Item Drawable = "@Drawable/background_96h_hero_prox"/>
+		<Item StartColor = "@Color/AmbientLightColorA"/>
+		<Item EndColor = "@Color/AmbientLightColorB"/>
+    	<Item Direction = "FreedomAngle"/>
+		<Item Angle = "75.0"/>
+    </LinearGradientDrawable>
+</Resource>

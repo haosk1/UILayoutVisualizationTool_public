@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent"
+        Id="@+Id/Layout">
+        <ImageActor
+            Id="@+Id/GPSImageIcon"
+            LayoutHeight="50"
+            LayoutWidth="66"
+            LayoutRightMargin="17"
+            LayoutBottomMargin="171"
+            Drawable="@Drawable/GPS_signal_level"
+            LayoutAlignParentRight="true"
+            LayoutAlignParentBottom="true" />
+    </RelativeLayout>
+</Resource>

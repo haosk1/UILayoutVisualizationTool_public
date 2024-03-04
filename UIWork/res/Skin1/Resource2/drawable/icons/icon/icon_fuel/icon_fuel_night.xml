@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" Drawable = "@Drawable/fuel_night"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" Drawable = "@Drawable/fuel_pressed_night"/>
+<!-->Disable-->
+		<Item StateEnabled = "false" Drawable = "@Drawable/fuel_disable_night"/>
+    </StateList>
+</Resource>

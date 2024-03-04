@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="62"
+        LayoutCenterVertical="true">
+        <TextActor
+            Id="@+Id/TxtTitle"
+            LayoutHeight="45"
+            LayoutLeftMargin="30"
+            TextFont="@Font/UIFont40_Text_R"
+            TextColor="@Color/DayBlack_NightWhite" />
+    </RelativeLayout>
+</Resource>

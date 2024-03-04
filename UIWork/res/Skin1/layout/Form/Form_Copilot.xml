@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+	<RelativeLayout
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent">
+         <!-- 接管闪烁背景 -->
+        <AutomaticImageActor
+            Id = "@+Id/TakeOver_High_Warning"
+            LayoutHeight = "FillParent"
+            LayoutWidth = "FillParent"
+            ImageChangeTimer = "33"
+            Cyclable = "true"
+            Drawable = "@Drawable/bg_red_list"
+            Visible = "Gone"/>
+        <!--半屏时占位控件，全屏时隐藏，达到控件布局可以动态切换-->
+	    <ImageActor
+			Id = "@Id/PreDefine/ImgSmartCard"
+			LayoutWidth = "496"
+			LayoutHeight = "FillParent"/>
+        <!-- HMI界面布局部分，此元器件LayoutWidth表示半屏尺寸 -->
+        <RelativeLayout
+            Id = "@+Id/LayoutParent"
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent"
+            LayoutRightOf = "@Id/PreDefine/ImgSmartCard">
+            <!--切换导航模式按钮-->
+            <RelativeLayout
+                Id = "@+Id/BTNChangeLaneMode"
+                LayoutWidth = "116"
+                LayoutHeight = "116"
+                LayoutLeftMargin = "6"
+                Clickable = "true"
+                Visible = "Gone"
+                LayoutAlignParentBottom = "true"
+                VisibleSpeechs = "@String/MX_LANG_NAVI_MAP_CCP_VIEW_LANE_NAVI_MODE_TEXT_Exit_Lane_Navi_VisibleSpeechs_1"
+                Background = "@Drawable/mixin_background_square_outlineNew">
+                <ImageActor
+                    Id = "@+Id/ChangeLaneModeIcon"
+                    Style = "@Style/LefBtnIconLayout"
+                    Drawable = "@Drawable/icon_navi"/>
+                <TextActor
+                    Style = "@Style/LeftBtnTxtLayout"
+                    TextColor = "@Color/BtnLaneModeColor"
+                    TextFont = "@Font/BtnFont20_N_TextL_P_TextM_C_TextL_D_TextL"
+                    Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_LANE_NAVI_MODE_TEXT_Exit_Lane_Navi"/>
+            </RelativeLayout>
+            <!--辅助驾驶布局-->
+            <RelativeLayout
+                Id = "@+Id/CopilotLayout"
+                LayoutWidth="FillParent"
+                LayoutHeight="FillParent">
+                <!--TBT位置占位-->
+                <ImageActor
+                    Id = "@+Id/TBTSeat"
+                    LayoutHeight = "WrapContent"
+                    LayoutWidth = "568"/>
+                <!--辅助驾驶看板-->
+                <LinearLayout
+                    Id = "@+Id/CopilotKanban"
+                    LayoutHeight = "166"
+                    LayoutWidth = "WrapContent"
+                    LayoutBelow = "@Id/TBTSeat"
+                    Background = "@Drawable/Co_pilot_bg"
+                    LayoutTopMargin = "-16"
+                    LayoutLeftMargin = "-4"
+                    PaddingLeft = "20"
+                    PaddingRight = "20"
+                    PaddingTop = "20"
+                    Clickable = "true">
+                    <RelativeLayout
+                        Id = "@+Id/ACCIcon"
+                        LayoutWidth = "156"
+                        LayoutHeight = "126"
+                        LayoutLeftMargin = "24"
+                        Visible = "Gone">
+                        <ImageActor
+                            Id = "@+Id/ACCIconImg"
+                            LayoutTopMargin = "15"
+                            LayoutCenterHorizontal = "true"
+                            Drawable="@Drawable/navi_ACC_status_64"/>
+                        <TextActor
+                            LayoutTopMargin = "82"
+                            LayoutCenterHorizontal = "true"
+                            TextFont = "@Font/UIFont24_Text_L"
+                            TextColor = "@Color/DayBlack_NightWhite"
+                            Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_COPILOT_ACC_ACTIVE_TA_DEACTIVE_EV_TEXT_ACC_Status"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        Id = "@+Id/TAIcon"
+                        LayoutWidth = "156"
+                        LayoutHeight = "126"
+                        LayoutLeftMargin = "24"
+                        Visible = "Gone">
+                        <ImageActor
+                            LayoutTopMargin = "15"
+                            LayoutCenterHorizontal = "true"
+                            Drawable="@Drawable/icon_ta"/>
+                        <TextActor
+                            LayoutTopMargin = "82"
+                            LayoutCenterHorizontal = "true"
+                            TextFont = "@Font/UIFont24_Text_L"
+                            TextColor = "@Color/DayBlack_NightWhite"
+                            Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_COPILOT_ACC_ACTIVE_TA_ACTIVE_EV_TEXT_TA_Status"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        Id = "@+Id/ACCSpeed"
+                        LayoutWidth = "156"
+                        LayoutHeight = "126"
+                        LayoutLeftMargin = "18">
+                        <TextActor
+                            Id = "@+Id/SpeedText"
+                            LayoutTopMargin = "20"
+                            LayoutCenterHorizontal = "true"
+                            TextFont = "@Font/UIFont46_UIDigit_R"
+                            TextColor = "@Color/DayBlack_NightWhite"/>
+                        <TextActor
+                            LayoutTopMargin = "82"
+                            LayoutCenterHorizontal = "true"
+                            TextFont = "@Font/UIFont24_Text_L"
+                            TextColor = "@Color/DayBlack_NightWhite"
+                            Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_COPILOT_ACC_ACTIVE_TA_DEACTIVE_EV_TEXT_Cruise_Speed"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        Id = "@+Id/ACCDistance"
+                        LayoutWidth = "156"
+                        LayoutHeight = "126"
+                        LayoutLeftMargin = "18"
+                        Visible = "Gone">
+                        <ImageActor
+                            Id = "@+Id/DistanceLevel"
+                            LayoutTopMargin = "15"
+                            LayoutCenterHorizontal = "true"
+                            Drawable="@Drawable/icon_level"/>
+                        <TextActor
+                            LayoutTopMargin = "82"
+                            LayoutCenterHorizontal = "true"
+                            TextFont = "@Font/UIFont24_Text_L"
+                            TextColor = "@Color/DayBlack_NightWhite"
+                            Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_COPILOT_ACC_ACTIVE_TA_DEACTIVE_EV_TEXT_Cruise_Distance_Level"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        Id = "@+Id/LaneChange"
+                        LayoutWidth = "156"
+                        LayoutHeight = "126"
+                        LayoutLeftMargin = "18"
+                        Visible = "Gone">
+                        <AutomaticImageActor
+                            Id = "@+Id/LaneChangeIcon"
+                            LayoutTopMargin = "15"
+                            LayoutCenterHorizontal = "true"
+                            ImageChangeTimer = "400"
+                            Cyclable = "true"
+                            Drawable="@Drawable/navi_Left_green_A_64"/>
+                        <TextActor
+                            Id = "@+Id/LaneChangeText"
+                            LayoutTopMargin = "82"
+                            LayoutCenterHorizontal = "true"
+                            TextFont = "@Font/UIFont24_Text_L"
+                            TextColor = "@Color/DayBlack_NightWhite"/>
+                    </RelativeLayout>
+                    <!-- 占位Actor -->
+                    <ImageActor
+                        LayoutLeftMargin = "18"
+                        LayoutWidth = "6"
+                        LayoutHeight = "126"/>
+                </LinearLayout>
+                <!-- 辅助驾驶模式pop -->
+                <RelativeLayout
+                    LayoutHeight="FillParent"
+                    LayoutWidth="FillParent"
+                    LayoutLeftMargin="408">
+                    <RelativeLayout
+                        Id="@+Id/CopilotPop"
+                        LayoutHeight="WrapContent"
+                        LayoutWidth="724"
+                        LayoutCenterHorizontal="true"
+                        LayoutTopMargin="78"
+                        PaddingBottom = "61"
+                        PaddingTop = "64"
+                        Clickable="true"
+                        Background="@Drawable/popup_toast_bg"
+                        Visible="Gone">
+                        <TextActor
+                            Id="@+Id/CopilotPopText"
+                            LayoutWidth="600"
+                            LayoutHeight="WrapContent"
+                            LayoutCenterHorizontal="true"
+                            PaddingTop="2"
+                            SingleLine="false"
+                            WordWrapped = "true"
+                            HorizontalGravity="Center"
+                            LineIntervalAddFactor="-6"
+                            LineIntervalMultiFactor="0.1"
+                            TextFont="@Font/UIFont34_Text_L"
+                            TextColor="@Color/DayBlack_NightWhite" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <!-- 接管看板 -->
+                <RelativeLayout
+                    Id = "@+Id/TakeOverKanban"
+                    LayoutHeight = "370"
+                    LayoutWidth = "516"
+                    LayoutTopMargin = "-16"
+                    LayoutLeftMargin = "-4"
+                    PaddingLeft = "20"
+                    PaddingTop = "20"
+                    Background = "@Drawable/Co_pilot_bg"
+                    LayoutBelow = "@Id/TBTSeat"
+                    Clickable = "true"
+                    Visible = "Gone">
+                    <ImageActor
+                        Id = "@+Id/TakeOver_Low"
+                        LayoutTopMargin = "4"
+                        LayoutHeight = "240"
+                        LayoutWidth = "300"
+                        LayoutCenterHorizontal="true"
+                        Drawable="@Drawable/card_takeover_Copilot"/>
+                    <AutomaticImageActor
+						Id = "@+Id/Automatic_TakeOver_High"
+                        LayoutTopMargin = "16"
+                        LayoutCenterHorizontal = "true"
+						LayoutWidth="300"
+						LayoutHeight="300"
+						ImageChangeTimer="70"
+						Cyclable="true"
+                        Visible = "Gone"
+                        Background="@Drawable/steering_wheel"
+						Drawable="@Drawable/card_takeover" />
+                    <ImageActor
+                        LayoutHeight = "42"
+                        LayoutWidth = "48"
+                        LayoutTopMargin = "257"
+                        LayoutLeftMargin = "59"
+                        Drawable="@Drawable/icon_navi_warning"/>
+                    <TextActor
+                        LayoutWidth = "290"
+                        LayoutHeight = "WrapContent"
+                        LayoutTopMargin = "263"
+                        LayoutLeftMargin = "130"
+                        SingleLine = "false"
+                        WordWrapped = "true"
+                        TextFont = "@Font/UIFont28_Text_L"
+                        TextColor = "@Color/DayBlack_NightWhite"
+                        Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_COPILOT_ACC_ACTIVE_TA_ACTIVE4_EV_TEXT_Takeover"/>
+                </RelativeLayout>
+                <!-- 制动看板 -->
+                <RelativeLayout
+                    Id = "@+Id/BrakeKanban"
+                    LayoutHeight = "370"
+                    LayoutWidth = "516"
+                    LayoutTopMargin = "-16"
+                    LayoutLeftMargin = "-4"
+                    PaddingLeft = "20"
+                    PaddingTop = "20"
+                    Background = "@Drawable/Co_pilot_bg"
+                    LayoutBelow = "@Id/TBTSeat"
+                    Clickable = "true"
+                    Visible = "Gone">
+                    <ImageActor
+                        LayoutHeight = "240"
+                        LayoutWidth = "300"
+                        LayoutTopMargin = "4"
+                        LayoutLeftMargin = "93"
+                        Drawable="@Drawable/card_brake"
+                        DrawableLevel = "0"/>
+                    <ImageActor
+                        LayoutHeight = "42"
+                        LayoutWidth = "48"
+                        LayoutTopMargin = "257"
+                        LayoutLeftMargin = "136"
+                        Drawable="@Drawable/icon_navi_warning"/>
+                    <TextActor
+                        LayoutWidth = "290"
+                        LayoutHeight = "WrapContent"
+                        LayoutTopMargin = "262"
+                        LayoutLeftMargin = "137"
+                        SingleLine = "false"
+                        WordWrapped = "true"
+                        TextFont = "@Font/UIFont28_Text_L"
+                        TextColor = "@Color/DayBlack_NightWhite"
+                        Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_COPILOT_ACC_ACTIVE_TA_DEACTIVE2_EV_TEXT_Enter_Lane_Navi"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

@@ -1,0 +1,143 @@
+﻿<? xml version = "1.0" encoding = "UTF-8" ?>
+<Resource>
+	<RelativeLayout
+		Id = "@+Id/LayoutParent"
+		LayoutWidth = "FillParent"
+		LayoutHeight = "WrapContent">
+	<RelativeLayout
+		Id = "@+Id/RelativeLayoutLnr_Maneuver"
+		LayoutWidth = "FillParent"
+		LayoutHeight = "128">
+		<!--2级List-->
+		<LinearLayout
+			Id = "@+Id/Lnr_Maneuver"
+			LayoutWidth = "326"
+			Focusable = "true"
+			LayoutHeight = "FillParent"
+			LayoutLeftMargin = "112"
+			HorizontalGravity = "Left"
+			VerticalGravity = "Center"
+			Clickable = "true"
+			Orientation = "Vertical">
+			<LinearLayout
+				LayoutWidth = "FillParent"
+				LayoutHeight = "FillParent"
+				HorizontalGravity = "Left"
+				VerticalGravity = "Center"
+				Background = "@Drawable/card_right_angle_conrners_tripview_bg"
+				DuplicateParentState = "true">
+				<!--Direction部品 资源暂未提供，临时对应-->
+				<ImageActor
+					Id = "@+Id/ImgDir"
+					LayoutWidth = "80"
+					LayoutHeight = "80"
+					LayoutLeftMargin = "3"
+					LayoutTopMargin = "20"
+					HorizontalGravity = "Center"
+					DuplicateParentState = "true"
+					VerticalGravity = "Center"/>
+				<LinearLayout
+					LayoutWidth = "198"
+					LayoutHeight = "FillParent"
+					LayoutLeftMargin = "16"
+					LayoutTopMargin = "23"
+					Orientation = "Vertical"
+					DuplicateParentState = "true">
+					<!--Title-->
+					<TextActor
+						Id = "@+Id/TxtWayName"
+						LayoutWidth = "FillParent"
+						LayoutHeight = "40"
+						LayoutTopMargin = "1"
+						Style = "@Style/cns_TripView_Title"
+						DuplicateParentState = "true"/>
+					<!--道路番号-->
+					<LinearLayout
+						LayoutWidth = "WrapContent"
+						LayoutHeight = "FillParent"
+						HorizontalGravity = "Left"
+						DuplicateParentState = "true">
+						<!--带点-->
+						<TextActor
+							Id = "@+Id/HighWayNo"
+							LayoutWidth = "WrapContent"
+							LayoutHeight = "WrapContent"
+							TextFont = "@Font/UIFont20_Text_R"
+							LayoutTopMargin = "8"
+							PaddingTop = "12"
+							LayoutRightMargin = "17"
+							TextColor = "@Color/Color_FFFFFF"
+							Visible = "Gone"/>
+						<!--不带点-->
+						<TextActor
+							Id = "@+Id/RNCNo"
+							LayoutWidth = "WrapContent"
+							LayoutHeight = "WrapContent"
+							LayoutRightMargin = "17"
+							LayoutTopMargin = "8"
+							PaddingTop = "4"
+							TextFont = "@Font/UIFont20_Text_R"
+							TextColor = "@Color/Color_FFFFFF"
+							Visible = "Gone"/>
+						<TextActor
+							Style = "@Style/cns_TripView_Address"
+							LayoutWidth = "WrapContent"
+							LayoutHeight = "40"
+							LayoutTopMargin = "1"
+							DuplicateParentState = "true"
+							Text = "@String/MX_LANG_NAVI_TRIPVIEW_ROUTE_NO_STOPOVER_TEXT_Driving"/>
+						<!--行驶距离-->
+						<TextActor
+							Id = "@+Id/TxtWayDistance"
+							Style = "@Style/cns_TripView_Title"
+							LayoutWidth = "WrapContent"
+							LayoutLeftMargin = "8"
+							LayoutHeight = "40"
+							DuplicateParentState = "true"/>
+						<!--行驶距离单位-->
+						<TextActor
+							Id = "@+Id/TxtWayDistanceUnit"
+							Style = "@Style/cns_TripView_Address"
+							LayoutWidth = "WrapContent"
+							LayoutHeight = "40"
+							DuplicateParentState = "true"/>
+					</LinearLayout>
+				</LinearLayout>
+			</LinearLayout>
+        </LinearLayout>
+		<RelativeLayout
+		Id = "@+Id/RelativeLayoutLnr_Maneuver_Width"
+		LayoutWidth = "426"
+		LayoutHeight = "FillParent"
+		LayoutLeftMargin = "112">
+		<!--List分割线-->
+		<ImageActor
+			LayoutWidth = "FillParent"
+			LayoutHeight = "2"
+			LayoutAlignParentBottom = "true"
+			Background = "@Drawable/radio_button_line"/>
+		<RelativeLayout
+			LayoutWidth = "108"
+			LayoutHeight = "136"
+			LayoutAlignParentRight = "true"
+			LayoutRightMargin = "6">
+			<!-- 分割线 -->
+			<ImageActor
+				LayoutWidth = "2"
+				LayoutHeight = "56"
+				LayoutTopMargin = "36"
+				Background = "@Drawable/card_list_vertical_line"/>
+			<!--List折叠/展开 icon-->
+			<ImageButton
+				Id = "@+Id/BTN_Block_Road"
+				LayoutHeight = "FillParent"
+				LayoutWidth = "FillParent"
+				LayoutLeftMargin = "8"
+				ClickDataCollection = "BTN_Block_Road"
+				Drawable = "@Drawable/icon_close_m" 
+				Background = "@Drawable/h64_background_normal_clear_list"/>
+		</RelativeLayout>
+		</RelativeLayout>
+	</RelativeLayout>
+	</RelativeLayout>
+</Resource>

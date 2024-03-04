@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <DayNightStateList>
+<!--Day-->
+		<Item DayOrNight = "Day" Drawable = "@Drawable/vertical_scrollbar_pressed_day"/>
+<!--Night-->
+		<Item DayOrNight = "Night" Drawable = "@Drawable/vertical_scrollbar_pressed_night"/>
+    </DayNightStateList>
+</Resource>

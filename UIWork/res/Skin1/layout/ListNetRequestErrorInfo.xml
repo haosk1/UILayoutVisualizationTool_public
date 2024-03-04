@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="69"
+        Focusable="true"
+        Background="@Drawable/scale_listBgMiddle"
+        BGVerticalGravity="Bottom">
+        <LinearLayout
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent"
+            Orientation="Vertical"
+            Focusable="true"
+            VerticalGravity="Center">
+            <LinearLayout
+                LayoutWidth="FillParent"
+                LayoutHeight="26">
+                <TextActor
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="FillParent"
+                    HorizontalGravity="Left"
+                    PaddingLeft="17"
+                    TextFont="@Font/UIFont26"
+                    TextColor="@Color/Color_White"
+                    Text="CurlCode:" />
+                <TextActor
+                    Id="@+Id/TextCurlCode"
+                    LayoutWidth="86"
+                    LayoutHeight="FillParent"
+                    PaddingLeft="17"
+                    HorizontalGravity="Left"
+                    TextAutoScrollMode="AutoScrollWhenFocused"
+                    TextFont="@Font/UIFont26"
+                    TextColor="@Color/Color_White" />
+                <TextActor
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="FillParent"
+                    HorizontalGravity="Left"
+                    PaddingLeft="17"
+                    TextFont="@Font/UIFont26"
+                    TextColor="@Color/Color_White"
+                    Text="HttpCode:" />
+                <TextActor
+                    Id="@+Id/TextHttpCode"
+                    LayoutWidth="86"
+                    LayoutHeight="FillParent"
+                    PaddingLeft="17"
+                    TextAutoScrollMode="AutoScrollWhenFocused"
+                    HorizontalGravity="Left"
+                    TextFont="@Font/UIFont26"
+                    TextColor="@Color/Color_White" />
+            </LinearLayout>
+            <LinearLayout
+                LayoutWidth="FillParent"
+                LayoutHeight="43">
+                <TextActor
+                    LayoutWidth="129"
+                    LayoutHeight="FillParent"
+                    HorizontalGravity="Left"
+                    PaddingLeft="17"
+                    TextFont="@Font/UIFont18"
+                    TextColor="@Color/Color_White"
+                    Text="URLStr: " />
+                <TextActor
+                    Id="@+Id/TextURLStr"
+                    LayoutWidth="951"
+                    LayoutHeight="FillParent"
+                    PaddingLeft="17"
+                    TextAutoScrollMode="AutoScroll"
+                    HorizontalGravity="Left"
+                    TextFont="@Font/UIFont18"
+                    TextColor="@Color/Color_White" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</Resource>

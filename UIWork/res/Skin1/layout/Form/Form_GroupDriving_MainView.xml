@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@Id/PreDefine/LayoutParent"
+        LayoutHeight="FillParent"
+        LayoutWidth="FillParent">
+        <TransparencyActor
+            Id="@+Id/TransparencyScreen"
+            LayoutHeight="FillParent"
+            LayoutWidth="FillParent" />
+        <Function
+            Id="@Id/PreDefine/Fragment_GroupDrivingMainView"
+            LayoutHeight="FillParent"
+            LayoutWidth="FillParent" />
+        <!--HMI界面布局部分，此元器件LayoutWidth表示半屏尺寸-->
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <!--SearchBar-->
+            <LinearLayout
+                Id="@Id/PreDefine/SearchBar"
+                LayoutHeight="98"
+                LayoutWidth="476"
+                LayoutTopMargin="112"
+                LayoutLeftMargin="16"
+                Background="@Drawable/search_bg"
+                Clickable="true">
+                <Button
+                    Id="@Id/PreDefine/BTN_Search"
+                    LayoutHeight="FillParent"
+                    LayoutWidth="FillParent"
+                    Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV1_TEXT_HInt_Text1"
+                    TextFont="@Font/UIFont34_Text_L"
+                    TextColor="@Color/DayBlack_NightWhite_Grey"
+                    PaddingLeft="48"
+                    PaddingTop="4"
+                    HorizontalGravity="Left"
+                    DuplicateParentState="true"
+                    ClickDataCollection="BTN_Search" />
+            </LinearLayout>
+            <!-- 组队主画页布局 -->
+            <RelativeLayout
+                Id="@Id/PreDefine/LayoutMain"
+                LayoutHeight="FillParent"
+                LayoutWidth="FillParent"
+                LayoutTopMargin="348">
+                <!-- 背景图片 -->
+                <RelativeLayout
+                    Id="@+Id/LayoutBG"
+                    LayoutHeight="620"
+                    LayoutWidth="584"
+                    Background="@Drawable/card_bg_day_and_night"
+                    Clickable="true">
+                    <RelativeLayout
+                        Id="@+Id/FullScreen"
+                        LayoutWidth="552"
+                        LayoutHeight="588"
+                        LayoutLeftMargin="16"
+                        LayoutTopMargin="16">
+                        <!-- 集结文言 -->
+                        <TextActor
+                            LayoutHeight="52"
+                            LayoutWidth="378"
+                            LayoutTopMargin="48"
+                            LayoutLeftMargin="144"
+                            TextFont="@Font/UIFont40_Text_M"
+                            TextColor="@Color/BtnFavoriteColor"
+                            Text="@String/MX_LANG_NAVI_GROUPDRIVING_LOADING_TEXT_Group_Driving"
+                            HorizontalGravity="Left" />
+                        <!-- 返回按钮 -->
+                        <ImageButton
+                            Id="@+Id/BtnClose"
+                            LayoutWidth="152"
+                            LayoutHeight="152"
+                            LayoutTopMargin="-4"
+                            LayoutLeftMargin="-4"
+                            Background="@Drawable/btn_h84_background_normal_prox"
+                            VisibleSpeechs="@String/MX_LANG_NAVI_GROUPDRIVING_MAIN_VIEW_VisibleSpeechs_01"
+                            Drawable="@Drawable/icon_close_s"
+                            ClickDataCollection="BTN_Close" />
+                        <!-- 头像、腾讯我的车、微信名 -->
+                        <RelativeLayout
+                            Id="@+Id/InfoMain"
+                            LayoutWidth="FillParent"
+                            LayoutHeight="FillParent">
+                            <RelativeLayout
+                                Background="@Drawable/image_small"
+                                LayoutWidth="160"
+                                LayoutHeight="160"
+                                LayoutLeftMargin="14"
+                                LayoutTopMargin="132">
+                                <ImageActor
+                                    Id="@+Id/MemberImage"
+                                    LayoutWidth="103"
+                                    LayoutHeight="103"
+                                    LayoutCenterInParent="true" />
+                            </RelativeLayout>
+                            <TextActor
+                                LayoutHeight="40"
+                                LayoutWidth="330"
+                                LayoutLeftMargin="188"
+                                LayoutTopMargin="167"
+                                TextFont=" @Font/UIFont34_Text_R"
+                                TextColor="@Color/BtnFavoriteColor"
+                                Text="@String/MX_LANG_NAVI_GROUPDRIVING_MAIN_VIEW_TEXT_Tecent_Mycar"
+                                SingleLine="true"
+                                HorizontalGravity="Left" />
+                            <TextActor
+                                Id="@+Id/WeChatName"
+                                LayoutHeight="40"
+                                LayoutWidth="330"
+                                LayoutLeftMargin="188"
+                                LayoutTopMargin="210"
+                                TextFont=" @Font/UIFont28_Text_L"
+                                TextColor="@Color/BtnFavoriteColor"
+                                Text="@String/MX_LANG_NAVI_GROUPDRIVING_FLEET_MAIN_NO_GATHERING_POINT_TEXT_Group_Unknown_Name"
+                                SingleLine="true"
+                                HorizontalGravity="Left" />
+                        </RelativeLayout>
+                        <!--创建队伍部品-->
+                        <RelativeLayout
+                            Id="@+Id/BtnCreateFleet"
+                            LayoutWidth="524"
+                            LayoutHeight="116"
+                            LayoutLeftMargin="10"
+                            LayoutTopMargin="278"
+                            Clickable="true"
+                            VisibleSpeechs="@String/MX_LANG_NAVI_GROUPDRIVING_MAIN_VIEW_VisibleSpeechs_02"
+                            ClickDataCollection="BTN_Creat">
+                            <TextActor
+                                LayoutWidth="560"
+                                LayoutHeight="152"
+                                LayoutTopMargin="-4"
+                                LayoutBottomMargin="-12"
+                                LayoutLeftMargin="-14"
+                                LayoutRightMargin="-22"
+                                PaddingTop="5"
+                                Background="@Drawable/background_64_normal_prox"
+                                DuplicateParentState="true"
+                                TextFont=" @Font/UIFont28_Text_L"
+                                TextColor="@Color/BtnFavoriteColor"
+                                Text="@String/MX_LANG_NAVI_GROUPDRIVING_MAIN_VIEW_TEXT_Create" />
+                        </RelativeLayout>
+                        <!--加入队伍部品-->
+                        <RelativeLayout
+                            Id="@+Id/BtnEnterFleet"
+                            LayoutWidth="524"
+                            LayoutHeight="116"
+                            LayoutLeftMargin="10"
+                            LayoutTopMargin="366"
+                            Clickable="true"
+                            VisibleSpeechs="@String/MX_LANG_NAVI_GROUPDRIVING_MAIN_VIEW_VisibleSpeechs_03"
+                            ClickDataCollection="BTN_Enter">
+                            <TextActor
+                                LayoutWidth="560"
+                                LayoutHeight="152"
+                                LayoutTopMargin="-4"
+                                LayoutBottomMargin="-12"
+                                LayoutLeftMargin="-14"
+                                LayoutRightMargin="-22"
+                                PaddingTop="5"
+                                PaddingRight="2"
+                                Background="@Drawable/background_64_normal_prox"
+                                DuplicateParentState="true"
+                                TextFont=" @Font/UIFont28_Text_L"
+                                TextColor="@Color/BtnFavoriteColor"
+                                Text="@String/MX_LANG_NAVI_GROUPDRIVING_MAIN_VIEW_TEXT_Enter" />
+                        </RelativeLayout>
+                        <!--加入上一次队伍部品-->
+                        <RelativeLayout
+                            Id="@+Id/BtnJoinLastFleet"
+                            LayoutWidth="524"
+                            LayoutHeight="116"
+                            LayoutLeftMargin="10"
+                            LayoutTopMargin="454"
+                            Clickable="true"
+                            VisibleSpeechs="@String/MX_LANG_NAVI_GROUPDRIVING_MAIN_VIEW_VisibleSpeechs_04"
+                            ClickDataCollection="BTN_Join_Previous"
+                            Visible="Visible">
+                            <TextActor
+                                LayoutWidth="560"
+                                LayoutHeight="152"
+                                LayoutTopMargin="-4"
+                                LayoutBottomMargin="-12"
+                                LayoutLeftMargin="-14"
+                                LayoutRightMargin="-22"
+                                PaddingTop="5"
+                                Background="@Drawable/background_64_normal_prox"
+                                DuplicateParentState="true"
+                                TextFont=" @Font/UIFont28_Text_L"
+                                TextColor="@Color/BtnFavoriteColor"
+                                Text="@String/MX_LANG_NAVI_GROUPDRIVING_MAIN_VIEW_TEXT_Join_Previous" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </MXUIScreenRelativeLayout>
+        <!--1558宽度元器件居中-->
+        <RelativeLayout
+            Id="@Id/PreDefine/CenterLayoutParent"
+            LayoutHeight="FillParent"
+            LayoutWidth="1314"
+            LayoutAlignParentRight="true"
+            Clickable="false">
+            <RelativeLayout
+                Id="@Id/PreDefine/ReturnCCP"
+                LayoutWidth="WrapContent"
+                LayoutHeight="164"
+                LayoutCenterHorizontal="true"
+                LayoutAlignParentBottom="true"
+                LayoutBottomMargin="94"
+                Background="@Drawable/background_96h_hero_prox_day_shadows">
+                <RelativeLayout
+                    Id="@Id/PreDefine/BtnReturnCCP"
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="164"
+                    LayoutLeftMargin="18"
+                    LayoutRightMargin="18"
+                    LayoutCenterInParent="true"
+                    VisibleSpeechs="@String/MX_LANG_NAVI_MAP_RESTRICTION_VIEW_WITHOUT_GUIDANCE_VisibleSpeechs_02"
+                    Clickable="true">
+                    <LinearLayout
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="104"
+                        LayoutLeftMargin="12"
+                        LayoutRightMargin="12"
+                        LayoutCenterInParent="true"
+                        DuplicateParentState="true"
+                        Background="@Drawable/Gradient_background_96h_hero_prox">
+                        <ImageActor
+                            LayoutLeftMargin="28"
+                            LayoutCenterVertical="true"
+                            DuplicateParentState="true"
+                            Drawable="@Drawable/back_to_destination_day" />
+                        <!--占位-->
+                        <ImageActor
+                            Id="@Id/PreDefine/SpaceBefore"
+                            LayoutWidth="2"
+                            LayoutHeight="FillParent"
+                            Visible="Gone" />
+                        <TextActor
+                            Id="@Id/PreDefine/TxtReturnCCP"
+                            LayoutHeight="FillParent"
+                            LayoutWidth="WrapContent"
+                            LayoutLeftMargin="8"
+                            LayoutRightMargin="47"
+                            PaddingTop="4"
+                            DuplicateParentState="true"
+                            Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV2_TEXT_Back_to_CCP"
+                            TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                            TextColor="@Color/HeroBtnText_RGB" />
+                        <!--占位-->
+                        <ImageActor
+                            Id="@Id/PreDefine/SpaceAfter"
+                            LayoutWidth="2"
+                            LayoutHeight="FillParent"
+                            Visible="Gone" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+            <!--车线-->
+            <LinearLayout
+                Id="@Id/PreDefine/LaneLayout"
+                LayoutHeight="164"
+                LayoutTopMargin="78"
+                LayoutCenterHorizontal="true"
+                Background="@Drawable/background_020_m_lane_info_box"
+                Visible="Invisible">
+                <RelativeLayout
+                    LayoutWidth="WrapContent"
+                    LayoutHeight="96"
+                    LayoutLeftMargin = "34"
+                    LayoutRightMargin = "34"
+                    LayoutTopMargin="34">
+                    <!--推荐车线背景帧动画-->
+                    <LaneAutomaticImageActor
+                        Id="@Id/PreDefine/LaneAutomatic"
+                        LayoutHeight="FillParent"
+                        ImageChangeTimer="38"
+                        Cyclable="true"
+                        Drawable="@Drawable/background_recommend_lane"
+                        Visible="Gone" />
+                    <LaneInfo
+                        Id="@Id/PreDefine/Lane"
+                        LayoutHeight="FillParent"
+                        LaneRecommended="@Drawable/DrawLevel_RecommendLane"
+                        LaneAvailable="@Drawable/DrawLevel_AvailableLane"
+                        LaneDisable="@Drawable/DrawLevel_DisableLane"
+                        LaneOmit="@Drawable/more"
+                        LaneTG="@Drawable/DrawLevel_All_SpecialLane"
+                        LaneMiddleImg="@Drawable/background_020_m_lane_info_box_line"
+                        LanePaddingLeft="8"
+                        LanePaddingRight="8"
+                        LanePaddingTop="16"
+                        LanePaddingBottom="16"
+                        LaneMaxCnt="6"
+                        Clickable="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

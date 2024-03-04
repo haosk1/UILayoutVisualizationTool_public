@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <LinearGradientDrawable>
+		<Item Drawable = "@Drawable/card_selected_right_angle_conrners_tripview_bg"/>
+		<Item StartColor = "@Color/AmbientLightColorA"/>
+		<Item EndColor = "@Color/AmbientLightColorB"/>
+    	<Item Direction = "FreedomAngle"/>
+		<Item Angle = "75.0"/>
+    </LinearGradientDrawable>
+</Resource>

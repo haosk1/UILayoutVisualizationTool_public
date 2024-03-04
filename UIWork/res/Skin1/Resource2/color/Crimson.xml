@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+		<Item StateEnabled = "true"  Color = "#dc143c"/>
+		<Item StateEnabled = "false" Color = "#dc143c"/>
+    </StateList>
+</Resource>

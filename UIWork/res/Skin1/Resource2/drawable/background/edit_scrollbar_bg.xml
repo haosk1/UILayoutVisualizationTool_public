@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <ScaleDrawableRectCustomStateList>
+<!-->Normal-->
+		<Item  PaddingTop = "-1" PaddingLeft = "0" PaddingBottom = "0" PaddingRight = "0" Drawable = "@Drawable/cursor"/>
+    </ScaleDrawableRectCustomStateList>
+</Resource>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <DayNightStateList>
+<!--Day-->
+		<Item DayOrNight = "Day" Drawable = "@Drawable/card_service_SAPA_remind_bg_Day"/>
+<!--Night-->
+		<Item DayOrNight = "Night" Drawable = "@Drawable/card_service_SAPA_remind_bg_Night"/>
+    </DayNightStateList>
+</Resource>

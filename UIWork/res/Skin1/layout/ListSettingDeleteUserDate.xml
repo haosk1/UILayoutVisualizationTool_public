@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/ListItem"
+        LayoutWidth="FillParent"
+        LayoutHeight="130"
+        Focusable="true">
+        <RelativeLayout
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent">
+            <RelativeLayout
+                Id="@+Id/RelativeLayout_Delete"
+                LayoutWidth="880"
+                LayoutHeight="110"
+                Background="@Drawable/bg_prox_pressed_selected_DayNight"
+                DuplicateParentState="true"
+                Clickable="true"
+                Focusable="true">
+                <TextActor
+                    Id="@+Id/Text_Setting_Delete"
+                    LayoutWidth="670"
+                    LayoutHeight="40"
+                    VerticalGravity="Center"
+                    LayoutTopMargin="37"
+                    LayoutLeftMargin="36"
+                    HorizontalGravity="Left"
+                    DuplicateParentState="true"
+                    TextFont="@Font/UIFont34_Text_R"
+                    TextColor="@Color/ListFavColor" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>

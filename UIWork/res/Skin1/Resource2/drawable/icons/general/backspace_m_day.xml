@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <StateList>
+<!-->Normal-->
+		<Item StateEnabled = "true" StatePressed = "false" StateChecked = "false" Drawable = "@Drawable/backspace_m_c_day"/>
+<!-->Push-->
+		<Item StateEnabled = "true" StatePressed = "true" Drawable = "@Drawable/backspace_m_c_pressed_day"/>
+<!-->Disable-->
+		<Item StateEnabled = "false" Drawable = "@Drawable/backspace_m_c_disable_day"/>
+    </StateList>
+</Resource>

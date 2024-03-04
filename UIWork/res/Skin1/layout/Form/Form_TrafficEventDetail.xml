@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent">
+        <!--HMI界面布局部分，此元器件LayoutWidth表示半屏尺寸-->
+      <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <RelativeLayout
+                Id="@+Id/RealtiveMain"
+                LayoutWidth="724"
+                LayoutHeight="872"
+                LayoutTopMargin="96"
+                Clickable="true"
+                Background="@Drawable/card_bg_day_and_night">
+                <RelativeLayout
+                    Id="@+Id/AnimationInfo"
+                    LayoutWidth="692"
+                    LayoutHeight="840"
+                    LayoutLeftMargin="16"
+                    LayoutTopMargin="16">
+                <!--title 部分-->
+                <RelativeLayout
+                    LayoutWidth="172"
+                    LayoutHeight="172"
+                    LayoutTopMargin="-4"
+                    LayoutLeftMargin="-4">
+                    <ImageButton
+                        Id="@+Id/BtnReturn"
+                        LayoutWidth="136"
+                        LayoutHeight="136"
+                        LayoutCenterInParent="true"
+                        LayoutVerticalGravity="Center"
+                        Drawable="@Drawable/icon_close"
+                        Background="@Drawable/btn_h104_background_normal_prox"
+                        BGHorizontalGravity="Center"
+                        BGVerticalGravity="Center"
+                        ClickDataCollection="BTN_Back"
+                        DuplicateParentState="true"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_MAP_TRAFFIC_EVENT_DETAIL2_VisibleSpeechs_01" />
+                </RelativeLayout>
+                <TextActor
+                    LayoutHeight="60"
+                    LayoutLeftMargin="164"
+                    LayoutTopMargin="51"
+                    PaddingTop="6"
+                    TextColor="@Color/DayBlack_NightWhite"
+                    TextFont="@Font/UIFont40_Text_M"
+                    Text="@String/MX_LANG_NAVI_MAP_TRAFFIC_EVENT_DETAIL_TITLE_Traffic_Event" />
+                <!--Info主体-->
+                <RelativeLayout
+                    Id="@+Id/LayoutTrafficEvent"
+                    LayoutWidth="724"
+                    LayoutHeight="691"
+                    LayoutTopMargin="139"
+                    Clickable="true">
+                    <UIScrollViewEx
+                        Id="@Id/PreDefine/ScrollViewEx"
+                        LayoutWidth="692"
+                        LayoutHeight="FillParent"
+                        ShowsIndicator="false"
+                        Orientation="Vertical"
+                        BounceVertical="true"
+                        BounceHorizontal="false"
+                        VisibleSpeechs="@String/NAVI_Scroll_Bar_VisibleSpeechs_With_TurnPages_And_Silde_01">
+                        <RelativeLayout
+                            LayoutWidth="547"
+                            LayoutHeight="92">
+                            <!--Traffic Icon-->
+                            <ImageActor
+                                Id="@+Id/Icon_TMC"
+                                LayoutWidth = "80"
+								LayoutHeight = "80"
+								LayoutLeftMargin = "42"
+								LayoutTopMargin = "19"
+                                Drawable="@Drawable/DrawableLeveTrafficEvent_GP80" />
+                            <!--事件名称-->
+                            <TextActor
+                                Id="@+Id/TrafficName"
+                                LayoutTopMargin="9"
+                                LayoutLeftMargin="160"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="52"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont40_Text_R"
+                                HorizontalGravity="Left" />
+                            <TextActor
+                                Id="@+Id/DistanceToCCP"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="40"
+                                LayoutLeftMargin="160"
+                                LayoutTopMargin="61"
+                                HorizontalGravity="Left"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont34_Text_R" />
+                        </RelativeLayout>
+                        <LinearLayout
+                            LayoutWidth="612"
+                            LayoutHeight="176"
+                            LayoutTopMargin="32"
+                            LayoutLeftMargin="40"
+                            Orientation="Vertical">
+                            <!--事件名称-->
+                            <TextActor
+                                Id="@+Id/ConstractionName"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="40"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont34_Text_R"
+                                HorizontalGravity="Left" />
+                            <!--事件信息-->
+                            <TextActor
+                                Id="@+Id/ConstractionInfo"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="WrapContent"
+                                LayoutTopMargin="16"
+                                LineIntervalAddFactor="-14"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont34_Text_L"
+                                HorizontalGravity="Left"
+                                SingleLine="false"
+                                WordWrapped="true" />
+                            <!--影响时间为连续 布局-->
+                            <LinearLayout
+                                Id="@+Id/ContinueTimeLayout"
+                                LayoutWidth="612"
+                                LayoutHeight="136"
+                                LayoutTopMargin="32"
+                                Orientation="Vertical">
+                                <!--影响时间标题-->
+                                <TextActor
+                                    Id="@+Id/EffectTimeName"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="40"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont34_Text_R"
+                                    HorizontalGravity="Left"
+                                    Text="@String/MX_LANG_NAVI_MAP_TRAFFIC_EVENT_DETAIL_TEXT_Event_Detail1" />
+                                <!--开始时间 从***-->
+                                <LinearLayout
+                                    LayoutWidth="WrapContent"
+                                    LayoutTopMargin="16"
+                                    LayoutHeight="45">
+                                    <TextActor
+                                        LayoutWidth="120"
+                                        LayoutHeight="40"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont34_Text_L"
+                                        HorizontalGravity="Left"
+                                        Text="@String/MX_LANG_NAVI_ROUTE_RESTRICTION_VIEW_DETAIL_EV_TEXT_Restriction_Detail_EV2" />
+                                    <TextActor
+                                        Id="@+Id/EffectTimeInfo_Begin"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="40"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont34_Text_R"
+                                        HorizontalGravity="Left" />
+                                </LinearLayout>
+                                <!--结束时间 至***-->
+                                <LinearLayout
+                                    LayoutWidth="FillParent"
+                                    LayoutHeight="45"
+                                    PaddingTop = "-5">
+                                    <TextActor
+                                        LayoutWidth="120"
+                                        LayoutHeight="40"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont34_Text_L"
+                                        HorizontalGravity="Left"
+                                        Text="@String/MX_LANG_NAVI_ROUTE_RESTRICTION_VIEW_DETAIL_EV_TEXT_Restriction_Detail_EV3" />
+                                    <TextActor
+                                        Id="@+Id/EffectTimeInfo_End"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="40"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont34_Text_R"
+                                        HorizontalGravity="Left" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <!--非连续影响时间 布局-->
+                            <LinearLayout
+                                Id="@+Id/SpecialTimeLayout"
+                                LayoutWidth="612"
+                                LayoutHeight="136"
+                                LayoutTopMargin="32"
+                                Orientation="Vertical"
+                                Visible="Gone">
+                                <!--标题-->
+                                <TextActor
+                                    Id="@+Id/SpecDateTitle"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="40"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont34_Text_R"
+                                    HorizontalGravity="Left"
+                                    Text="@String/MX_LANG_NAVI_MAP_TRAFFIC_EVENT_DETAIL_TEXT_Event_Detail4" />
+                                <!--日期开始  从***-->
+                                <LinearLayout
+                                    LayoutWidth="WrapContent"
+                                    LayoutTopMargin="16"
+                                    LayoutHeight="45">
+                                    <TextActor
+                                        LayoutWidth="120"
+                                        LayoutHeight="40"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont34_Text_L"
+                                        HorizontalGravity="Left"
+                                        Text="@String/MX_LANG_NAVI_ROUTE_RESTRICTION_VIEW_DETAIL_EV_TEXT_Restriction_Detail_EV2" />
+                                    <TextActor
+                                        Id="@+Id/SpecDateBegin"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="40"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont40_Text_R"
+                                        HorizontalGravity="Left" />
+                                </LinearLayout>
+                                <!--日期结束  到***-->
+                                <LinearLayout
+                                    LayoutWidth="FillParent"
+                                    LayoutHeight="45"
+                                    PaddingTop = "-5">                                    
+                                    <TextActor
+                                        LayoutWidth="120"
+                                        LayoutHeight="40"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont34_Text_L"
+                                        HorizontalGravity="Left"
+                                        Text="@String/MX_LANG_NAVI_ROUTE_RESTRICTION_VIEW_DETAIL_EV_TEXT_Restriction_Detail_EV3" />
+                                    <TextActor
+                                        Id="@+Id/SpecDateEnd"
+                                        LayoutWidth="WrapContent"
+                                        LayoutHeight="40"
+                                        TextColor="@Color/DayBlack_NightWhite"
+                                        TextFont="@Font/UIFont34_Text_R"
+                                        HorizontalGravity="Left" />
+                                </LinearLayout>
+                                <!--影响时间标题-->
+                                <TextActor
+                                    Id="@+Id/SpecTimeTitle"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="40"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont34_Text_R"
+                                    HorizontalGravity="Left"
+                                    LayoutTopMargin="21"
+                                    Text="@String/MX_LANG_NAVI_MAP_TRAFFIC_EVENT_DETAIL_TEXT_Event_Detail1" />
+                                <!--影响时间content-->
+                                <TextActor
+                                    Id="@+Id/SpecTimeContent"
+                                    LayoutWidth="WrapContent"
+                                    LayoutHeight="40"
+                                    LayoutTopMargin="9"
+                                    SingleLine="false"
+                                    WordWrapped="true"
+                                    TextColor="@Color/DayBlack_NightWhite"
+                                    TextFont="@Font/UIFont34_Text_R"
+                                    HorizontalGravity="Left" />
+                            </LinearLayout>
+                            <!--更新时间标题-->
+                            <TextActor
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="60"
+                                LayoutTopMargin="23"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont34_Text_R"
+                                HorizontalGravity="Left"
+                                Text="@String/MX_LANG_NAVI_MAP_TRAFFIC_EVENT_DETAIL_TEXT_Event_Detail2" />
+                            <!--更新时间-->
+                            <TextActor
+                                Id="@+Id/GetInfoTime"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="52"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont34_Text_R"
+                                HorizontalGravity="Left" />
+                            <!--供应商标题-->
+                            <TextActor
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="60"
+                                LayoutTopMargin="16"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont34_Text_R"
+                                HorizontalGravity="Left"
+                                Text="@String/MX_LANG_NAVI_MAP_TRAFFIC_EVENT_DETAIL_TEXT_Event_Detail3" />
+                            <!--供应商-->
+                            <TextActor
+                                Id="@+Id/Publisher"
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="52"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont34_Text_L"
+                                HorizontalGravity="Left" />
+                        </LinearLayout>
+                    </UIScrollViewEx>
+                    <ScrollViewBar
+                        Id="@Id/PreDefine/ScrollViewBar"
+                        LayoutWidth="30"
+                        LayoutHeight="670"
+                        LayoutAlignParentRight="true"
+                        LayoutTopMargin="26"
+                        ScrollBarLayout="@Layout/CActorScrollBarRouteSelect" />
+                </RelativeLayout>
+                <!--loading-->
+                <RelativeLayout
+                    Id="@+Id/RealtiveLoading"
+                    LayoutWidth="FillParent"
+                    LayoutHeight="FillParent"
+                    ClipChildren="false"
+                    Visible="Gone">
+                    <AutomaticImageActor
+                        Id="@+Id/ImageLoading"
+                        LayoutWidth="80"
+                        LayoutHeight="80"
+                        ImageChangeTimer="83"
+						LayoutTopMargin = "374"
+						LayoutLeftMargin = "305"
+                        Cyclable="true"
+                        Drawable="@Drawable/loading_anim_seq_l_LayerList"
+                        Visible="Gone"/>
+                    <TextActor
+                        Id="@+Id/loading"
+                        LayoutWidth="597"
+                        LayoutHeight="50"
+                        LayoutTopMargin="497"
+                        LayoutLeftMargin="46"
+                        Text="@String/MX_LANG_NAVI_TRAFFIC_EVENT_LOADING_TEXT_Event_Loading"
+                        TextFont="@Font/UIFont34_Text_L"
+                        TextColor="@Color/DayBlack_NightWhite" />
+                </RelativeLayout>
+                <!--Noresult message-->
+                <RelativeLayout
+                    Id="@+Id/Linear_NoResult_parent"
+                    LayoutWidth="FillParent"
+                    LayoutHeight="FillParent"
+                    ClipChildren="false"
+                    Orientation="Vertical"
+                    Visible="Gone">
+                    <TextActor
+                        Id="@+Id/NoResult"
+                        LayoutWidth="612"
+                        LayoutHeight="WrapContent"
+                        LayoutLeftMargin="41"
+                        LayoutTopMargin="399"
+                        PaddingTop="3"
+                        LineIntervalAddFactor="-14"
+                        SingleLine="false"
+                        WordWrapped="true"
+                        VerticalGravity="Top"
+                        HorizontalGravity="Center"
+                        TextFont="@Font/UIFont34_Text_L"
+                        TextColor="@Color/DayBlack_NightWhite" />
+                </RelativeLayout>
+            </RelativeLayout>
+            </RelativeLayout>
+             <RelativeLayout
+				LayoutWidth = "FillParent"
+				LayoutHeight = "FillParent"
+				LayoutLeftMargin="709">
+			<!--回自车 hero btn -->
+				<RelativeLayout
+					Id = "@Id/PreDefine/ReturnCCP"
+					LayoutWidth="WrapContent"
+					LayoutHeight="164"
+					LayoutCenterHorizontal = "true"
+					LayoutAlignParentBottom = "true"
+					LayoutBottomMargin = "128"
+					Background = "@Drawable/background_96h_hero_prox_day_shadows"
+                    VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CCP_VIEW_NO_GUIDANCE_OPERATE_VisibleSpeechs_05">
+					<RelativeLayout
+						Id = "@Id/PreDefine/BtnReturnCCP"
+						LayoutWidth="WrapContent"
+						LayoutHeight="164"
+						LayoutLeftMargin = "18"
+						LayoutRightMargin = "18"
+						LayoutCenterInParent="true"
+						Clickable="true"
+						VisibleSpeechs="@String/MX_LANG_NAVI_MAP_RESTRICTION_VIEW_WITHOUT_GUIDANCE_VisibleSpeechs_02">
+						<LinearLayout
+							LayoutWidth="WrapContent"
+							LayoutHeight="104"
+							LayoutLeftMargin = "12"
+							LayoutRightMargin = "12"
+							LayoutCenterInParent="true"
+							DuplicateParentState="true"
+							Background = "@Drawable/Gradient_background_96h_hero_prox">
+							<ImageActor
+								LayoutLeftMargin="28"
+								LayoutCenterVertical="true"
+								DuplicateParentState="true"
+								Drawable="@Drawable/back_to_destination_day"/>
+							<!--占位-->
+							<ImageActor
+								Id = "@Id/PreDefine/SpaceBefore"
+								LayoutWidth = "2"
+								LayoutHeight = "FillParent"
+								Visible = "Gone"/>
+							<TextActor
+								Id = "@Id/PreDefine/TxtReturnCCP"
+								LayoutHeight = "FillParent"
+								LayoutWidth = "WrapContent"
+								LayoutLeftMargin = "8"
+								LayoutRightMargin = "47"
+								PaddingTop = "4"
+								DuplicateParentState="true"
+								Text = "@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV2_TEXT_Back_to_CCP"
+								TextFont = "@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+								TextColor = "@Color/HeroBtnText_RGB" />
+							<!--占位-->
+							<ImageActor
+								Id = "@Id/PreDefine/SpaceAfter"
+								LayoutWidth = "2"
+								LayoutHeight = "FillParent"
+								Visible = "Gone"/>
+						</LinearLayout>
+					</RelativeLayout>
+				</RelativeLayout>
+			</RelativeLayout>	
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

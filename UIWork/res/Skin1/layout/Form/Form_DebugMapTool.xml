@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        LayoutWidth="FillParent"
+        LayoutHeight="FillParent"
+        Background="@Drawable/scale_Background_Headline">
+        <TextActor
+            Id="@+Id/Title"
+            LayoutHorizontalGravity="Center"
+            TextFont="@Font/UIFont24"
+            LayoutTopMargin="137"
+            LayoutLeftMargin="514"
+            TextColor="@Color/Color_White"
+            Text="地图配置工具" />
+        <ImageButton
+            Id="@+Id/BtnReturn"
+            Background="@Drawable/BtnStyleReturn"
+            LayoutHeight="WrapContent"
+            LayoutWidth="WrapContent"
+            LayoutTopMargin="137"
+            LayoutAlignParentTop="true"
+            LayoutAlignParentRight="true" />
+        <TextActor
+            Id="@+Id/TxtConnect"
+            LayoutHorizontalGravity="Center"
+            TextFont="@Font/UIFont24"
+            LayoutTopMargin="171"
+            LayoutLeftMargin="514"
+            TextColor="@Color/Color_White"
+            Text="请选择连接方式：" />
+        <LinearLayout
+            LayoutWidth="1071"
+            LayoutHeight="69"
+            LayoutTopMargin="214"
+            LayoutLeftMargin="514">
+            <Button
+                Id="@+Id/BtnAutoConnect"
+                Style="@Style/BtnStyle1"
+                LayoutWidth="0"
+                SingleLine="false"
+                LayoutWeight="1"
+                LayoutHeight="69"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Text="自动连接"
+                TextFont="@Font/UIFont24" />
+            <Button
+                Id="@+Id/BtnManualConnect"
+                Style="@Style/BtnStyle1"
+                LayoutWidth="0"
+                LayoutWeight="1"
+                LayoutHeight="69"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Text="手动连接"
+                TextFont="@Font/UIFont24" />
+            <Button
+                Id="@+Id/BtnStopConnect"
+                Style="@Style/BtnStyle1"
+                LayoutWidth="0"
+                LayoutWeight="1"
+                LayoutHeight="69"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Text="断开连接"
+                TextFont="@Font/UIFont24" />
+        </LinearLayout>
+        <LinearLayout
+            LayoutWidth="1071"
+            LayoutHeight="69"
+            LayoutTopMargin="300"
+            LayoutLeftMargin="514">
+            <LinearLayout
+                LayoutWidth="0"
+                LayoutWeight="2"
+                Background="@Drawable/EditText_Bg"
+                LayoutHeight="69">
+                <EditBox
+                    Id="@+Id/TextIPInfo"
+                    Style="@Style/cns_EditBoxStyle"
+                    Background="@Drawable/Type10011_06"
+                    LayoutHeight="FillParent"
+                    LayoutWidth="0"
+                    LayoutWeight="2"
+                    Text="192.168.40.4" />
+                <ImageActor
+                    LayoutHeight="WrapContent"
+                    LayoutWidth="1"
+                    LayoutTopMargin="5"
+                    LayoutLeftMargin="15"
+                    Drawable="@Drawable/Icon_Line_ma" />
+                <!--删除-->
+                <ImageButton
+                    Id="@+Id/Btn_Delete"
+                    LayoutHeight="60"
+                    LayoutWidth="0"
+                    LayoutWeight="1"
+                    Drawable="@Drawable/SOP2_MQB_btn_input_delete" />
+            </LinearLayout>
+            <Button
+                Id="@+Id/BtnConnect"
+                Style="@Style/BtnStyle1"
+                LayoutWidth="0"
+                LayoutWeight="1"
+                LayoutHeight="69"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Text="连接"
+                TextFont="@Font/UIFont24" />
+        </LinearLayout>
+        <LinearLayout
+            Id="@+Id/LayoutNum"
+            LayoutWidth="1071"
+            LayoutHeight="69"
+            LayoutTopMargin="377"
+            LayoutLeftMargin="514"
+            Visible="Gone">
+            <Button
+                Id="@Id/PreDefine/Key_0"
+                Style="@Style/BtnStyle1"
+                LayoutWidth="0"
+                LayoutWeight="1"
+                LayoutHeight="69"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Text="0"
+                TextFont="@Font/UIFont24" />
+            <Button
+                Id="@Id/PreDefine/Key_1"
+                Style="@Style/BtnStyle1"
+                LayoutWidth="0"
+                LayoutWeight="1"
+                LayoutHeight="69"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Text="1"
+                TextFont="@Font/UIFont24" />
+            <Button
+                Id="@Id/PreDefine/Key_2"
+                Style="@Style/BtnStyle1"
+                LayoutWidth="0"
+                LayoutWeight="1"
+                LayoutHeight="69"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Text="2"
+                TextFont="@Font/UIFont24" />
+            <Button
+                Id="@Id/PreDefine/Key_3"
+                Style="@Style/BtnStyle1"
+                LayoutWidth="0"
+                LayoutWeight="1"
+                LayoutHeight="69"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Text="3"
+                TextFont="@Font/UIFont24" />
+            <Button
+                Id="@Id/PreDefine/Key_4"
+                Style="@Style/BtnStyle1"
+                LayoutWidth="0"
+                LayoutWeight="1"
+                LayoutHeight="69"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Text="4"
+                TextFont="@Font/UIFont24" />
+            <Button
+                Id="@Id/PreDefine/Key_5"
+                Style="@Style/BtnStyle1"
+                LayoutWidth="0"
+                LayoutWeight="1"
+                LayoutHeight="69"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Text="5"
+                TextFont="@Font/UIFont24" />
+            <Button
+                Id="@Id/PreDefine/Key_6"
+                Style="@Style/BtnStyle1"
+                LayoutWidth="0"
+                LayoutWeight="1"
+                LayoutHeight="69"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Text="6"
+                TextFont="@Font/UIFont24" />
+            <Button
+                Id="@Id/PreDefine/Key_7"
+                Style="@Style/BtnStyle1"
+                LayoutWidth="0"
+                LayoutWeight="1"
+                LayoutHeight="69"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Text="7"
+                TextFont="@Font/UIFont24" />
+            <Button
+                Id="@Id/PreDefine/Key_8"
+                Style="@Style/BtnStyle1"
+                LayoutWidth="0"
+                LayoutWeight="1"
+                LayoutHeight="69"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Text="8"
+                TextFont="@Font/UIFont24" />
+            <Button
+                Id="@Id/PreDefine/Key_9"
+                Style="@Style/BtnStyle1"
+                LayoutWidth="0"
+                LayoutWeight="1"
+                LayoutHeight="69"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Text="9"
+                TextFont="@Font/UIFont24" />
+            <Button
+                Id="@+Id/BtnPoint"
+                Style="@Style/BtnStyle1"
+                LayoutWidth="0"
+                LayoutWeight="1"
+                LayoutHeight="69"
+                HorizontalGravity="Center"
+                VerticalGravity="Center"
+                Text="."
+                TextFont="@Font/UIFont24" />
+        </LinearLayout>
+    </RelativeLayout>
+</Resource>

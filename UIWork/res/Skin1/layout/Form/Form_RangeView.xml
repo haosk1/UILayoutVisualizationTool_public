@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@Id/PreDefine/RealtiveMain"
+        LayoutWidth="1920"
+        LayoutHeight="1080">
+        <TransparencyActor
+            Id="@+Id/TransparencyScreen"
+            LayoutHeight="FillParent"
+            LayoutWidth="FillParent" />
+        <!--HMI界面布局部分，此元器件LayoutWidth表示半屏尺寸-->
+        <MXUIScreenRelativeLayout
+            Id="@Id/PreDefine/MXUIScreenRelativeLayout"
+            LayoutAlignParentRight="true"
+            LayoutWidth="1424"
+            LayoutHeight="FillParent">
+            <RelativeLayout
+                Id="@Id/PreDefine/LayoutParent"
+                LayoutHeight="FillParent"
+                LayoutWidth="FillParent">
+                <RelativeLayout
+                    Id="@Id/PreDefine/CenterLayoutParent"
+                    LayoutWidth="1314"
+                    LayoutHeight="FillParent"
+                    LayoutAlignParentRight="true">
+                    <!--Back To CCP-->
+                    <RelativeLayout
+                        Id="@Id/PreDefine/ReturnCCP"
+                        LayoutWidth="WrapContent"
+                        LayoutHeight="164"
+                        LayoutCenterHorizontal="true"
+                        LayoutAlignParentBottom="true"
+                        LayoutBottomMargin="94"
+                        Background="@Drawable/background_96h_hero_prox_day_shadows">
+                        <RelativeLayout
+                            Id="@Id/PreDefine/BtnReturnCCP"
+                            LayoutWidth="WrapContent"
+                            LayoutHeight="164"
+                            LayoutLeftMargin="6"
+                            LayoutRightMargin="18"
+                            LayoutCenterInParent="true"
+                            VisibleSpeechs="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV2_EV_VisibleSpeechs_03"
+                            Clickable="true">
+                            <LinearLayout
+                                LayoutWidth="WrapContent"
+                                LayoutHeight="104"
+                                LayoutLeftMargin="12"
+                                LayoutRightMargin="12"
+                                LayoutCenterInParent="true"
+                                DuplicateParentState="true"
+                                Background="@Drawable/Gradient_background_96h_hero_prox">
+                                <ImageActor
+                                    LayoutLeftMargin="28"
+                                    LayoutCenterVertical="true"
+                                    DuplicateParentState="true"
+                                    Drawable="@Drawable/back_to_destination_day" />
+                                <!--占位-->
+                                <ImageActor
+                                    Id="@Id/PreDefine/SpaceBefore"
+                                    LayoutWidth="2"
+                                    LayoutHeight="FillParent"
+                                    Visible="Gone" />
+                                <TextActor
+                                    Id="@Id/PreDefine/TxtReturnCCP"
+                                    LayoutHeight="FillParent"
+                                    LayoutWidth="WrapContent"
+                                    LayoutLeftMargin="8"
+                                    LayoutRightMargin="47"
+                                    PaddingTop="4"
+                                    DuplicateParentState="true"
+                                    Text="@String/MX_LANG_NAVI_MAP_CCP_VIEW_PNAV2_TEXT_Back_to_CCP"
+                                    TextFont="@Font/BtnFont40_N_TextL_P_TextM_C_TextM_D_TextL"
+                                    TextColor="@Color/HeroBtnText_RGB" />
+                                <!--占位-->
+                                <ImageActor
+                                    Id="@Id/PreDefine/SpaceAfter"
+                                    LayoutWidth="2"
+                                    LayoutHeight="FillParent"
+                                    Visible="Gone" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+            <LinearLayout
+                LayoutWidth="FillParent"
+                LayoutHeight="FillParent"
+                LayoutLeftMargin="-20"
+                Orientation="Horizontal">
+                <RelativeLayout
+                    LayoutWidth="FillParent"
+                    LayoutHeight="FillParent"
+                    LayoutCenterHorizontal="true">
+                    <!--充电站点选项按钮-->
+                    <RelativeLayout
+                        Id="@+Id/Layout_Option"
+                        LayoutWidth="394"
+                        LayoutHeight="136"
+                        LayoutAlignParentBottom="true"
+                        VisibleSpeechs="@String/MX_LANG_NAVI_SEARCH_RESULT_LIST_ONLINE_VisibleSpeechs_02"
+                        LayoutBottomMargin="112"
+                        Clickable="true">
+                        <ImageActor
+                            LayoutWidth="394"
+                            LayoutHeight="172"
+                            LayoutTopMargin="-10"
+                            LayoutBottomMargin="-18"
+                            LayoutLeftMargin="2"
+                            LayoutRightMargin="-18"
+                            DuplicateParentState="true"
+                            Background="@Drawable/background_96h_normal_view" />
+                        <TextActor
+                            Id="@+Id/TxtOption"
+                            LayoutWidth="100"
+                            LayoutHeight="56"
+                            LayoutLeftMargin="86"
+                            LayoutTopMargin="47"
+                            HorizontalGravity="Left"
+                            DuplicateParentState="true"
+                            Text="@String/MX_LANG_NAVI_MAP_CHARGING_MAP_EV_TEXT_Charging_Map_Option"
+                            TextFont="@Font/BtnFont34_N_TextL_P_TextM_C_TextM_D_TextL"
+                            TextColor="@Color/NormalBtn_RGB" />
+                        <ImageActor
+                            Id="@+Id/ImgOption"
+                            LayoutWidth="80"
+                            LayoutHeight="80"
+                            LayoutAlignParentRight="true"
+                            LayoutRightMargin="52"
+                            LayoutTopMargin="28"
+                            DuplicateParentState="true"
+                            Drawable="@Drawable/btn_down" />
+                    </RelativeLayout>
+
+
+                    <!--一条文言-->
+					<LinearLayout
+						Id = "@+Id/Layout_OneText"
+                        LayoutWidth="1131"
+                        LayoutHeight="WrapContent"
+						LayoutLeftMargin="157"
+                        LayoutTopMargin="78"
+						Background="@Drawable/popup_toast_bg"
+						Clickable = "true"
+						Visible = "Gone">
+                        <LinearLayout
+                            LayoutWidth = "WrapContent"
+                            LayoutHeight = "WrapContent"
+                            LayoutTopMargin = "34"
+                            LayoutLeftMargin = "34"
+                            LayoutRightMargin = "34"
+                            LayoutBottomMargin = "34">
+                            <TextActor
+                                Id = "@+Id/Text_Remind"
+                                LayoutWidth="1062"
+                                LayoutHeight="WrapContent"
+                                LayoutLeftMargin = "28"
+                                PaddingTop = "33"
+							    PaddingBottom = "26"
+                                MinFormatHeight = "40"
+                                VerticalGravity = "Bottom"
+								HorizontalGravity = "Left"
+                                SingleLine="false"
+                                WordWrapped="true"
+                                LineIntervalMultiFactor="0.01"
+								LineIntervalAddFactor="-2"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont34_Text_L"
+                                Text="@String/MX_LANG_NAVI_MAP_CHARGING_MAP_LOADING_FAILED_EV_TEXT_Loading_Failed"/>
+                        </LinearLayout>
+					</LinearLayout>
+					<!--两条文言-->	
+                    <LinearLayout
+						Id = "@+Id/Layout_TowTexts"
+						LayoutWidth = "1131"
+						LayoutHeight = "WrapContent"
+						LayoutLeftMargin="157"
+						LayoutTopMargin = "78"
+                        Orientation = "Vertical"
+                        Clickable = "true"
+                        Visible = "Gone"
+						Background = "@Drawable/popup_toast_bg">
+                        <LinearLayout
+                            LayoutWidth = "WrapContent"
+                            LayoutHeight = "WrapContent"
+                            LayoutTopMargin = "34"
+                            LayoutLeftMargin = "34"
+                            LayoutRightMargin = "34"
+                            LayoutBottomMargin = "34"
+                            Orientation = "Vertical">
+                            <!--低电提示文言pop-->
+                            <TextActor
+                                Id = "@+Id/Text_RangeLowBattery"
+                                LayoutWidth = "1063"
+                                LayoutHeight = "WrapContent"
+                                HorizontalGravity = "Left"
+                                PaddingLeft="28"
+                                PaddingRight="28"
+                                PaddingTop="33"
+                                PaddingBottom="24"
+                                SingleLine = "false"
+                                WordWrapped = "true"
+                                LineIntervalMultiFactor = "0.02"
+                                TextColor = "@Color/DayBlack_NightWhite"
+                                TextFont = "@Font/UIFont34_Text_L"
+                                Text = "@String/MX_LANG_NAVI_MAP_RANGE_VIEW_EV_TEXT_INFO_NAVI_RANGE_LOWBATTERY"/>
+                            <ImageActor
+                                Id = "@+Id/DividerLine"
+                                LayoutHeight = "2" 
+                                LayoutWidth = "1063"
+                                Background = "@Drawable/card_list_line_day"/>
+                            <!--检索结果提示文言-->
+                            <TextActor
+                                Id = "@+Id/Text_Status_Reminder"
+                                LayoutWidth="1063"
+                                LayoutHeight = "WrapContent"
+                                HorizontalGravity = "Left"
+                                PaddingLeft="28"
+                                PaddingRight="28"
+                                PaddingTop="31"
+                                PaddingBottom="26"
+                                SingleLine="false"
+                                WordWrapped="true"
+                                LineIntervalMultiFactor="0.01"
+								LineIntervalAddFactor="-2"
+                                TextColor="@Color/DayBlack_NightWhite"
+                                TextFont="@Font/UIFont34_Text_L"
+                                Text="@String/MX_LANG_NAVI_MAP_CHARGING_MAP_LOADING_FAILED_EV_TEXT_Loading_Failed"/>
+                        </LinearLayout>
+					</LinearLayout>
+
+
+				</RelativeLayout>
+			</LinearLayout>
+        </MXUIScreenRelativeLayout>
+    </RelativeLayout>
+</Resource>

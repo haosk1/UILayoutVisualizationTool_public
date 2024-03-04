@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <LinearLayout
+        Id="@+Id/ListItem"
+        LayoutWidth="880"
+        LayoutHeight="WrapContent"
+        Orientation="Vertical"
+        Clickable="true">
+        <RelativeLayout
+            Id="@+Id/Space_Up"
+            LayoutHeight="13"
+            LayoutWidth="FillParent"
+            Visible="Gone" />
+        <LinearLayout
+            Id = "@+Id/Check_Layout"
+            LayoutHeight="104"
+            LayoutWidth="FillParent">
+            <RelativeLayout
+                Id="@+Id/Layout_Catagory1"
+                LayoutHeight="104"
+                LayoutWidth="423"
+                Background="@Drawable/btn_text_com"
+                Clickable="true"
+                Focusable="true">
+                <VividCheckbox
+                    Id="@+Id/ImgCategoryName1"
+                    LayoutWidth="104"
+                    LayoutHeight="104"
+                    LayoutLeftMargin="20"
+                    UnCheckToCheck="@Drawable/Gradient_Checkbox_M_Z06Z10_F_C"
+                    CheckToUnCheck="@Drawable/Gradient_Checkbox_M_Z10Z06_F_C"
+                    UnCheckToCheckBackground="@Drawable/Checkbox_M_Z06Z10_B"
+                    CheckToUnCheckBackground="@Drawable/Checkbox_M_Z10Z06_B"
+                    Clickable="false"
+                    Focusable="false"
+                    DuplicateParentState="true" />
+                <TextActor
+                    Id="@+Id/TxtCategoryName1"
+                    LayoutHeight="40"
+                    LayoutWidth="280"
+                    PaddingTop="4"
+                    LayoutLeftMargin="124"
+                    HorizontalGravity = "Left"
+                    LayoutCenterVertical="true"
+                    TextFont="@Font/UIFont34_Text_R"
+                    TextColor="@Color/DayBlack_NightWhite"
+                    DuplicateParentState="true" />
+            </RelativeLayout>
+            <ImageActor
+                LayoutWidth="2"
+                LayoutHeight="56"
+                LayoutVerticalGravity = "Center"
+                Drawable="@Drawable/citylist_line_dayAndnight" />
+            <RelativeLayout
+                Id="@+Id/Layout_Catagory2"
+                LayoutHeight="104"
+                LayoutWidth="455"
+                Background="@Drawable/btn_text_com"
+                Clickable="true"
+                Focusable="true">
+                <VividCheckbox
+                    Id="@+Id/ImgCategoryName2"
+                    LayoutWidth="104"
+                    LayoutHeight="104"
+                    LayoutLeftMargin="20"
+                    UnCheckToCheck="@Drawable/Gradient_Checkbox_M_Z06Z10_F_C"
+                    CheckToUnCheck="@Drawable/Gradient_Checkbox_M_Z10Z06_F_C"
+                    UnCheckToCheckBackground="@Drawable/Checkbox_M_Z06Z10_B"
+                    CheckToUnCheckBackground="@Drawable/Checkbox_M_Z10Z06_B"
+                    Clickable="false"
+                    Focusable="false"
+                    DuplicateParentState="true" />
+                <TextActor
+                    Id="@+Id/TxtCategoryName2"
+                    LayoutHeight="40"
+                    LayoutWidth="280"
+                    PaddingTop="4"
+                    LayoutLeftMargin="124"
+                    LayoutCenterVertical="true"
+                    MaxFormatWidth="321"
+                    TextFont="@Font/UIFont34_Text_R"
+                    HorizontalGravity = "Left"
+                    TextColor="@Color/DayBlack_NightWhite"
+                    DuplicateParentState="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout
+            Id="@+Id/Space_Down"
+            LayoutHeight="13"
+            LayoutWidth="FillParent"
+            Visible="Gone" />
+        <ImageActor
+            Id = "@+Id/Split_Line"
+            LayoutWidth="FillParent"
+            LayoutHeight="2"
+            LayoutAlignParentBottom = "true" 
+            Background = "@Drawable/card_list_line"
+            Visible = "Gone"/>
+    </LinearLayout>
+</Resource>

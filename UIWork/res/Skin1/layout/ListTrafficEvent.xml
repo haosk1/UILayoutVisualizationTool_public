@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resource>
+    <RelativeLayout
+        Id="@+Id/ListItem"
+        LayoutWidth="FillParent"
+        LayoutHeight="164"
+        Clickable="true"
+        Focusable="true"
+        Background="@Drawable/bg_prox_traffic_list">
+        <RelativeLayout
+            Id="@+Id/Layout1"
+            LayoutWidth="FillParent"
+            LayoutHeight="FillParent"
+            Clickable="true">
+            <ImageActor
+                Id="@+Id/Icon_TMC1"
+                LayoutWidth="64"
+                LayoutHeight="64"
+                LayoutLeftMargin="42"
+                LayoutTopMargin="48"
+                Drawable="@Drawable/DrawableLeveTrafficEvent_GP64" />
+            <TextActor
+                Id="@+Id/ListMainBody1"
+                LayoutWidth="496"
+                LayoutHeight="40"
+                LayoutLeftMargin="118"
+                LayoutTopMargin="37"
+                PaddingTop="3"
+                HorizontalGravity="Left"
+                TextFont="@Font/UIFont34_Text_R"
+                TextColor="@Color/ListFavColor"
+                DuplicateParentState = "true" 
+                ShowEllipsis="true"
+                Text="@String/MX_LANG_NAVI_MAP_TRAFFIC_EVENT_DETAIL_TITLE_Traffic_Event" />
+            <TextActor
+                Id="@+Id/DistanceToCCP"
+                LayoutWidth="496"
+                LayoutHeight="34"
+                LayoutLeftMargin="118"
+                LayoutTopMargin="90"
+                PaddingTop="3"
+                HorizontalGravity="Left"
+                TextFont="@Font/UIFont28_Text_L"
+                TextColor="@Color/ListFavColor"
+                DuplicateParentState = "true"  />
+        </RelativeLayout>
+    </RelativeLayout>
+</Resource>
